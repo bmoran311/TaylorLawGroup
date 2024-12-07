@@ -1,0 +1,10 @@
+@import "https://cdn.jsdelivr.net/npm/jsvectormap/dist/css/jsvectormap.min.css";
+@import "https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-input{
+    @apply w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary
+}
