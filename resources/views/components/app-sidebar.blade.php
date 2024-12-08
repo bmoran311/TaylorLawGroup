@@ -78,7 +78,7 @@
                 />
               </svg>
 
-              Dashboard
+              Super User Links
 
               <svg
                 class="absolute right-4 top-1/2 -translate-y-1/2 fill-current"
@@ -112,6 +112,76 @@
                     >eCommerce
                   </a>
                 </li>
+              </ul>
+              <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
+                <li>
+                  <a
+                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    href="{{ route('language.index') }}"
+                    :class="page === 'language' && '!text-white'"
+                    >Languages
+                  </a>
+                </li>
+              </ul>
+              <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
+                <li>
+                  <a
+                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    href="{{ route('award') }}"
+                    :class="page === 'award' && '!text-white'"
+                    >Awards
+                  </a>
+                </li>
+              </ul>
+              <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
+                <li>
+                  <a
+                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    href="{{ route('license') }}"
+                    :class="page === 'license' && '!text-white'"
+                    >Licenses
+                  </a>
+                </li>
+              </ul>
+              <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
+                <li>
+                  <a
+                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    href="{{ route('membership') }}"
+                    :class="page === 'membership' && '!text-white'"
+                    >Memberships
+                  </a>
+                </li>
+              </ul>
+              <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
+                <li>
+                  <a
+                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    href="{{ route('news') }}"
+                    :class="page === 'news' && '!text-white'"
+                    >News
+                  </a>
+                </li>
+              </ul>
+              <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
+                <li>
+                  <a
+                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    href="{{ route('award') }}"
+                    :class="page === 'award' && '!text-white'"
+                    >Awards
+                  </a>
+                </li>
+              </ul>
+              <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
+                <li>
+                  <a
+                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    href="{{ route('engagement') }}"
+                    :class="page === 'engagement' && '!text-white'"
+                    >Engagements
+                  </a>
+                </li>              
               </ul>
             </div>
             <!-- Dropdown Menu End -->
@@ -182,8 +252,8 @@
             <a
               class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
               href="#"
-              @click.prevent="selected = (selected === 'Forms' ? '':'Forms')"
-              :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'Forms') || (page === 'formElements' || page === 'formLayout') }"
+              @click.prevent="selected = (selected === 'Firms' ? '':'Firms')"
+              :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'Firms') || (page === 'formElements' || page === 'formLayout') }"
             >
               <svg
                 class="fill-current"
@@ -215,11 +285,11 @@
                 />
               </svg>
 
-              Forms
+              Firms
 
               <svg
                 class="absolute right-4 top-1/2 -translate-y-1/2 fill-current"
-                :class="{ 'rotate-180': (selected === 'Forms') }"
+                :class="{ 'rotate-180': (selected === 'Firms') }"
                 width="20"
                 height="20"
                 viewBox="0 0 20 20"
@@ -238,9 +308,17 @@
             <!-- Dropdown Menu Start -->
             <div
               class="translate transform overflow-hidden"
-              :class="(selected === 'Forms') ? 'block' :'hidden'"
+              :class="(selected === 'Firms') ? 'block' :'hidden'"
             >
               <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
+                <li> 
+                  <a
+                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    href="{{ route('bio') }}"
+                    :class="page === 'Bios' && '!text-white'"
+                    >Bios</a
+                  >
+                </li>
                 <li>
                   <a
                     class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
