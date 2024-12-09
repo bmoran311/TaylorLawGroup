@@ -32,7 +32,7 @@
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>Membership Name</x-label>
-                            <x-text-input name="name" type="text" placeholder="Membership Name..." class="text-input" value="{{ old('name', $membership->name ?? '') }}"/>                            
+                            <x-text-input name="name" type="text" placeholder="Membership Name..." class="text-input" value="{{ old('name', $membership->name ?? '') }}"/>
                         </div>
 					</div>
 					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
@@ -43,10 +43,10 @@
                                 <option value="State Bar" {{ old('type', $membership->type ?? '') == 'State Bar' ? 'selected' : '' }}>State Bar</option>
                                 <option value="National Bar" {{ old('type', $membership->type ?? '') == 'National Bar' ? 'selected' : '' }}>National Bar</option>
                                 <option value="Specialty Bar" {{ old('type', $membership->type ?? '') == 'Specialty Bar' ? 'selected' : '' }}>Specialty Bar</option>
-                            </select>                                  
+                            </select>
                         </div>
 					</div>
-					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
+
                         <div class="flex justify-end gap-4.5">
                             <a href="{{ route('membership.index') }}"
                                 class="btn-white"
@@ -58,7 +58,7 @@
                                 type="submit"
                             >Save</button>
                         </div>
-                    </div>
+
                 </form>
             </div>
         </div>

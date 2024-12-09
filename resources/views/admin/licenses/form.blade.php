@@ -32,7 +32,7 @@
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>License Name</x-label>
-                            <x-text-input name="name" type="text" placeholder="License Name..." class="text-input" value="{{ old('name', $license->name ?? '') }}"/>                            
+                            <x-text-input name="name" type="text" placeholder="License Name..." class="text-input" value="{{ old('name', $license->name ?? '') }}"/>
                         </div>
                     </div>
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
@@ -43,22 +43,22 @@
                                 <option value="State License" {{ old('type', $license->type ?? '') == 'State License' ? 'selected' : '' }}>State License</option>
                                 <option value="Territorial License" {{ old('type', $license->type ?? '') == 'Territorial License' ? 'selected' : '' }}>Territorial License</option>
                                 <option value="Federal License" {{ old('type', $license->type ?? '') == 'Federal License' ? 'selected' : '' }}>Federal License</option>
-                            </select>                    
+                            </select>
                         </div>
                     </div>
-                    <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
-                        <div class="flex justify-end gap-4.5">
-                            <a href="{{ route('license.index') }}"
-                                class="btn-white"
-                                type="submit">
-                                Cancel
-                            </a>
-                            <button
-                                class="btn-primary"
-                                type="submit"
-                            >Save</button>
-                        </div>
+
+                    <div class="flex justify-end gap-4.5">
+                        <a href="{{ route('license.index') }}"
+                            class="btn-white"
+                            type="submit">
+                            Cancel
+                        </a>
+                        <button
+                            class="btn-primary"
+                            type="submit"
+                        >Save</button>
                     </div>
+
                 </form>
             </div>
         </div>

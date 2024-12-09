@@ -15,6 +15,7 @@ class LevelSeeder extends Seeder
      */
     public function run()
     {
+        $now = now();
         $levels = [
             ['name' => 'Associate', 'created_at' => $now],
 			['name' => 'Attorney', 'created_at' => $now],
@@ -26,7 +27,7 @@ class LevelSeeder extends Seeder
             ['name' => 'Of Counsel', 'created_at' => $now],
             ['name' => 'Staff Attorney', 'created_at' => $now],
             ['name' => 'Law Clerk', 'created_at' => $now],
-            ['name' => 'Legislative Assistant', 'created_at' => $now],			
+            ['name' => 'Legislative Assistant', 'created_at' => $now],
         ];
 
         DB::table('level')->insert($levels);

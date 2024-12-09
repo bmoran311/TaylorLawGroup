@@ -32,13 +32,13 @@
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>Education Name</x-label>
-                            <x-text-input name="name" type="text" placeholder="Education Name..." class="text-input" value="{{ old('name', $education->name ?? '') }}"/>                            
+                            <x-text-input name="name" type="text" placeholder="Education Name..." class="text-input" value="{{ old('name', $education->name ?? '') }}"/>
                         </div>
 					</div>
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>City</x-label>
-                            <x-text-input name="city" type="text" placeholder="City" class="text-input" value="{{ old('city', $education->city ?? '') }}"/>                            
+                            <x-text-input name="city" type="text" placeholder="City" class="text-input" value="{{ old('city', $education->city ?? '') }}"/>
                         </div>
 					</div>
 					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
@@ -47,15 +47,15 @@
                             <select name="state" class="text-input">
 								<option value="">Select a State</option>
 								@foreach($states as $state)
-									<option value="{{ $state->abbreviation }}" 
+									<option value="{{ $state->abbreviation }}"
 										{{ old('state', $education->state ?? '') == $state->abbreviation ? 'selected' : '' }}>
 										{{ $state->name }}
 									</option>
 								@endforeach
-							</select>                        
+							</select>
                         </div>
 					</div>
-					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
+
                         <div class="flex justify-end gap-4.5">
                             <a href="{{ route('education.index') }}"
                                 class="btn-white"
@@ -67,7 +67,7 @@
                                 type="submit"
                             >Save</button>
                         </div>
-                    </div>
+
                 </form>
             </div>
         </div>
