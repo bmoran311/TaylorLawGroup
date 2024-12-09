@@ -108,8 +108,8 @@
                   <a
                     class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                     href="{{ route('dashboard') }}"
-                    :class="page === 'ecommerce' && '!text-white'"
-                    >eCommerce
+                    :class="page === 'dashboard' && '!text-white'"
+                    >Dashboard
                   </a>
                 </li>
               </ul>
@@ -127,7 +127,17 @@
                 <li>
                   <a
                     class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
-                    href="{{ route('award') }}"
+                    href="{{ route('level.index') }}"
+                    :class="page === 'level' && '!text-white'"
+                    >Levels
+                  </a>
+                </li>
+              </ul>
+              <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
+                <li>
+                  <a
+                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    href="{{ route('award.index') }}"
                     :class="page === 'award' && '!text-white'"
                     >Awards
                   </a>
@@ -137,8 +147,8 @@
                 <li>
                   <a
                     class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
-                    href="{{ route('license') }}"
-                    :class="page === 'license' && '!text-white'"
+                    href="{{ route('license.index') }}"
+                    :class="page === 'license.index' && '!text-white'"
                     >Licenses
                   </a>
                 </li>
@@ -147,9 +157,29 @@
                 <li>
                   <a
                     class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
-                    href="{{ route('membership') }}"
+                    href="{{ route('membership.index') }}"
                     :class="page === 'membership' && '!text-white'"
                     >Memberships
+                  </a>
+                </li>
+              </ul>
+			        <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
+                <li>
+                  <a
+                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    href="{{ route('admission.index') }}"
+                    :class="page === 'admission' && '!text-white'"
+                    >Admissions
+                  </a>
+                </li>
+              </ul>
+              <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
+                <li>
+                  <a
+                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    href="{{ route('education.index') }}"
+                    :class="page === 'education' && '!text-white'"
+                    >Education
                   </a>
                 </li>
               </ul>
@@ -162,17 +192,7 @@
                     >News
                   </a>
                 </li>
-              </ul>
-              <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
-                <li>
-                  <a
-                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
-                    href="{{ route('award') }}"
-                    :class="page === 'award' && '!text-white'"
-                    >Awards
-                  </a>
-                </li>
-              </ul>
+              </ul>              
               <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
                 <li>
                   <a
@@ -314,7 +334,7 @@
                 <li> 
                   <a
                     class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
-                    href="{{ route('bio') }}"
+                    href="{{ route('bio.index') }}"
                     :class="page === 'Bios' && '!text-white'"
                     >Bios</a
                   >

@@ -15,7 +15,9 @@ return new class extends Migration
     {
         Schema::create('education', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('name');
+			$table->string('city');
+			$table->string('state');
             $table->timestamps();
         });
     }

@@ -11,12 +11,12 @@ class LanguageController extends Controller
     public function index()
     {
         $languages = language::orderBy('name')->get();
-        return view('admin.languages.index', compact('languages'));
+        return view('admin.languages.list', compact('languages'));
     }
 
     public function create()
     {
-        return view('admin.languages.create');
+        return view('admin.languages.form');
     }
 
     public function store(Request $request)
@@ -25,10 +25,8 @@ class LanguageController extends Controller
             'name' => 'required|string|max:255',
         ]);
         
-        $language = new Language();
-        
-        $language->name = $request->input('name');
-        
+        $language = new Language();        
+        $language->name = $request->input('name');        
         $language->save();
     
         return back()->with('success', 'Language Created');
@@ -36,7 +34,7 @@ class LanguageController extends Controller
    
     public function edit(language $language)
     {
-        return view('admin.languages.edit', compact('language'));
+        return view('admin.languages.form', compact('language'));
     }
 
     public function update(Request $request, language $language)
@@ -50,6 +48,8 @@ class LanguageController extends Controller
     
     public function destroy(language $language)
     {
-         //
+        $language->delete();
+
+         return back()->with('danger', 'Language Deleted');
     }
 }

@@ -13,10 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('award', function (Blueprint $table) {
+        Schema::create('level', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-			$table->string('publication')->nullable(); 
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('award');
+        Schema::dropIfExists('level');
     }
 };

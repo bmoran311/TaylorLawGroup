@@ -2,6 +2,12 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\LanguageController;
+use App\Http\Controllers\Admin\AwardController;
+use App\Http\Controllers\Admin\LevelController;
+use App\Http\Controllers\Admin\LicenseController;
+use App\Http\Controllers\Admin\MembershipController;
+use App\Http\Controllers\Admin\AdmissionController;
+use App\Http\Controllers\Admin\EducationController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -30,17 +36,15 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('news', LanguageController::class, ['as' => 'bio']);
-Route::get('bio', [LanguageController::class, 'index'])->name('bio');
+Route::resource('bio', LanguageController::class);
 Route::resource('language', LanguageController::class);
-Route::resource('award', LanguageController::class, ['as' => 'award']);
-Route::get('award', [LanguageController::class, 'index'])->name('award');
-Route::resource('education', LanguageController::class, ['as' => 'education']);
-Route::get('education', [LanguageController::class, 'index'])->name('education');
-Route::resource('license', LanguageController::class, ['as' => 'license']);
-Route::get('license', [LanguageController::class, 'index'])->name('license');
-Route::resource('membership', LanguageController::class, ['as' => 'membership']);
-Route::get('membership', [LanguageController::class, 'index'])->name('membership');
+Route::resource('award', AwardController::class);
+Route::resource('level', LevelController::class);
+Route::resource('license', LicenseController::class);
+Route::resource('membership', MembershipController::class);
+Route::resource('admission', AdmissionController::class);
+Route::resource('education', EducationController::class);
+
 Route::resource('engagement', LanguageController::class, ['as' => 'engagement']);
 Route::get('engagement', [LanguageController::class, 'index'])->name('engagement');
 Route::resource('news', LanguageController::class, ['as' => 'news']);
