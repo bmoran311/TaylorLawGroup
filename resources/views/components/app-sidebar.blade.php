@@ -50,7 +50,7 @@
               class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
               href="{{ route('dashboard') }}"
               @click.prevent="selected = (selected === 'Dashboard' ? '':'Dashboard')"
-              :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'Dashboard') || (page === 'ecommerce' || page === 'analytics' || page === 'stocks') }"
+              :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'Dashboard')}"
             >
               <svg
                 class="fill-current"
@@ -106,9 +106,8 @@
               <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
                 <li>
                   <a
-                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    class="@if(request()->routeIs('dashboard')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                     href="{{ route('dashboard') }}"
-                    :class="page === 'dashboard' && '!text-white'"
                     >Dashboard
                   </a>
                 </li>
@@ -116,9 +115,8 @@
               <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
                 <li>
                   <a
-                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    class="@if(request()->routeIs('language*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                     href="{{ route('language.index') }}"
-                    :class="page === 'language' && '!text-white'"
                     >Languages
                   </a>
                 </li>
@@ -126,9 +124,8 @@
               <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
                 <li>
                   <a
-                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    class="@if(request()->routeIs('level*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                     href="{{ route('level.index') }}"
-                    :class="page === 'level' && '!text-white'"
                     >Levels
                   </a>
                 </li>
@@ -136,9 +133,8 @@
               <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
                 <li>
                   <a
-                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    class="@if(request()->routeIs('award*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                     href="{{ route('award.index') }}"
-                    :class="page === 'award' && '!text-white'"
                     >Awards
                   </a>
                 </li>
@@ -146,9 +142,8 @@
               <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
                 <li>
                   <a
-                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    class="@if(request()->routeIs('license*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                     href="{{ route('license.index') }}"
-                    :class="page === 'license.index' && '!text-white'"
                     >Licenses
                   </a>
                 </li>
@@ -156,9 +151,8 @@
               <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
                 <li>
                   <a
-                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    class="@if(request()->routeIs('membership*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                     href="{{ route('membership.index') }}"
-                    :class="page === 'membership' && '!text-white'"
                     >Memberships
                   </a>
                 </li>
@@ -166,9 +160,8 @@
 			        <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
                 <li>
                   <a
-                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    class="@if(request()->routeIs('admission*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                     href="{{ route('admission.index') }}"
-                    :class="page === 'admission' && '!text-white'"
                     >Admissions
                   </a>
                 </li>
@@ -176,9 +169,8 @@
               <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
                 <li>
                   <a
-                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    class="@if(request()->routeIs('education*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                     href="{{ route('education.index') }}"
-                    :class="page === 'education' && '!text-white'"
                     >Education
                   </a>
                 </li>
@@ -186,22 +178,20 @@
               <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
                 <li>
                   <a
-                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    class="@if(request()->routeIs('news*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                     href="{{ route('news') }}"
-                    :class="page === 'news' && '!text-white'"
                     >News
                   </a>
                 </li>
-              </ul>              
+              </ul>
               <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
                 <li>
                   <a
-                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    class="@if(request()->routeIs('engagement*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                     href="{{ route('engagement') }}"
-                    :class="page === 'engagement' && '!text-white'"
                     >Engagements
                   </a>
-                </li>              
+                </li>
               </ul>
             </div>
             <!-- Dropdown Menu End -->
@@ -331,11 +321,10 @@
               :class="(selected === 'Firms') ? 'block' :'hidden'"
             >
               <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
-                <li> 
+                <li>
                   <a
-                    class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    class="@if(request()->routeIs('bio*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                     href="{{ route('bio.index') }}"
-                    :class="page === 'Bios' && '!text-white'"
                     >Bios</a
                   >
                 </li>
