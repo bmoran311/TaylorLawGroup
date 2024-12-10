@@ -1,20 +1,20 @@
 <x-app-layout>
 <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
     <h2 class="text-title-md2 font-bold text-black dark:text-white">
-    Education
+    Engagement
     </h2>
     <nav>
         <ol class="flex items-center gap-2">
             <li>
                 <a class="font-medium" href="{{ route('dashboard') }}">Dashboard /</a>
             </li>
-            <li class="font-medium text-primary">Education</li>
+            <li class="font-medium text-primary">Engagement</li>
         </ol>
     </nav>
 </div>
 
 <section class="flex justify-end mb-4">
-    <x-create-button href="{{ route('education.create') }}">Add New Education</x-create-button>
+    <x-create-button href="{{ route('engagement.create') }}">Add Engagement</x-create-button>
 </section>
 
 <div class="flex flex-col gap-10">
@@ -24,45 +24,37 @@
                 <thead>
                     <tr class="bg-gray-2 text-left dark:bg-meta-4">
                         <th class="min-w-[220px]  xl:pl-11">
-                            Education
-                        </th>
-						<th class="min-w-[220px]  xl:pl-11">
-                            Location
+                            Headline
                         </th>
                         <th class="min-w-[150px]">
-                            Created Date
+                            Type
                         </th>
-                        <th class="min-w-[120px]">
-                            Status
-                        </th>
+						<th class="min-w-[150px]">
+                            Conference / Publication
+                        </th>                                           
                         <th>
                             Actions
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($educations as $education)
+                    @foreach($engagement as $engagement)
                         <tr>
                             <td class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
-                                <h5 class="font-medium text-black dark:text-white">{{ $education->name }}</h5>
+                                <h5 class="font-medium text-black dark:text-white">{{ $engagement->title }}<br>{{ $engagement->event_date }}</h5>
+                            </td>
+                            <td class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
+                                <h5 class="font-medium text-black dark:text-white">{{ $engagement->type }}</h5>
                             </td>
 							<td class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
-                                <h5 class="font-medium text-black dark:text-white">{{ $education->city }}, {{ $education->state }}</h5>
-                            </td>
-                            <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                                <p class="text-black dark:text-white">{{ $education->created_at->format('M d, Y') }}</p>
-                            </td>
-                            <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                                <p class="inline-flex rounded-full bg-success bg-opacity-10 px-3 py-1 text-sm font-medium text-success">
-                                Active
-                                </p>
-                            </td>
+                                <h5 class="font-medium text-black dark:text-white">{{ $engagement->conference }}</h5>
+                            </td>                                                       
                             <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                                 <div class="flex items-center space-x-3.5">
                                     <button class="hover:text-primary">
-                                        <a href="{{ route('education.edit', ['education' => $education]) }}"><x-icon-view /></a>
+                                        <a href="{{ route('engagement.edit', ['engagement' => $engagement]) }}"><x-icon-view /></a>
                                     </button>
-                                    <form action="{{route('education.destroy', ['education' => $education])}}" method="POST" onsubmit="return confirm('Are you sure you want to delete this education?')">
+                                    <form action="{{route('engagement.destroy', ['engagement' => $engagement])}}" method="POST" onsubmit="return confirm('Are you sure you want to delete this engagement?')">
                                         @method('DELETE')
                                         @csrf
                                         <button class="hover:text-primary">

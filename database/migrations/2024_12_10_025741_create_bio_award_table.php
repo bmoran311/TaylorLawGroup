@@ -8,26 +8,22 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
-        Schema::create('practice_area', function (Blueprint $table) {
+        Schema::create('bio_award', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->text('description')->nullable();
+            $table->foreignId('bio_id')->constrained('bio')->onDelete('cascade'); 
+            $table->foreignId('award_id')->constrained('award')->onDelete('cascade');
             $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
-        Schema::dropIfExists('practice_area');
+        Schema::dropIfExists('bio_award');
     }
 };

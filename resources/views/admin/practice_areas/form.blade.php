@@ -1,14 +1,14 @@
 <x-app-layout>
 <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
     <h2 class="text-title-md2 font-bold text-black dark:text-white">
-        Education
+        Practice Areas
     </h2>
     <nav>
     <ol class="flex items-center gap-2">
         <li>
         <a class="font-medium" href="{{ route('dashboard') }}">Dashboard /</a>
         </li>
-        <li class="font-medium text-primary"><a class="font-medium" href="{{ route('education.index') }}">Education</a></li>
+        <li class="font-medium text-primary"><a class="font-medium" href="{{ route('practice_area.index') }}">Practice Areas</a></li>
     </ol>
     </nav>
 </div>
@@ -18,46 +18,39 @@
         <div class="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
             <div class="border-b border-stroke px-7 py-4 dark:border-strokedark">
                 <h3 class="font-medium text-black dark:text-white">
-                {{ isset($education) ? 'Edit' : 'Create' }} New Education
+                {{ isset($practice_area) ? 'Edit' : 'Create' }} Practice Area
                 </h3>
             </div>
             <div class="p-7">
-                <form action="{{ isset($education) ? route('education.update', $education->id) : route('education.store') }}" method="POST">
+                <form action="{{ isset($practice_area) ? route('practice_area.update', $practice_area->id) : route('practice_area.store') }}" method="POST">
                     @csrf
-                    @if(isset($education))
+                    @if(isset($practice_area))
                         @method('PUT')
                     @else
                         @method('POST')
                     @endif
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
-                            <x-label>Education Name</x-label>
-                            <x-text-input name="name" type="text" placeholder="Education Name..." class="text-input" value="{{ old('name', $education->name ?? '') }}"/>
+                            <x-label>Practice Area Name</x-label>
+                            <x-text-input name="name" type="text" placeholder="Practice Area Name..." class="text-input" value="{{ old('name', $practice_area->name ?? '') }}"/>
+                            </div>
                         </div>
-					</div>
+                    </div>
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
-                            <x-label>City</x-label>
-                            <x-text-input name="city" type="text" placeholder="City" class="text-input" value="{{ old('city', $education->city ?? '') }}"/>
+                            <x-label>Description</x-label>
+                            <textarea
+                                name="description"
+                                rows="6"
+                                placeholder="Active textarea"
+                                class="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
+                            >{{ old('description', $practice_area->description ?? '') }}</textarea>
+                            </div>
                         </div>
-					</div>
-					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
-                        <div class="w-full">
-                            <x-label>State</x-label>
-                            <select name="state" class="text-input">
-								<option value="">Select a State</option>
-								@foreach($states as $state)
-									<option value="{{ $state->abbreviation }}"
-										{{ old('state', $education->state ?? '') == $state->abbreviation ? 'selected' : '' }}>
-										{{ $state->name }}
-									</option>
-								@endforeach
-							</select>
-                        </div>
-					</div>
-
+                    </div>
+                    <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">                        
                         <div class="flex justify-end gap-4.5">
-                            <a href="{{ route('education.index') }}"
+                            <a href="{{ route('practice_area.index') }}"
                                 class="btn-white"
                                 type="submit">
                                 Cancel
@@ -67,7 +60,7 @@
                                 type="submit"
                             >Save</button>
                         </div>
-
+                    </div>
                 </form>
             </div>
         </div>

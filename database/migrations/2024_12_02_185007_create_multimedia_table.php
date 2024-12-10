@@ -13,14 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('engagement', function (Blueprint $table) {
+        Schema::create('multimedia', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('conference');
-            $table->date('event_date');
-            $table->string('event_time');
-            $table->string('type');
-            $table->text('summary');         
+            $table->string('headline');
+            $table->date('publication_date');
+            $table->string('publication');
+            $table->text('summary');
+            $table->string('url', 555);
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('engagement');
+        Schema::dropIfExists('multimedia');
     }
 };

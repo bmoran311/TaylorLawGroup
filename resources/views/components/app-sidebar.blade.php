@@ -110,63 +110,56 @@
                     href="{{ route('dashboard') }}"
                     >Dashboard
                   </a>
-                </li>
-              </ul>
-              <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
+                </li>              
+                <li>
+                  <a
+                    class="@if(request()->routeIs('firm*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    href="{{ route('firm.index') }}"
+                    >Firms
+                  </a>
+                </li>              
                 <li>
                   <a
                     class="@if(request()->routeIs('language*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                     href="{{ route('language.index') }}"
                     >Languages
                   </a>
-                </li>
-              </ul>
-              <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
+                </li>              
                 <li>
                   <a
                     class="@if(request()->routeIs('level*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                     href="{{ route('level.index') }}"
                     >Levels
                   </a>
-                </li>
-              </ul>
-              <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
+                </li>              
                 <li>
                   <a
                     class="@if(request()->routeIs('award*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                     href="{{ route('award.index') }}"
                     >Awards
                   </a>
-                </li>
-              </ul>
-              <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
+                </li>              
                 <li>
                   <a
                     class="@if(request()->routeIs('license*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                     href="{{ route('license.index') }}"
                     >Licenses
                   </a>
-                </li>
-              </ul>
-              <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
+                </li>              
                 <li>
                   <a
                     class="@if(request()->routeIs('membership*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                     href="{{ route('membership.index') }}"
                     >Memberships
                   </a>
-                </li>
-              </ul>
-			        <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
+                </li>              
                 <li>
                   <a
                     class="@if(request()->routeIs('admission*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                     href="{{ route('admission.index') }}"
                     >Admissions
                   </a>
-                </li>
-              </ul>
-              <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
+                </li>             
                 <li>
                   <a
                     class="@if(request()->routeIs('education*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
@@ -174,25 +167,7 @@
                     >Education
                   </a>
                 </li>
-              </ul>
-              <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
-                <li>
-                  <a
-                    class="@if(request()->routeIs('news*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
-                    href="{{ route('news') }}"
-                    >News
-                  </a>
-                </li>
-              </ul>
-              <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
-                <li>
-                  <a
-                    class="@if(request()->routeIs('engagement*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
-                    href="{{ route('engagement') }}"
-                    >Engagements
-                  </a>
-                </li>
-              </ul>
+              </ul>              
             </div>
             <!-- Dropdown Menu End -->
           </li>
@@ -295,7 +270,7 @@
                 />
               </svg>
 
-              Firms
+              Firm Admin
 
               <svg
                 class="absolute right-4 top-1/2 -translate-y-1/2 fill-current"
@@ -328,6 +303,39 @@
                     >Bios</a
                   >
                 </li>
+		
+					<li>
+					  <a
+						class="@if(request()->routeIs('language*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+						href="{{ route('practice_area.index') }}"
+						>Practice Areas
+					  </a>
+					</li>
+			
+                <li>
+                  <a
+                    class="@if(request()->routeIs('news*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    href="{{ route('news.index') }}"
+                    >News
+                  </a>
+                </li>
+             
+                <li>
+                  <a
+                    class="@if(request()->routeIs('engagement*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    href="{{ route('engagement.index') }}"
+                    >Engagements
+                  </a>
+                </li>
+             
+                <li>
+                  <a
+                    class="@if(request()->routeIs('multimedia*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    href="{{ route('multimedia.index') }}"
+                    >Multimedia
+                  </a>
+                </li>
+                <!---
                 <li>
                   <a
                     class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
@@ -344,6 +352,7 @@
                     >Form Layout</a
                   >
                 </li>
+                --->
               </ul>
             </div>
             <!-- Dropdown Menu End -->
@@ -384,7 +393,7 @@
                 </defs>
               </svg>
 
-              Tables
+              Client Portal
             </a>
           </li>
           <!-- Menu Item Tables -->

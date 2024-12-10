@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\FirmController;
+use App\Http\Controllers\Admin\PracticeAreaController;
 use App\Http\Controllers\Admin\LanguageController;
 use App\Http\Controllers\Admin\AwardController;
 use App\Http\Controllers\Admin\LevelController;
@@ -8,6 +10,10 @@ use App\Http\Controllers\Admin\LicenseController;
 use App\Http\Controllers\Admin\MembershipController;
 use App\Http\Controllers\Admin\AdmissionController;
 use App\Http\Controllers\Admin\EducationController;
+use App\Http\Controllers\Admin\NewsController;
+use App\Http\Controllers\Admin\EngagementController;
+use App\Http\Controllers\Admin\MultimediaController;
+
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -36,7 +42,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('bio', LanguageController::class);
+Route::resource('firm', FirmController::class);
+Route::resource('bio', BioController::class);
+Route::resource('practice_area', PracticeAreaController::class);
 Route::resource('language', LanguageController::class);
 Route::resource('award', AwardController::class);
 Route::resource('level', LevelController::class);
@@ -44,10 +52,8 @@ Route::resource('license', LicenseController::class);
 Route::resource('membership', MembershipController::class);
 Route::resource('admission', AdmissionController::class);
 Route::resource('education', EducationController::class);
-
-Route::resource('engagement', LanguageController::class, ['as' => 'engagement']);
-Route::get('engagement', [LanguageController::class, 'index'])->name('engagement');
-Route::resource('news', LanguageController::class, ['as' => 'news']);
-Route::get('news', [LanguageController::class, 'index'])->name('news');
+Route::resource('news', NewsController::class);
+Route::resource('engagement', EngagementController::class);
+Route::resource('multimedia', MultimediaController::class);
 
 require __DIR__.'/auth.php';
