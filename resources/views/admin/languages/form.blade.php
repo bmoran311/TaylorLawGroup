@@ -31,9 +31,10 @@
                     @endif
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
-                            <x-label>Language Name</x-label>
-                            <x-text-input name="name" type="text" placeholder="Language Name..." class="text-input" value="{{ old('name', $language->name ?? '') }}"/>
-                            </div>
+                                <x-label>Language Name</x-label>
+                                <x-text-input name="name" type="text" placeholder="Language Name..." class="text-input" value="{{ old('name', $language->name ?? '') }}"/>
+                                <x-form-error key="name" />
+                        </div>
                         </div>
                         <div class="flex justify-end gap-4.5">
                             <a href="{{ route('language.index') }}"
