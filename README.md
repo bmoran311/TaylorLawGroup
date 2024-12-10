@@ -15,3 +15,7 @@ Should simply be:
 
 
 Note on database: When I was playing around - I was using sqlite - which is fine to use for dev purposes - if you want to use that great, if not - you'll need to setup a local DB and update the env file accordingly.
+
+Documentation for sortable tables is here: 
+https://github.com/tofsjonas/sortable
+If you want a column to not be sortable - give the th a 'no-sort' class

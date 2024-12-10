@@ -7,7 +7,10 @@
 
         <title>{{ config('app.name', 'Taylor Law') }}</title>
 
-        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/gh/tofsjonas/sortable@latest/dist/sortable.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/gh/tofsjonas/sortable@latest/sortable-base.min.css" rel="stylesheet" />
+
+
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @stack('head')
     </head>
