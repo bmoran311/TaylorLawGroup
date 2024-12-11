@@ -29,40 +29,36 @@
                     @else
                         @method('POST')
                     @endif
-                    <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
-                        <div class="w-full">
+                    <div class="mb-5.5 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div>
 							<x-label>First Name</x-label>
 							<x-text-input name="first_name" type="text" placeholder="First Name..." class="text-input" value="{{ old('first_name', $bio->first_name ?? '') }}"/>
 							<x-form-error key="first_name" />
                         </div>
-                    </div>
-					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
-                        <div class="w-full">
+                        <div>
 							<x-label>Middle Initial</x-label>
 							<x-text-input name="middle_initial" type="text" placeholder="Middle Initial..." class="text-input" value="{{ old('middle_initial', $bio->middle_initial ?? '') }}"/>
                         </div>
-                    </div>
-					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
-                        <div class="w-full">
+                        <div>
 							<x-label>Last Name</x-label>
 							<x-text-input name="last_name" type="text" placeholder="Last Name..." class="text-input" value="{{ old('last_name', $bio->last_name ?? '') }}"/>
 							<x-form-error key="last_name" />
                         </div>
                     </div>
-					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
-                        <div class="w-full">
+
+					<div class="mb-5.5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
 							<x-label>Email</x-label>
 							<x-text-input name="email" type="text" placeholder="Email..." class="text-input" value="{{ old('email', $bio->email ?? '') }}"/>
 							<x-form-error key="email" />
                         </div>
-                    </div>
-					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
-                        <div class="w-full">
+                        <div>
 							<x-label>Phone</x-label>
 							<x-text-input name="phone_number" type="text" placeholder="Phone Number..." class="text-input" value="{{ old('phone_number', $bio->phone_number ?? '') }}"/>
 							<x-form-error key="phone_number" />
                         </div>
                     </div>
+
 
                     <section class="space-y-8 py-6">
 
