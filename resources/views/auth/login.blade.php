@@ -23,10 +23,10 @@
 
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
-		
+
 		<div class="mt-4">
             <x-input-label for="firm" :value="__('Firm')" />
-            <select name="firm" class="block mt-1 w-full">
+            <select name="firm" class="select-input">
 				<option value="The Taylor Law">The Taylor Law</option>
 			</select>
         </div>
