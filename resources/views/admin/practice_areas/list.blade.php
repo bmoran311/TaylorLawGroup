@@ -39,7 +39,7 @@
                 </thead>
                 <tbody>
                     @foreach($practice_areas as $practice_area)
-                        <tr>
+                        <tr class="hover:bg-blue-50 hover:cursor-pointer" onclick="window.location.href = '{{ route('practice_area.edit', ['practice_area' => $practice_area]) }}'">
                             <td class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
                                 <h5 class="font-medium text-black dark:text-white">{{ $practice_area->name }}</h5>
                             </td>
@@ -62,7 +62,7 @@
                                         <button class="hover:text-primary">
                                             <x-icon-delete />
                                         </button>
-                                    </form>                                                   
+                                    </form>
                                 </div>
                             </td>
                         </tr>
