@@ -470,9 +470,7 @@
               </a>
             </li>
           </ul>
-          <button
-            class="flex items-center gap-3.5 px-6 py-4 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
-          >
+          <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="px-5.5 py-4 flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base">
             <svg
               class="fill-current"
               width="22"
@@ -490,16 +488,11 @@
                 fill=""
               />
             </svg>
-            <form method="POST" action="{{ route('logout') }}">
+            Logout
+          </a>
+            <form method="POST" action="{{ route('logout') }}" class="hidden" id="logout-form">
 				@csrf
-
-				<x-dropdown-link :href="route('logout')"
-						onclick="event.preventDefault();
-									this.closest('form').submit();">
-					{{ __('Log Out') }}
-				</x-dropdown-link>
 			</form>
-          </button>
         </div>
         <!-- Dropdown End -->
       </div>
