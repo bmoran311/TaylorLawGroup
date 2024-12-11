@@ -10,4 +10,9 @@ class Multimedia extends Model
     use HasFactory;    
     protected $table = 'multimedia';
     protected $fillable = ['headline'];	
+
+    public function bios()
+    {
+        return $this->belongsToMany(Bio::class, 'bio_multimedia')->withTimestamps();
+    }
 }

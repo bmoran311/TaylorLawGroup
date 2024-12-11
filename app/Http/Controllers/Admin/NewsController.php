@@ -22,8 +22,11 @@ class NewsController extends Controller
     public function store(Request $request)
     {        
         $request->validate([
+            'publication_date' => 'required|date',
             'headline' => 'required|string|max:255',
-        ]);
+            'url' => 'required|string|max:255',
+            'publication' => 'required|string|max:255',            
+        ]);        
         
         $news = new News();        
         $news->headline = $request->input('headline');    
@@ -44,8 +47,11 @@ class NewsController extends Controller
     public function update(Request $request, news $news)
     {
 		$request->validate([
+            'publication_date' => 'required|date',
             'headline' => 'required|string|max:255',
-        ]);
+            'url' => 'required|string|max:255',
+            'publication' => 'required|string|max:255',            
+        ]);    
 
         $news->headline = $request->input('headline'); 
 		$news->publication = $request->input('publication'); 

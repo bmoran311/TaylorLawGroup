@@ -10,4 +10,9 @@ class License extends Model
     use HasFactory;    
     protected $table = 'license';
     protected $fillable = ['name'];
+
+    public function bios()
+    {
+        return $this->belongsToMany(Bio::class, 'bio_license')->withTimestamps();
+    }
 }

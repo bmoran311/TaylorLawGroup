@@ -18,7 +18,7 @@
         <div class="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
             <div class="border-b border-stroke px-7 py-4 dark:border-strokedark">
                 <h3 class="font-medium text-black dark:text-white">
-                {{ isset($membership) ? 'Edit' : 'Create' }} New Membership
+                {{ isset($membership) ? 'Edit' : 'Create' }} Membership
                 </h3>
             </div>
             <div class="p-7">
@@ -33,6 +33,7 @@
                         <div class="w-full">
                             <x-label>Membership Name</x-label>
                             <x-text-input name="name" type="text" placeholder="Membership Name..." class="text-input" value="{{ old('name', $membership->name ?? '') }}"/>
+                            <x-form-error key="name" />
                         </div>
 					</div>
 					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
@@ -44,6 +45,7 @@
                                 <option value="National Bar" {{ old('type', $membership->type ?? '') == 'National Bar' ? 'selected' : '' }}>National Bar</option>
                                 <option value="Specialty Bar" {{ old('type', $membership->type ?? '') == 'Specialty Bar' ? 'selected' : '' }}>Specialty Bar</option>
                             </select>
+                            <x-form-error key="type" />
                         </div>
 					</div>
 

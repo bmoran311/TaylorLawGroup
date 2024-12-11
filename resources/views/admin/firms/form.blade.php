@@ -32,13 +32,15 @@
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>Name</x-label>
-                            <x-text-input name="name" type="text" placeholder="Name..." class="text-input" value="{{ old('name', $firm->name ?? '') }}"/>                           
+                            <x-text-input name="name" type="text" placeholder="Name..." class="text-input" value="{{ old('name', $firm->name ?? '') }}"/> 
+                            <x-form-error key="name" />                          
                         </div>
                     </div>					
 					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>URL</x-label>
                             <x-text-input name="url" type="text" placeholder="URL..." class="text-input" value="{{ old('url', $firm->url ?? '') }}"/>                            
+                            <x-form-error key="url" />
                         </div>
                     </div>   
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">                        

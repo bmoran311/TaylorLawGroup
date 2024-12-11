@@ -18,7 +18,7 @@
         <div class="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
             <div class="border-b border-stroke px-7 py-4 dark:border-strokedark">
                 <h3 class="font-medium text-black dark:text-white">
-                {{ isset($license) ? 'Edit' : 'Create' }} New License
+                {{ isset($license) ? 'Edit' : 'Create' }} License
                 </h3>
             </div>
             <div class="p-7">
@@ -33,6 +33,7 @@
                         <div class="w-full">
                             <x-label>License Name</x-label>
                             <x-text-input name="name" type="text" placeholder="License Name..." class="text-input" value="{{ old('name', $license->name ?? '') }}"/>
+                            <x-form-error key="name" />
                         </div>
                     </div>
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
@@ -44,6 +45,7 @@
                                 <option value="Territorial License" {{ old('type', $license->type ?? '') == 'Territorial License' ? 'selected' : '' }}>Territorial License</option>
                                 <option value="Federal License" {{ old('type', $license->type ?? '') == 'Federal License' ? 'selected' : '' }}>Federal License</option>
                             </select>
+                            <x-form-error key="type" />
                         </div>
                     </div>
 

@@ -32,22 +32,21 @@
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>Practice Area Name</x-label>
-                            <x-text-input name="name" type="text" placeholder="Practice Area Name..." class="text-input" value="{{ old('name', $practice_area->name ?? '') }}"/>
-                            </div>
-                        </div>
+                            <x-text-input name="name" type="text" placeholder="Name..." class="text-input" value="{{ old('name', $practice_area->name ?? '') }}"/>
+                            <x-form-error key="name" />
+                        </div>                        
                     </div>
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>Description</x-label>
-                            <textarea
-                                name="description"
+                            <textarea                              
+                                name="summary"
                                 rows="6"
-                                placeholder="Active textarea"
+                                placeholder="Summary"
                                 class="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
-                            >{{ old('description', $practice_area->description ?? '') }}</textarea>
-                            </div>
+                            >{{ old('summary', $engagement->summary ?? '') }}</textarea>                            
                         </div>
-                    </div>
+                    </div>                    
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">                        
                         <div class="flex justify-end gap-4.5">
                             <a href="{{ route('practice_area.index') }}"

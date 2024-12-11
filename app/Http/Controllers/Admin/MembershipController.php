@@ -23,6 +23,7 @@ class MembershipController extends Controller
     {        
         $request->validate([
             'name' => 'required|string|max:255',
+            'type' => 'required|string|max:50',
         ]);
         
         $membership = new Membership();        
@@ -40,6 +41,10 @@ class MembershipController extends Controller
 
     public function update(Request $request, membership $membership)
     {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'type' => 'required|string|max:50',
+        ]);
 
         $membership->name = $request->input('name');   
 		$membership->type = $request->input('type');		

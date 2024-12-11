@@ -23,6 +23,7 @@ class FirmController extends Controller
     {        
         $request->validate([
             'name' => 'required|string|max:255',
+            'url' => 'required|string|max:255',
         ]);
         
         $firm = new Firm();        
@@ -43,6 +44,7 @@ class FirmController extends Controller
     {
 		$request->validate([
             'name' => 'required|string|max:255',
+            'url' => 'required|string|max:255',
         ]);
 
         $firm->name = $request->input('name'); 

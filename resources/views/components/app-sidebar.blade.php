@@ -120,23 +120,9 @@
                 </li>
                 <li>
                   <a
-                    class="@if(request()->routeIs('language*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
-                    href="{{ route('language.index') }}"
-                    >Languages
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="@if(request()->routeIs('level*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
-                    href="{{ route('level.index') }}"
-                    >Levels
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="@if(request()->routeIs('award*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
-                    href="{{ route('award.index') }}"
-                    >Awards
+                    class="@if(request()->routeIs('education*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    href="{{ route('education.index') }}"
+                    >Education
                   </a>
                 </li>
                 <li>
@@ -159,14 +145,28 @@
                     href="{{ route('admission.index') }}"
                     >Admissions
                   </a>
+                </li>                 
+                <li>
+                  <a
+                    class="@if(request()->routeIs('level*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    href="{{ route('level.index') }}"
+                    >Levels
+                  </a>
                 </li>
                 <li>
                   <a
-                    class="@if(request()->routeIs('education*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
-                    href="{{ route('education.index') }}"
-                    >Education
+                    class="@if(request()->routeIs('award*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    href="{{ route('award.index') }}"
+                    >Awards
                   </a>
-                </li>
+                </li> 
+                <li>
+                  <a
+                    class="@if(request()->routeIs('language*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    href="{{ route('language.index') }}"
+                    >Languages
+                  </a>
+                </li>                                              
               </ul>
             </div>
             <!-- Dropdown Menu End -->
@@ -243,15 +243,13 @@
                     >Bios</a
                   >
                 </li>
-
-					<li>
-					  <a
-						class="@if(request()->routeIs('language*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
-						href="{{ route('practice_area.index') }}"
-						>Practice Areas
-					  </a>
-					</li>
-
+                <li>
+                  <a
+                  class="@if(request()->routeIs('practice_area*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                  href="{{ route('practice_area.index') }}"
+                  >Practice Areas
+                  </a>
+                </li>
                 <li>
                   <a
                     class="@if(request()->routeIs('news*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"

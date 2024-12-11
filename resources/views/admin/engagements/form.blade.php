@@ -38,31 +38,43 @@
 								class="form-datepicker w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
 								placeholder="mm/dd/yyyy"
 								data-class="flatpickr-right"
-							/>                           
+							/>
+                            <x-form-error key="event_date" />                           
                         </div>
                     </div>
 					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>Event Time</x-label>
-                            <x-text-input name="event_time" type="text" placeholder="Time..." class="text-input" value="{{ old('event_time', $engagement->event_time ?? '') }}"/>                            
+                            <x-text-input name="event_time" type="text" placeholder="Time..." class="text-input" value="{{ old('event_time', $engagement->event_time ?? '') }}"/>                                                        
                         </div>
                     </div>
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>Title</x-label>
                             <x-text-input name="title" type="text" placeholder="Title..." class="text-input" value="{{ old('title', $engagement->title ?? '') }}"/>                           
+                            <x-form-error key="title" />
                         </div>
                     </div>
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>Conference / Publication</x-label>
                             <x-text-input name="conference" type="text" placeholder="Conference..." class="text-input" value="{{ old('conference', $engagement->conference ?? '') }}"/>                           
+                            <x-form-error key="conference" />
                         </div>
                     </div>
 					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>Type</x-label>
-                            <x-text-input name="type" type="text" placeholder="Type..." class="text-input" value="{{ old('type', $engagement->type ?? '') }}"/>                           
+                            <select name="type" id="event_type" class="form-control">
+                                <option value="">Select Type</option>
+                                @foreach($event_types as $event_type)
+                                    <option value="{{ $event_type }}" 
+                                        {{ isset($engagement) && $engagement->type === $event_type ? 'selected' : '' }}>
+                                        {{ $event_type }}
+                                    </option>
+                                @endforeach
+                            </select>   
+                            <x-form-error key="type" />                       
                         </div>
                     </div>					
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">

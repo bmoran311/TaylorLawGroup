@@ -1,20 +1,20 @@
 <x-app-layout>
 <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
     <h2 class="text-title-md2 font-bold text-black dark:text-white">
-    Firm
+    Bios
     </h2>
     <nav>
         <ol class="flex items-center gap-2">
             <li>
                 <a class="font-medium" href="{{ route('dashboard') }}">Dashboard /</a>
             </li>
-            <li class="font-medium text-primary">Firm</li>
+            <li class="font-medium text-primary">Bios</li>
         </ol>
     </nav>
 </div>
 
 <section class="flex justify-end mb-4">
-    <x-create-button href="{{ route('firm.create') }}">Add Firm</x-create-button>
+    <x-create-button href="{{ route('bio.create') }}">Add New Bio</x-create-button>
 </section>
 
 <div class="flex flex-col gap-10">
@@ -26,8 +26,11 @@
                         <th class="min-w-[220px]  xl:pl-11">
                             Name
                         </th>
-						<th class="min-w-[150px]">
-                            URL
+						<th class="min-w-[220px]  xl:pl-11">
+                            Email
+                        </th>
+						<th class="min-w-[220px]  xl:pl-11">
+                            Phone
                         </th>
                         <th class="min-w-[150px]">
                             Created Date
@@ -38,29 +41,32 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($firm as $firm)
+                    @foreach($bios as $bio)
                         <tr>
                             <td class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
-                                <h5 class="font-medium text-black dark:text-white">{{ $firm->name }}</h5>
+                                <h5 class="font-medium text-black dark:text-white">{{ $bio->last_name }}, {{ $bio->first_name }}</h5>
                             </td>
 							<td class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
-                                <h5 class="font-medium text-black dark:text-white">{{ $firm->url }}</h5>
+                                <h5 class="font-medium text-black dark:text-white">{{ $bio->email }}</h5>
+                            </td>
+							<td class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
+                                <h5 class="font-medium text-black dark:text-white">{{ $bio->phone_number }}</h5>
                             </td>
                             <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                                <p class="text-black dark:text-white">{{ $firm->created_at }}</p>
+                                <p class="text-black dark:text-white">{{ $bio->created_at->format('M d, Y') }}</p>
                             </td>                            
                             <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                                 <div class="flex items-center space-x-3.5">
                                     <button class="hover:text-primary">
-                                        <a href="{{ route('firm.edit', ['firm' => $firm]) }}"><x-icon-view /></a>
+                                        <a href="{{ route('bio.edit', ['bio' => $bio]) }}"><x-icon-view /></a>
                                     </button>
-                                    <form action="{{route('firm.destroy', ['firm' => $firm])}}" method="POST" onsubmit="return confirm('Are you sure you want to delete this firm?')">
+                                    <form action="{{route('bio.destroy', ['bio' => $bio])}}" method="POST" onsubmit="return confirm('Are you sure you want to delete this bio?')">
                                         @method('DELETE')
                                         @csrf
                                         <button class="hover:text-primary">
                                             <x-icon-delete />
                                         </button>
-                                    </form>                                                   
+                                    </form>
                                 </div>
                             </td>
                         </tr>

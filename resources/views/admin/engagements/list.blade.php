@@ -20,7 +20,7 @@
 <div class="flex flex-col gap-10">
     <div class="rounded-sm border border-stroke bg-white px-5 pb-2.5 pt-6 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-1">
         <div class="max-w-full overflow-x-auto">
-            <table class="w-full table-auto taylor-table">
+            <table class="w-full table-auto taylor-table sortable">
                 <thead>
                     <tr class="bg-gray-2 text-left dark:bg-meta-4">
                         <th class="min-w-[220px]  xl:pl-11">
@@ -32,13 +32,13 @@
 						<th class="min-w-[150px]">
                             Conference / Publication
                         </th>                                           
-                        <th>
+                        <th class="no-sort">
                             Actions
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($engagement as $engagement)
+                    @foreach($engagements as $engagement)
                         <tr>
                             <td class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
                                 <h5 class="font-medium text-black dark:text-white">{{ $engagement->title }}<br>{{ $engagement->event_date }}</h5>

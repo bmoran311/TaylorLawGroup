@@ -18,7 +18,7 @@
         <div class="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
             <div class="border-b border-stroke px-7 py-4 dark:border-strokedark">
                 <h3 class="font-medium text-black dark:text-white">
-                {{ isset($education) ? 'Edit' : 'Create' }} New Education
+                {{ isset($education) ? 'Edit' : 'Create' }} Education
                 </h3>
             </div>
             <div class="p-7">
@@ -33,12 +33,14 @@
                         <div class="w-full">
                             <x-label>Education Name</x-label>
                             <x-text-input name="name" type="text" placeholder="Education Name..." class="text-input" value="{{ old('name', $education->name ?? '') }}"/>
+							<x-form-error key="name" />
                         </div>
 					</div>
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>City</x-label>
                             <x-text-input name="city" type="text" placeholder="City" class="text-input" value="{{ old('city', $education->city ?? '') }}"/>
+							<x-form-error key="city" />
                         </div>
 					</div>
 					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
@@ -53,6 +55,7 @@
 									</option>
 								@endforeach
 							</select>
+							<x-form-error key="state" />
                         </div>
 					</div>
 

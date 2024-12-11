@@ -18,7 +18,7 @@
         <div class="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
             <div class="border-b border-stroke px-7 py-4 dark:border-strokedark">
                 <h3 class="font-medium text-black dark:text-white">
-                {{ isset($level) ? 'Edit' : 'Create' }} New Level
+                {{ isset($level) ? 'Edit' : 'Create' }} Level
                 </h3>
             </div>
             <div class="p-7">
@@ -33,9 +33,10 @@
                         <div class="w-full">
                             <x-label>Level Name</x-label>
                             <x-text-input name="name" type="text" placeholder="Level Name..." class="text-input" value="{{ old('name', $level->name ?? '') }}"/>
-                            </div>
+                            <x-form-error key="name" />
                         </div>
-                        <div class="flex justify-end gap-4.5">
+                    </div>
+                    <div class="flex justify-end gap-4.5">
                             <a href="{{ route('level.index') }}"
                                 class="btn-white"
                                 type="submit">

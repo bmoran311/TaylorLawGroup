@@ -10,4 +10,9 @@ class News extends Model
     use HasFactory;    
     protected $table = 'news';
     protected $fillable = ['headline'];	
+
+    public function bios()
+    {
+        return $this->belongsToMany(Bio::class, 'bio_news')->withTimestamps();
+    }
 }

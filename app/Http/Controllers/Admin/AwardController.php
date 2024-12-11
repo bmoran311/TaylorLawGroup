@@ -23,6 +23,7 @@ class AwardController extends Controller
     {        
         $request->validate([
             'name' => 'required|string|max:255',
+			'publication' => 'required|string|max:255',
         ]);
         
         $award = new Award();        
@@ -40,6 +41,10 @@ class AwardController extends Controller
 
     public function update(Request $request, award $award)
     {
+		$request->validate([
+            'name' => 'required|string|max:255',
+			'publication' => 'required|string|max:255',
+        ]);
 
         $award->name = $request->input('name');    
         $award->publication = $request->input('publication'); 

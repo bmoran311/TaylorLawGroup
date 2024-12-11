@@ -22,8 +22,11 @@ class MultimediaController extends Controller
     public function store(Request $request)
     {        
         $request->validate([
+            'publication_date' => 'required|date',
             'headline' => 'required|string|max:255',
-        ]);
+            'url' => 'required|string|max:255',
+            'publication' => 'required|string|max:255',            
+        ]);          
         
         $multimedia = new Multimedia();        
         $multimedia->headline = $request->input('headline');    
@@ -44,7 +47,10 @@ class MultimediaController extends Controller
     public function update(Request $request, Multimedia $multimedia)
     {
 		$request->validate([
+            'publication_date' => 'required|date',
             'headline' => 'required|string|max:255',
+            'url' => 'required|string|max:255',
+            'publication' => 'required|string|max:255',            
         ]);
 
         $multimedia->headline = $request->input('headline'); 

@@ -8,21 +8,41 @@ use Illuminate\Http\Request;
 
 class EngagementController extends Controller
 {
-    public function index()
+    private function getEventTypes()
     {
-        $engagement = Engagement::orderBy('title')->get();
-        return view('admin.engagements.list', compact('engagement'));
+        return [
+            'Workshop',
+            'Seminar',
+            'Webinar',
+            'Podcast',
+            'Conference',
+            'Networking',
+            'Roundtable',
+            'Summit',
+            'Panel Discussion'
+        ];
+    }
+
+    public function index()
+    {        
+        $engagements = Engagement::orderBy('title')->get();
+        return view('admin.engagements.list', compact('engagements'));
     }
 
     public function create()
     {
-        return view('admin.engagements.form');
+        $event_types = $this->getEventTypes();
+
+        return view('admin.engagements.form', compact('event_types'));
     }
 
     public function store(Request $request)
     {        
         $request->validate([
+            'event_date' => 'required|date',
             'title' => 'required|string|max:255',
+            'conference' => 'required|string|max:255',
+            'type' => 'required|string|max:100',
         ]);
         
         $engagement = new Engagement();        
@@ -38,15 +58,20 @@ class EngagementController extends Controller
     }
    
     public function edit(Engagement $engagement)
-    {				
-        return view('admin.engagements.form', compact('engagement'));
+    {		
+        $event_types = $this->getEventTypes();
+        
+        return view('admin.engagements.form', compact('engagement', 'event_types'));
     }
 
     public function update(Request $request, Engagement $engagement)
     {
 
 		$request->validate([
+            'event_date' => 'required|date',
             'title' => 'required|string|max:255',
+            'conference' => 'required|string|max:255',
+            'type' => 'required|string|max:100',
         ]);
 
         $engagement->title = $request->input('title'); 

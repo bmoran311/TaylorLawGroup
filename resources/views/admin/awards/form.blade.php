@@ -18,7 +18,7 @@
         <div class="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
             <div class="border-b border-stroke px-7 py-4 dark:border-strokedark">
                 <h3 class="font-medium text-black dark:text-white">
-                {{ isset($award) ? 'Edit' : 'Create' }} New Award
+                {{ isset($award) ? 'Edit' : 'Create' }} Award
                 </h3>
             </div>
             <div class="p-7">
@@ -33,12 +33,14 @@
                         <div class="w-full">
                             <x-label>Award Name</x-label>
                             <x-text-input name="name" type="text" placeholder="Award Name..." class="text-input" value="{{ old('name', $award->name ?? '') }}"/>                            
+							<x-form-error key="name" />
                         </div>
                     </div>
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>Publication</x-label>
                             <x-text-input name="publication" type="text" placeholder="Publication..." class="text-input" value="{{ old('publication', $award->publication ?? '') }}"/>                           
+							<x-form-error key="publication" />
                         </div>
                     </div>
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">

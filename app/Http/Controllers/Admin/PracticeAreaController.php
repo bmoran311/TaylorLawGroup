@@ -39,7 +39,10 @@ class PracticeAreaController extends Controller
     }
 
     public function update(Request $request, PracticeArea $practice_area)
-    {
+    {   
+        $request->validate([
+            'name' => 'required|string|max:255',
+        ]);
 
         $practice_area->name = $request->input('name'); 
         $practice_area->description = $request->input('description');        

@@ -39,6 +39,9 @@ class LevelController extends Controller
 
     public function update(Request $request, Level $level)
     {
+        $request->validate([
+            'name' => 'required|string|max:255',
+        ]);
 
         $level->name = $request->input('name');    
         $level->save();

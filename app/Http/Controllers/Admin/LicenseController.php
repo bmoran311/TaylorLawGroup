@@ -23,6 +23,7 @@ class LicenseController extends Controller
     {        
         $request->validate([
             'name' => 'required|string|max:255',
+            'type' => 'required|string|max:50',
         ]);
         
         $license = new License();        
@@ -40,6 +41,10 @@ class LicenseController extends Controller
 
     public function update(Request $request, License $license)
     {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'type' => 'required|string|max:50',
+        ]);
 
         $license->name = $request->input('name');   
 		$license->type = $request->input('type');  			

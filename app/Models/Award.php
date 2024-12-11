@@ -10,4 +10,9 @@ class Award extends Model
     use HasFactory;    
     protected $table = 'award';
     protected $fillable = ['name'];
+
+    public function bios()
+    {
+        return $this->belongsToMany(Bio::class, 'bio_award')->withTimestamps();
+    }
 }

@@ -10,4 +10,9 @@ class Membership extends Model
     use HasFactory;    
     protected $table = 'membership';
     protected $fillable = ['name'];
+
+    public function memberships()
+    {
+        return $this->belongsToMany(Bio::class, 'bio_membership')->withTimestamps();
+    }
 }

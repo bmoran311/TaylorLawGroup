@@ -28,10 +28,7 @@
                         </th>
                         <th class="min-w-[150px]">
                             Created Date
-                        </th>
-                        <th class="min-w-[120px]">
-                            Status
-                        </th>
+                        </th>                        
                         <th class="no-sort">
                             Actions
                         </th>
@@ -45,12 +42,7 @@
                             </td>
                             <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                                 <p class="text-black dark:text-white">{{ $language->created_at->format('M d, Y') }}</p>
-                            </td>
-                            <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                                <p class="inline-flex rounded-full bg-success bg-opacity-10 px-3 py-1 text-sm font-medium text-success">
-                                Active
-                                </p>
-                            </td>
+                            </td>                            
                             <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                                 <div class="flex items-center space-x-3.5">
                                     <button class="hover:text-primary">

@@ -26,6 +26,8 @@ class EducationController extends Controller
     {        
         $request->validate([
             'name' => 'required|string|max:255',
+			'city' => 'required|string|max:255',
+			'state' => 'required|string|max:2',
         ]);
         
         $education = new Education();        
@@ -46,6 +48,11 @@ class EducationController extends Controller
 
     public function update(Request $request, education $education)
     {
+		$request->validate([
+            'name' => 'required|string|max:255',
+			'city' => 'required|string|max:255',
+			'state' => 'required|string|max:2',
+        ]);
 
         $education->name = $request->input('name');  
         $education->city = $request->input('city');     

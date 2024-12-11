@@ -10,4 +10,9 @@ class Admission extends Model
     use HasFactory;    
     protected $table = 'admission';
     protected $fillable = ['name'];	
+
+    public function bios()
+    {
+        return $this->belongsToMany(Bio::class, 'bio_admission')->withTimestamps();
+    }
 }

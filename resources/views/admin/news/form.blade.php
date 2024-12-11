@@ -38,25 +38,29 @@
 								class="form-datepicker w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
 								placeholder="mm/dd/yyyy"
 								data-class="flatpickr-right"
-							/>                           
+							/>    
+                            <x-form-error key="publication_date" />                               
                         </div>
                     </div>
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>News Headline</x-label>
                             <x-text-input name="headline" type="text" placeholder="News headline..." class="text-input" value="{{ old('headline', $news->headline ?? '') }}"/>                           
+                            <x-form-error key="headline" />        
                         </div>
                     </div>
 					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>Publication</x-label>
                             <x-text-input name="publication" type="text" placeholder="Publication..." class="text-input" value="{{ old('publication', $news->publication ?? '') }}"/>                           
+                            <x-form-error key="publication" />  
                         </div>
                     </div>
 					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>URL</x-label>
-                            <x-text-input name="url" type="text" placeholder="URL..." class="text-input" value="{{ old('url', $news->url ?? '') }}"/>                            
+                            <x-text-input name="url" type="text" placeholder="URL..." class="text-input" value="{{ old('url', $news->url ?? '') }}"/>  
+                            <x-form-error key="url" />                            
                         </div>
                     </div>
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">

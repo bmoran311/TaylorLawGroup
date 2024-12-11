@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\FirmController;
+use App\Http\Controllers\Admin\BioController;
 use App\Http\Controllers\Admin\PracticeAreaController;
 use App\Http\Controllers\Admin\LanguageController;
 use App\Http\Controllers\Admin\AwardController;

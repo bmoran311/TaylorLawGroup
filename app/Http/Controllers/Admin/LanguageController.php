@@ -39,6 +39,9 @@ class LanguageController extends Controller
 
     public function update(Request $request, language $language)
     {
+		$request->validate([
+            'name' => 'required|string|max:255',
+        ]);
 
         $language->name = $request->input('name');    
         $language->save();
