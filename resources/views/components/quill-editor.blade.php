@@ -28,9 +28,17 @@
 </script>
 @endpushOnce
 
-<div>
-    <div id="{{ $name }}_editor" style="min-height: {{ $height }}px;">
-        {{ $slot }}
+<div x-data="{source: false}">
+    <div x-show="!source" x-cloak>
+        <div id="{{ $name }}_editor" style="min-height: {{ $height }}px;" >
+            {{ $slot }}
+        </div>
     </div>
-    <textarea class="hidden" id="{{ $name }}_value" name="{{ $name }}" rows="8"></textarea>
+    <textarea x-cloak x-show="source" id="{{ $name }}_value" name="{{ $name }}" rows="8" class="text-input" style="min-height: {{ $height }}px;"></textarea>
+    <div class="flex justify-end mt-2">
+        <button @click="source = !source" type="button" class="text-blue-500 hover:underline text-sm">
+            <span x-show="!source" x-cloak>HTML Mode</span>
+            <span x-show="source" x-cloak>Content Mode</span>
+        </button>
+    </div>
 </div>
