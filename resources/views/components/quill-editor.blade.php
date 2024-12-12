@@ -7,13 +7,30 @@
 
 @pushOnce('foot')
 <script>
-  const quill = new Quill('#{{ $name }}_editor', {
-    theme: 'snow'
-  });
+ document.addEventListener('DOMContentLoaded', function() {
+    const quill = new Quill('#{{ $name }}_editor', {
+        theme: 'snow'
+    });
+
+    var textarea = document.getElementById('{{ $name }}_value');
+
+    quill.on('text-change', function() {
+
+        textarea.value = quill.root.innerHTML;
+
+    });
+    textarea.addEventListener('input', function() {
+
+        quill.root.innerHTML = textarea.value;
+
+    });
+ });
 </script>
 @endpushOnce
 
-
-<div id="{{ $name }}_editor">
-    {{ $slot }}
+<div>
+    <div id="{{ $name }}_editor">
+        {{ $slot }}
+    </div>
+    <textarea class="hidden" id="{{ $name }}_value" name="{{ $name }}" rows="8"></textarea>
 </div>

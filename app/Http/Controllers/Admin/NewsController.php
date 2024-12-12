@@ -20,27 +20,29 @@ class NewsController extends Controller
     }
 
     public function store(Request $request)
-    {        
+    {
+        dd($request->input());
+
         $request->validate([
             'publication_date' => 'required|date',
             'headline' => 'required|string|max:255',
             'url' => 'required|string|max:255',
-            'publication' => 'required|string|max:255',            
-        ]);        
-        
-        $news = new News();        
-        $news->headline = $request->input('headline');    
-		$news->publication = $request->input('publication'); 
+            'publication' => 'required|string|max:255',
+        ]);
+
+        $news = new News();
+        $news->headline = $request->input('headline');
+		$news->publication = $request->input('publication');
 		$news->url = $request->input('url');
-        $news->publication_date = $request->input('publication_date'); 
-        $news->summary = $request->input('summary'); 
+        $news->publication_date = $request->input('publication_date');
+        $news->summary = $request->input('summary');
         $news->save();
-    
+
         return back()->with('success', 'News Created');
     }
-   
+
     public function edit(news $news)
-    {				
+    {
         return view('admin.news.form', compact('news'));
     }
 
@@ -50,19 +52,19 @@ class NewsController extends Controller
             'publication_date' => 'required|date',
             'headline' => 'required|string|max:255',
             'url' => 'required|string|max:255',
-            'publication' => 'required|string|max:255',            
-        ]);    
+            'publication' => 'required|string|max:255',
+        ]);
 
-        $news->headline = $request->input('headline'); 
-		$news->publication = $request->input('publication'); 
+        $news->headline = $request->input('headline');
+		$news->publication = $request->input('publication');
 		$news->url = $request->input('url');
-        $news->publication_date = $request->input('publication_date'); 
-        $news->summary = $request->input('summary'); 
+        $news->publication_date = $request->input('publication_date');
+        $news->summary = $request->input('summary');
         $news->save();
 
         return back()->with('success', 'News Updated');
     }
-    
+
     public function destroy(news $news)
     {
         $news->delete();
