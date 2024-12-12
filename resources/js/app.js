@@ -46,3 +46,33 @@ flatpickr(".datepicker", {
     nextArrow:
       '<svg class="fill-current" width="7" height="11" viewBox="0 0 7 11"><path d="M1.4 10.8L0 9.4l4-4-4-4L1.4 0l5.4 5.4z" /></svg>',
   });
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+
+    const tables = document.querySelectorAll('.clickable-rows');
+
+    tables.forEach(table => {
+        table.addEventListener('click', event => {
+            // Find the clicked row
+            const row = event.target.closest('tr');
+
+            // If no row was clicked, do nothing
+            if (!row) return;
+
+            // Check if the click happened inside the last column
+            const lastCell = row.querySelector('td:last-child');
+            if (lastCell.contains(event.target)) {
+                // Prevent row navigation if the click happened inside the last column
+                return;
+            }
+
+            // Get the URL from the 'data-url' attribute
+            const url = row.getAttribute('data-url');
+            if (url) {
+                // Navigate to the URL
+                window.location.href = url;
+            }
+        });
+    });
+});

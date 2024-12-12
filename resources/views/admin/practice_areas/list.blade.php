@@ -1,4 +1,9 @@
 <x-app-layout>
+
+@push('head')
+
+@endpush
+
 <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
     <h2 class="text-title-md2 font-bold text-black dark:text-white">
     Practice Areas
@@ -20,7 +25,7 @@
 <div class="flex flex-col gap-10">
     <div class="rounded-sm border border-stroke bg-white px-5 pb-2.5 pt-6 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-1">
         <div class="max-w-full overflow-x-auto">
-            <table class="w-full table-auto taylor-table sortable">
+            <table class="w-full table-auto taylor-table sortable clickable-rows">
                 <thead>
                     <tr class="bg-gray-2 text-left dark:bg-meta-4">
                         <th class="min-w-[220px]  xl:pl-11">
@@ -39,7 +44,7 @@
                 </thead>
                 <tbody>
                     @foreach($practice_areas as $practice_area)
-                        <tr class="hover:bg-blue-50 hover:cursor-pointer" onclick="window.location.href = '{{ route('practice_area.edit', ['practice_area' => $practice_area]) }}'">
+                        <tr class="hover:bg-blue-50 hover:cursor-pointer" data-url="{{ route('practice_area.edit', ['practice_area' => $practice_area]) }}">
                             <td class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
                                 <h5 class="font-medium text-black dark:text-white">{{ $practice_area->name }}</h5>
                             </td>
