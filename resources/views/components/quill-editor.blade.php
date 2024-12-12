@@ -1,4 +1,4 @@
-@props(['name'])
+@props(['name', 'height' => '400'])
 
 @pushOnce('head')
 <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
@@ -29,7 +29,7 @@
 @endpushOnce
 
 <div>
-    <div id="{{ $name }}_editor">
+    <div id="{{ $name }}_editor" style="min-height: {{ $height }}px;">
         {{ $slot }}
     </div>
     <textarea class="hidden" id="{{ $name }}_value" name="{{ $name }}" rows="8"></textarea>
