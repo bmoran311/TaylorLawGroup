@@ -19,3 +19,6 @@ Note on database: When I was playing around - I was using sqlite - which is fine
 Documentation for sortable tables is here: 
 https://github.com/tofsjonas/sortable
 If you want a column to not be sortable - give the th a 'no-sort' class
+
+Documentation for Quill Editor is here:
+https://quilljs.com/docs/quickstart

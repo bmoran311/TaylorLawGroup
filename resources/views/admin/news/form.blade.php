@@ -28,7 +28,7 @@
                         @method('PUT')
                     @else
                         @method('POST')
-                    @endif					                   
+                    @endif
 					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>Publication Date</x-label>
@@ -38,43 +38,40 @@
 								class="form-datepicker w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
 								placeholder="mm/dd/yyyy"
 								data-class="flatpickr-right"
-							/>    
-                            <x-form-error key="publication_date" />                               
+							/>
+                            <x-form-error key="publication_date" />
                         </div>
                     </div>
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>News Headline</x-label>
-                            <x-text-input name="headline" type="text" placeholder="News headline..." class="text-input" value="{{ old('headline', $news->headline ?? '') }}"/>                           
-                            <x-form-error key="headline" />        
+                            <x-text-input name="headline" type="text" placeholder="News headline..." class="text-input" value="{{ old('headline', $news->headline ?? '') }}"/>
+                            <x-form-error key="headline" />
                         </div>
                     </div>
 					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>Publication</x-label>
-                            <x-text-input name="publication" type="text" placeholder="Publication..." class="text-input" value="{{ old('publication', $news->publication ?? '') }}"/>                           
-                            <x-form-error key="publication" />  
+                            <x-text-input name="publication" type="text" placeholder="Publication..." class="text-input" value="{{ old('publication', $news->publication ?? '') }}"/>
+                            <x-form-error key="publication" />
                         </div>
                     </div>
 					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>URL</x-label>
-                            <x-text-input name="url" type="text" placeholder="URL..." class="text-input" value="{{ old('url', $news->url ?? '') }}"/>  
-                            <x-form-error key="url" />                            
+                            <x-text-input name="url" type="text" placeholder="URL..." class="text-input" value="{{ old('url', $news->url ?? '') }}"/>
+                            <x-form-error key="url" />
+                        </div>
+                    </div>
+                    <div class="mb-5.5">
+                        <div class="w-full">
+                            <x-label>Summary</x-label>
+                            <x-quill-editor name="summary">
+                                {{ old('summary', $news->summary ?? '') }}
+                            </x-quill-editor>
                         </div>
                     </div>
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
-                        <div class="w-full">
-                            <x-label>Summary</x-label>
-                            <textarea
-                                name="summary"
-                                rows="6"
-                                placeholder="Active textarea"
-                                class="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
-                            >{{ old('summary', $news->summary ?? '') }}</textarea>                            
-                        </div>
-                    </div>
-                    <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">                        
                         <div class="flex justify-end gap-4.5">
                             <a href="{{ route('news.index') }}"
                                 class="btn-white"
