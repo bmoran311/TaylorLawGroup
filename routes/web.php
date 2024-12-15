@@ -1,20 +1,20 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\Admin\FirmController;
-use App\Http\Controllers\Admin\BioController;
-use App\Http\Controllers\Admin\PracticeAreaController;
-use App\Http\Controllers\Admin\LanguageController;
+use App\Http\Controllers\Admin\AdmissionController;
 use App\Http\Controllers\Admin\AwardController;
+use App\Http\Controllers\Admin\BioController;
+use App\Http\Controllers\Admin\CareersController;
+use App\Http\Controllers\Admin\EducationController;
+use App\Http\Controllers\Admin\EngagementController;
+use App\Http\Controllers\Admin\FirmController;
+use App\Http\Controllers\Admin\LanguageController;
 use App\Http\Controllers\Admin\LevelController;
 use App\Http\Controllers\Admin\LicenseController;
 use App\Http\Controllers\Admin\MembershipController;
-use App\Http\Controllers\Admin\AdmissionController;
-use App\Http\Controllers\Admin\EducationController;
-use App\Http\Controllers\Admin\NewsController;
-use App\Http\Controllers\Admin\EngagementController;
 use App\Http\Controllers\Admin\MultimediaController;
-
+use App\Http\Controllers\Admin\NewsController;
+use App\Http\Controllers\Admin\PracticeAreaController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -43,6 +43,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::resource('career', CareersController::class);
 Route::resource('firm', FirmController::class);
 Route::resource('bio', BioController::class);
 Route::resource('practice_area', PracticeAreaController::class);

@@ -145,7 +145,7 @@
                     href="{{ route('admission.index') }}"
                     >Admissions
                   </a>
-                </li>                 
+                </li>
                 <li>
                   <a
                     class="@if(request()->routeIs('level*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
@@ -159,14 +159,14 @@
                     href="{{ route('award.index') }}"
                     >Awards
                   </a>
-                </li> 
+                </li>
                 <li>
                   <a
                     class="@if(request()->routeIs('language*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                     href="{{ route('language.index') }}"
                     >Languages
                   </a>
-                </li>                                              
+                </li>
               </ul>
             </div>
             <!-- Dropdown Menu End -->
@@ -271,6 +271,14 @@
                     class="@if(request()->routeIs('multimedia*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                     href="{{ route('multimedia.index') }}"
                     >Multimedia
+                  </a>
+                </li>
+
+                  <li>
+                  <a
+                    class="@if(request()->routeIs('career*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    href="{{ route('career.index') }}"
+                    >Job Openings
                   </a>
                 </li>
 
