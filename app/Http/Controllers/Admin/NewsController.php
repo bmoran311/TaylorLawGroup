@@ -3,14 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\news;
+use App\Models\News;
 use Illuminate\Http\Request;
 
 class NewsController extends Controller
 {
     public function index()
     {
-        $news = news::orderBy('headline')->get();
+        $news = News::orderBy('headline')->get();
         return view('admin.news.list', compact('news'));
     }
 

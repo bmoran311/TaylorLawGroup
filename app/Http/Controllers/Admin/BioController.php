@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\bio;
+use App\Models\Bio;
 use Illuminate\Http\Request;
 use App\Models\Language, App\Models\Level, App\Models\PracticeArea, App\Models\Membership, App\Models\License, App\Models\Award, App\Models\Education, App\Models\Admission, App\Models\News, App\Models\Engagement, App\Models\Multimedia;
 
@@ -16,39 +16,39 @@ class BioController extends Controller
     }
 
     public function create()
-    {	
-        $practice_areas = PracticeArea::orderBy('name')->get();  
+    {
+        $practice_areas = PracticeArea::orderBy('name')->get();
         $languages = Language::orderBy('name')->get();
         $levels = Level::orderBy('name')->get();
-        $memberships = Membership::orderBy('name')->get(); 
-        $licenses = License::orderBy('name')->get();  
-        $awards = Award::orderBy('name')->get();   
-        $education = Education::orderBy('name')->get();  
-        $admissions = Admission::orderBy('name')->get(); 
+        $memberships = Membership::orderBy('name')->get();
+        $licenses = License::orderBy('name')->get();
+        $awards = Award::orderBy('name')->get();
+        $education = Education::orderBy('name')->get();
+        $admissions = Admission::orderBy('name')->get();
         $news = News::orderBy('headline')->get();
         $engagements = Engagement::orderBy('title')->get();
-        $multimedias = Multimedia::orderBy('headline')->get();           
-		
+        $multimedias = Multimedia::orderBy('headline')->get();
+
         return view('admin.bios.form', compact('practice_areas', 'languages', 'levels', 'memberships', 'licenses', 'awards', 'education', 'admissions', 'news', 'engagements', 'multimedias'));
     }
 
     public function store(Request $request)
-    {       
-        $request->validate([            
+    {
+        $request->validate([
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'email' => 'required|string|max:255',
-            'phone_number' => 'required|string|max:255',            
+            'phone_number' => 'required|string|max:255',
         ]);
-        
-        $bio = new Bio();        
-        $bio->first_name = $request->input('first_name');  
-		$bio->middle_initial = $request->input('middle_initial');    
-		$bio->last_name = $request->input('last_name');    
+
+        $bio = new Bio();
+        $bio->first_name = $request->input('first_name');
+		$bio->middle_initial = $request->input('middle_initial');
+		$bio->last_name = $request->input('last_name');
 		$bio->email = $request->input('email');
-		$bio->phone_number = $request->input('phone_number'); 		
-        $bio->save(); 
-        
+		$bio->phone_number = $request->input('phone_number');
+        $bio->save();
+
         $bio->practice_areas()->sync($request->input('practice_areas', []));
         $bio->languages()->sync($request->input('languages', []));
         $bio->levels()->sync($request->input('levels', []));
@@ -60,23 +60,23 @@ class BioController extends Controller
         $bio->news()->sync($request->input('news', []));
         $bio->engagements()->sync($request->input('engagements', []));
         $bio->multimedias()->sync($request->input('multimedias', []));
-    
+
         return back()->with('success', 'Bio Created');
     }
-   
+
     public function edit(bio $bio)
     {
-        $practice_areas = PracticeArea::orderBy('name')->get();  
+        $practice_areas = PracticeArea::orderBy('name')->get();
 		$languages = language::orderBy('name')->get();
         $levels = Level::orderBy('name')->get();
         $memberships = Membership::orderBy('name')->get();
         $licenses = License::orderBy('name')->get();
         $awards = Award::orderBy('name')->get();
-        $education = Education::orderBy('name')->get(); 
-        $admissions = Admission::orderBy('name')->get(); 
+        $education = Education::orderBy('name')->get();
+        $admissions = Admission::orderBy('name')->get();
         $news = News::orderBy('headline')->get();
         $engagements = Engagement::orderBy('title')->get();
-        $multimedias = Multimedia::orderBy('headline')->get();           
+        $multimedias = Multimedia::orderBy('headline')->get();
 
         $bio->load('practice_areas');
         $bio->load('languages');
@@ -89,24 +89,24 @@ class BioController extends Controller
         $bio->load('news');
         $bio->load('engagements');
         $bio->load('multimedias');
-		
+
         return view('admin.bios.form', compact('bio', 'practice_areas', 'languages', 'memberships', 'levels', 'licenses', 'awards', 'education', 'admissions', 'news', 'engagements', 'multimedias'));
     }
 
     public function update(Request $request, bio $bio)
     {
-        $request->validate([            
+        $request->validate([
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'email' => 'required|string|max:255',
-            'phone_number' => 'required|string|max:255',            
+            'phone_number' => 'required|string|max:255',
         ]);
 
-        $bio->first_name = $request->input('first_name');  
-		$bio->middle_initial = $request->input('middle_initial');    
-		$bio->last_name = $request->input('last_name');    
+        $bio->first_name = $request->input('first_name');
+		$bio->middle_initial = $request->input('middle_initial');
+		$bio->last_name = $request->input('last_name');
 		$bio->email = $request->input('email');
-		$bio->phone_number = $request->input('phone_number'); 
+		$bio->phone_number = $request->input('phone_number');
         $bio->save();
 
         $bio->practice_areas()->sync($request->input('practice_areas', []));
@@ -123,7 +123,7 @@ class BioController extends Controller
 
         return back()->with('success', 'Bio Updated');
     }
-    
+
     public function destroy(bio $bio)
     {
         $bio->delete();
