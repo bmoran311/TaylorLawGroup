@@ -32,24 +32,12 @@
                         </th>
                         <th class="min-w-[150px]">
                             Employment Type
-                        </th>
-                        <th class="no-sort">
-                            Job Summary
-                        </th>
-                        <th class="no-sort">
-                            Responsibilities
-                        </th>
-                        <th class="no-sort">
-                            Qualifications
-                        </th>
-                        <th class="no-sort">
-                            Skills
-                        </th>
+                        </th>                       
                         <th class="no-sort">
                             Application Deadline
                         </th>
                         <th class="no-sort">
-                           Job Posting Date
+                            Actions
                         </th>
                     </tr>
                     </thead>
@@ -66,22 +54,7 @@
                                 <p class="text-black dark:text-white">{{ $career->employment_type }}</p>
                             </td>
                             <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                                <p class="text-black dark:text-white">{{ $career->job_summary }}</p>
-                            </td>
-                            <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                                <p class="text-black dark:text-white">{{ $career->responsibilities }}</p>
-                            </td>
-                            <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                                <p class="text-black dark:text-white">{{ $career->qualifications }}</p>
-                            </td>
-                            <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                                <p class="text-black dark:text-white">{{ $career->skills }}</p>
-                            </td>
-                            <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                                 <p class="text-black dark:text-white">{{ $career->application_deadline }}</p>
-                            </td>
-                            <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                                <p class="text-black dark:text-white">{{ $career->job_posting_date }}</p>
                             </td>
                             <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                                 <div class="flex items-center space-x-3.5">

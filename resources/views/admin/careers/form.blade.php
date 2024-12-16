@@ -31,96 +31,114 @@
                         @else
                             @method('POST')
                         @endif
-                        <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
-                            <div class="w-full">
+                        <div class="mb-5.5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
                                 <x-label>Job Title</x-label>
                                 <x-text-input name="job_title" type="text" placeholder="Job Title..." class="text-input"
                                               value="{{ old('job_title', $career->job_title ?? '') }}"/>
                                 <x-form-error key="job_title"/>
-                            </div>
-                        </div>
-                        <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
-                            <div class="w-full">
+                            </div>                            
+                            <div>
                                 <x-label>Location</x-label>
                                 <x-text-input name="location" type="text" placeholder="Location..." class="text-input"
                                               value="{{ old('location', $career->location ?? '') }}"/>
                                 <x-form-error key="location"/>
                             </div>
-                        </div>
+                        </div>          
+                        <div class="mb-5.5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <x-label>Application Deadline</x-label>
+                                <input
+                                    name="application_deadline"
+                                    value="{{ old('application_deadline', $career->application_deadline ?? '') }}"
+                                    class="form-datepicker w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
+                                    placeholder="mm/dd/yyyy"
+                                    data-class="flatpickr-right"
+                                />                       
+                                <x-form-error key="application_deadline"/>                                
+                            </div>  
+                            <div>                          
+                                <x-label>Job Posting Date</x-label>
+                                <input
+                                    name="job_posting_date"
+                                    value="{{ old('job_posting_date', $career->job_posting_date ?? '') }}"
+                                    class="form-datepicker w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
+                                    placeholder="mm/dd/yyyy"
+                                    data-class="flatpickr-right"
+                                />  
+                            </div>
+                        </div>               
                         <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                             <div class="w-full">
-                                <x-label>Employment Type</x-label>
-                                <x-text-input name="employment_type" type="text" placeholder="Employment Type..."
-                                              class="text-input"
-                                              value="{{ old('employment_type', $career->employment_type ?? '') }}"/>
+                                <x-label>Employment Type</x-label>                                
+                                <select name="employment_type" id="employment_type" class="form-control">
+                                    <option value="">Select Type</option>
+                                    @foreach ($employment_types as $employment_type)
+                                        <option value="{{ $employment_type }}" 
+                                            {{ isset($career) && $career->employment_type === $employment_type ? 'selected' : '' }}>
+                                            {{ $employment_type }}
+                                        </option>
+                                    @endforeach
+                                </select>                                
                                 <x-form-error key="employment_type"/>
                             </div>
                         </div>
                         <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                             <div class="w-full">
                                 <x-label>Job Summary</x-label>
-                                <x-text-input name="job_summary" type="text" placeholder="Job Summary..."
-                                              class="text-input"
-                                              value="{{ old('job_summary', $career->job_summary ?? '') }}"/>
-                                <x-form-error key="job_summary"/>
+                                <textarea
+                                    name="job_summary"
+                                    rows="6"
+                                    placeholder="Summary..."
+                                    class="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
+                                >{{ old('summary', $career->job_summary ?? '') }}</textarea>
                             </div>
                         </div>
                         <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                             <div class="w-full">
                                 <x-label>Responsibilities</x-label>
-                                <x-text-input name="responsibilities" type="text" placeholder="Responsibilities..."
-                                              class="text-input"
-                                              value="{{ old('responsibilities', $career->responsibilities ?? '') }}"/>
-                                <x-form-error key="responsibilities"/>
+                                <textarea
+                                    name="responsibilities"
+                                    rows="6"
+                                    placeholder="Responsibilities..."
+                                    class="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
+                                >{{ old('responsibilities', $career->responsibilities ?? '') }}</textarea>                                
                             </div>
                         </div>
                         <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                             <div class="w-full">
                                 <x-label>Qualifications</x-label>
-                                <x-text-input name="qualifications" type="text" placeholder="Qualifications..."
-                                              class="text-input"
-                                              value="{{ old('qualifications', $career->qualifications ?? '') }}"/>
-                                <x-form-error key="qualifications"/>
+                                <textarea
+                                    name="qualifications"
+                                    rows="6"
+                                    placeholder="Qualifications..."
+                                    class="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
+                                >{{ old('qualifications', $career->qualifications ?? '') }}</textarea>                     
                             </div>
                         </div>
                         <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                             <div class="w-full">
                                 <x-label>Skills</x-label>
-                                <x-text-input name="skills" type="text" placeholder="Skills..." class="text-input"
-                                              value="{{ old('skills', $career->skills ?? '') }}"/>
-                                <x-form-error key="skills"/>
+                                <textarea
+                                    name="skills"
+                                    rows="6"
+                                    placeholder="Skills..."
+                                    class="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
+                                >{{ old('skills', $career->skills ?? '') }}</textarea> 
                             </div>
                         </div>
                         <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                             <div class="w-full">
                                 <x-label>Salary Benefits</x-label>
-                                <x-text-input name="salary_benefits" type="text" placeholder="Salary Benefits..."
-                                              class="text-input"
-                                              value="{{ old('salary_benefits', $career->salary_benefits ?? '') }}"/>
-                                <x-form-error key="salary_benefits"/>
+                                <textarea
+                                    name="salary_benefits"
+                                    rows="6"
+                                    placeholder="Salary Benefits..."
+                                    class="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
+                                >{{ old('salary_benefits', $career->salary_benefits ?? '') }}</textarea>                                 
                             </div>
-                        </div>
-                        <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
-                            <div class="w-full">
-                                <x-label>Application Deadline</x-label>
-                                <x-text-input name="application_deadline" type="text"
-                                              placeholder="Application Deadline..." class="text-input"
-                                              value="{{ old('application_deadline', $career->application_deadline ?? '') }}"/>
-                                <x-form-error key="application_deadline"/>
-                            </div>
-                        </div>
-                        <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
-                            <div class="w-full">
-                                <x-label>Job Posting Date</x-label>
-                                <x-text-input name="job_posting_date" type="text"
-                                              placeholder="Job Posting Date..." class="text-input"
-                                              value="{{ old('job_posting_date', $career->job_posting_date ?? '') }}"/>
-                                <x-form-error key="job_posting_date"/>
-                            </div>
-                        </div>
-
+                        </div>                        
                         <section class="space-y-8 py-6">
-
                             <x-accordion-panel header="Practice Area">
                                 <div class="grid grid-cols-1 sm:grid-cols-3 text-sm gap-4 bg-slate-50 p-4">
                                     @foreach ($practice_areas as $practice_area)
@@ -137,9 +155,7 @@
                                     @endforeach
                                 </div>
                             </x-accordion-panel>
-
                         </section>
-
                         <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                             <div class="flex justify-end gap-4.5">
                                 <a href="{{ route('career.index') }}"

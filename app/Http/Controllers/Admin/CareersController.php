@@ -18,8 +18,15 @@ class CareersController extends Controller
 
     public function create()
     {
+        $employment_types = [
+            'full_time' => 'Full-time',
+            'part_time' => 'Part-time',
+            'contract' => 'Contract',
+            'internship' => 'Internship',
+        ];
+
         $practice_areas = PracticeArea::orderBy('name')->get();
-        return view('admin.careers.form', compact('practice_areas'));
+        return view('admin.careers.form', compact('practice_areas', 'employment_types'));
     }
 
     public function store(Request $request)
@@ -27,12 +34,7 @@ class CareersController extends Controller
         $request->validate([
             'job_title' => 'required|string|max:255',
             'location' => 'required|string|max:255',
-            'employment_type' => 'required|string|max:255',
-            'job_summary' => 'required|string|max:255',
-            'responsibilities' => 'required|string|max:255',
-            'qualifications' => 'required|string|max:255',
-            'skills' => 'required|string|max:255',
-            'salary_benefits' => 'required|string|max:255',
+            'employment_type' => 'required|string|max:255',            
             'application_deadline' => 'required|string|max:255',
             'job_posting_date' => 'required|string|max:255',
         ]);
@@ -57,9 +59,16 @@ class CareersController extends Controller
 
     public function edit(Career $career)
     {
+        $employment_types = [
+            'Full-time',
+            'Part-time',
+            'Contract',
+            'Internship',
+        ];
+
         $practice_areas = PracticeArea::orderBy('name')->get();
         $career->load('practice_areas');
-        return view('admin.careers.form', compact('career', 'practice_areas'));
+        return view('admin.careers.form', compact('career', 'practice_areas', 'employment_types'));
     }
 
     public function update(Request $request, Career $career)
