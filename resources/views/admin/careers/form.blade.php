@@ -71,7 +71,7 @@
                         <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                             <div class="w-full">
                                 <x-label>Employment Type</x-label>                                
-                                <select name="employment_type" id="employment_type" class="form-control">
+                                <select name="employment_type" id="employment_type" class="text-input">                               
                                     <option value="">Select Type</option>
                                     @foreach ($employment_types as $employment_type)
                                         <option value="{{ $employment_type }}" 
