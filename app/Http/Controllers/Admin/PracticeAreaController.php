@@ -10,7 +10,7 @@ class PracticeAreaController extends Controller
 {
     public function index()
     {
-        $practice_areas = PracticeArea::orderBy('name')->get();
+        $practice_areas = PracticeArea::where('firm_id', session('firm_id'))->orderBy('name')->get();
         return view('admin.practice_areas.list', compact('practice_areas'));
     }
 
@@ -25,7 +25,8 @@ class PracticeAreaController extends Controller
             'name' => 'required|string|max:255',
         ]);
         
-        $practice_area = new PracticeArea();        
+        $practice_area = new PracticeArea();  
+        $practice_area->firm_id = session('firm_id');        
         $practice_area->name = $request->input('name');   
         $practice_area->description = $request->input('description');          
         $practice_area->save();

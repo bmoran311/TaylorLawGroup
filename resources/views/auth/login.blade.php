@@ -26,8 +26,8 @@
 
 		<div class="mt-4">
             <x-input-label for="firm" :value="__('Firm')" />
-            <select name="firm" class="select-input">
-				<option value="The Taylor Law">The Taylor Law</option>
+            <select name="firm_id" class="select-input">
+				<option value="1">The Taylor Law</option>
 			</select>
         </div>
 

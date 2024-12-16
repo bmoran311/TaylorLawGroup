@@ -11,7 +11,7 @@ class BioController extends Controller
 {
     public function index()
     {
-        $bios = Bio::orderBy('last_name')->orderBy('first_name')->get();
+        $bios = Bio::where('firm_id', session('firm_id'))->orderBy('last_name')->orderBy('first_name')->get();
         return view('admin.bios.list', compact('bios'));
     }
 
@@ -42,6 +42,7 @@ class BioController extends Controller
         ]);
 
         $bio = new Bio();
+        $bio->firm_id = session('firm_id');        
         $bio->first_name = $request->input('first_name');
 		$bio->middle_initial = $request->input('middle_initial');
 		$bio->last_name = $request->input('last_name');

@@ -12,7 +12,7 @@ class CareersController extends Controller
 {
     public function index()
     {
-        $careers = Career::orderBy('job_posting_date')->get();
+        $careers = Career::where('firm_id', session('firm_id'))->orderBy('job_posting_date')->get();
         return view('admin.careers.list', compact('careers'));
     }
 
@@ -40,6 +40,7 @@ class CareersController extends Controller
         ]);
 
         $career = new Career();
+        $career->firm_id = session('firm_id');   
         $career->job_title = $request->input('job_title');
         $career->location = $request->input('location');
         $career->employment_type = $request->input('employment_type');

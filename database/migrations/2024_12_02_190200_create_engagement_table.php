@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('engagement', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('firm_id');
             $table->string('title');
             $table->string('conference');
             $table->date('event_date');

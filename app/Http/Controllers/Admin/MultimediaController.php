@@ -10,7 +10,7 @@ class MultimediaController extends Controller
 {
     public function index()
     {
-        $multimedia = Multimedia::orderBy('headline')->get();
+        $multimedia = Multimedia::where('firm_id', session('firm_id'))->orderBy('headline')->get();
         return view('admin.multimedia.list', compact('multimedia'));
     }
 
@@ -28,7 +28,8 @@ class MultimediaController extends Controller
             'publication' => 'required|string|max:255',            
         ]);          
         
-        $multimedia = new Multimedia();        
+        $multimedia = new Multimedia();    
+        $multimedia->firm_id = session('firm_id');          
         $multimedia->headline = $request->input('headline');    
 		$multimedia->publication = $request->input('publication'); 
 		$multimedia->url = $request->input('url');

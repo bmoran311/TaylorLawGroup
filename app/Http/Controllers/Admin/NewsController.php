@@ -10,7 +10,7 @@ class NewsController extends Controller
 {
     public function index()
     {
-        $news = News::orderBy('headline')->get();
+        $news = News::where('firm_id', session('firm_id'))->orderBy('headline')->get();
         return view('admin.news.list', compact('news'));
     }
 
@@ -31,6 +31,7 @@ class NewsController extends Controller
         ]);
 
         $news = new News();
+        $news->firm_id = session('firm_id');       
         $news->headline = $request->input('headline');
 		$news->publication = $request->input('publication');
 		$news->url = $request->input('url');

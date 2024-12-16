@@ -25,8 +25,8 @@ class AuthenticatedSessionController extends Controller
     public function store(LoginRequest $request): RedirectResponse
     {
         $request->authenticate();
-
-        $request->session()->regenerate();
+        $request->session()->put('firm_id', $request->input('firm_id')); 
+        $request->session()->regenerate();                
 
         return redirect()->intended(route('dashboard', absolute: false));
     }
@@ -40,7 +40,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->invalidate();
 
-        $request->session()->regenerateToken();
+        $request->session()->regenerateToken();        
 
         return redirect('/dashboard');
     }

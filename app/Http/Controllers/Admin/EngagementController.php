@@ -25,7 +25,7 @@ class EngagementController extends Controller
 
     public function index()
     {        
-        $engagements = Engagement::orderBy('title')->get();
+        $engagements = Engagement::where('firm_id', session('firm_id'))->orderBy('title')->get();
         return view('admin.engagements.list', compact('engagements'));
     }
 
@@ -45,7 +45,8 @@ class EngagementController extends Controller
             'type' => 'required|string|max:100',
         ]);
         
-        $engagement = new Engagement();        
+        $engagement = new Engagement();   
+        $engagement->firm_id = session('firm_id');        
         $engagement->title = $request->input('title');    
         $engagement->type = $request->input('type');   
 		$engagement->conference = $request->input('conference'); 
