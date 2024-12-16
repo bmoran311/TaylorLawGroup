@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Career;
 use Illuminate\Http\Request;
+use App\Models\PracticeArea;
 
 
 class CareersController extends Controller
@@ -17,7 +18,8 @@ class CareersController extends Controller
 
     public function create()
     {
-        return view('admin.careers.form');
+        $practice_areas = PracticeArea::orderBy('name')->get();
+        return view('admin.careers.form', compact('practice_areas'));
     }
 
     public function store(Request $request)
@@ -30,7 +32,7 @@ class CareersController extends Controller
             'responsibilities' => 'required|string|max:255',
             'qualifications' => 'required|string|max:255',
             'skills' => 'required|string|max:255',
-            'practice_area' => 'required|string|max:255',
+            'salary_benefits' => 'required|string|max:255',
             'application_deadline' => 'required|string|max:255',
             'job_posting_date' => 'required|string|max:255',
         ]);
@@ -43,17 +45,21 @@ class CareersController extends Controller
         $career->responsibilities = $request->input('responsibilities');
         $career->qualifications = $request->input('qualifications');
         $career->skills = $request->input('skills');
-        $career->practice_area = $request->input('practice_area');
+        $career->salary_benefits = $request->input('salary_benefits');
         $career->application_deadline = $request->input('application_deadline');
         $career->job_posting_date = $request->input('job_posting_date');
         $career->save();
+
+        $career->practice_areas()->sync($request->input('practice_areas', []));
 
         return back()->with('success', 'Firm Created');
     }
 
     public function edit(Career $career)
     {
-        return view('admin.careers.form', compact('career'));
+        $practice_areas = PracticeArea::orderBy('name')->get();
+        $career->load('practice_areas');
+        return view('admin.careers.form', compact('career', 'practice_areas'));
     }
 
     public function update(Request $request, Career $career)
@@ -66,7 +72,7 @@ class CareersController extends Controller
             'responsibilities' => 'required|string|max:255',
             'qualifications' => 'required|string|max:255',
             'skills' => 'required|string|max:255',
-            'practice_area' => 'required|string|max:255',
+            'salary_benefits' => 'string|max:255',
             'application_deadline' => 'required|string|max:255',
             'job_posting_date' => 'required|string|max:255',
         ]);
@@ -78,10 +84,12 @@ class CareersController extends Controller
         $career->responsibilities = $request->input('responsibilities');
         $career->qualifications = $request->input('qualifications');
         $career->skills = $request->input('skills');
-        $career->practice_area = $request->input('practice_area');
+        $career->salary_benefits = $request->input('salary_benefits');
         $career->application_deadline = $request->input('application_deadline');
         $career->job_posting_date = $request->input('job_posting_date');
         $career->save();
+
+        $career->practice_areas()->sync($request->input('practice_areas', []));
 
         return back()->with('success', 'Career Updated');
     }

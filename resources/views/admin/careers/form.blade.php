@@ -93,15 +93,6 @@
                         </div>
                         <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                             <div class="w-full">
-                                <x-label>Practice Area</x-label>
-                                <x-text-input name="practice_area" type="text" placeholder="Practice Area..."
-                                              class="text-input"
-                                              value="{{ old('practice_area', $career->practice_area ?? '') }}"/>
-                                <x-form-error key="practice_area"/>
-                            </div>
-                        </div>
-                        <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
-                            <div class="w-full">
                                 <x-label>Salary Benefits</x-label>
                                 <x-text-input name="salary_benefits" type="text" placeholder="Salary Benefits..."
                                               class="text-input"
@@ -127,6 +118,28 @@
                                 <x-form-error key="job_posting_date"/>
                             </div>
                         </div>
+
+                        <section class="space-y-8 py-6">
+
+                            <x-accordion-panel header="Practice Area">
+                                <div class="grid grid-cols-1 sm:grid-cols-3 text-sm gap-4 bg-slate-50 p-4">
+                                    @foreach ($practice_areas as $practice_area)
+                                        <div class="flex items-center space-x-2">
+                                            <input
+                                                type="checkbox"
+                                                id="practice_area_{{ $practice_area->id }}"
+                                                name="practice_areas[]"
+                                                value="{{ $practice_area->id }}"
+                                                {{ isset($career) && $career->practice_areas && $career->practice_areas->contains($practice_area->id) ? 'checked' : '' }}
+                                            >
+                                            <label for="practice_area_{{ $practice_area->id }}">{{ $practice_area->name }}</label>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </x-accordion-panel>
+
+                        </section>
+
                         <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                             <div class="flex justify-end gap-4.5">
                                 <a href="{{ route('career.index') }}"

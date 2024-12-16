@@ -46,9 +46,6 @@
                             Skills
                         </th>
                         <th class="no-sort">
-                            Practice Area
-                        </th>
-                        <th class="no-sort">
                             Application Deadline
                         </th>
                         <th class="no-sort">
@@ -79,9 +76,6 @@
                             </td>
                             <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                                 <p class="text-black dark:text-white">{{ $career->skills }}</p>
-                            </td>
-                            <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                                <p class="text-black dark:text-white">{{ $career->practice_area }}</p>
                             </td>
                             <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                                 <p class="text-black dark:text-white">{{ $career->application_deadline }}</p>
