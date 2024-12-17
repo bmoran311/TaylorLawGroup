@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\BioController;
 use App\Http\Controllers\Admin\CareersController;
 use App\Http\Controllers\Admin\EducationController;
 use App\Http\Controllers\Admin\EngagementController;
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\FirmController;
 use App\Http\Controllers\Admin\LanguageController;
 use App\Http\Controllers\Admin\LevelController;
@@ -44,6 +45,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('career', CareersController::class);
+Route::resource('faq', FaqController::class);
 Route::resource('firm', FirmController::class);
 Route::resource('bio', BioController::class);
 Route::resource('practice_area', PracticeAreaController::class);
