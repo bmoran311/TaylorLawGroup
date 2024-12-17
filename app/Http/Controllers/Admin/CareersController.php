@@ -34,9 +34,9 @@ class CareersController extends Controller
         $request->validate([
             'job_title' => 'required|string|max:255',
             'location' => 'required|string|max:255',
-            'employment_type' => 'required|string|max:255',            
-            'application_deadline' => 'required|string|max:255',
-            'job_posting_date' => 'required|string|max:255',
+            'employment_type' => 'required|string|max:255',
+            'application_deadline' => 'required|date|max:255',
+            'job_posting_date' => 'required|date|max:255',
         ]);
 
         $career = new Career();
@@ -83,8 +83,8 @@ class CareersController extends Controller
             'qualifications' => 'required|string|max:255',
             'skills' => 'required|string|max:255',
             'salary_benefits' => 'string|max:255',
-            'application_deadline' => 'required|string|max:255',
-            'job_posting_date' => 'required|string|max:255',
+            'application_deadline' => 'required|date|max:255',
+            'job_posting_date' => 'required|date|max:255',
         ]);
 
         $career->job_title = $request->input('job_title');
