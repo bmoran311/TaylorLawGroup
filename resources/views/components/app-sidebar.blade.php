@@ -281,10 +281,16 @@
                     >Careers
                   </a>
                 </li>
-
-                  <li>
+                <li>
                   <a
-                    class="@if(request()->routeIs('faq*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    class="@if(request()->routeIs('faq_category*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                    href="{{ route('faq_category.index') }}"
+                    >FAQ Categories
+                  </a>
+                </li>					
+                <li>
+                  <a
+                    class="@if(request()->routeIs('faq*')&& !request()->routeIs('faq_category*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                     href="{{ route('faq.index') }}"
                     >FAQs
                   </a>

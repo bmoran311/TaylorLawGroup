@@ -19,6 +19,7 @@ class FaqController extends Controller
     public function create()
     {
         $categories = FaqCategory::orderBy('name')->get();
+        
         return view('admin.faq.form', compact('categories'));
     }
 
@@ -27,14 +28,14 @@ class FaqController extends Controller
         $request->validate([
             'question' => 'required|string|max:255',
             'answer' => 'required|string|max:255',
-            'category' => 'required|integer',
+            'faq_category_id' => 'required|integer',
         ]);
 
         $faq = new Faq();
+        $faq->firm_id = session('firm_id');
         $faq->question = $request->input('question');
         $faq->answer = $request->input('answer');
-        $faq->faq_category_id = $request->input('category');
-        $faq->firm_id = Session::get('firm_id', 0);
+        $faq->faq_category_id = $request->input('faq_category_id');        
         $faq->save();
 
         return back()->with('success', 'Faq Created');
@@ -42,9 +43,8 @@ class FaqController extends Controller
 
     public function edit(Faq $faq)
     {
-        $faq_category = FaqCategory::orderBy('name')->get();
-
-        return view('admin.faq.form', compact('faq', 'faq_category'));
+        $categories = FaqCategory::orderBy('name')->get();
+        return view('admin.faq.form', compact('faq', 'categories'));
     }
 
     public function update(Request $request, Faq $faq)
@@ -52,12 +52,12 @@ class FaqController extends Controller
         $request->validate([
             'question' => 'required|string|max:255',
             'answer' => 'required|string|max:255',
-            'category' => 'required|integer',
+            'faq_category_id' => 'required|integer',
         ]);
 
         $faq->question = $request->input('question');
         $faq->answer = $request->input('answer');
-        $faq->faq_category_id = $request->input('category');
+        $faq->faq_category_id = $request->input('faq_category_id');
         $faq->save();
 
         return back()->with('success', 'Faq Updated');

@@ -31,38 +31,45 @@
                         @else
                             @method('POST')
                         @endif
+                        <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
+                            <div class="w-full">                         
+                                <x-label>Question</x-label>
+                                <textarea
+                                    name="question"
+                                    rows="6"
+                                    placeholder="Question..."
+                                    class="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
+                                >{{ old('question', $faq->question ?? '') }}</textarea>
+                                <x-form-error key="question"/>
+                            </div>                                              
+                        </div>                       
+                        <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
+                            <div class="w-full">
+                                <x-label>Answer</x-label>
+                                <textarea
+                                    name="answer"
+                                    rows="6"
+                                    placeholder="Answer..."
+                                    class="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
+                                >{{ old('answer', $faq->answer ?? '') }}</textarea>
+                                <x-form-error key="answer"/>  
+                            </div>                                              
+                        </div>
                         <div class="mb-5.5 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <x-label>Name</x-label>
-                                <x-text-input name="name" type="text" placeholder="Name..." class="text-input"
-                                              value="{{ old('name', $faq->name ?? '') }}"/>
-                                <x-form-error key="name"/>
-                            </div>
-                            <div>
-                                <x-label>Description</x-label>
-                                <x-text-input name="description" type="text" placeholder="Description..." class="text-input"
-                                              value="{{ old('description', $faq->description ?? '') }}"/>
-                                <x-form-error key="description"/>
+                            <div class="w-full">
+                                <x-label>Category</x-label>                                
+                                <select name="faq_category_id" id="faq_category_id" class="text-input">                               
+                                    <option value="">Select Type</option>
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}" 
+                                            {{ isset($faq) && $faq->faq_category_id === $category->id ? 'selected' : '' }}>
+                                            {{ $category->name }}
+                                        </option>
+                                    @endforeach
+                                </select>                                
+                                <x-form-error key="faq_category_id"/>
                             </div>
                         </div>
-                        <section class="space-y-8 py-6">
-                            <x-accordion-panel header="Category">
-                                <div class="grid grid-cols-1 sm:grid-cols-3 text-sm gap-4 bg-slate-50 p-4">
-                                    @foreach ($categories as $category)
-                                        <div class="flex items-center space-x-2">
-                                            <input
-                                                type="radio"
-                                                id="category_{{ $category->id }}"
-                                                name="category"
-                                                value="{{ $category->id }}"
-                                                {{ isset($faq) && $faq->faq_category_id ? 'checked' : '' }}
-                                            >
-                                            <label for="category_{{ $category->id }}">{{ $category->name }}</label>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </x-accordion-panel>
-                        </section>
                         <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                             <div class="flex justify-end gap-4.5">
                                 <a href="{{ route('faq.index') }}"

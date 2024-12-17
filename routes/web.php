@@ -6,7 +6,6 @@ use App\Http\Controllers\Admin\BioController;
 use App\Http\Controllers\Admin\CareersController;
 use App\Http\Controllers\Admin\EducationController;
 use App\Http\Controllers\Admin\EngagementController;
-use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\FirmController;
 use App\Http\Controllers\Admin\LanguageController;
 use App\Http\Controllers\Admin\LevelController;
@@ -15,6 +14,8 @@ use App\Http\Controllers\Admin\MembershipController;
 use App\Http\Controllers\Admin\MultimediaController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\PracticeAreaController;
+use App\Http\Controllers\Admin\FaqController;
+use App\Http\Controllers\Admin\FaqCategoryController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -45,7 +46,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('career', CareersController::class);
-Route::resource('faq', FaqController::class);
 Route::resource('firm', FirmController::class);
 Route::resource('bio', BioController::class);
 Route::resource('practice_area', PracticeAreaController::class);
@@ -59,5 +59,7 @@ Route::resource('education', EducationController::class);
 Route::resource('news', NewsController::class);
 Route::resource('engagement', EngagementController::class);
 Route::resource('multimedia', MultimediaController::class);
+Route::resource('faq', FaqController::class);
+Route::resource('faq_category', FaqCategoryController::class);
 
 require __DIR__.'/auth.php';

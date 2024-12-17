@@ -25,10 +25,10 @@
                     <thead>
                     <tr class="bg-gray-2 text-left dark:bg-meta-4">
                         <th class="min-w-[220px]  xl:pl-11">
-                            Name
+                            Question 
                         </th>
                         <th class="min-w-[150px]">
-                            Description
+                            Answer
                         </th>
                         <th class="no-sort">
                             Actions
@@ -39,13 +39,13 @@
                     @foreach($faqs as $faq)
                         <tr>
                             <td class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
-                                <h5 class="font-medium text-black dark:text-white">{{ $faq->name }}</h5>
+                                <h5 class="font-medium text-black dark:text-white">{{ $faq->question }}</h5>
                             </td>
                             <td class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
-                                <h5 class="font-medium text-black dark:text-white">{{ $faq->description }}</h5>
+                                <h5 class="font-medium text-black dark:text-white">{{ $faq->answer }}</h5>
                             </td>
                             <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                                <div class="flex items-center space-x-3.5">FAQ
+                                <div class="flex items-center space-x-3.5">
                                     <button class="hover:text-primary">
                                         <a href="{{ route('faq.edit', ['faq' => $faq]) }}">
                                             <x-icon-view/>
