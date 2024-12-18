@@ -297,6 +297,13 @@
                                 </li>
                                 <li>
                                     <a
+                                        class="@if(request()->routeIs('blog_post*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                                        href="{{ route('blog_post.index') }}"
+                                    >Blog Posts
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
                                         class="@if(request()->routeIs('blog_category*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                                         href="{{ route('blog_category.index') }}"
                                     >Blog Categories
