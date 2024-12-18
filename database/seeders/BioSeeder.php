@@ -2,14 +2,17 @@
 
 namespace Database\Seeders;
 
-use DB;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class BioSeeder extends Seeder
 {
     public function run()
     {
+        // Only seed the bio table if it's empty
+        if (DB::table('bio')->count() > 0) {
+            return;
+        }
         DB::table('bio')->insert([
             [
                 'first_name' => 'Douglas',
