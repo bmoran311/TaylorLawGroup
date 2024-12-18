@@ -21,8 +21,6 @@ class NewsController extends Controller
 
     public function store(Request $request)
     {
-
-
         $request->validate([
             'publication_date' => 'required|date',
             'headline' => 'required|string|max:255',
@@ -42,12 +40,12 @@ class NewsController extends Controller
         return back()->with('success', 'News Created');
     }
 
-    public function edit(news $news)
+    public function edit(News $news)
     {
         return view('admin.news.form', compact('news'));
     }
 
-    public function update(Request $request, news $news)
+    public function update(Request $request, News $news)
     {
 		$request->validate([
             'publication_date' => 'required|date',
@@ -66,7 +64,7 @@ class NewsController extends Controller
         return back()->with('success', 'News Updated');
     }
 
-    public function destroy(news $news)
+    public function destroy(News $news)
     {
         $news->delete();
 

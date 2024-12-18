@@ -16,6 +16,8 @@ use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\PracticeAreaController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\FaqCategoryController;
+use App\Http\Controllers\Admin\TestimonialController;
+
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -61,5 +63,6 @@ Route::resource('engagement', EngagementController::class);
 Route::resource('multimedia', MultimediaController::class);
 Route::resource('faq', FaqController::class);
 Route::resource('faq_category', FaqCategoryController::class);
+Route::resource('testimonial', TestimonialController::class);
 
 require __DIR__.'/auth.php';
