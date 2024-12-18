@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdmissionController;
 use App\Http\Controllers\Admin\AwardController;
 use App\Http\Controllers\Admin\BioController;
+use App\Http\Controllers\Admin\BlogCategoryController;
 use App\Http\Controllers\Admin\CareersController;
 use App\Http\Controllers\Admin\EducationController;
 use App\Http\Controllers\Admin\EngagementController;
@@ -61,5 +62,6 @@ Route::resource('engagement', EngagementController::class);
 Route::resource('multimedia', MultimediaController::class);
 Route::resource('faq', FaqController::class);
 Route::resource('faq_category', FaqCategoryController::class);
+Route::resource('blog_category', BlogCategoryController::class);
 
 require __DIR__.'/auth.php';
