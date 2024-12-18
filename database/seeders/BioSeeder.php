@@ -18,6 +18,7 @@ class BioSeeder extends Seeder
                 'email' => 'dfoley@taylorfoleylaw.com',
                 'phone_number' => '843.723.2000',
                 'created_at' => fake()->dateTimeThisYear(),
+                'firm_id' => 1,
             ],
             [
                 'first_name' => 'Joseph',
@@ -26,6 +27,7 @@ class BioSeeder extends Seeder
                 'email' => 'jfoley@taylorfoleylaw.com',
                 'phone_number' => '843.723.2000',
                 'created_at' => fake()->dateTimeThisYear(),
+                'firm_id' => 1,
             ],
             [
                 'first_name' => 'Connor',
@@ -34,6 +36,7 @@ class BioSeeder extends Seeder
                 'email' => 'cfoley@taylorfoleylaw.com',
                 'phone_number' => '843.723.2000',
                 'created_at' => fake()->dateTimeThisYear(),
+                'firm_id' => 1,
             ],
         ]);
     }
