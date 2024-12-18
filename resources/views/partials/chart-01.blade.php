@@ -165,7 +165,7 @@
           ></span>
         </span>
         <div class="w-full">
-          <p class="font-semibold text-secondary">Total Sales</p>
+          <p class="font-semibold text-secondary">Total Tax Savings</p>
           <p class="text-sm font-medium">12.04.2022 - 12.05.2022</p>
         </div>
       </div>

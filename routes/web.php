@@ -68,5 +68,7 @@ Route::resource('faq_category', FaqCategoryController::class);
 Route::resource('testimonial', TestimonialController::class);
 Route::resource('blog_post', BlogPostController::class);
 Route::resource('blog_category', BlogCategoryController::class);
+Route::get('/blog_category/order/{direction}/{id}/{currPos}', 'App\Http\Controllers\Admin\BlogCategoryController@sort')->name('orderBlogCategory');
+Route::get('/faq_category/order/{direction}/{id}/{currPos}', 'App\Http\Controllers\Admin\FaqCategoryController@sort')->name('orderFaqCategory');
 
 require __DIR__.'/auth.php';

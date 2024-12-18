@@ -3,7 +3,7 @@
  const chartTwoOptions = {
     series: [
       {
-        name: "Sales",
+        name: "Tax Savings",
         data: [44, 55, 41, 67, 22, 43, 65],
       },
       {

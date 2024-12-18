@@ -33,6 +33,9 @@
                             Status
                         </th>
                         <th class="no-sort">
+                            Sort
+                        </th>
+                        <th class="no-sort">
                             Actions
                         </th>
                     </tr>
@@ -49,6 +52,16 @@
                             <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                                 <p class="inline-flex rounded-full bg-success bg-opacity-10 px-3 py-1 text-sm font-medium text-success">
                                 Active
+                                </p>
+                            </td>
+                            <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
+                                <p class="inline-flex rounded-full bg-success bg-opacity-10 px-3 py-1 text-sm font-medium text-success">
+                                @if(!$loop->first)
+                                    <a href="{{ route('orderFaqCategory',[ 'direction' => 'up', 'id' => $faq_category->id, 'currPos' => $faq_category->sort_order]) }}">Up</a> @endif
+                                &nbsp;&nbsp;&nbsp;
+                                @if(!$loop->last)
+                                    <a href="{{ route('orderFaqCategory',[ 'direction' => 'down', 'id' => $faq_category->id, 'currPos' => $faq_category->sort_order]) }}">Down</a>
+                                @endif
                                 </p>
                             </td>
                             <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">

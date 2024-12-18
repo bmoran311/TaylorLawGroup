@@ -31,9 +31,9 @@
                     <h4
                       class="text-title-md font-bold text-black dark:text-white"
                     >
-                      $3.456K
+                      $345.6K
                     </h4>
-                    <span class="text-sm font-medium">Total views</span>
+                    <span class="text-sm font-medium">Total Tax Savings</span>
                   </div>
 
                   <span
@@ -93,9 +93,9 @@
                     <h4
                       class="text-title-md font-bold text-black dark:text-white"
                     >
-                      $45,2K
+                      $4.528K
                     </h4>
-                    <span class="text-sm font-medium">Total Profit</span>
+                    <span class="text-sm font-medium">Total Exit Profit</span>
                   </div>
 
                   <span
@@ -151,9 +151,9 @@
                     <h4
                       class="text-title-md font-bold text-black dark:text-white"
                     >
-                      2.450
+                      48
                     </h4>
-                    <span class="text-sm font-medium">Total Product</span>
+                    <span class="text-sm font-medium">Total Clients</span>
                   </div>
 
                   <span
@@ -213,7 +213,7 @@
                     <h4
                       class="text-title-md font-bold text-black dark:text-white"
                     >
-                      3.456
+                      345
                     </h4>
                     <span class="text-sm font-medium">Total Users</span>
                   </div>

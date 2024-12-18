@@ -9,6 +9,7 @@ class BlogCategory extends Model
 {
     use HasFactory;
     protected $table = 'blog_category';
+    protected $fillable = ['name', 'sort_order'];	
 
     public function blog_posts()
     {
