@@ -26,6 +26,9 @@
                         <th class="min-w-[220px]  xl:pl-11">
                             Title
                         </th>
+                        <th class="min-w-[150px]">
+                            Publication Date
+                        </th> 
 						<th class="min-w-[150px]">
                             Slug
                         </th>
@@ -43,6 +46,9 @@
                             <td class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
                                 <h5 class="font-medium text-black dark:text-white">{{ $blog_post->title }}</h5>
                             </td>
+                            <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
+                                <p class="text-black dark:text-white">{{ $blog_post->published_date }}</p>
+                            </td> 
 							<td class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
                                 <h5 class="font-medium text-black dark:text-white">{{ $blog_post->slug }}</h5>
                             </td>

@@ -38,38 +38,17 @@
                     </div>
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
-                            <x-label>Slug</x-label>
-                            <x-text-input name="slug" type="text" placeholder="Slug.." class="text-input" value="{{ old('slug', $blog_post->slug ?? '') }}"/>
-                            <x-form-error key="slug" />
-                        </div>
-                    </div>
-					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
-                        <div class="w-full">
-                            <x-label>Excerpt</x-label>
-                            <textarea
-                                name="excerpt"
-                                rows="6"
-                                placeholder="Excerpt..."
-                                class="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
-                            >{{ old('excerpt', $blog_post->excerpt ?? '') }}</textarea>
-                        </div>
-                    </div>
-                    <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
-                        <div class="w-full">
-                            <x-label>Content</x-label>
-                            <textarea
-                                name="content"
-                                rows="6"
-                                placeholder="Content..."
-                                class="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
-                            >{{ old('content', $blog_post->content ?? '') }}</textarea>
-                        </div>
-                    </div>
-					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
-                        <div class="w-full">
-                            <x-label>Tags</x-label>
-                            <x-text-input name="tags" type="text" placeholder="Tags..." class="text-input" value="{{ old('tags', $blog_post->tags ?? '') }}"/>
-                            <x-form-error key="tags" />
+                            <x-label>Category</x-label>
+                            <select name="blog_category_id" id="blog_category_id" class="text-input">
+                                <option value="">Select Category</option>
+                                @foreach ($categories as $category)
+                                    <option value="{{ $category->id }}"
+                                        {{ isset($blog_post) && $blog_post->blog_category_id === $category->id ? 'selected' : '' }}>
+                                        {{ $category->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                            <x-form-error key="blog_category_id"/>
                         </div>
                     </div>
                     <div class="mb-5.5 grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -114,8 +93,13 @@
                             </label>
                         </div>
                     </div>
-                    <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
-                        <div class="w-full">
+                    <div class="mb-5.5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <x-label>Slug</x-label>
+                            <x-text-input name="slug" type="text" placeholder="Slug.." class="text-input" value="{{ old('slug', $blog_post->slug ?? '') }}"/>
+                            <x-form-error key="slug" />
+                        </div>
+                        <div>
                             <x-label>Published Date</x-label>
                             <input
                                 name="published_date"
@@ -127,6 +111,35 @@
                             <x-form-error key="published_date"/>
                         </div>
                     </div>
+					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
+                        <div class="w-full">
+                            <x-label>Excerpt</x-label>
+                            <textarea
+                                name="excerpt"
+                                rows="6"
+                                placeholder="Excerpt..."
+                                class="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
+                            >{{ old('excerpt', $blog_post->excerpt ?? '') }}</textarea>
+                        </div>
+                    </div>
+                    <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
+                        <div class="w-full">
+                            <x-label>Content</x-label>
+                            <textarea
+                                name="content"
+                                rows="6"
+                                placeholder="Content..."
+                                class="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
+                            >{{ old('content', $blog_post->content ?? '') }}</textarea>
+                        </div>
+                    </div>
+					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
+                        <div class="w-full">
+                            <x-label>Tags</x-label>
+                            <x-text-input name="tags" type="text" placeholder="Tags..." class="text-input" value="{{ old('tags', $blog_post->tags ?? '') }}"/>
+                            <x-form-error key="tags" />
+                        </div>
+                    </div>                                       
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>SEO Title</x-label>
@@ -140,22 +153,7 @@
                             <x-text-input name="seo_meta_description" type="text" placeholder="SEO Meta Description..." class="text-input" value="{{ old('seo_meta_description', $blog_post->seo_meta_description ?? '') }}"/>
                             <x-form-error key="seo_meta_description" />
                         </div>
-                    </div>
-                    <div class="mb-5.5 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="w-full">
-                            <x-label>Category</x-label>
-                            <select name="blog_category_id" id="blog_category_id" class="text-input">
-                                <option value="">Select Category</option>
-                                @foreach ($categories as $category)
-                                    <option value="{{ $category->id }}"
-                                        {{ isset($blog_post) && $blog_post->blog_category_id === $blog_post->id ? 'selected' : '' }}>
-                                        {{ $category->name }}
-                                    </option>
-                                @endforeach
-                            </select>
-                            <x-form-error key="blog_category_id"/>
-                        </div>
-                    </div>
+                    </div>                   
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="flex justify-end gap-4.5">
                             <a href="{{ route('blog_post.index') }}"
