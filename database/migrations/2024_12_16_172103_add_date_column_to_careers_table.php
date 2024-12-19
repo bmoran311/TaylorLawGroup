@@ -31,8 +31,8 @@ return new class extends Migration
     {
         Schema::table('careers', function (Blueprint $table) {
             // Replace the new date type columns with the existing columns
-            $table->string('application_deadline');
-            $table->string('job_posting_date');
+            // $table->string('application_deadline');
+            // $table->string('job_posting_date');
         });
     }
 };

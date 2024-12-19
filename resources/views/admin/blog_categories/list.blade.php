@@ -23,6 +23,9 @@
             <table class="w-full table-auto taylor-table sortable">
                 <thead>
                     <tr class="bg-gray-2 text-left dark:bg-meta-4">
+                        <th class="no-sort">
+
+                        </th>
                         <th class="min-w-[220px]  xl:pl-11">
                             Name
                         </th>
@@ -33,9 +36,6 @@
                             Status
                         </th>
                         <th class="no-sort">
-                            Sort
-                        </th>
-                        <th class="no-sort">
                             Actions
                         </th>
                     </tr>
@@ -43,7 +43,25 @@
                 <tbody>
                     @foreach($blog_categories as $blog_category)
                         <tr>
-                            <td class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
+                            <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark max-w-[10px]">
+                                <div class="flex items-center space-x-1">
+                                    @if(!$loop->first)
+                                        <a href="{{ route('orderBlogCategory',[ 'direction' => 'up', 'id' => $blog_category->id, 'currPos' => $blog_category->sort_order]) }}">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                                            </svg>
+                                        </a>
+                                        @endif
+                                    @if(!$loop->last)
+                                        <a href="{{ route('orderBlogCategory',[ 'direction' => 'down', 'id' => $blog_category->id, 'currPos' => $blog_category->sort_order]) }}">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                            </svg>
+                                        </a>
+                                    @endif
+                                </div>
+                            </td>
+                            <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                                 <h5 class="font-medium text-black dark:text-white">{{ $blog_category->name }}</h5>
                             </td>
                             <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
@@ -52,16 +70,6 @@
                             <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                                 <p class="inline-flex rounded-full bg-success bg-opacity-10 px-3 py-1 text-sm font-medium text-success">
                                 Active
-                                </p>
-                            </td>
-                            <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                                <p class="inline-flex rounded-full bg-success bg-opacity-10 px-3 py-1 text-sm font-medium text-success">
-                                @if(!$loop->first)
-                                    <a href="{{ route('orderBlogCategory',[ 'direction' => 'up', 'id' => $blog_category->id, 'currPos' => $blog_category->sort_order]) }}">Up</a> @endif
-                                &nbsp;&nbsp;&nbsp;
-                                @if(!$loop->last)
-                                    <a href="{{ route('orderBlogCategory',[ 'direction' => 'down', 'id' => $blog_category->id, 'currPos' => $blog_category->sort_order]) }}">Down</a>
-                                @endif
                                 </p>
                             </td>
                             <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
