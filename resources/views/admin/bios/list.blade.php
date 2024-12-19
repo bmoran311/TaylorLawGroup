@@ -20,9 +20,12 @@
 <div class="flex flex-col gap-10">
     <div class="rounded-sm border border-stroke bg-white px-5 pb-2.5 pt-6 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-1">
         <div class="max-w-full overflow-x-auto">
-            <table class="w-full table-auto taylor-table sortable">
+            <table class="w-full table-auto taylor-table sortable clickable-rows">
                 <thead>
                     <tr class="bg-gray-2 text-left dark:bg-meta-4">
+                        <th class="min-w-[100px]  xl:pl-11">
+                            Headshot
+                        </th>
                         <th class="min-w-[220px]  xl:pl-11">
                             Name
                         </th>
@@ -42,7 +45,12 @@
                 </thead>
                 <tbody>
                     @foreach($bios as $bio)
-                        <tr>
+                     <tr class="hover:bg-blue-50 hover:cursor-pointer" data-url="{{ route('bio.edit', ['bio' => $bio]) }}">
+                            <td class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
+                                @if(isset($bio) && $bio->headshot)
+                                    <img src="{{ asset('storage/' . $bio->headshot) }}" alt="Headshot" width="100">                                
+                                @endif
+                            </td>
                             <td class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
                                 <h5 class="font-medium text-black dark:text-white">{{ $bio->last_name }}, {{ $bio->first_name }}</h5>
                             </td>

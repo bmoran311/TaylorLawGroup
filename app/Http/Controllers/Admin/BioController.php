@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Bio;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Language, App\Models\Level, App\Models\PracticeArea, App\Models\Membership, App\Models\License, App\Models\Award, App\Models\Education, App\Models\Admission, App\Models\News, App\Models\Engagement, App\Models\Multimedia;
 
 class BioController extends Controller
@@ -38,10 +39,17 @@ class BioController extends Controller
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'email' => 'required|string|max:255',
-            'phone_number' => 'required|string|max:255',
+            'phone_number' => 'required|string|max:255',           
+            'headshot' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         $bio = new Bio();
+
+        if ($request->hasFile('headshot')) {                                       
+            $path = $request->file('headshot')->store('headshots', 'public');
+            $bio->headshot = $path;
+        }
+
         $bio->firm_id = session('firm_id');        
         $bio->first_name = $request->input('first_name');
 		$bio->middle_initial = $request->input('middle_initial');
@@ -100,8 +108,27 @@ class BioController extends Controller
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'email' => 'required|string|max:255',
-            'phone_number' => 'required|string|max:255',
+            'phone_number' => 'required|string|max:255',  
+            'headshot' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',          
         ]);
+
+        if ($request->has('remove_headshot') && $request->input('remove_headshot') == 1) 
+        {           
+            if ($bio->headshot) {
+                Storage::delete('public/' . $bio->headshot);
+                $bio->headshot = null; 
+            }
+        }
+
+        if ($request->hasFile('headshot')) {           
+            if ($bio->headshot) {
+                Storage::delete($bio->headshot);
+            }
+    
+            // Store the new headshot
+            $path = $request->file('headshot')->store('headshots', 'public');
+            $bio->headshot = $path;
+        }
 
         $bio->first_name = $request->input('first_name');
 		$bio->middle_initial = $request->input('middle_initial');

@@ -22,7 +22,7 @@
                 </h3>
             </div>
             <div class="p-7">
-                <form action="{{ isset($bio) ? route('bio.update', $bio->id) : route('bio.store') }}" method="POST">
+                <form action="{{ isset($bio) ? route('bio.update', $bio->id) : route('bio.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @if(isset($bio))
                         @method('PUT')
@@ -59,6 +59,20 @@
                         </div>
                     </div>
 
+                    <div class="mb-5.5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+							<x-label>Headshot</x-label>
+                            <input type="file" class="form-control" id="headshot" name="headshot">
+                            @if(isset($bio) && $bio->headshot)
+                                <img src="{{ asset('storage/' . $bio->headshot) }}" alt="Headshot" width="100">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="remove_headshot" name="remove_headshot" value="1">
+                                    <label for="remove_headshot" class="form-check-label">Remove Headshot</label>
+                                </div>
+                            @endif
+                            <x-form-error key="headshot" />
+                        </div>                       
+                    </div>
 
                     <section class="space-y-8 py-6">
 

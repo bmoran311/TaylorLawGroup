@@ -22,7 +22,7 @@
                 </h3>
             </div>
             <div class="p-7">
-                <form action="{{ isset($blog_post) ? route('blog_post.update', $blog_post->id) : route('blog_post.store') }}" method="POST">
+                <form action="{{ isset($blog_post) ? route('blog_post.update', $blog_post->id) : route('blog_post.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @if(isset($blog_post))
                         @method('PUT')
@@ -50,6 +50,20 @@
                             </select>
                             <x-form-error key="blog_category_id"/>
                         </div>
+                    </div>
+                    <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
+                        <div class="w-full">                       
+							<x-label>Featured Image</x-label>
+                            <input type="file" class="form-control" id="featured_image" name="featured_image">
+                            @if(isset($blog_post) && $blog_post->featured_image)
+                                <img src="{{ asset('storage/' . $blog_post->featured_image) }}" alt="Headshot" width="100">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="remove_featured_image" name="remove_featured_image" value="1">
+                                    <label for="remove_featured_image" class="form-check-label">Remove Featured Image</label>
+                                </div>
+                            @endif
+                            <x-form-error key="featured_image" />
+                        </div>    
                     </div>
                     <div class="mb-5.5 grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
