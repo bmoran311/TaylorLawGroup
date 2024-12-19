@@ -71,11 +71,11 @@
                                     rows="6"
                                     placeholder="Summary..."
                                     class="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
-                                >{{ old('summary', $career->summary ?? '') }}</textarea>                             --}}
-                            <x-fckeditor name="summary" />
+                                >{{ old('summary', $career->summary ?? '') }}</textarea> --}}
+                            <x-trix name="summary" />
                         </div>
                     </div>
-                    <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
+
                         <div class="flex justify-end gap-4.5">
                             <a href="{{ route('news.index') }}"
                                 class="btn-white"
@@ -87,7 +87,7 @@
                                 type="submit"
                             >Save</button>
                         </div>
-                    </div>
+
                 </form>
             </div>
         </div>
