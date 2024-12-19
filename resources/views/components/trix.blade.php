@@ -1,4 +1,4 @@
-@props(['name'])
+@props(['name', 'value'])
 
 @pushOnce('head')
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
@@ -10,4 +10,7 @@
   </style>
 @endpushOnce
 
-<trix-editor name="{{ $name }}_editor"></trix-editor>
+<trix-editor input="{{ $name }}">
+{!! $value !!}
+</trix-editor>
+<input id="{{ $name }}" type="hidden" name="{{ $name }}">

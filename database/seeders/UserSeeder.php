@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
@@ -12,6 +13,11 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
+        User::updateOrCreate([
+            'name' => 'Justin Johnson',
+            'email' => 'systemsevendesigns@gmail.com',
+            'password' => Hash::make('password'),
+        ]);
         // Check if users already exist
         if (User::count() > 0) {
             return;

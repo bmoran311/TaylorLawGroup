@@ -29,7 +29,7 @@ class NewsController extends Controller
         ]);
 
         $news = new News();
-        $news->firm_id = session('firm_id');       
+        $news->firm_id = session('firm_id');
         $news->headline = $request->input('headline');
 		$news->publication = $request->input('publication');
 		$news->url = $request->input('url');
