@@ -11,7 +11,7 @@ class BlogCategoryController extends Controller
 {
     public function index()
     {
-        $blog_categories = BlogCategory::orderBy('sort_order')->get();
+        $blog_categories = BlogCategory::where('firm_id', session('firm_id'))->orderBy('sort_order')->get();
         return view('admin.blog_categories.list', compact('blog_categories'));
     }
 
@@ -27,6 +27,7 @@ class BlogCategoryController extends Controller
         ]);
 
         $blog_category = new BlogCategory();
+        $blog_category->firm_id = session('firm_id'); 
         $blog_category->name = $request->input('name');
         $blog_category->sort_order = BlogCategory::max('sort_order') + 1 ?? 1;
         $blog_category->save();
@@ -54,7 +55,7 @@ class BlogCategoryController extends Controller
     public function destroy(BlogCategory $blog_category)
     {
         $blog_category->delete();
-        BlogCategory::where('sort_order', '>', $blog_category->sort_order)->decrement('sort_order');
+        BlogCategory::where('firm_id', session('firm_id'))->where('sort_order', '>', $blog_category->sort_order)->decrement('sort_order');
 
          return back()->with('danger', 'Blog Category Deleted');
     }

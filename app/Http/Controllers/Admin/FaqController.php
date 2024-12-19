@@ -12,7 +12,7 @@ class FaqController extends Controller
 {
     public function index()
     {
-        $faqs = Faq::orderBy('faq_category_id')->orderBy('created_at')->get();
+        $faqs = Faq::where('firm_id', session('firm_id'))->orderBy('faq_category_id')->orderBy('created_at')->get();
         return view('admin.faq.list', compact('faqs'));
     }
 

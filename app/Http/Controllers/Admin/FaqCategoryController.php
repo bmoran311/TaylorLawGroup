@@ -11,7 +11,7 @@ class FaqCategoryController extends Controller
 {
     public function index()
     {
-        $faq_categories = FaqCategory::orderBy('sort_order')->get();
+        $faq_categories = FaqCategory::where('firm_id', session('firm_id'))->orderBy('sort_order')->get();
         return view('admin.faq_categories.list', compact('faq_categories'));
     }
 
@@ -26,7 +26,8 @@ class FaqCategoryController extends Controller
             'name' => 'required|string|max:255',
         ]);
         
-        $faq_category = new FaqCategory();        
+        $faq_category = new FaqCategory();  
+        $faq_category->firm_id = session('firm_id');       
         $faq_category->name = $request->input('name');  
         $faq_category->sort_order = FaqCategory::max('sort_order') + 1 ?? 1; 
         $faq_category->save();
@@ -54,7 +55,7 @@ class FaqCategoryController extends Controller
     public function destroy(FaqCategory $faq_category)
     {        
         $faq_category->delete();
-        FaqCategory::where('sort_order', '>', $faq_category->sort_order)->decrement('sort_order');
+        FaqCategory::where('firm_id', session('firm_id'))->where('sort_order', '>', $faq_category->sort_order)->decrement('sort_order');
 
         return back()->with('danger', 'Faq Category Deleted');
     }

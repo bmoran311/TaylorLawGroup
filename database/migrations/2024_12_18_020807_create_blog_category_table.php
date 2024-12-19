@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('blog_category', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('firm_id');
             $table->string('name');
             $table->text('description')->nullable();
             $table->integer('sort_order')->index();

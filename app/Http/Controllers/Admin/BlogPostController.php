@@ -14,7 +14,7 @@ class BlogPostController extends Controller
 {
     public function index()
     {
-        $blog_posts = BlogPost::orderBy('blog_category_id')->orderBy('created_at')->get();
+        $blog_posts = BlogPost::where('firm_id', session('firm_id'))->orderBy('blog_category_id')->orderBy('created_at')->get();
         return view('admin.blog_posts.list', compact('blog_posts'));
     }
 
@@ -45,6 +45,7 @@ class BlogPostController extends Controller
         }
 
         $blog_post->title = $request->input('title');
+        $blog_post->firm_id = session('firm_id'); 
         $blog_post->slug = $request->input('slug');
         $blog_post->excerpt = $request->input('excerpt');
         $blog_post->content = $request->input('content');

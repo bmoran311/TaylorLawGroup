@@ -53,16 +53,24 @@
                                 <p class="inline-flex rounded-full bg-success bg-opacity-10 px-3 py-1 text-sm font-medium text-success">
                                 Active
                                 </p>
-                            </td>
-                            <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                                <p class="inline-flex rounded-full bg-success bg-opacity-10 px-3 py-1 text-sm font-medium text-success">
-                                @if(!$loop->first)
-                                    <a href="{{ route('orderFaqCategory',[ 'direction' => 'up', 'id' => $faq_category->id, 'currPos' => $faq_category->sort_order]) }}">Up</a> @endif
-                                &nbsp;&nbsp;&nbsp;
-                                @if(!$loop->last)
-                                    <a href="{{ route('orderFaqCategory',[ 'direction' => 'down', 'id' => $faq_category->id, 'currPos' => $faq_category->sort_order]) }}">Down</a>
-                                @endif
-                                </p>
+                            </td>                            
+                            <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark max-w-[10px]">
+                                <div class="flex items-center space-x-1">
+                                    @if(!$loop->first)
+                                        <a href="{{ route('orderFaqCategory',[ 'direction' => 'up', 'id' => $faq_category->id, 'currPos' => $faq_category->sort_order]) }}">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                                            </svg>
+                                        </a>
+                                        @endif
+                                    @if(!$loop->last)
+                                        <a href="{{ route('orderFaqCategory',[ 'direction' => 'down', 'id' => $faq_category->id, 'currPos' => $faq_category->sort_order]) }}">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                            </svg>
+                                        </a>
+                                    @endif
+                                </div>
                             </td>
                             <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                                 <div class="flex items-center space-x-3.5">

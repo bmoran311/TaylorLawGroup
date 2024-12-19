@@ -14,14 +14,17 @@ return new class extends Migration
 
         // Create faq_category table that has many faqs
 
-        Schema::create('faq_category', function (Blueprint $table) {
+        Schema::create('faq_category', function (Blueprint $table) 
+        {
             $table->id();
+            $table->unsignedBigInteger('firm_id');
             $table->string('name');            
             $table->text('description')->nullable();
             $table->integer('sort_order')->default(0);
             $table->timestamps();
         });
-        Schema::create('faq', function (Blueprint $table) {
+        Schema::create('faq', function (Blueprint $table) 
+        {
             $table->id();
             $table->string('question');
             $table->text('answer');
