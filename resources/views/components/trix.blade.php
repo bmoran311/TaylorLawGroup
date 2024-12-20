@@ -7,6 +7,9 @@
     trix-toolbar .trix-button-group--file-tools {
         display: none;
     }
+    trix-toolbar .trix-button--icon-code {
+        display: none;
+    }
   </style>
 @endpushOnce
 
