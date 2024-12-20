@@ -19,6 +19,8 @@ use App\Http\Controllers\Admin\PracticeAreaController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\FaqCategoryController;
 use App\Http\Controllers\Admin\TestimonialController;
+use App\Http\Controllers\Admin\ResourceController;
+use App\Http\Controllers\Admin\ResourceCategoryController;
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -68,7 +70,10 @@ Route::resource('faq_category', FaqCategoryController::class);
 Route::resource('testimonial', TestimonialController::class);
 Route::resource('blog_post', BlogPostController::class);
 Route::resource('blog_category', BlogCategoryController::class);
+Route::resource('resource', ResourceController::class);
+Route::resource('resource_category', ResourceCategoryController::class);
 Route::get('/blog_category/order/{direction}/{id}/{currPos}', 'App\Http\Controllers\Admin\BlogCategoryController@sort')->name('orderBlogCategory');
 Route::get('/faq_category/order/{direction}/{id}/{currPos}', 'App\Http\Controllers\Admin\FaqCategoryController@sort')->name('orderFaqCategory');
+Route::get('/resource_category/order/{direction}/{id}/{currPos}', 'App\Http\Controllers\Admin\ResourceCategoryController@sort')->name('orderResourceCategory');
 
 require __DIR__.'/auth.php';

@@ -307,7 +307,21 @@
 						href="{{ route('blog_post.index') }}"
 					>Blog Posts
 					</a>
-				</li>				
+				</li>		
+        <li>
+					<a
+						class="@if(request()->routeIs('resource_category*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+						href="{{ route('resource_category.index') }}"
+					>Resource Categories
+					</a>
+				</li>
+				<li>
+					<a
+						class="@if(request()->routeIs('resource*')&& !request()->routeIs('resource_category*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+						href="{{ route('resource.index') }}"
+					>Resources
+					</a>
+				</li>			
 				<li>
 					<a
 						class="@if(request()->routeIs('testimonial*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
