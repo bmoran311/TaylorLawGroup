@@ -15,24 +15,23 @@ class UserSeeder extends Seeder
     {
 
         // Check if users already exist
-        if (User::count() > 0) {
-            return;
-        }
-        User::create([
+        // if (User::count() > 0) {
+        //     return;
+        // }
+
+
+        User::updateOrCreate(['email' => 'bmoran@enertia-inc.com',], [
             'name' => 'Brian Moran',
-            'email' => 'bmoran@enertia-inc.com',
-            'password' => bcrypt('Goirish1011$'),
+            'password' => Hash::make('Goirish1011$'),
         ]);
 
-		User::create([
+        User::updateOrCreate(['email' => 'loweman64@outlook.com',], [
             'name' => 'Brian Moran',
-            'email' => 'loweman64@outlook.com',
-            'password' => bcrypt('loweman64'),
+            'password' => Hash::make('loweman64'),
         ]);
 
-        User::updateOrCreate([
+        User::updateOrCreate(['email' => 'systemsevendesigns@gmail.com',], [
             'name' => 'Justin Johnson',
-            'email' => 'systemsevendesigns@gmail.com',
             'password' => Hash::make('password'),
         ]);
     }
