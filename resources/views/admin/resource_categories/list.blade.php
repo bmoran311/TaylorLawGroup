@@ -8,13 +8,13 @@
             <li>
                 <a class="font-medium" href="{{ route('dashboard') }}">Dashboard /</a>
             </li>
-            <li class="font-medium text-primary">FAQ Caetegories</li>
+            <li class="font-medium text-primary">Resource Categories</li>
         </ol>
     </nav>
 </div>
 
 <section class="flex justify-end mb-4">
-    <x-create-button href="{{ route('faq_category.create') }}">Add New FAQ Category</x-create-button>
+    <x-create-button href="{{ route('resource_category.create') }}">Add New Resource Category</x-create-button>
 </section>
 
 <div class="flex flex-col gap-10">
@@ -41,35 +41,43 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($faq_categories as $faq_category)
+                    @foreach($resource_categories as $resource_category)
                         <tr>
                             <td class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
-                                <h5 class="font-medium text-black dark:text-white">{{ $faq_category->name }}</h5>
+                                <h5 class="font-medium text-black dark:text-white">{{ $resource_category->name }}</h5>
                             </td>
                             <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                                <p class="text-black dark:text-white">{{ $faq_category->created_at->format('M d, Y') }}</p>
+                                <p class="text-black dark:text-white">{{ $resource_category->created_at->format('M d, Y') }}</p>
                             </td>
                             <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                                 <p class="inline-flex rounded-full bg-success bg-opacity-10 px-3 py-1 text-sm font-medium text-success">
                                 Active
                                 </p>
-                            </td>
-                            <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                                <p class="inline-flex rounded-full bg-success bg-opacity-10 px-3 py-1 text-sm font-medium text-success">
-                                @if(!$loop->first)
-                                    <a href="{{ route('orderFaqCategory',[ 'direction' => 'up', 'id' => $faq_category->id, 'currPos' => $faq_category->sort_order]) }}">Up</a> @endif
-                                &nbsp;&nbsp;&nbsp;
-                                @if(!$loop->last)
-                                    <a href="{{ route('orderFaqCategory',[ 'direction' => 'down', 'id' => $faq_category->id, 'currPos' => $faq_category->sort_order]) }}">Down</a>
-                                @endif
-                                </p>
+                            </td>                            
+                            <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark max-w-[10px]">
+                                <div class="flex items-center space-x-1">
+                                    @if(!$loop->first)
+                                        <a href="{{ route('orderResourceCategory',[ 'direction' => 'up', 'id' => $resource_category->id, 'currPos' => $resource_category->sort_order]) }}">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                                            </svg>
+                                        </a>
+                                        @endif
+                                    @if(!$loop->last)
+                                        <a href="{{ route('orderResourceCategory',[ 'direction' => 'down', 'id' => $resource_category->id, 'currPos' => $resource_category->sort_order]) }}">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                            </svg>
+                                        </a>
+                                    @endif
+                                </div>
                             </td>
                             <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                                 <div class="flex items-center space-x-3.5">
                                     <button class="hover:text-primary">
-                                        <a href="{{ route('faq_category.edit', ['faq_category' => $faq_category]) }}"><x-icon-view /></a>
+                                        <a href="{{ route('resource_category.edit', ['resource_category' => $resource_category]) }}"><x-icon-view /></a>
                                     </button>
-                                    <form action="{{route('faq_category.destroy', ['faq_category' => $faq_category])}}" method="POST" onsubmit="return confirm('Are you sure you want to delete this category?')">
+                                    <form action="{{route('resource_category.destroy', ['resource_category' => $resource_category])}}" method="POST" onsubmit="return confirm('Are you sure you want to delete this category?')">
                                         @method('DELETE')
                                         @csrf
                                         <button class="hover:text-primary">

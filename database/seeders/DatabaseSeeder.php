@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             AdmissionSeeder::class,
             AwardSeeder::class,
             BioSeeder::class,
+            BlogCategoryeeder::class,
             EducationSeeder::class,
             FirmSeeder::class,
             LanguageSeeder::class,
@@ -26,14 +27,9 @@ class DatabaseSeeder extends Seeder
             LicenseSeeder::class,
             MembershipSeeder::class,
             PracticeAreaSeeder::class,
+            ResourceCategorySeeder::class,
             StatesTableSeeder::class,
             UserSeeder::class
-        ]);
-
-        //User::factory()->create([
-        //    'name' => 'Brian Moran',
-        //    'email' => 'bmoran@enertia-inc.com',
-        //    'password' => bcrypt('Goirish311$'),
-        //]);
+        ]);        
     }
 }

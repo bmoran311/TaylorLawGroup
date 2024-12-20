@@ -69,19 +69,17 @@
                             <x-trix name="summary" :value="old('summary', $news->summary ?? '')" />
                         </div>
                     </div>
-
-                        <div class="flex justify-end gap-4.5">
-                            <a href="{{ route('news.index') }}"
-                                class="btn-white"
-                                type="submit">
-                                Cancel
-                            </a>
-                            <button
-                                class="btn-primary"
-                                type="submit"
-                            >Save</button>
-                        </div>
-
+                    <div class="flex justify-end gap-4.5">
+                        <a href="{{ route('news.index') }}"
+                            class="btn-white"
+                            type="submit">
+                            Cancel
+                        </a>
+                        <button
+                            class="btn-primary"
+                            type="submit"
+                        >Save</button>
+                    </div>
                 </form>
             </div>
         </div>

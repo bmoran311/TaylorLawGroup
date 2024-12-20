@@ -7,6 +7,12 @@
     trix-toolbar .trix-button-group--file-tools {
         display: none;
     }
+
+    trix-editor 
+    {
+        min-height: calc(1.5em * 20); /* 1.5em is the line-height; adjust if necessary */
+        box-sizing: border-box; /* Ensures padding doesn't affect the height */
+
     trix-toolbar .trix-button--icon-code {
         display: none;
     }
