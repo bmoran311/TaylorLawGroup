@@ -1,4 +1,11 @@
 <x-app-layout>
+
+<div class="mb-8">
+    <div class="bg-yellow-50 text-center border border-yellow-200 p-4 shadow-lg shadow-slate-200 max-w-5xl mx-auto" role="alert">
+        <p class="text-sm leading-5 text-yellow-700">The "Level" categorizes legal professionals within the firm based on their role, responsibilities, and expertise. Common levels usually include Associate, Attorney and Law Clerk. Use this field to specify the position of individuals in the organization for better clarity and organization.</p>
+    </div>
+</div>
+
 <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
     <h2 class="text-title-md2 font-bold text-black dark:text-white">
     Levels
@@ -62,7 +69,7 @@
                                         <button class="hover:text-primary">
                                             <x-icon-delete />
                                         </button>
-                                    </form>                                                   
+                                    </form>
                                 </div>
                             </td>
                         </tr>
