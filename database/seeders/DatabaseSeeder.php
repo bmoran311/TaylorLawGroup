@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             AdmissionSeeder::class,
             AwardSeeder::class,
             BioSeeder::class,
-            BlogCategoryeeder::class,
+            BlogCategorySeeder::class,
             EducationSeeder::class,
             FirmSeeder::class,
             LanguageSeeder::class,
@@ -27,9 +27,9 @@ class DatabaseSeeder extends Seeder
             LicenseSeeder::class,
             MembershipSeeder::class,
             PracticeAreaSeeder::class,
-            ResourceCategorySeeder::class,
+            // ResourceCategorySeeder::class,
             StatesTableSeeder::class,
             UserSeeder::class
-        ]);        
+        ]);
     }
 }
