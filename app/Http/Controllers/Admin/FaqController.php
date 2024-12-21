@@ -18,7 +18,7 @@ class FaqController extends Controller
 
     public function create()
     {
-        $categories = FaqCategory::orderBy('name')->get();
+        $categories = FaqCategory::orderBy('sort_order')->get();
         
         return view('admin.faq.form', compact('categories'));
     }
@@ -26,8 +26,8 @@ class FaqController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'question' => 'required|string|max:255',
-            'answer' => 'required|string|max:255',
+            'question' => 'required|string',
+            'answer' => 'required|string',
             'faq_category_id' => 'required|integer',
         ]);
 
@@ -43,15 +43,15 @@ class FaqController extends Controller
 
     public function edit(Faq $faq)
     {
-        $categories = FaqCategory::orderBy('name')->get();
+        $categories = FaqCategory::orderBy('sort_order')->get();
         return view('admin.faq.form', compact('faq', 'categories'));
     }
 
     public function update(Request $request, Faq $faq)
     {
         $request->validate([
-            'question' => 'required|string|max:255',
-            'answer' => 'required|string|max:255',
+            'question' => 'required|string',
+            'answer' => 'required|string',
             'faq_category_id' => 'required|integer',
         ]);
 
