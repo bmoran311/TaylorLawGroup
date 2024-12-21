@@ -62,7 +62,8 @@
                                     <option value="">Select Type</option>
                                     @foreach ($categories as $category)
                                         <option value="{{ $category->id }}" 
-                                            {{ isset($faq) && $faq->faq_category_id === $category->id ? 'selected' : '' }}>
+                                            {{ (isset($faq) && $faq->faq_category_id === $category->id) || (old('faq_category_id') == $category->id) ? 'selected' : '' }}
+                                        >
                                             {{ $category->name }}
                                         </option>
                                     @endforeach

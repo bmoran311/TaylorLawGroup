@@ -20,7 +20,7 @@ class BlogPostController extends Controller
 
     public function create()
     {
-        $categories = BlogCategory::orderBy('name')->get();
+        $categories = BlogCategory::orderBy('sort_order')->get();
 
         return view('admin.blog_posts.form', compact('categories'));
     }
@@ -31,9 +31,7 @@ class BlogPostController extends Controller
             'title' => 'required|string|max:255',
             'excerpt' => 'required|string',
             'content' => 'required|string',
-            'tags' => 'required|string|max:255',
-            'seo_title' => 'required|string|max:255',
-            'seo_meta_description' => 'required|string|max:255',
+            'tags' => 'required|string|max:255',            
             'blog_category_id' => 'required|integer',
         ]);
 
@@ -63,7 +61,8 @@ class BlogPostController extends Controller
 
     public function edit(BlogPost $blog_post)
     {
-        $categories = BlogCategory::orderBy('name')->get();
+        $categories = BlogCategory::orderBy('sort_order')->get();
+
         return view('admin.blog_posts.form', compact('blog_post', 'categories'));
     }
 
@@ -73,9 +72,7 @@ class BlogPostController extends Controller
             'title' => 'required|string|max:255',
             'excerpt' => 'required|string',
             'content' => 'required|string',
-            'tags' => 'required|string|max:255',
-            'seo_title' => 'required|string|max:255',
-            'seo_meta_description' => 'required|string|max:255',
+            'tags' => 'required|string|max:255',            
             'blog_category_id' => 'required|integer',
         ]);
 
