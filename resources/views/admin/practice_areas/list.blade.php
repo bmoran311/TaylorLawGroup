@@ -1,8 +1,17 @@
 <x-app-layout>
 
-@push('head')
+<div class="mb-8">
+    <div class="bg-yellow-50 text-center border border-yellow-200 p-4 shadow-lg shadow-slate-200 max-w-5xl mx-auto" role="alert">
+        <p class="text-sm leading-5 text-yellow-700">
+        A <b>Practice Area</b> defines the specific fields of law in which an attorney or firm specializes. Examples include Family Law,<br>
+        Criminal Defense, Intellectual Property, and Corporate Law.<br><br>
 
-@endpush
+        Our system includes a comprehensive list of common practice areas to simplify the selection process. If a particular area of practice<br>
+        is not listed, you can add it manually to ensure full representation of your firm's expertise.
+        
+        </p>
+    </div>
+</div>
 
 <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
     <h2 class="text-title-md2 font-bold text-black dark:text-white">

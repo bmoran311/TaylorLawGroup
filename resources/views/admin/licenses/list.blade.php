@@ -1,4 +1,18 @@
 <x-app-layout>
+
+<div class="mb-8">
+    <div class="bg-yellow-50 text-center border border-yellow-200 p-4 shadow-lg shadow-slate-200 max-w-5xl mx-auto" role="alert">
+        <p class="text-sm leading-5 text-yellow-700">
+        <b>Licenses</b> represent the professional credentials required to practice law and may vary by jurisdiction. Our system supports licenses at three levels:
+        <br><br>
+        <b>State-Level Licenses:</b> Applicable to specific states within the U.S. (e.g., California, New York).<br>
+        <b>Territorial Licenses:</b> Issued by U.S. territories or other regional authorities.<br>
+        <b>National Licenses:</b> Valid across the entire country or recognized at a national level.
+        <br><br>
+        Ensure that the appropriate license type is selected and accurately recorded to reflect the correct scope of practice for each individual.
+    </div>
+</div>
+
 <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
     <h2 class="text-title-md2 font-bold text-black dark:text-white">
     Licenses

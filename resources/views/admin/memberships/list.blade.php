@@ -1,4 +1,19 @@
 <x-app-layout>
+
+<div class="mb-8">
+    <div class="bg-yellow-50 text-center border border-yellow-200 p-4 shadow-lg shadow-slate-200 max-w-5xl mx-auto" role="alert">
+        <p class="text-sm leading-5 text-yellow-700">
+            Memberships represent affiliations with professional legal organizations and are categorized into three types:<br><br>
+
+            <b>State Bar Memberships:</b> These are memberships specific to the bar association of an individual state (e.g., California State Bar).<br>
+            <b>National Bar Memberships:</b> These apply to organizations that operate at a national level and represent legal professionals across the country.<br>
+            <b>Specialty Bar Memberships:</b> These focus on specific areas of law or legal practice, offering resources and networking for specialized fields.
+            <br><br>
+            Accurately record each type of membership to reflect the full professional affiliations of each individual.
+        </p>
+    </div>
+</div>
+
 <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
     <h2 class="text-title-md2 font-bold text-black dark:text-white">
     Memberships

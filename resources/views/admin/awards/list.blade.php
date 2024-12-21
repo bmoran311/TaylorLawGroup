@@ -1,4 +1,14 @@
 <x-app-layout>
+
+<div class="mb-8">
+    <div class="bg-yellow-50 text-center border border-yellow-200 p-4 shadow-lg shadow-slate-200 max-w-5xl mx-auto" role="alert">
+        <p class="text-sm leading-5 text-yellow-700">
+        <b>Awards</b> and distinctions in the legal profession are acknowledgments of excellence, expertise, and professional reputation. <br>
+        Some notable examples include: American Bar Association (ABA) Awards, Burton Awards for Legal Achievement and Chambers USA Awards for Excellence.
+        </p>
+    </div>
+</div>
+
 <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
     <h2 class="text-title-md2 font-bold text-black dark:text-white">
     Awards

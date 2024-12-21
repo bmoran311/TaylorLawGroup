@@ -1,4 +1,15 @@
 <x-app-layout>
+
+<div class="mb-8">
+    <div class="bg-yellow-50 text-center border border-yellow-200 p-4 shadow-lg shadow-slate-200 max-w-5xl mx-auto" role="alert">
+        <p class="text-sm leading-5 text-yellow-700">
+        <b>Resource categories</b> on a legal website are designed to organize valuable, client-facing content into distinct formats tailored for different user needs.<br>
+        These resources help educate potential clients, establish the firm’s authority, and provide actionable insights in easily digestible formats. <br>
+        The firms comes pre-seeded with White Papers, Guides, Checklists, Infographics, Quick Reference Guides and Brochures but can be overwritten as needed.
+        </p>
+    </div>
+</div>
+
 <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
     <h2 class="text-title-md2 font-bold text-black dark:text-white">
     Levels

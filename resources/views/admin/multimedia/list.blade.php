@@ -1,4 +1,14 @@
 <x-app-layout>
+
+<div class="mb-8">
+    <div class="bg-yellow-50 text-center border border-yellow-200 p-4 shadow-lg shadow-slate-200 max-w-5xl mx-auto" role="alert">
+        <p class="text-sm leading-5 text-yellow-700">
+            <b>Multimedia</b> refers to audio or visual content created for public consumption, such as podcasts, recorded interviews, webinars, or video presentations. <br><br>
+            This category is intended for spoken-word content that can be uploaded and shared for informational or promotional purposes.      
+        </p>
+    </div>
+</div>
+
 <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
     <h2 class="text-title-md2 font-bold text-black dark:text-white">
     Multimedia

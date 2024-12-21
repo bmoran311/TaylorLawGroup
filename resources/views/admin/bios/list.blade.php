@@ -1,4 +1,17 @@
 <x-app-layout>
+
+<div class="mb-8">
+    <div class="bg-yellow-50 text-center border border-yellow-200 p-4 shadow-lg shadow-slate-200 max-w-5xl mx-auto" role="alert">
+        <p class="text-sm leading-5 text-yellow-700">
+        A <b>Bio</b> provides a summary of an individual's professional background, achievements, and expertise. This information is essential for <br>
+        showcasing qualifications, experience, and unique strengths to clients and colleagues.<br><br>
+
+        When writing a bio, you'll select the attorney's Practice Area, Education, Admission, Language, <br>
+        Level, Membership, License, Awards, News, Engagements and Multimedia.
+        </p>
+    </div>
+</div>
+
 <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
     <h2 class="text-title-md2 font-bold text-black dark:text-white">
     Bios

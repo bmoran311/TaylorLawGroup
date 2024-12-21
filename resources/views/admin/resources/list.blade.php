@@ -1,4 +1,14 @@
 <x-app-layout>
+<div class="mb-8">
+    <div class="bg-yellow-50 text-center border border-yellow-200 p-4 shadow-lg shadow-slate-200 max-w-5xl mx-auto" role="alert">
+        <p class="text-sm leading-5 text-yellow-700">
+        <b>Resources</b> on a legal website refer to a collection of educational and informational materials designed to assist visitors in <br>
+        understanding legal concepts, processes, and services. These materials are strategically created to address client concerns, answer<br>
+         common questions, and provide actionable insights while showcasing the expertise of the law firm.
+        </p>
+    </div>
+</div>
+
 <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
     <h2 class="text-title-md2 font-bold text-black dark:text-white">
     Resources

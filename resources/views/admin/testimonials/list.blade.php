@@ -1,4 +1,14 @@
 <x-app-layout>
+<div class="mb-8">
+    <div class="bg-yellow-50 text-center border border-yellow-200 p-4 shadow-lg shadow-slate-200 max-w-5xl mx-auto" role="alert">
+        <p class="text-sm leading-5 text-yellow-700">
+        A client <b>testimonial</b> for a legal practice is a personal account from a satisfied client that highlights their experience<br>
+         with the law firm or attorney. These testimonials provide insights into the firm's professionalism, expertise, and ability<br>
+          to resolve legal issues, helping to build trust and credibility with potential clients.
+        </p>
+    </div>
+</div>
+
 <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
     <h2 class="text-title-md2 font-bold text-black dark:text-white">
     Testimonials

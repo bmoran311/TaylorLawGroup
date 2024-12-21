@@ -1,4 +1,14 @@
 <x-app-layout>
+
+<div class="mb-8">
+    <div class="bg-yellow-50 text-center border border-yellow-200 p-4 shadow-lg shadow-slate-200 max-w-5xl mx-auto" role="alert">
+        <p class="text-sm leading-5 text-yellow-700">
+            The <b>FAQ Category</b> Section is a centralized interface that allows administrators to manage the organization and content of the FAQ categories effectively.<br><br>
+            This section comes pre-seeded with common categories but can be overwritten at the firm level.
+        </p>
+    </div>
+</div>
+
 <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
     <h2 class="text-title-md2 font-bold text-black dark:text-white">
     Levels

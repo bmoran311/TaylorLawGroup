@@ -1,4 +1,14 @@
 <x-app-layout>
+
+<div class="mb-8">
+    <div class="bg-yellow-50 text-center border border-yellow-200 p-4 shadow-lg shadow-slate-200 max-w-5xl mx-auto" role="alert">
+        <p class="text-sm leading-5 text-yellow-700">
+            <b>News</b> refers to a story or article published in a periodical, such as a newspaper, magazine, or online news outlet, where the firm or its members are highlighted.<br><br>
+            This is distinct from white papers, multimedia content like podcasts, or internal publications.        
+        </p>
+    </div>
+</div>
+
 <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
     <h2 class="text-title-md2 font-bold text-black dark:text-white">
     News
