@@ -18,7 +18,7 @@ class ResourceController extends Controller
 
     public function create()
     {
-        $categories = ResourceCategory::orderBy('name')->get();
+        $categories = ResourceCategory::orderBy('sort_order')->get();
 
         return view('admin.resources.form', compact('categories'));
     }
@@ -46,7 +46,8 @@ class ResourceController extends Controller
 
     public function edit(Resource $resource)
     {
-        $categories = ResourceCategory::orderBy('name')->get();
+        $categories = ResourceCategory::orderBy('sort_order')->get();
+
         return view('admin.resources.form', compact('resource', 'categories'));
     }
 
