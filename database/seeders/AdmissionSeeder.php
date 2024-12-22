@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Admission;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -16,6 +17,8 @@ class AdmissionSeeder extends Seeder
      */
     public function run()
     {
+        Admission::truncate();
+
         $now = Carbon::now();
 
         $admissions = [
