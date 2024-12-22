@@ -26,8 +26,8 @@ return new class extends Migration {
             $table->timestamp('published_date')->useCurrent();
             $table->boolean('is_featured')->default(false);
             $table->boolean('visibility')->default(false);
-            $table->string('seo_title');
-            $table->string('seo_meta_description');
+            $table->string('seo_title')->nullable();
+            $table->string('seo_meta_description')->nullable();
             $table->integer('firm_id');
             $table->timestamps();
         });
