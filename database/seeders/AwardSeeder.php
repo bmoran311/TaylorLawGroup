@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Award;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -10,6 +11,8 @@ class AwardSeeder extends Seeder
 {
     public function run()
     {
+        Award::truncate();
+
         $awards = [
             ['name' => 'Rising Star', 'publication' => 'New York Metro Super Lawyers Magazine'],
             ['name' => 'The Best Lawyers in America', 'publication' => null],
