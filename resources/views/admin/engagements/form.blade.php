@@ -29,7 +29,7 @@
                     @else
                         @method('POST')
                     @endif					                   
-					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
+					<div class="mb-5.5 grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="w-full">
                             <x-label>Event Date</x-label>
                             <input
@@ -41,13 +41,11 @@
 							/>
                             <x-form-error key="event_date" />                           
                         </div>
-                    </div>
-					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>Event Time</x-label>
                             <x-text-input name="event_time" type="text" placeholder="Time..." class="text-input" value="{{ old('event_time', $engagement->event_time ?? '') }}"/>                                                        
                         </div>
-                    </div>
+                    </div>					
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>Title</x-label>
@@ -55,14 +53,12 @@
                             <x-form-error key="title" />
                         </div>
                     </div>
-                    <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
+                    <div class="mb-5.5 grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="w-full">
                             <x-label>Conference / Publication</x-label>
                             <x-text-input name="conference" type="text" placeholder="Conference..." class="text-input" value="{{ old('conference', $engagement->conference ?? '') }}"/>                           
                             <x-form-error key="conference" />
-                        </div>
-                    </div>
-					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
+                        </div>                    
                         <div class="w-full">
                             <x-label>Type</x-label>
                             <select name="type" id="event_type" class="text-input">

@@ -17,12 +17,12 @@ return new class extends Migration
             $table->string('job_title');
             $table->string('location');
             $table->string('employment_type');
-            $table->string('job_summary');
-            $table->string('responsibilities');
-            $table->string('qualifications');
-            $table->string('skills');
+            $table->text('job_summary');
+            $table->text('responsibilities');
+            $table->text('qualifications');
+            $table->text('skills');
             $table->string('practice_area');
-            $table->string('salary_benefits')->nullable();
+            $table->text('salary_benefits')->nullable();
             $table->string('application_deadline');
             $table->string('job_posting_date');
             $table->timestamps();
