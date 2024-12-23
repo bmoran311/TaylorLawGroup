@@ -61,9 +61,9 @@
                             </select>
                             <x-form-error key="blog_category_id"/>
                         </div>
-                    </div>                    
+                    </div>
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
-                        <div class="w-full">                       
+                        <div class="w-full">
 							<x-label>Thumbnail Image</x-label>
                             <input type="file" class="form-control" id="thumbnail_image" name="thumbnail_image">
                             @if(isset($resource) && $resource->thumbnail_image)
@@ -74,10 +74,10 @@
                                 </div>
                             @endif
                             <x-form-error key="thumbnail_image" />
-                        </div>    
-                    </div>     
+                        </div>
+                    </div>
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
-                        <div class="w-full">                       
+                        <div class="w-full">
 							<x-label>File Upload</x-label>
                             <input type="file" class="form-control" id="file_upload" name="file_upload">
                             @if(isset($resource) && $resource->file_upload)
@@ -88,21 +88,21 @@
                                 </div>
                             @endif
                             <x-form-error key="file_upload" />
-                        </div>    
-                    </div>                                     				
+                        </div>
+                    </div>
 					<div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>Tags</x-label>
                             <x-text-input name="tags" type="text" placeholder="Tags..." class="text-input" value="{{ old('tags', $resource->tags ?? '') }}"/>
                             <x-form-error key="tags" />
                         </div>
-                    </div>  
+                    </div>
                     <div class="mb-5.5">
                         <div class="w-full">
                             <x-label>Description</x-label>
                             <x-trix name="description" :value="old('description', $resource->description ?? '')" />
                         </div>
-                    </div>                                                                           
+                    </div>
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="flex justify-end gap-4.5">
                             <a href="{{ route('resource.index') }}"

@@ -31,24 +31,24 @@ class BlogPostController extends Controller
             'title' => 'required|string|max:255',
             'excerpt' => 'required|string',
             'content' => 'required|string',
-            'tags' => 'required|string|max:255',            
+            'tags' => 'required|string|max:255',
             'blog_category_id' => 'required|integer',
         ]);
 
         $blog_post = new BlogPost();
 
-        if ($request->hasFile('featured_image')) {                                       
+        if ($request->hasFile('featured_image')) {
             $path = $request->file('featured_image')->store('blog_images', 'public');
             $blog_post->featured_image = $path;
         }
 
         $blog_post->title = $request->input('title');
-        $blog_post->firm_id = session('firm_id'); 
+        $blog_post->firm_id = session('firm_id');
         $blog_post->slug = $request->input('slug');
         $blog_post->excerpt = $request->input('excerpt');
         $blog_post->content = $request->input('content');
         $blog_post->blog_category_id = $request->input('blog_category_id');
-        $blog_post->tags = $request->input('tags');     
+        $blog_post->tags = $request->input('tags');
         $blog_post->is_featured = $request->input('is_featured');
         $blog_post->visibility = $request->input('visibility');
         $blog_post->seo_title = $request->input('seo_title');
@@ -72,23 +72,23 @@ class BlogPostController extends Controller
             'title' => 'required|string|max:255',
             'excerpt' => 'required|string',
             'content' => 'required|string',
-            'tags' => 'required|string|max:255',            
+            'tags' => 'required|string|max:255',
             'blog_category_id' => 'required|integer',
         ]);
 
-        if ($request->has('remove_featured_image') && $request->input('remove_featured_image') == 1) 
-        {           
+        if ($request->has('remove_featured_image') && $request->input('remove_featured_image') == 1)
+        {
             if ($blog_post->featured_image) {
-                Storage::delete('public/' . $blog_post->featured_image);
-                $blog_post->featured_image = null; 
+                Storage::disk('public')->delete($blog_post->featured_image);
+                $blog_post->featured_image = null;
             }
         }
 
-        if ($request->hasFile('featured_image')) {           
+        if ($request->hasFile('featured_image')) {
             if ($blog_post->featured_image) {
-                Storage::delete($blog_post->featured_image);
+                Storage::disk('public')->delete($blog_post->featured_image);
             }
-                
+
             $path = $request->file('featured_image')->store('blog_images', 'public');
             $blog_post->featured_image = $path;
         }
@@ -98,7 +98,7 @@ class BlogPostController extends Controller
         $blog_post->excerpt = $request->input('excerpt');
         $blog_post->content = $request->input('content');
         $blog_post->blog_category_id = $request->input('blog_category_id');
-        $blog_post->tags = $request->input('tags');     
+        $blog_post->tags = $request->input('tags');
         $blog_post->is_featured = $request->input('is_featured');
         $blog_post->visibility = $request->input('visibility');
         $blog_post->seo_title = $request->input('seo_title');
