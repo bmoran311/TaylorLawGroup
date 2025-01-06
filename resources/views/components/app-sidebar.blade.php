@@ -7,7 +7,8 @@
   <div class="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
     <a href="{{ route('dashboard') }}">
       {{-- <img src="/images/logo/logo.svg" alt="Logo" /> --}}
-      <span class="text-white text-2xl font-bold">TaylorLaw (logo)</span>
+      {{-- <span class="text-white text-2xl font-bold">TaylorLaw (logo)</span> --}}
+      <img src="/img/taylor_law_logo.svg" alt="Taylor Law Logo" />
     </a>
 
     <button
@@ -145,7 +146,7 @@
                     href="{{ route('admission.index') }}"
                     >Admissions
                   </a>
-                </li>                 
+                </li>
                 <li>
                   <a
                     class="@if(request()->routeIs('level*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
@@ -159,14 +160,14 @@
                     href="{{ route('award.index') }}"
                     >Awards
                   </a>
-                </li> 
+                </li>
                 <li>
                   <a
                     class="@if(request()->routeIs('language*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                     href="{{ route('language.index') }}"
                     >Languages
                   </a>
-                </li>                                              
+                </li>
               </ul>
             </div>
             <!-- Dropdown Menu End -->
@@ -307,7 +308,7 @@
 						href="{{ route('blog_post.index') }}"
 					>Blog Posts
 					</a>
-				</li>		
+				</li>
         <li>
 					<a
 						class="@if(request()->routeIs('resource_category*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
@@ -321,7 +322,7 @@
 						href="{{ route('resource.index') }}"
 					>Resources
 					</a>
-				</li>			
+				</li>
 				<li>
 					<a
 						class="@if(request()->routeIs('testimonial*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
