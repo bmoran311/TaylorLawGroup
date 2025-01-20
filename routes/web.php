@@ -23,57 +23,66 @@ use App\Http\Controllers\Admin\ResourceController;
 use App\Http\Controllers\Admin\ResourceCategoryController;
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Site\PageController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/', [PageController::class, 'index'])->name('site.home');
 
-Route::get('/dashboard/form-elements', function () {
-    return view('form-elements');
-})->middleware(['auth', 'verified'])->name('form-elements');
 
-Route::get('/dashboard/form-layout', function () {
-    return view('form-layout');
-})->middleware(['auth', 'verified'])->name('form-layout');
+require __DIR__.'/auth.php';
 
-Route::get('/dashboard/tables', function () {
-    return view('tables');
-})->middleware(['auth', 'verified'])->name('tables');
+Route::prefix('dashboard')->group(function(){
+    Route::middleware(['auth'])->group(function(){
+        Route::get('/', function () {
+            return view('dashboard');
+        })->name('dashboard');
+    });
 
-Route::middleware('auth')->group(function () {
+
+    Route::get('/form-elements', function () {
+        return view('form-elements');
+    })->name('form-elements');
+
+    Route::get('/form-layout', function () {
+        return view('form-layout');
+    })->name('form-layout');
+
+    Route::get('/tables', function () {
+        return view('tables');
+    })->name('tables');
+
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::resource('career', CareersController::class);
+    Route::resource('firm', FirmController::class);
+    Route::resource('bio', BioController::class);
+    Route::resource('practice_area', PracticeAreaController::class);
+    Route::resource('language', LanguageController::class);
+    Route::resource('award', AwardController::class);
+    Route::resource('level', LevelController::class);
+    Route::resource('license', LicenseController::class);
+    Route::resource('membership', MembershipController::class);
+    Route::resource('admission', AdmissionController::class);
+    Route::resource('education', EducationController::class);
+    Route::resource('news', NewsController::class);
+    Route::resource('engagement', EngagementController::class);
+    Route::resource('multimedia', MultimediaController::class);
+    Route::resource('faq', FaqController::class);
+    Route::resource('faq_category', FaqCategoryController::class);
+    Route::resource('testimonial', TestimonialController::class);
+    Route::resource('blog_post', BlogPostController::class);
+    Route::resource('blog_category', BlogCategoryController::class);
+    Route::resource('resource', ResourceController::class);
+    Route::resource('resource_category', ResourceCategoryController::class);
+    Route::get('/blog_category/order/{direction}/{id}/{currPos}', 'App\Http\Controllers\Admin\BlogCategoryController@sort')->name('orderBlogCategory');
+    Route::get('/faq_category/order/{direction}/{id}/{currPos}', 'App\Http\Controllers\Admin\FaqCategoryController@sort')->name('orderFaqCategory');
+    Route::get('/resource_category/order/{direction}/{id}/{currPos}', 'App\Http\Controllers\Admin\ResourceCategoryController@sort')->name('orderResourceCategory');
 });
 
-Route::resource('career', CareersController::class);
-Route::resource('firm', FirmController::class);
-Route::resource('bio', BioController::class);
-Route::resource('practice_area', PracticeAreaController::class);
-Route::resource('language', LanguageController::class);
-Route::resource('award', AwardController::class);
-Route::resource('level', LevelController::class);
-Route::resource('license', LicenseController::class);
-Route::resource('membership', MembershipController::class);
-Route::resource('admission', AdmissionController::class);
-Route::resource('education', EducationController::class);
-Route::resource('news', NewsController::class);
-Route::resource('engagement', EngagementController::class);
-Route::resource('multimedia', MultimediaController::class);
-Route::resource('faq', FaqController::class);
-Route::resource('faq_category', FaqCategoryController::class);
-Route::resource('testimonial', TestimonialController::class);
-Route::resource('blog_post', BlogPostController::class);
-Route::resource('blog_category', BlogCategoryController::class);
-Route::resource('resource', ResourceController::class);
-Route::resource('resource_category', ResourceCategoryController::class);
-Route::get('/blog_category/order/{direction}/{id}/{currPos}', 'App\Http\Controllers\Admin\BlogCategoryController@sort')->name('orderBlogCategory');
-Route::get('/faq_category/order/{direction}/{id}/{currPos}', 'App\Http\Controllers\Admin\FaqCategoryController@sort')->name('orderFaqCategory');
-Route::get('/resource_category/order/{direction}/{id}/{currPos}', 'App\Http\Controllers\Admin\ResourceCategoryController@sort')->name('orderResourceCategory');
 
-require __DIR__.'/auth.php';
+
+
