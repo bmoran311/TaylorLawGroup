@@ -29,6 +29,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'index'])->name('site.home');
 
+Route::view('prototype/home', 'prototype.home')->name('site.prototype.home');
+
 
 require __DIR__.'/auth.php';
 
