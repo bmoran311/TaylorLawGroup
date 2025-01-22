@@ -20,6 +20,8 @@
   <!-- FAVICONS -->
   <link rel="shortcut icon" href="/prototype/img/favicon/favicon.png" type="image/png">
   <link rel="icon" href="/prototype/img/favicon/favicon.png" type="image/png">
+
+
 </head>
 
 <body>
