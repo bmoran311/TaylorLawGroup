@@ -30,6 +30,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PageController::class, 'index'])->name('site.home');
 
 Route::view('prototype/home', 'prototype.home')->name('site.prototype.home');
+Route::view('prototype/attorney-detail', 'prototype.attorney-detail')->name('site.prototype.attorney-detail');
+Route::view('prototype/attorney-member', 'prototype.attorneys-member')->name('site.prototype.attorneys-member');
+Route::view('prototype/attorneys', 'prototype.attorneys')->name('site.prototype.attorneys');
+Route::view('prototype/practice-areas', 'prototype.practice-areas')->name('site.prototype.practice-areas');
 
 
 require __DIR__.'/auth.php';

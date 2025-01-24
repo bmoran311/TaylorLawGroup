@@ -4,7 +4,7 @@
 		loop:true,
 		lazyLoad:true,
 		margin:15,
-		autoplay:true,
+		autoplay:false,
 		autoplayTimeout:10000,
 		smartSpeed: 1000,		
 		slideSpeed : 10000,
@@ -20,8 +20,11 @@
 			1024:{
 				items:3,
 			},
+			1020:{
+				items:2,
+			},
 			640:{
-				items:3,
+				items:1,
 			},
 			480:{
 				items:1,

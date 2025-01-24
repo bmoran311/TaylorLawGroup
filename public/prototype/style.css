@@ -152,9 +152,13 @@ header .mainmenu ul .nav-item:last-child a:focus {
     display: block;
     margin-top: 0;
   }
-  .dropdown .dropdown-menu {
-    display: none;
-  }
+.dropdown .dropdown-menu {
+  display: none;
+  border: none;
+  padding: 8px 40px;
+  background-color: #a8886d4a;
+  top: 43px;
+}
   .dropdown:hover .dropdown-toggle::after {
     border-top: 0;
     border-bottom: 0.3em solid;
@@ -191,15 +195,24 @@ header .mainmenu .navbar-nav .nav-item:nth-child(4)  a:focus,
 header .mainmenu .navbar-nav .nav-item:nth-child(4)  a:hover{
 background-image: none !important;
 }
-header .mainmenu .navbar-nav a.active,
-header .mainmenu .navbar-nav a:focus,
-header .mainmenu .navbar-nav a:hover {
+
+header .mainmenu .navbar-nav .nav-item a:focus, header .mainmenu .nav-item a:hover {
+  color: #fff;
+}
+header .mainmenu .navbar-nav li:first-child a:focus, header .mainmenu li:first-child a:hover {
   color: #fff;
   background-image: url('img/icons/active-icon.png');
   background-repeat: no-repeat;
   background-position: bottom;
   padding-bottom: 20px !important;
   background-size: 30px;
+}
+.dropdown .dropdown-menu li {
+  padding: 2px !important;
+}
+header .mainmenu .navbar-nav .nav-item .dropdown-item:hover {
+  padding-bottom: 0px !important;
+  background-image: none !important;
 }
 header .mainmenu .navbar-nav .menu1 a.active, header .mainmenu .navbar-nav .menu1 a:focus, header .mainmenu .navbar-nav .menu1 a:hover{
 	background-image: none !important;
@@ -247,7 +260,7 @@ header .header-bottom .banner-contents {
     position: absolute;
     left: 0;
     right: 0;
-    top: 30%;
+    top: 35%;
     width: 100%;
 }
 header .banner-contents h1 {
@@ -266,6 +279,10 @@ header .banner-contents h1 {
   border-left: 3px solid #a9896f;
   padding-left: 20px;
 }
+.btn:hover, .btn:focus {
+  color: #fff;
+  box-shadow: none;
+}
 .btn {
   font-size: 16px;
   color: #fff;
@@ -280,6 +297,7 @@ header .banner-contents h1 {
   border: 0px;
   text-transform: uppercase;
 }
+
 .banner-btn{
   border-left: 3px solid #a9896f;
   margin-top: 20px;
@@ -313,8 +331,12 @@ header .banner-contents h1 {
 }
 .about-border img {
   position: relative;
-  margin-top: -81%;
-  left: 130px;
+  margin-top: -60%;
+  left: -25px;
+  height: 300px;
+}
+.about-border {
+  text-align: end;
 }
 .banner-shape {
 	position: absolute;
@@ -397,10 +419,13 @@ header .banner-contents h1 {
   background-color: #f6f2ee;
 }
 .team-sub-cont h4 {
-  font-size: 20px;
+  font-size: 23px;
   color: #041330;
   font-family: 'Outfit';
   font-weight: 500;
+}
+.team-sub-cont hr {
+  margin: 12px auto;
 }
 .team-sub-cont {
   padding-top: 20px;
@@ -476,6 +501,7 @@ header .banner-contents h1 {
   color: #222;
   font-weight: 700;
   font-family: 'Montserrat';
+  margin: 20px 0px;
 }
 .practice-sub-cont p {
   font-size: 16px;
@@ -520,7 +546,7 @@ header .banner-contents h1 {
 
 
 .proprietary-section {
-  padding: 30px 0px;
+  padding: 70px 0px;
   background-color: #f3e7dd;
   position: relative;
 }
@@ -556,7 +582,7 @@ header .banner-contents h1 {
 .img-fluid.obstrac-img {
   position: absolute;
   right: 0px;
-  top: -150px;
+  top: -195px;
 }
 .taylorline-box {
   position: relative;
@@ -609,7 +635,7 @@ header .banner-contents h1 {
   text-decoration: underline;
   font-weight: 400;
 }
-.testimonial-contents:hover p, .testimonial-contents:hover h4 {
+.testimonial-contents:hover p, .testimonial-contents:hover h4, .testimonial-contents:hover a {
   color: #fff;
 }
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
@@ -645,18 +671,22 @@ header .banner-contents h1 {
 .contact-wrap {
   border: 2px solid #bb9678;
   padding: 0px;
+  margin-top: 50px;
 }
 .contact-form {
   background: rgb(186,149,119);
   background: linear-gradient(225deg, rgba(186,149,119,1) 0%, rgba(126,93,60,1) 100%);
   margin-top: 0px;
-  padding: 10px 30px;
+  padding: 40px 30px;
+}
+.contact-form form {
+  margin-top: 30px;
 }
 .contact-wrap h4 {
-  font-size: 25px;
+  font-size: 22px;
   color: #fff;
   font-family: 'Outfit';
-  text-transform: capitalize !important;
+  text-transform: uppercase;
 }
 .contact-wrap hr {
   width: 50px;
@@ -664,7 +694,7 @@ header .banner-contents h1 {
   background-color: #b39781;
   opacity: 1;
   position: relative;
-  top: 10px;
+  top: 12px;
   display: inline-block;
 }
 .get-content ul li span {
@@ -696,6 +726,15 @@ header .banner-contents h1 {
   font-family: 'Outfit';
   font-weight: 400;
 }
+.get-content ul {
+  border-bottom: 1px solid #9f7d5d2e;
+  width: 100%;
+  margin: 20px 0px 0px;
+  padding: 10px 0px 20px;
+}
+.get-content ul:last-child {
+  border-bottom: 0px solid #9f7d5d2e;
+}
 /*.get-content ul li {
   background-image: url('img/icons/addrs-icon.png');
   background-repeat: no-repeat;
@@ -714,23 +753,52 @@ header .banner-contents h1 {
 
 
 .form-group input, .form-group textarea {
-  background-color: transparent !important;
+  font-size: 15px;
+  background-color: #fff;
   border: 2px solid #fff;
   margin: 10px 0px;
-  border-radius: 10px;
+  border-radius: 1px;
   padding: 12px 30px;
-  color: #fff !important;
+  font-family: 'Outfit';
+  color: #041330;
   text-transform: capitalize;
 }
+.form-group input, .form-group textarea {
+  background-image: url('img/icons/user-icon.png');
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: 0px 10px;
+}
+.form-group input.email-txt{  
+  background-image: url('img/icons/email-icon.png');
+}
+.form-group input.phone-txt{  
+  background-image: url('img/icons/phone-icon.png');
+}
+.form-group textarea.message-txt{  
+  background-image: url('img/icons/message-icon.png');
+}
+.form-group input.company-txt{  
+  background-image: url('img/icons/web-icon.png');
+}
+
 .cont-btn.head {
   margin-top: 20px;
 }
-.cont-btn.head a{
+.cont-btn.head a {
   text-decoration: none;
-  background-color: #fff;
-  color: #000;
+  background-color: transparent;
+  color: #fff;
   text-transform: capitalize;
-  padding: 10px 50px;
+  padding: 15px;
+  display: block;
+  border: 2px solid #fff;
+  text-align: center;
+  font-family: 'Outfit';
+  font-size: 22px;
+}
+.contact-form hr {
+  background-color: #041330;
 }
 .form-control:focus {
   color: #212529;
@@ -740,11 +808,11 @@ header .banner-contents h1 {
   box-shadow: none;
 }
 ::-ms-input-placeholder { /* Edge 12-18 */
-  color: #fff !important;
+  color: #041330 !important;
 }
 
 ::placeholder {
-  color: #fff !important;
+  color: #041330 !important;
 }
 .footer-section {
   background-color: #0000;
@@ -774,6 +842,10 @@ header .banner-contents h1 {
   border: 2px solid #fff;
   width: 40px;
   height: 40px;
+}
+.footer-menu.menu-2 {
+  position: relative;
+  left: -40px;
 }
 .footer-menu i {
   color: #041330;
@@ -843,7 +915,11 @@ header .banner-contents h1 {
   display: block;
 }
 .get-content {
-  padding: 40px 90px 0px;
+  padding: 40px 80px 100px;
+  background-image: url('img/others/taylor-line4.png');
+  background-repeat: no-repeat;
+  background-position: center 5px;
+  background-size: contain;
 }
 .contact-heading hr {
   margin: 20px auto 30px;
@@ -860,6 +936,378 @@ header .banner-contents h1 {
   color: #fff;
 }
 
+
+
+
+/*Inner page*/
+
+.inner-page-ban .banner-contents {
+  top: 50% !important;
+}
+.inner-page-ban .line-img {
+  left: 0px;
+  width: 5%;
+  top: -86px;
+}
+.about-border.industry {
+  text-align: left !important;
+}
+.about-border.industry img {
+  transform: rotate(90deg);
+  position: relative;
+  margin-top: -61%;
+  right: 0px;
+  left: 15px;
+  height: 290px;
+}
+.about-img.industry img{
+  outline: 3px solid #be997b;
+  outline-offset: -15px;
+  padding-right: 0px !important;
+  border-bottom: 40px solid #fff;
+  border-top: 5px solid #fff;
+  border-left: 5px solid #fff;
+  padding-left: 40px;
+}
+.industry-section h4 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-family: 'Outfit';
+  font-weight: 600;
+  color: #242424;
+  text-transform: full-size-kana;
+  line-height: 1.2;
+}
+.industry-section {
+  position: relative;
+  padding: 70px 0px 40px;
+}
+.industry-section .about-content {
+  padding-top: 100px;
+}
+.industry-section .taylorline-about-left img {
+  right: 0px;
+  transform: rotate(180deg);
+  top: 0px;
+  width: 10%;
+}
+.accordion-button::after {
+  flex-shrink: 0;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\2b";
+  color: #9f826a;
+  position: absolute;
+  right: 10px;
+  background-image: none;
+}
+.accordion-button:not(.collapsed)::after{
+    content: "\f068";
+    background-image: none;
+}
+.accordion-flush .accordion-item .accordion-button {
+  border-radius: 0;
+  font-size: 19px;
+  color: #041330;
+  font-family: 'Outfit';
+  font-weight: 600;
+}
+.accordion-body{  
+  font-size: 16px;
+  padding: 0px 20px 30px;
+  color: #041330;
+  font-family: 'Outfit';
+  font-weight: 400;
+}
+.accordion-flush .accordion-item{
+  border: none;
+}
+.bor-box-faq {
+  border-bottom: 1px solid #000 !important;
+}
+.accordion-button:focus {
+  z-index: 3;
+  border-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  box-shadow: none;
+}
+.faq-section{
+  position: relative;
+  padding-bottom: 70px;
+}
+.faq-section .taylorline-about-left img {
+  width: 80px;
+  top: -40px;
+}
+.faq-content {
+  margin: 0px 30px;
+}
+
+
+
+
+
+/*Team Detail Page*/
+
+.practice-details {
+  display: inline flow-root list-item;
+}
+.attorneys-wrap {
+  padding: 60px 80px;
+  background-color: #fff;
+  position: relative;
+  margin-top: -25%;
+  outline: 3px solid #a9896f;
+  outline-offset: -20px;
+  box-shadow: 0px 2px 10px #be997b3b;
+}
+.team-contents ul li a {
+  font-size: 18px;
+  color: #0c172d;
+  font-family: 'Outfit';
+  text-decoration: none;
+}
+.team-contents ul li a i {
+  padding: 0px 10px 10px 0px;
+}
+.team-contents .cont-detail li:last-child {
+  margin-left: 80px;
+}
+.team-contents h6 {
+  font-size: 18px;
+  color: #0c172d;
+  font-family: 'Outfit';
+}
+.practice-details li {
+  padding: 4px 0px 4px 10px;
+  font-size: 17px !important;
+  font-family: 'Outfit';
+  color: #0c172d;
+}
+.practice-details li i {
+  font-size: 8px;
+  padding-right: 10px;
+  color: #9f826a;
+  position: relative;
+  top: -3px;
+}
+.practice-details {
+  display: inline flow-root list-item;
+  padding-right: 70px;
+}
+.practice-details li:last-child i {
+  color: #7b5a39;
+}
+.team-name {
+  border-left: 4px solid #a9896f;
+  padding-left: 50px;
+  margin-bottom: 20px;
+}
+.cont-detail {
+  margin: 25px 0px;
+}
+.team-contents {
+  padding-left: 60px;
+}
+.inner-page-ban2 .line-img {
+  right: 0px;
+  top: -105px;
+  width: 90px;
+}
+.tab-contentleft {
+  background-color: #041330;
+  position: relative;
+  padding: 40px 0px;
+}
+.tab-right-content {
+  padding: 10px 0px 0px 50px;
+}
+.nav-pills .nav-link:last-child {
+  border: none;
+}
+.nav-pills .nav-link.active, .nav-pills .nav-link:hover,  .nav-pills .show > .nav-link {
+  color: #fff;
+  background: linear-gradient(225deg, rgba(186,149,119,1) 0%, rgba(126,93,60,1) 100%);
+  text-align: left;
+  border: 1px solid transparent;
+}
+.nav-pills .nav-link {
+  background: none;
+  border: 0;
+  border-radius: 0px;
+  text-align: left;
+  margin: 0px 50px 10px;
+  font-family: 'Outfit';
+  text-transform: uppercase;
+  color: #fff;
+  border-bottom: 0.2px solid #ffffff5e;
+}
+.tab-wrap h3 {
+  font-size: 40px !important;
+}
+.tab-wrap h5 {
+  color: #fff;
+  font-size: 16px;
+  margin-top: -4px;
+}
+.tab-wrap {
+  padding: 80px 0px;
+}
+.tab-right-content hr {
+  top: -10px;
+}
+.img-fluid.taylorline-img {
+    position: absolute;
+    right: -56px;
+    transform: rotate(90deg);
+    top: 30%;
+    width: 80px;
+}
+.tab-right-content ul li i {
+  background: rgb(186,149,119);
+  background: linear-gradient(225deg, rgba(186,149,119,1) 0%, rgba(126,93,60,1) 100%);
+  padding: 0px;
+  margin-right: 10px;
+}
+.tab-right-content h6 {
+  font-size: 18px;
+  color: #0c172d;
+  font-family: 'Outfit';
+  padding-top: 30px;
+}
+.news-content p {
+  font-size: 17px;
+}
+.play-btn {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  right: 0px;
+  background-color: transparent;
+  border: none;
+}
+.media-box {
+  position: relative;
+}
+.publicat-content h5 {
+  font-size: 18px;
+  color: #a9896f;
+  font-family: 'Outfit';
+  font-weight: 500;
+}
+.publicat-content h4 {
+  font-size: 19px;
+  color: #000;
+  font-family: 'Outfit';
+  text-transform: full-size-kana;
+}
+.publicat-content p {
+  font-size: 16px;
+}
+.publicat-content:hover {
+  background-color: #f8f3ee;
+  background-image: url('img/others/taylorline.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 60px;
+}
+.tab-right-content h4, p, a {
+  font-family: 'Outfit' !important;
+}
+.team-contents .social-icon li i {
+  padding-left: 20px;
+}
+.tab-right-content a {
+  text-decoration: none;
+  color: #bd997a;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: -7px 0px 0px;
+  display: block;
+  font-size: 20px;
+}
+.speaking-content {
+  margin: 0px 0px 40px;
+}
+.publicat-content {
+  padding: 20px;
+  border: 2px solid #b18c6e;
+  margin: 30px 0px;
+}
+
+
+/*practice-Area page*/
+
+.practice-ban .banner-info {
+  margin: 0px !important;
+}
+.inner-page .line-img {
+  right: 0px !important;
+  position: absolute;
+  left: auto;
+}
+.search-box {
+  position: relative;
+  margin-top: -80px;
+  outline: 3px solid #e1d0c3;
+  outline-offset: -15px;
+  box-shadow: 0px 2px 10px #be997b3b;
+  padding: 70px 50px;
+  background-color: #fff;
+}
+.search-box input {
+  background-color: #f8f6f4;
+  font-family: 'Outfit';
+  border: 3px solid #e1d0c3;
+  padding: 20px;
+}
+.search-box input:focus {
+  background-color: #f8f6f4 !important;
+  font-family: 'Outfit';
+  border: 3px solid #e1d0c3;
+}
+.input-group .btn:focus, .input-group button:focus {
+  outline: none;
+}
+.btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0);
+}
+.input-group .btn, .input-group button {
+  background: transparent !important;
+  color: #be997b;
+  position: absolute;
+  right: 0px;
+  font-size: 22px;
+  top: 8px;
+  z-index: 999;
+}
+
+
+
+.tab-titles button {
+  background: transparent !important;
+  color: #041330 !important;
+  font-family: 'Outfit';
+  font-size: 20px;
+}
+.tab-titles .nav {
+  border-bottom: 2px solid #d6cbc0;
+}
+.tab-titles .nav-pills .nav-link.active, .tab-titles .nav-pills .nav-link:hover {
+  border-bottom: 3px solid #9f826a !important;
+  border: 2px solid transparent;
+}
+.tab-titles .nav-pills .nav-link {
+  margin: -1px;
+  padding: 10px 90px;
+}
+.accordion-button:not(.collapsed) {
+  color: #0c63e4;
+  background-color: #e7f1ff00;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0);
+  color: #a9896f !important;
+}
 
 
 
@@ -883,22 +1331,134 @@ header .banner-contents h1 {
 
 }
 @media screen and (max-width: 1440px) {
-header .mainmenu ul li {
-  padding: 0px 9px;
-}
+
+  header .mainmenu ul li {
+    padding: 0px 9px;
+  }
+  .navbar-nav {
+    margin: auto;
+  }
+  header .mainmenu ul .nav-item:nth-child(2) {
+    padding-left: 50px;
+    left: 0px;
+  }
+  .nav-item.logo-t img {
+    width: 73%;
+    left: 56px;
+    position: relative;
+    top: -61px;
+  }
+  header .mainmenu ul .nav-item:nth-child(5) {
+    position: relative;
+    left: 40px;
+  }
+  header .mainmenu ul .nav-item:nth-child(6) {
+    position: relative;
+    left: 60px;
+  }
+  header .mainmenu ul .nav-item:last-child {
+    left: 90px;
+  }
+  .social-icon i {
+    padding: 20px 10px;
+  }
 
 }
 @media screen and (max-width: 1376px){
-
+  header .mainmenu ul li a {
+    font-size: 13px;
+  }
+  .header-bg-img {
+    margin-top: -70px;
+  }
+  header .mainmenu {
+    top: -92px;
+  }
+  header .mainmenu .navbar-nav a:hover {
+    padding-bottom: 17px !important;
+    background-size: 24px;
+  }
+  .nav-item.logo-t img {
+    width: 63%;
+    left: 64px;
+    position: relative;
+    top: -53px;
+  }
+    .about-border img {
+    position: relative;
+    margin-top: -90%;
+    left: -23px;
+    width: 80%;
+    height: 420px;
+  }
+  .about-border {
+    text-align: end !important;
+  }
+  .practice-sub-cont p {
+    font-size: 14px;
+  }
 
 }
 @media screen and (max-width: 1280px) {
-
-	
-}
-@media screen and (max-width: 1270px) {
-  header .mainmenu ul li a {
+ .header-bg-img {
+    margin-top: -60px;
+  }
+    header .mainmenu {
+    top: -93px;
+  }
+   header .mainmenu ul li a {
     font-size: 13px;
+  }
+    .about-border img {
+    position: relative;
+    margin-top: -90%;
+    left: -23px;
+    width: 80%;
+    height: 420px;
+  }
+  .about-border.industry img {
+    transform: rotate(90deg);
+    position: relative;
+    margin-top: -64%;
+    right: 0px;
+    left: 42px;
+    height: 300px;
+    width: 50%;
+  }
+	.about-img.industry img {
+    outline-offset: -20px;
+  }
+}
+
+
+@media screen and (max-width: 1270px) {
+  header .mainmenu ul .nav-item:last-child {
+    left: 60px;
+    padding: 10px 10px 10px 10px !important;
+    top: -9px;
+  }
+  .nav-item.logo-t img {
+    width: 53%;
+    left: 70px;
+    position: relative;
+    top: -46px;
+  }
+    header .mainmenu ul .nav-item:nth-child(5) {
+    left: 20px;
+  }
+  header .mainmenu .navbar-nav a:hover {
+    padding-bottom: 15px !important;
+    background-size: 24px;
+  }
+    header .mainmenu ul .nav-item:nth-child(6) {
+    left: 40px;
+  }
+  header .mainmenu ul li a {
+    font-size: 10px;
+  }
+    header .mainmenu {
+    top: -77px;
+    z-index: 9999;
   }
     header .mainmenu ul li {
     padding: 0px 4px;
@@ -915,9 +1475,7 @@ header .mainmenu ul li {
   header .banner-contents h1 {
     font-size: 40px;
   }
-  .banner-info {
-    margin: 0% 10%;
-  }
+
   .banner-info p {
     font-size: 17px;
   }
@@ -928,13 +1486,179 @@ header .mainmenu ul li {
     font-size: 20px;
   }
 
+ .about-border img {
+    height: 335px;
+  }
+ .about-border.industry img {
+    margin-top: -68%;
+    left: 65px;
+    width: 50%;
+  }
+    .team-contents {
+    padding-left: 10px;
+  }
+  .practice-details {
+    padding-right: 0px;
+  }
+  .attorneys-wrap {
+    padding: 20px 60px;
+    margin-top: -115%;
+  }
+  .team-img {
+    text-align: center;
+  }
+  .team-name {
+    border-left: 4px solid #a9896f;
+    padding-left: 30px;
+  }
+
+  .accordion-flush .accordion-item .accordion-button {
+    font-size: 16px;
+  }
+   .attorneys-wrap {
+    margin-top: -70%;
+  }
 }
 
 
 @media screen and (max-width: 1023px) {
-	  header .mainmenu ul li a {
-    font-size: 11px;
-    padding: 0px 4px !important;
+    header .mainmenu {
+    top: auto;
+  }
+  .about-border img {
+    height: auto;
+  }
+  .header-top {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    background-image: url('img/others/mobile-header-bg-1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 30px 0px;
+    background-size: 100% 90%;
+  }
+.collapse:not(.show) {
+  display: none;
+}
+ .navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+    position: absolute;
+    top: 168px;
+    background-color: #bd987a;
+    left: 0px;
+    padding: 20px;
+    width: 100%;
+  }
+  header .mainmenu ul .nav-item:nth-child(6) {
+    left: 0px;
+    top: 0px;
+    padding: 0px !important;
+    color: #fff !important;
+    background-image: none;
+  }
+  .about-border img {
+    position: relative;
+    margin-top: -83%;
+    left: -20px;
+  }
+  .header-clock-cont ul {
+    margin: 0px;
+  }
+  header .mainmenu ul .nav-item{
+    padding: 0px;
+  }
+  header .mainmenu ul .nav-item:nth-child(5) {
+    left: 0px;
+    padding: 0px;
+  }
+  header .mainmenu ul .nav-item:nth-child(2) {
+    padding-left: 0px;
+    left: 0px;
+    padding: 0px;
+  }
+  header .mainmenu ul .nav-item:last-child a {
+    color: #fff;
+    padding: 0px !important;
+  }
+  header .mainmenu ul .nav-item:nth-child(3) {
+    position: relative;
+    padding: 0px;
+    left: 0px;
+  }
+ .navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+    border: none !important;
+  }
+  header .header-bottom .banner-contents {
+    top: 50%;
+  }
+  header .header-logo {
+      text-align: center;
+  }
+  header .header-logo img {
+    display: inline-block;
+  }
+  header .mainmenu .navbar {
+    margin: 0;
+    padding: 0;
+  }
+  .icon-bar {
+    background-color: #fff;
+    border-radius: 1px;
+    display: block;
+    height: 2px;
+    width: 22px;
+  }
+  .icon-bar + .icon-bar {
+    margin-top: 4px;
+  }
+  button:focus {
+    outline: none;
+  }
+  .navbar-toggler {
+    background-color: transparent;
+    background-image: none;
+    border-radius: 0;
+    padding: 9px 10px;
+  }
+  .navbar-dark .navbar-toggler {
+    border: medium none;
+  }
+  header .header-top .mainmenu ul li {
+    margin-bottom: 5px;
+  }
+  header .header-top .mainmenu ul li .sub-menu li {
+    margin-bottom: 0px;
+  }
+  .mainmenu li:last-child:hover .sub-menu {
+    right: auto;
+  }
+  header .mainmenu {
+    float: none;
+    padding-top: 0px;
+  }
+  a.navbar-brand{
+      width: 50%;
+  }
+  header .mainmenu ul li a {
+    font-size: 14px;
+  }
+  header .mainmenu .navbar-nav a:hover {
+    color: #fff;
+    background-color: transparent;
+    background-image: none;
+    padding: 0px !important;
+  }
+   header .mainmenu ul li a {
+    font-size: 20px;
+/*    padding: 12px 4px !important;*/
   }
   .mainmenu  .container {
     padding: 0px !important;
@@ -949,20 +1673,26 @@ header .mainmenu ul li {
       margin: auto;
   }
    header .header-bottom .banner-contents {
-    top: 15%;
+    top: 50%;
   }
   .header-logo {
     padding-top: 15px;
   }
   .heading h3 {
-    font-size: 30px;
+    font-size: 50px;
   }
-  
+  .heading hr {
+    top: -10px;
+  }  
   .heading h4 {
     font-size: 16px;
   }
   .heading p {
-    font-size: 14px;
+    font-size: 18px;
+  }
+  .border-left-prah {
+    padding-left: 15px;
+    margin: 20px 0px 30px;
   }
   .footer-menu h4 {
     font-size: 17px;
@@ -976,6 +1706,93 @@ header .mainmenu ul li {
     width: 30px;
     height: 30px;
   }
+  .practice-sub-cont p {
+    font-size: 13px !important;
+  }
+  .heading hr {
+    top: -20px;
+  }
+  .practice-sub-cont h6 {
+    padding-top: 10px;
+  }
+  .last-box {
+    margin: 10px 40px !important;
+  }
+  .practice-content.last-box:hover {
+    width: auto;
+  }
+  .last-box {
+    margin: -100px 160px 0px !important;
+    width: auto;
+  }
+  .team-content {
+    margin-bottom: 50px;
+  }
+  .team-section {
+    padding: 40px 0px;
+  }
+  .cooming-img img {
+    width: 70%;
+  }
+  .get-content {
+    padding: 20px 20px 0px;
+  }
+  .contact-wrap h4 {
+    font-size: 23px;
+  }
+  .mob-img img {
+    width: 100%;
+    position: relative;
+    z-index: 99999;
+  }
+    .footer-logo {
+    text-align: center;
+  }
+  .social-icon{
+    text-align: center;
+  }
+  .footer-menu {
+    padding-left: 100px;
+  }
+  .copyrights {
+    text-align: left !important;
+    padding-left: 100px;
+  }
+  .terms-menu a {
+    font-size: 16px;
+    padding: 0px 20px 0px 0px;
+  }
+  .terms-menu{
+    text-align: left !important;
+  }
+  .footer-menu.menu-2 {
+    left: 0px;
+  }
+  .footer-section{
+    padding: 30px 0px 20px;
+  }
+
+  .about-border.industry img {
+    margin-top: -61%;
+    left: 5px;
+    width: 50%;
+  }
+    .tab-wrap h3 {
+    font-size: 28px !important;
+  }
+
+   .team-contents .cont-detail li:last-child {
+    margin-left: 20px;
+  }
+    .attorneys-wrap {
+    padding: 20px 40px;
+  }
+  .tab-right-content {
+    padding: 10px 10px 10px;
+  }
+  .industry-section .about-content {
+    padding-top: 0px;
+  }
  
 }
 @media screen and (max-width: 840px) {
@@ -984,173 +1801,162 @@ header .mainmenu ul li {
 }
 
 @media screen and (max-width: 767px) {
-  .navbar-toggler:focus {
-	  text-decoration: none;
-	  outline: 0;
-	  box-shadow: none;
-	  border: none !important;
-	}
-	header .header-bottom .banner-contents {
-		top: 50%;
-	}
-	header .header-logo {
-	    text-align: center;
-	}
-	header .header-logo img {
-		display: inline-block;
-	}
-	header .mainmenu .navbar {
-	  margin: 0;
-	  padding: 0;
-	}
-	.icon-bar {
-		background-color: #fff;
-		border-radius: 1px;
-		display: block;
-		height: 2px;
-		width: 22px;
-	}
-	.icon-bar + .icon-bar {
-		margin-top: 4px;
-	}
-	button:focus {
-		outline: none;
-	}
-	.navbar-toggler {
-	  background-color: transparent;
-	  background-image: none;
-	  border-radius: 0;
-	  padding: 9px 10px;
-	}
-	.navbar-dark .navbar-toggler {
-	  border: medium none;
-	}
-	header .header-top .mainmenu ul li {
-	  margin-bottom: 5px;
-	}
-	header .header-top .mainmenu ul li .sub-menu li {
-	  margin-bottom: 0px;
-	}
-	.mainmenu li:last-child:hover .sub-menu {
-		right: auto;
-	}
-	header .mainmenu {
-		float: none;
-		padding-top: 0px;
-	}
-	a.navbar-brand{
-	    width: 50%;
-	}
-	header .mainmenu ul li a {
-	  font-size: 14px;
-	}
-  header .mainmenu .navbar-nav a.active, header .mainmenu .navbar-nav a:focus, header .mainmenu .navbar-nav a:hover {
-    color: #df542e;
-    font-weight: 700;
-    background-color: transparent;
+  
+  .last-box {
+    margin: auto !important;
+    width: auto;
   }
-	.contact-wrap {
-	  padding-top: 10px;
-	}
-	header .header-bottom .banner-contents {
-		top: 2%;
-	}
-	.navbar-nav.me-auto.mb-2.mb-lg-0 {
-	  margin-top: 20px;
-	}
-	.navbar.navbar-expand-md .container {
-	  padding: 0px;
-	}
-	.navbar.navbar-expand-md a img {
-	  width: 50%;
-	}	
+  .footer-menu {
+    padding-left: 0px;
+  }  
+  .copyrights {
+    text-align: left !important;
+    padding-left: 0px;
+  }
+  .proprietary-content.heading {
+    padding-top: 20px;
+  }
 
- 
-  .banner-contents a {
-    font-size: 14px;
-    padding: 10px 25px;
+  .heading hr {
+    top: -10px;
+  } 
+
+  .heading h3 {
+    font-size: 30px;
   }
-  .banner-info p {
+
+  .heading h5 {
+    font-size: 15px;
+  } 
+  .get-content ul li span {
+      font-size: 15px;
+    margin: 0px 40px 0px 0px;
+  }
+  .navbar-brand {
+    margin-right: 30px !important;
+  }
+  .navbar-collapse {
+    top: 148px;
+  }
+  header .mainmenu ul li a {
+    padding: 10px 0px !important;
+  }
+  .about-section {
+    padding: 40px 0px;
+  }
+    .about-border.industry img {
+    margin-top: -65%;
+    left: 50px;
+    width: 50%;
+  }
+  .nav-pills .nav-link {
+    margin: 0px 30px 10px;
+    font-size: 13px;
+  }
+  .team-name {
+    padding-left: 30px;
+  }
+
+  .tab-contentleft {
+    padding: 40px 0px 10px;
+  }
+
+  .accordion-flush .accordion-item .accordion-button {
     font-size: 15px;
   }
-	.footer-section {
-    padding-top: 0px;
-    text-align: center !important;
-    margin: auto;
-  }
 
-  .footer-logo {
-      text-align: center !important;
+   .attorneys-wrap {
+    margin-top: -110%;
   }
-  .copyrights p {
-    margin: 0px 0px 0px;
+  .cont-detail {
+  display: inherit !important;
   }
-  .footer-menu h4 {
-    font-size: 17px;
+  .team-contents .cont-detail li:last-child {
+    margin-left: 0px;
   }
-  .footer-logo {
-    padding: 30px 0px;
-  }
-  
-  .footer-menu a {
-    display: block;
-  }
- .footer-menu i {
-    padding: 6px 7px;
-  }
-  .copyrights p {
-    font-size: 13px;
+  .media-box {
+    position: relative;
     padding: 20px 0px;
   }
-  
 
+}
+
+@media screen and (max-width: 490px) {
+ .about-border.industry img {
+    margin-top: -67%;
+    left: 66px;
+    width: 50%;
+  }
+  .tab-right-content {
+    padding: 40px 10px 10px;
+  }
+  .attorneys-wrap {
+    margin-top: -70%;
+  }
 }
 
 @media screen and (max-width: 480px) {
 
-  header .banner-contents h1 {
-    font-size: 20px;
+  .heading p {
+    font-size: 15px;
   }
-  .banner-info p {
+   .heading hr {
+    top: -10px;
+    margin-bottom: 0px;
+  }
+  .testimonials-heading hr {
+    margin: auto !important;
+  }
+  .testimonials-section {
+    padding: 30px 0px 70px;
+  }
+   a.btn {
+    padding: 5px 10px;
     font-size: 13px;
-  }
-    .banner-contents a {
-    font-size: 13px;
-    padding: 2px 20px;
-  }
-  
-  .header-top {
-  padding: 3px 0px;
-}
-.banner-info h4 {
-    font-size: 14px;
   }
 
-
-  
-}
-@media screen and (max-width: 428px) {
-  
- 
-    .banner-info p {
-    font-size: 13px;
-    display: none;
-  }
-    header .header-bottom .banner-contents {
-    top: 14%;
+   header .header-bottom .banner-contents {
+      top: 45%;
+    }
+  .banner-btn a {
+    padding: 10px;
   }
     header .mainmenu ul li a {
-    font-size: 13px;
+    font-size: 12px;
+    padding: 3px !important;
   }
-    .heading h3 {
-    font-size: 23px;
+  .header-clock-cont li i {
+    padding: 7px;
+  }   
+  .nav-item a {
+    font-size: 17px !important;
   }
- 
-    .heading h3 {
-    font-size: 25px !important;
+   .navbar-collapse {
+    top: 135px;
   }
-  .heading h5 {
+
+  .industry-section {
+    position: relative;
+    padding: 30px 0px 40px;
+  }
+   .industry-section h4 {
     font-size: 20px;
+  }
+}
+@media screen and (max-width: 428px) {
+  header .header-bottom .banner-contents {
+    top: 40%;
+  }
+   .navbar-collapse {
+    top: 115px;
+  }
+    .about-border.industry img {
+    margin-top: -70%;
+    left: 80px;
+    width: 50%;
+  }
+  .attorneys-wrap {
+    padding: 20px 25px;
   }
 
 
@@ -1159,25 +1965,67 @@ header .mainmenu ul li {
 
   .contact-head h5 span a {
     font-size: 14px;
+  }   
+  .terms-menu a {
+    font-size: 16px;
+    padding: 0px 10px 0px 0px;
   }
-   
+    .navbar-collapse {
+    top: 105px;
+  }
+    header .banner-contents h1 {
+    font-size: 27px;
+    text-shadow: 2px 2px #010a15;
+  }
+    .heading h3 {
+    font-size: 25px;
+  }
 }
-@media screen and (max-width: 390px) {
-  
+@media screen and (max-width: 391px) {
+  .navbar-brand {
+    margin-right: 0px !important;
+    position: relative;
+    left: -20px;
+  }
+  .about-border.industry img {
+    margin-top: -73%;
+    left: 88px;
+    width: 50%;
+  }
 
 }
 @media screen and (max-width: 375px) {
 	
+  .accordion-flush .accordion-item .accordion-button {
+    font-size: 13px;
+  }
+   .about-border.industry img {
+    margin-top: -75%;
+    left: 45px;
+    width: 50%;
+    height: 200px;
+  }
 
 }
 @media screen and (max-width: 360px) {
   .navbar-brand {
     margin-right: 0px;
   }
- 
+   a.navbar-brand {
+    width: 50%;
+    position: relative;
+    left: -8px;
+  }
+   header .mainmenu ul li {
+    padding: 0px;
+  }
+
 }
 @media screen and (max-width: 320px) {
-  header .header-bottom .banner-contents {
-    top: 6%;
+
+ .about-border.industry img {
+    margin-top: -75%;
+    left: 55px;
   }
+
 }
