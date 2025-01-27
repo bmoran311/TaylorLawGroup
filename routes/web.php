@@ -28,18 +28,19 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [PageController::class, 'index'])->name('site.home');
-
-Route::view('prototype/home', 'prototype.home')->name('site.prototype.home');
-Route::view('prototype/attorney-detail', 'prototype.attorney-detail')->name('site.prototype.attorney-detail');
-Route::view('prototype/attorney-member', 'prototype.attorneys-member')->name('site.prototype.attorneys-member');
-Route::view('prototype/attorneys', 'prototype.attorneys')->name('site.prototype.attorneys');
-Route::view('prototype/practice-areas', 'prototype.practice-areas')->name('site.prototype.practice-areas');
+Route::get('/attorney-detail', [PageController::class, 'attorney_detail'])->name('site.attorney-detail');
+Route::get('/attorneys', [PageController::class, 'attorneys'])->name('site.attorneys');
+Route::get('/our-firm', [PageController::class, 'our_firm'])->name('site.our-firm');
+Route::view('/attorneys2', 'prototype.attorneys')->name('site.prototype.attorneys');
+Route::view('/practice-areas', 'prototype.practice-areas')->name('site.prototype.practice-areas');
 
 
 require __DIR__.'/auth.php';
 
-Route::prefix('dashboard')->group(function(){
-    Route::middleware(['auth'])->group(function(){
+Route::prefix('dashboard')->group(function()
+{
+    Route::middleware(['auth'])->group(function()
+    {
         Route::get('/', function () {
             return view('dashboard');
         })->name('dashboard');

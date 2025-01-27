@@ -1,0 +1,90 @@
+<div class="footer-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-lg-4 col-sm-12 col-12">
+                <div class="footer-logo">
+                    <a href="index.html"><img src="/site/img/logo.png" class="img-fluid" alt="footer-logo" /></a>
+                </div>
+                <div class="social-icon">
+                    <ul class="list-unstyled d-inline-flex">
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.twitter.com/"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        <div class="col-lg-2 col-md-3 col-sm-12">
+        <div class="footer-menu menu-1">
+            <h4>navigation</h4>
+            <hr class="border-bot">
+            <ul class="list-unstyled">
+                <li><a href="/our-firm">Our Firm</a></li>
+                <li><a href="/attorneys">Attorneys</a></li>
+                <li><a href="#">Practice Areas </a></li>
+                <li><a href="#">News and Events  </a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-12">
+        <div class="footer-menu menu-2">
+            <h4>resources</h4>
+            <hr class="border-bot">
+            <ul class="list-unstyled">
+                <li><a href="termsandcondition.html">Privacy Policy</a></li>
+                <li><a href="#">Accessiblity</a></li>
+                <li><a href="#">Disclaimer</a></li>
+                <li><a href="#">Terms of use</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-12">
+        <div class="footer-menu menu-3">
+            <h4>get in touch</h4>
+            <hr class="border-bot">
+            <ul class="list-unstyled d-inline-flex d-flex">
+                <li><a href="#"><i class="fa-solid fa-location-pin"></i></a></li>
+                <li><a href="#"><span>171 Church Street - Suite 330 Charleston, South Carolina 29401</span></a>
+                </li>
+            </ul>
+            <ul class="list-unstyled d-inline-flex d-flex">
+                <li><a href="tel:843.723.2000"><i class="fa-solid fa-phone"></i></a></li>
+                <li><a href="tel:843.723.2000"><span>843.723.2000</span></a>
+                </li>
+            </ul>
+            <br>
+            <ul class="list-unstyled d-inline-flex d-flex">
+                <li><a href="mailto:info@taylorlaw.com"><i class="fa-solid fa-envelope"></i></a></li>
+                <li><a href="mailto:info@taylorlaw.com"><span>info@taylorlaw.com</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="copyrights">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="copyright-content">
+                <p>2024 &copy;2025 Taylor Law |  All Rights Reserved</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="terms-menu text-end">
+                <ul class="list-unstyled d-inline-flex d-flex">
+                    <li><a href="#">Terms of use </a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript Libraries -->
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script src="https://kit.fontawesome.com/d547ebcf09.js" crossorigin="anonymous"></script>

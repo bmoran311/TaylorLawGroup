@@ -8,19 +8,19 @@
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" media="screen" href="/prototype/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" media="screen" href="/prototype/css/fonts.css">
-  <link rel="stylesheet" type="text/css" media="screen" href="/prototype/css/owl.carousel.min.css">
-  <link rel="stylesheet" type="text/css" media="screen" href="/prototype/css/owl.theme.default.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="/site/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="/site/css/fonts.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="/site/css/owl.carousel.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="/site/css/owl.theme.default.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" media="screen" href="/prototype/style.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="/site/style.css">
 
   <!-- FAVICONS -->
-  <link rel="shortcut icon" href="/prototype/img/favicon/favicon.png" type="image/png">
-  <link rel="icon" href="/prototype/img/favicon/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="/site/img/favicon/favicon.png" type="image/png">
+  <link rel="icon" href="/site/img/favicon/favicon.png" type="image/png">
 </head>
 
 <body>
@@ -35,7 +35,7 @@
                     <li><a href="#"><i class="fa-solid fa-clock"></i></a></li>
                     <li><a href="tel: 843.723.2000"><i class="fa-solid fa-phone"></i></a></li>
                   </ul>
-                </div><a class="navbar-brand d-block d-md-block d-lg-none d-sm-block" href="index.html"><img src="/prototype/img/logo.png" class="img-fluid" alt="logo" /></a>
+                </div><a class="navbar-brand d-block d-md-block d-lg-none d-sm-block" href="index.html"><img src="/site/img/logo.png" class="img-fluid" alt="logo" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -116,13 +116,13 @@
             </div>
           </div>
           <div class="header-bg-img">
-            <img src="/prototype/img/others/header-bg2.png" class="img-fluid" alt="header-bg" />
+            <img src="/site/img/others/header-bg2.png" class="img-fluid" alt="header-bg" />
           </div>
           <div class="header-menu">
             <div class="mainmenu">
               <nav class="navbar navbar-expand-md">
                 <div class="container">
-                  <a class="navbar-brand d-block d-md-none d-lg-none d-sm-block" href="index.html"><img src="/prototype/img/logo.png" class="img-fluid" alt="logo" /></a>
+                  <a class="navbar-brand d-block d-md-none d-lg-none d-sm-block" href="index.html"><img src="/site/img/logo.png" class="img-fluid" alt="logo" /></a>
                   <div class="get-start text-end d-block d-md-none d-lg-none d-sm-block">
                    <a href="login.html" class="btn">Get Started</a>
                   </div>
@@ -159,7 +159,7 @@
                         </ul>
                       </li>
                       <li class="nav-item logo-t">
-                         <a class="nav-link" href="index.html"><img src="/prototype/img/logo1.png" class="img-fluid" alt="logo" /></a>
+                         <a class="nav-link" href="index.html"><img src="/site/img/logo1.png" class="img-fluid" alt="logo" /></a>
                       </li>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -190,8 +190,8 @@
 
       <div class="header-bottom inner-page-ban">
         <div class="banner-wrap">
-          <img src="/prototype/img/banner/banner2.jpg" class="img-fluid d-none d-lg-block d-md-none d-sm-none" width="100%" alt="banner">
-          <img src="/prototype/img/banner/mobile-banner.jpg" class="img-fluid d-block d-md-block d-lg-none d-sm-block" alt="banner" width="100%">
+          <img src="/site/img/banner/banner2.jpg" class="img-fluid d-none d-lg-block d-md-none d-sm-none" width="100%" alt="banner">
+          <img src="/site/img/banner/mobile-banner.jpg" class="img-fluid d-block d-md-block d-lg-none d-sm-block" alt="banner" width="100%">
           <div class="banner-contents">
             <div class="container">
               <div class="banner-details">
@@ -207,7 +207,7 @@
         <div class="taylor-line">
           <div class="container">
             <div class="line-img">
-              <img src="/prototype/img/others/taylor-line-left.png" class="img-fluid" alt="taylorline" />
+              <img src="/site/img/others/taylor-line-left.png" class="img-fluid" alt="taylorline" />
             </div>
           </div>
         </div>
@@ -218,7 +218,7 @@
 
       <div class="industry-section">
         <div class="taylorline-about-left">
-          <img src="/prototype/img/others/taylor-line-left.png" class="img-fluid" alt="taylorline" />
+          <img src="/site/img/others/taylor-line-left.png" class="img-fluid" alt="taylorline" />
         </div>
         <div class="container">
           <div class="about-wrap heading">
@@ -235,10 +235,10 @@
 
               <div class="col-md-12 col-lg-6 ">
                 <div class="about-img industry text-center">
-                  <img src="/prototype/img/others/about-img2.png" class="img-fluid" alt="about-img" />
+                  <img src="/site/img/others/about-img2.png" class="img-fluid" alt="about-img" />
                 </div>
                 <div class="about-border industry">
-                  <img src="/prototype/img/others/img-border.png" class="img-fluid" alt="about-border" />
+                  <img src="/site/img/others/img-border.png" class="img-fluid" alt="about-border" />
                 </div>
               </div>
             </div>
@@ -251,7 +251,7 @@
 
       <div class="faq-section heading">
         <div class="taylorline-about-left">
-          <img src="/prototype/img/others/taylor-line-left.png" class="img-fluid" alt="taylorline" />
+          <img src="/site/img/others/taylor-line-left.png" class="img-fluid" alt="taylorline" />
         </div>
         <div class="container">
           <div class="faq-content">
@@ -497,7 +497,7 @@
 
       <div class="contact-section">
         <div class="taylorline-box">
-          <img src="/prototype/img/others/taylorline.png" class="img-fluid obstrac-img" alt="taylorline">
+          <img src="/site/img/others/taylorline.png" class="img-fluid obstrac-img" alt="taylorline">
         </div>
         <div class="container">
           <div class="contact-heading text-center heading">
@@ -589,7 +589,7 @@
           <div class="row">
             <div class="col-md-12 col-lg-3 col-sm-12 col-12">
               <div class="footer-logo">
-                <a href="index.html"><img src="/prototype/img/logo.png" class="img-fluid" alt="footer-logo" /></a>
+                <a href="index.html"><img src="/site/img/logo.png" class="img-fluid" alt="footer-logo" /></a>
               </div>
               <div class="social-icon">
                 <ul class="list-unstyled d-inline-flex">
