@@ -65,8 +65,7 @@ class TestimonialController extends Controller
             'client_name' => 'required|string|max:255',
             'title' => 'required|string|max:255',  
         ]);
-
-        $testimonial = new Testimonial();
+        
         $testimonial->firm_id = session('firm_id');        
         $testimonial->client_name = $request->input('client_name');
 		$testimonial->title = $request->input('title');

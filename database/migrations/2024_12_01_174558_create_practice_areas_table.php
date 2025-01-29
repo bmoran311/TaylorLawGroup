@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('firm_id');
             $table->string('name');
+            $table->text('summary')->nullable();
             $table->text('description')->nullable();
             $table->timestamps();
         });

@@ -38,11 +38,24 @@
                     </div>
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
+                            <x-label>Summary</x-label>
+                            <textarea
+                                name="summary"
+                                rows="10"
+                                placeholder="Summary..."
+                                class="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
+                            >{{ old('summary', $practice_area->summary ?? '') }}</textarea>
+                        </div>
+                    </div>
+                    <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
+                        <div class="w-full">
                             <x-label>Description</x-label>
-                            <x-quill-editor name="description">
-                                {{ old('description', $practice_area->description ?? '') }}
-                            </x-quill-editor>
-                           
+                            <textarea
+                                name="description"
+                                rows="20"
+                                placeholder="Description..."
+                                class="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
+                            >{{ old('description', $practice_area->description ?? '') }}</textarea>
                         </div>
                     </div>                    
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">                        

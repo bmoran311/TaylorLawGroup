@@ -16,7 +16,7 @@
                             </ul>
                         </div>
                         <div class="team-name heading">
-                            <h3>David Taylor</h3>
+                            <h3>{{$bio}}}} Taylor</h3>
                             <h5>FOUNDING PARTNER</h5>
                         </div>
                         <ul class="list-unstyled d-inline-flex d-flex cont-detail">

@@ -21,9 +21,9 @@
             <ul class="list-unstyled">
                 <li><a href="/our-firm">Our Firm</a></li>
                 <li><a href="/attorneys">Attorneys</a></li>
-                <li><a href="#">Practice Areas </a></li>
-                <li><a href="#">News and Events  </a></li>
-                <li><a href="#">Team</a></li>
+                <li><a href="/practice_areas">Practice Areas </a></li>
+                <li><a href="/news">News and Events  </a></li>
+                <li><a href="/attorneys">Team</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -33,11 +33,11 @@
             <h4>resources</h4>
             <hr class="border-bot">
             <ul class="list-unstyled">
-                <li><a href="termsandcondition.html">Privacy Policy</a></li>
-                <li><a href="#">Accessiblity</a></li>
-                <li><a href="#">Disclaimer</a></li>
-                <li><a href="#">Terms of use</a></li>
-                <li><a href="#">FAQ</a></li>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/accessibility">Accessiblity</a></li>
+                <li><a href="/disclaimer">Disclaimer</a></li>
+                <li><a href="/terms-of-use">Terms of use</a></li>
+                <li><a href="/faqs">FAQ</a></li>
             </ul>
         </div>
     </div>
@@ -73,8 +73,8 @@
         <div class="col-md-6">
             <div class="terms-menu text-end">
                 <ul class="list-unstyled d-inline-flex d-flex">
-                    <li><a href="#">Terms of use </a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="/terms-of-use">Terms of use </a></li>
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
                     <li><a href="#">Sitemap</a></li>
                 </ul>
             </div>
@@ -83,8 +83,8 @@
 </div>
 
 <!-- JavaScript Libraries -->
-<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/owl.carousel.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
 <script src="https://kit.fontawesome.com/d547ebcf09.js" crossorigin="anonymous"></script>

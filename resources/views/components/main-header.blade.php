@@ -1,3 +1,10 @@
+<?php 
+    use Illuminate\Support\Facades\DB;    
+    $bios = DB::table('bio')->latest()->get();  
+    
+    $practice_areas = DB::table('practice_area')->latest()->get();  
+?>
+
 <div class="header-top">
     <div class="container">
         <div class="header-call-timg">
@@ -49,39 +56,41 @@
                                         Attorneys
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="#">David Taylor</a></li>
-                                        <li><a class="dropdown-item" href="#">Bob McCullough</a></li>
-                                        <li><a class="dropdown-item" href="#">Alexander Evans</a></li>
+                                        @foreach ($bios as $bio)
+                                            <li><a class="dropdown-item" href="/attorney-detail/{{ $bio->id }}">{{ $bio->first_name }} {{ $bio->last_name }}</a></li>
+                                        @endforeach
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="/practice-areas" id="navbarDropdown" role="button" aria-expanded="false">
                                         Practice Areas
                                     </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">                                       
-                                        <li><a class="dropdown-item" href="#">Asset Protection</a></li>  
-                                        <li><a class="dropdown-item" href="#">Complex Income Tax Planning</a></li> 
-                                        <li><a class="dropdown-item" href="#">Corporate</a></li> 
-                                        <li><a class="dropdown-item" href="#">Entity Formation</a></li> 
-                                        <li><a class="dropdown-item" href="#">Estate Planning</a></li> 
-                                        <li><a class="dropdown-item" href="#">Probate</a></li> 
-                                        <li><a class="dropdown-item" href="#">Securities</a></li>                                       
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">   
+                                        @foreach ($practice_areas as $practice_area)                                    
+                                            <li><a class="dropdown-item" href="/practice-area/{{ $practice_area->id }}">{{ $practice_area->name }}</a></li>  
+                                        @endforeach                                                                              
                                     </ul>
                                 </li>
                                 <li class="nav-item logo-t">
                                     <a class="nav-link" href="/"><img src="/site/img/logo1.png" class="img-fluid" alt="logo" /></a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle" href="/our-firm" id="navbarDropdown" role="button" aria-expanded="false">
                                         History
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="#">Firm </a></li>
-                                        <li><a class="dropdown-item" href="#">About David</a></li>
+                                        <li><a class="dropdown-item" href="/our-firm">Firm</a></li>
+                                        <li><a class="dropdown-item" href="/attorney-detail/2">About David</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">News & Events</a>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="/news" id="navbarDropdown" role="button" aria-expanded="false">
+                                        News & Events
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="/news">News</a></li>
+                                        <li><a class="dropdown-item" href="/events">Events</a></li>
+                                    </ul>
                                 </li>
                                 <li class="nav-item">                                
                                     <a class="nav-link" href="#contact">BOOK AN APPOINTMENT</a>

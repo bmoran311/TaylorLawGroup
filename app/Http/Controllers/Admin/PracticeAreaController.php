@@ -27,7 +27,8 @@ class PracticeAreaController extends Controller
         
         $practice_area = new PracticeArea();  
         $practice_area->firm_id = session('firm_id');        
-        $practice_area->name = $request->input('name');   
+        $practice_area->name = $request->input('name');  
+        $practice_area->summary = $request->input('summary');  
         $practice_area->description = $request->input('description');          
         $practice_area->save();
     
@@ -46,6 +47,7 @@ class PracticeAreaController extends Controller
         ]);
 
         $practice_area->name = $request->input('name'); 
+        $practice_area->summary = $request->input('summary');
         $practice_area->description = $request->input('description');        
         $practice_area->save();
 

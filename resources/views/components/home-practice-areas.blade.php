@@ -24,7 +24,7 @@
                                 <img src="/site/img/icons/practice-icon2.png" class="img-fluid" alt="practice-area-icons" />
                                 <h6>Complex income tax planning</h6>
                                 <hr class="border-bot">
-                                <p>Each of our attorneys at Taylor | Foley holds a Masters of Law in Taxation (LL.M.).  Therefore, everything we do for our clients is done with an eye towards minimizing their overall income tax burden.</p>
+                                <p>Each of our attorneys at Taylor Tax Law holds a Masters of Law in Taxation (LL.M.).  Therefore, everything we do for our clients is done with an eye towards minimizing their overall income tax burden.</p>
                                 <a href="#" class="btn">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>

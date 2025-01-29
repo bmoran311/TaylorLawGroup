@@ -28,12 +28,19 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [PageController::class, 'index'])->name('site.home');
-Route::get('/attorney-detail', [PageController::class, 'attorney_detail'])->name('site.attorney-detail');
 Route::get('/attorneys', [PageController::class, 'attorneys'])->name('site.attorneys');
+Route::get('/attorneys/{letter}', [PageController::class, 'attorneys'])->name('site.attorneys');
+Route::get('/attorney-detail/{bio_id}', [PageController::class, 'attorney_detail'])->name('site.attorney-detail');
 Route::get('/our-firm', [PageController::class, 'our_firm'])->name('site.our-firm');
-Route::view('/attorneys2', 'prototype.attorneys')->name('site.prototype.attorneys');
-Route::view('/practice-areas', 'prototype.practice-areas')->name('site.prototype.practice-areas');
-
+Route::get('/privacy-policy', [PageController::class, 'privacy_policy'])->name('site.privacy-policy');
+Route::get('/accessibility', [PageController::class, 'accessibility'])->name('site.accessibility');
+Route::get('/disclaimer', [PageController::class, 'disclaimer'])->name('site.disclaimer');
+Route::get('/terms-of-use', [PageController::class, 'terms_of_use'])->name('site.terms-of-use');
+Route::get('/news', [PageController::class, 'news'])->name('site.news');
+Route::get('/events', [PageController::class, 'events'])->name('site.events');
+Route::get('/faqs', [PageController::class, 'faqs'])->name('site.faqs');
+Route::get('/practice-areas', [PageController::class, 'practice_areas'])->name('site.practice-areas');
+Route::get('/practice-area/{practice_area_id}', [PageController::class, 'practice_area'])->name('site.practice-area');
 
 require __DIR__.'/auth.php';
 

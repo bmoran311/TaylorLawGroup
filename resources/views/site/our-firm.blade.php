@@ -1,4 +1,5 @@
 @extends('layouts.subpage')
+
 @section('content')
 <div class="industry-section">
     <div class="taylorline-about-left">

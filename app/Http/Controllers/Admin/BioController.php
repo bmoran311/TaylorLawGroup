@@ -56,6 +56,11 @@ class BioController extends Controller
 		$bio->last_name = $request->input('last_name');
 		$bio->email = $request->input('email');
 		$bio->phone_number = $request->input('phone_number');
+        $bio->title = $request->input('title');
+        $bio->twitter = $request->input('twitter');
+        $bio->linked_in = $request->input('linked_in');
+        $bio->summary = $request->input('summary'); 
+        $bio->description = $request->input('description');       
         $bio->save();
 
         $bio->practice_areas()->sync($request->input('practice_areas', []));
@@ -135,6 +140,11 @@ class BioController extends Controller
 		$bio->last_name = $request->input('last_name');
 		$bio->email = $request->input('email');
 		$bio->phone_number = $request->input('phone_number');
+        $bio->title = $request->input('title');
+        $bio->twitter = $request->input('twitter');
+        $bio->linked_in = $request->input('linked_in');
+        $bio->summary = $request->input('summary');
+        $bio->description = $request->input('description');
         $bio->save();
 
         $bio->practice_areas()->sync($request->input('practice_areas', []));

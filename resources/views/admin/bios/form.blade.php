@@ -46,7 +46,12 @@
                         </div>
                     </div>
 
-					<div class="mb-5.5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+					<div class="mb-5.5 grid grid-cols-1 sm:grid-cols-3 gap-4">  
+                        <div>
+							<x-label>Title</x-label>
+							<x-text-input name="title" type="text" placeholder="Title..." class="text-input" value="{{ old('title', $bio->title ?? '') }}"/>
+							<x-form-error key="title" />
+                        </div>
                         <div>
 							<x-label>Email</x-label>
 							<x-text-input name="email" type="text" placeholder="Email..." class="text-input" value="{{ old('email', $bio->email ?? '') }}"/>
@@ -56,6 +61,41 @@
 							<x-label>Phone</x-label>
 							<x-text-input name="phone_number" type="text" placeholder="Phone Number..." class="text-input" value="{{ old('phone_number', $bio->phone_number ?? '') }}"/>
 							<x-form-error key="phone_number" />
+                        </div>
+                    </div>
+
+                    <div class="mb-5.5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+							<x-label>Twitter Handle</x-label>
+							<x-text-input name="twitter" type="text" placeholder="Email..." class="text-input" value="{{ old('twitter', $bio->twitter ?? '') }}"/>							
+                        </div>
+                        <div>
+							<x-label>LinkedIn Profile</x-label>
+							<x-text-input name="linked_in" type="text" placeholder="Linked In..." class="text-input" value="{{ old('linked_in', $bio->linked_in ?? '') }}"/>							
+                        </div>
+                    </div>
+
+                    <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
+                        <div class="w-full">
+                            <x-label>Summary</x-label>
+                            <textarea
+                                name="summary"
+                                rows="10"
+                                placeholder="Summary..."
+                                class="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
+                            >{{ old('summary', $bio->summary ?? '') }}</textarea>
+                        </div>
+                    </div>
+
+                    <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
+                        <div class="w-full">
+                            <x-label>Description</x-label>
+                            <textarea
+                                name="description"
+                                rows="25"
+                                placeholder="Description..."
+                                class="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
+                            >{{ old('description', $bio->description ?? '') }}</textarea>
                         </div>
                     </div>
 

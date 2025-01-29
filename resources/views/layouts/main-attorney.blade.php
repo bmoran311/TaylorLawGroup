@@ -5,12 +5,10 @@
 
 <body>
     <header>
-        <x-main-header :practice-areas="$practice_areas" />
+        <x-main-header />
         <x-attorney-banner />
     </header>
-
-    <x-attorney-header-block />
-    
+        
     @yield('content')  
 
     <x-footer-contact />      

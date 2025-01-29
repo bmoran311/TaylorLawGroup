@@ -4,7 +4,7 @@
 @include('partials.head')
 <body>
     <header>      
-      	<x-main-header :practice-areas="$practice_areas" />
+      	<x-main-header />
 		<x-home-header />      
   	</header>
 

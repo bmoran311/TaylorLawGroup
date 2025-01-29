@@ -82,6 +82,9 @@ header .mainmenu ul .nav-item:first-child {
 header .mainmenu ul .nav-item:last-child {
   padding-right: 0px !important;
 }
+.nav-link.dropdown-toggle {
+  height: 50px;
+}
 header .mainmenu ul .nav-item:nth-child(2) {
   padding-left: 50px;
   position: relative;
@@ -560,23 +563,76 @@ header .banner-contents h1 {
   top: 25%;
 }
 .proprietary-content.heading {
-  padding-top: 150px;
+  padding-top: 0px;
 }
-.cooming-img h4 {
+.coming-img h4 {
   font-size: 75px;
   color: #9c7959;
   font-family: 'Caveat Brush';
   font-weight: 700;
   padding: 150px 0px;
   border-radius: 30px;
-  background-color: #fff;
+  background-color: transparent;
+  position: absolute;
+  z-index: 999999999;
+  right: 0;
+  left: 0;
+  transform: rotate(-30deg);
+  top: 18%;
+
+  background: -webkit-linear-gradient(45deg, #8e551c, #e9954f 80%);
+    background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
 }
-.cooming-img img {
+ .blink-soft {
+  animation: blinker 1.5s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 10;
+  }
+}
+.coming-img .coming-text h4 {
+  font-size: 75px;
+  color: #9c7959 !important;
+  padding: 0px;
+  border-radius: 30px;
+  position: inherit;
+  z-index: 99999;
+  right: 0;
+  left: 0;
+  transform: rotate(0deg);
+  top: auto;
+  z-index: 99;
+  background: #fff;
+  -webkit-text-fill-color: #a9896f;
+}
+.proprietary-wrap .row .col-md-12.col-lg-6 {
+  align-content: center !important;
+}
+.coming-img.text-center {
+  position: relative;
+}
+.mob-img img {
+  width: auto !important;
+  position: relative;
+  z-index: 999;
+  border: 4px solid #fff;
+  border-radius: 30px;
+}
+.coming-img img {
   width: 50%;
 }
 .taylorline-bottom img {
   transform: rotate(180deg);
-  top: -8px;
+  top: 0px;
   position: relative;
 }
 .img-fluid.obstrac-img {
@@ -940,14 +996,19 @@ header .banner-contents h1 {
 
 
 /*Inner page*/
-
+.top-elements {
+  position: absolute;
+  right: 0px;
+  margin-top: -50px;
+}
 .inner-page-ban .banner-contents {
   top: 50% !important;
 }
 .inner-page-ban .line-img {
   left: 0px;
   width: 5%;
-  top: -86px;
+  top: 0px;
+  margin-top: -96px;
 }
 .about-border.industry {
   text-align: left !important;
@@ -998,7 +1059,7 @@ header .banner-contents h1 {
   content: "\2b";
   color: #9f826a;
   position: absolute;
-  right: 10px;
+  right: 15px;
   background-image: none;
 }
 .accordion-button:not(.collapsed)::after{
@@ -1022,7 +1083,7 @@ header .banner-contents h1 {
 .accordion-flush .accordion-item{
   border: none;
 }
-.bor-box-faq {
+.accordion-item {
   border-bottom: 1px solid #000 !important;
 }
 .accordion-button:focus {
@@ -1041,7 +1102,7 @@ header .banner-contents h1 {
   top: -40px;
 }
 .faq-content {
-  margin: 0px 30px;
+  margin: 0px 0px;
 }
 
 
@@ -1057,7 +1118,7 @@ header .banner-contents h1 {
   padding: 60px 80px;
   background-color: #fff;
   position: relative;
-  margin-top: -25%;
+  margin-top: -15%;
   outline: 3px solid #a9896f;
   outline-offset: -20px;
   box-shadow: 0px 2px 10px #be997b3b;
@@ -1101,7 +1162,7 @@ header .banner-contents h1 {
 }
 .team-name {
   border-left: 4px solid #a9896f;
-  padding-left: 50px;
+  padding-left: 30px;
   margin-bottom: 20px;
 }
 .cont-detail {
@@ -1119,9 +1180,10 @@ header .banner-contents h1 {
   background-color: #041330;
   position: relative;
   padding: 40px 0px;
+  margin-bottom: 60px;
 }
 .tab-right-content {
-  padding: 10px 0px 0px 50px;
+  padding: 10px 0px 30px 50px;
 }
 .nav-pills .nav-link:last-child {
   border: none;
@@ -1150,9 +1212,10 @@ header .banner-contents h1 {
   color: #fff;
   font-size: 16px;
   margin-top: -4px;
+  line-height: 1.5;
 }
 .tab-wrap {
-  padding: 80px 0px;
+  padding: 80px 0px 0px;
 }
 .tab-right-content hr {
   top: -10px;
@@ -1252,11 +1315,12 @@ header .banner-contents h1 {
   margin-top: -80px;
   outline: 3px solid #e1d0c3;
   outline-offset: -15px;
-  box-shadow: 0px 2px 10px #be997b3b;
+  box-shadow: 0px 2px 20px #be997b26;
   padding: 70px 50px;
   background-color: #fff;
 }
 .search-box input {
+  font-size: 17px;
   background-color: #f8f6f4;
   font-family: 'Outfit';
   border: 3px solid #e1d0c3;
@@ -1309,16 +1373,202 @@ header .banner-contents h1 {
   color: #a9896f !important;
 }
 
+.tab-titles .nav-pills .nav-link{
+  border: none !important;
+}
+.tab-answer .faq-content {
+  margin: 50px 30px 0px;
+}
+.accordion-flush .accordion-item:last-child {
+  border-bottom: 2px solid #fff !important;
+}
+.practice-details-wrap a{
+  text-decoration: none;
+  color: #000;
+  font-family: 'Outfit';
+  font-weight: 400;
+  display: block;
+}
+.practice-details-wrap ul li {
+  font-size: 18px;
+  border-bottom: 1px solid #8a8a8a;
+  color: #000;
+  font-family: 'Outfit';
+  font-weight: 400;
+  display: block;
+  padding: 8px 10px;
+  margin: 10px 40px;
+  background-image: url('img/icons/right-icon.png');
+  background-repeat: no-repeat;
+  background-position: 99%;
+  background-size: 10px;
+}
+.practice-list-border {  
+  border-bottom: 1px solid #8a8a8a;
+}
+.practice-details-wrap ul li:last-child {
+  border: none;
+}
+.tab-content-section {
+  padding-bottom: 100px;
+  position: relative;
+}
+.tab-content-section .taylorline-about-left img {
+  width: 117px;
+  top: 0px;
+}
+
+.search-box h6 {
+  font-size: 20px;
+  font-family: 'Outfit';
+  font-weight: 400;
+  letter-spacing: 13px;
+}
+.search-box h4 {
+  font-size: 20px;
+  font-family: 'Outfit';
+  color: #9e7b5c;
+  font-weight: 400;
+  margin-bottom: 13px;
+}
+
+.search-box .col-md-4 {
+  align-content: center;
+}
+.search-box .row {
+  padding-top: 20px;
+}
+.advance-search a {
+  font-size: 16px;
+  color: #000;
+  font-family: 'Outfit';
+  font-weight: 400;
+}
+.team-section.all-member {
+  background-color: #fff;
+  position: relative;
+  padding: 70px 0px;
+  margin: 10px 0px;
+}
+.team-section.all-member .team-content {
+  margin: 10px 0px 20px;
+}
+.all-member-btn .btn {
+  background: #fff;
+  border: 3px solid #bd987a;
+  color: #bd987a;
+  margin-top: 20px;
+}
+.all-member-pg{
+  background-color: #f8f1eb;
+}
+.team-section.all-member .taylorline-about-left img {
+  width: 10%;
+  top: 0px;
+  z-index: 999;
+}
+
+.team-img.tem-box1{
+  position: relative;
+}
+/*.team-img.tem-box1::after {
+  content: "";
+  background-image: url('img/others/img-shape-bg.png');
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  z-index: 99999;
+  top: -20px;
+  width: 100%;
+  height: 100vh;
+
+}*/
+/*
+.team-img.tem-box1 img {
+  padding: 0px 0px 40px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  padding: 20px 30px;
+  height: 440px;
+}*/
+/*.img-fluid.shape-bg-img {
+  background-image: url('img/others/team-img-5.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}*/
+
+/*.img-fluid.img-ss {
+  background-image: url('img/others/img-shape-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}*/
+.team-img.tem-box1::after {
+  background-image: url('img/others/img-shape-bg.png');
+  background-position: center;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-size: 100%;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  top: 0px;
+}
+.team-img.tem-box1 {
+  position: relative;
+  padding: 15px 0px;
+  margin: -1px;
+}
+.banner-info.practice-ban {
+  border: none;
+}
+
+/*
+.team-img.tem-box1::after {
+  content: "";
+  background-image: url('img/others/img-shape-bg.png');
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  z-index: 99999;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 90%;
+}*/
 
 
+.tab-right-content .practice-details li i {
+  color: #9f826a;
+  position: relative;
+  top: 8px;
+  height: fit-content;
+}
 
-
-
+.tab-right-content ul li {
+  display: inline-flex !important;
+}
+.tab-right-content ul li:last-child i{
+  color: #9f826a;
+}
 
 /*RESPONSIVE*/
 @media screen and (max-width: 2880px) {
-
-
 
 }
 @media screen and (max-width: 1920px) {
@@ -1327,7 +1577,9 @@ header .banner-contents h1 {
 
 }
 @media screen and (max-width: 1680px) {
-
+  .inner-page-ban .line-img {
+    width: 5%;
+  }
 
 }
 @media screen and (max-width: 1440px) {
@@ -1511,6 +1763,9 @@ header .banner-contents h1 {
     border-left: 4px solid #a9896f;
     padding-left: 30px;
   }
+  .inner-page-ban .line-img {
+    top: -62px;
+  }
 
   .accordion-flush .accordion-item .accordion-button {
     font-size: 16px;
@@ -1518,6 +1773,17 @@ header .banner-contents h1 {
    .attorneys-wrap {
     margin-top: -70%;
   }
+  .tab-titles .nav-pills .nav-link {
+    padding: 10px 30px;
+  }
+  .search-box {
+    margin-top: -50px;
+  }
+  .top-elements {
+    margin-top: 3px;
+    width: 40px;
+  }
+
 }
 
 
@@ -1526,6 +1792,9 @@ header .banner-contents h1 {
     top: auto;
   }
   .about-border img {
+    height: auto;
+  }
+  .nav-link.dropdown-toggle {
     height: auto;
   }
   .header-top {
@@ -1731,7 +2000,7 @@ header .banner-contents h1 {
   .team-section {
     padding: 40px 0px;
   }
-  .cooming-img img {
+  .coming-img img {
     width: 70%;
   }
   .get-content {
@@ -1780,6 +2049,9 @@ header .banner-contents h1 {
     .tab-wrap h3 {
     font-size: 28px !important;
   }
+  .faq-content {
+    margin: 0px 0px;
+  }
 
    .team-contents .cont-detail li:last-child {
     margin-left: 20px;
@@ -1793,10 +2065,31 @@ header .banner-contents h1 {
   .industry-section .about-content {
     padding-top: 0px;
   }
+
+  .practice-details-wrap ul li {
+    font-size: 15px;
+    padding: 8px 10px;
+    margin: 10px 10px;
+  }
+  .tab-answer .faq-content {
+    margin: 10px 0px 0px;
+  }
+    .team-img.tem-box1 {
+    padding: 35px 0px;
+    margin: 30px;
+  }
+  .inner-page-ban .line-img {
+    top: -46px;
+  }
+
+
  
 }
 @media screen and (max-width: 840px) {
-
+  .tab-titles .nav-pills .nav-link {
+    padding: 10px 20px;
+    font-size: 17px;
+  }
  
 }
 
@@ -1856,15 +2149,23 @@ header .banner-contents h1 {
   .team-name {
     padding-left: 30px;
   }
-
+  .inner-page-ban .line-img {
+    left: 0px;
+    width: 5%;
+    top: -37px;
+  }
   .tab-contentleft {
     padding: 40px 0px 10px;
+    margin-bottom: 10px;
   }
 
   .accordion-flush .accordion-item .accordion-button {
     font-size: 15px;
   }
-
+  .about-border img {
+    margin-top: -88%;
+    left: -20px;
+  }
    .attorneys-wrap {
     margin-top: -110%;
   }
@@ -1877,6 +2178,32 @@ header .banner-contents h1 {
   .media-box {
     position: relative;
     padding: 20px 0px;
+  }
+  .search-box {
+    margin-top: -20px;
+  }
+    .search-box input {
+    padding: 16px;
+    font-size: 18px;
+  }
+  .input-group .btn, .input-group button {
+    top: 0px;
+  }
+    .team-img.tem-box1 {
+    padding: 35px 0px;
+    margin: 0px 0px;
+  }
+  .advance-search{
+    text-align: center !important;
+    padding-top: 10px;
+  }
+   .top-elements {
+    margin-top: -27px;
+    width: 40px;
+  }
+    .search-box h6 {
+    font-size: 16px;
+    letter-spacing: 6px;
   }
 
 }
@@ -1893,6 +2220,28 @@ header .banner-contents h1 {
   .attorneys-wrap {
     margin-top: -70%;
   }
+
+  .line-img {
+    top: -182px;
+    width: 70px;
+  }
+   .tab-titles .nav-pills .nav-link {
+    padding: 10px 15px;
+  }
+  .tab-wrap {
+    padding: 30px 0px 0px;
+  }
+   .tab-titles .nav-pills .nav-link {
+    font-size: 15px;
+  }
+   .search-box input {
+    font-size: 14px;
+  }
+ .input-group .btn, .input-group button {
+    font-size: 18px;
+    padding: 4px 0px 0px 10px !important;
+  }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -1942,6 +2291,30 @@ header .banner-contents h1 {
    .industry-section h4 {
     font-size: 20px;
   }
+  .search-box {
+    padding: 50px 30px;
+  }
+  .team-img.tem-box1 {
+    padding: 15px 0px;
+    margin: 0px 0px;
+  }
+  .team-sub-cont {
+    padding-top: 0px;
+  }
+  .about-border img {
+    margin-top: -88%;
+  }
+  .practice-details-wrap ul li{
+    background-size: 6px;
+  
+  }
+  .coming-img .coming-text h4 {
+    font-size: 55px;
+  }
+  .coming-img h4 {
+    font-size: 45px;
+    padding: 90px 0px;
+  }
 }
 @media screen and (max-width: 428px) {
   header .header-bottom .banner-contents {
@@ -1958,7 +2331,9 @@ header .banner-contents h1 {
   .attorneys-wrap {
     padding: 20px 25px;
   }
-
+ .banner-info p {
+    font-size: 15px;
+  }
 
 }
 @media screen and (max-width: 420px) {
@@ -1980,6 +2355,15 @@ header .banner-contents h1 {
     .heading h3 {
     font-size: 25px;
   }
+   .tab-titles .nav-pills .nav-link {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+  .search-box {
+    padding: 40px 30px;
+  }
+
+
 }
 @media screen and (max-width: 391px) {
   .navbar-brand {
@@ -1992,7 +2376,12 @@ header .banner-contents h1 {
     left: 88px;
     width: 50%;
   }
-
+  .input-group .btn, .input-group button {
+  position: relative;
+  }
+   .about-border img {
+    margin-top: -96%;
+  }
 }
 @media screen and (max-width: 375px) {
 	
@@ -2018,6 +2407,12 @@ header .banner-contents h1 {
   }
    header .mainmenu ul li {
     padding: 0px;
+  }
+  .inner-page-ban .banner-contents {
+    top: 44% !important;
+  }
+   header .banner-contents h1 {
+    font-size: 23px;
   }
 
 }

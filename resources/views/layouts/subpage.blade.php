@@ -3,8 +3,8 @@
 @include('partials.head')
 <body>
 	<header>	
-        <x-main-header :practice-areas="$practice_areas" />
-        <x-main-banner h1Text="OUR ATTORNEYS" h4Text="MEET OUR PEOPLE" bannerText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis." />
+        <x-main-header />
+        <x-main-banner :h1Text="$headerInfo['h1Text']" :h4Text="$headerInfo['h4Text']" :bannerText="$headerInfo['bannerText']" />
     </header>
 
     @yield('content') 
