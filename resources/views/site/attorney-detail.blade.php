@@ -18,8 +18,8 @@
                                 @if(strlen($bio->twitter))
                                     <li><a href="https://www.twitter.com/{{ $bio->twitter }}" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
                                 @endif
-                                @if(strlen($bio->linked_in))
-                                    <li><a href="{{ $bio->linked_in }}" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                @if(strlen($bio->linkedin))
+                                    <li><a href="{{ $bio->linkedin }}" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
                                 @endif
                             </ul>
                         </div>

@@ -58,7 +58,7 @@ class BioController extends Controller
 		$bio->phone_number = $request->input('phone_number');
         $bio->title = $request->input('title');
         $bio->twitter = $request->input('twitter');
-        $bio->linked_in = $request->input('linked_in');
+        $bio->linkedin = $request->input('linkedin');
         $bio->summary = $request->input('summary'); 
         $bio->description = $request->input('description');       
         $bio->save();
@@ -142,7 +142,7 @@ class BioController extends Controller
 		$bio->phone_number = $request->input('phone_number');
         $bio->title = $request->input('title');
         $bio->twitter = $request->input('twitter');
-        $bio->linked_in = $request->input('linked_in');
+        $bio->linkedin = $request->input('linkedin');
         $bio->summary = $request->input('summary');
         $bio->description = $request->input('description');
         $bio->save();

@@ -71,7 +71,7 @@
                         </div>
                         <div>
 							<x-label>LinkedIn Profile</x-label>
-							<x-text-input name="linked_in" type="text" placeholder="Linked In..." class="text-input" value="{{ old('linked_in', $bio->linked_in ?? '') }}"/>							
+							<x-text-input name="linkedin" type="text" placeholder="Linked In..." class="text-input" value="{{ old('linkedin', $bio->linkedin ?? '') }}"/>							
                         </div>
                     </div>
 
