@@ -17,14 +17,8 @@ return new class extends Migration
             $table->string('first_name');
             $table->string('middle_initial')->nullable();
             $table->string('last_name');
-            $table->string('title');
-            $table->string('twitter');
-            $table->string('linked_in');
             $table->string('email')->unique();
-            $table->string('phone_number');   
-            $table->string('headshot');
-            $table->text('summary');    
-            $table->text('description');      
+            $table->string('phone_number');
             $table->timestamps();
         });
     }
