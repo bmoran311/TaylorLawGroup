@@ -8,13 +8,13 @@
         <x-main-header />
         <x-attorney-banner />
     </header>
-        
-    @yield('content')  
 
-    <x-footer-contact />      
+        @yield('content')
+
+    <x-footer-contact />
 
     <footer>
-	    <x-main-footer />        	
+	    <x-main-footer />
 	</footer>
 </body>
 
