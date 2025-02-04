@@ -1,8 +1,8 @@
-<?php 
-    use Illuminate\Support\Facades\DB;    
-    $bios = DB::table('bio')->latest()->get();  
-    
-    $practice_areas = DB::table('practice_area')->latest()->get();  
+<?php
+    use Illuminate\Support\Facades\DB;
+    $bios = DB::table('bio')->latest()->get();
+
+    $practice_areas = DB::table('practice_area')->latest()->get();
 ?>
 
 <div class="header-top">
@@ -65,10 +65,10 @@
                                     <a class="nav-link dropdown-toggle" href="/practice-areas" id="navbarDropdown" role="button" aria-expanded="false">
                                         Practice Areas
                                     </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">   
-                                        @foreach ($practice_areas as $practice_area)                                    
-                                            <li><a class="dropdown-item" href="/practice-area/{{ $practice_area->id }}">{{ $practice_area->name }}</a></li>  
-                                        @endforeach                                                                              
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        @foreach ($practice_areas as $practice_area)
+                                            <li><a class="dropdown-item" href="/practice-area/{{ $practice_area->id }}">{{ $practice_area->name }}</a></li>
+                                        @endforeach
                                     </ul>
                                 </li>
                                 <li class="nav-item logo-t">
@@ -92,14 +92,14 @@
                                         <li><a class="dropdown-item" href="/events">Events</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item">                                
+                                <li class="nav-item">
                                     <a class="nav-link" href="#contact">BOOK AN APPOINTMENT</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </nav>
-            </div>                 
+            </div>
         </div>
     </div>
 </div>
