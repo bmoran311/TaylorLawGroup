@@ -57,6 +57,10 @@ header .mainmenu {
     color: #fff !important;
 }
 
+.mainmenu .dropdown-menu{
+    z-index: 9999 !important;
+}
+
 .dropdown .dropdown-menu {
   background-color: transparent;
 }
