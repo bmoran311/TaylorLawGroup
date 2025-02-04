@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="attorneys-cont-section">
-    <div class="container bg-white">
+    <div class="container">
         <div class="attorneys-wrap bg-white">
             <div class="row">
                 <div class="col-lg-4">
@@ -44,7 +44,7 @@
     </div>
 </div>
 
-<div class="tab-section" style="z-index: 999; position: relative; padding: 35px;">
+<div class="tab-section">
     <div class="container">
         <div class="tab-wrap">
             <div class="d-flex align-items-start">
