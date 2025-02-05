@@ -21,6 +21,7 @@ use App\Http\Controllers\Admin\FaqCategoryController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\ResourceController;
 use App\Http\Controllers\Admin\ResourceCategoryController;
+use App\Http\Controllers\Admin\ContactController;
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Site\PageController;
@@ -41,6 +42,7 @@ Route::get('/events', [PageController::class, 'events'])->name('site.events');
 Route::get('/faqs', [PageController::class, 'faqs'])->name('site.faqs');
 Route::get('/practice-areas', [PageController::class, 'practice_areas'])->name('site.practice-areas');
 Route::get('/practice-area/{practice_area_id}', [PageController::class, 'practice_area'])->name('site.practice-area');
+Route::post('/contact-submit', [ContactController::class, 'submit'])->name('contact.submit');
 
 require __DIR__.'/auth.php';
 
@@ -92,6 +94,7 @@ Route::prefix('dashboard')->group(function()
     Route::resource('blog_category', BlogCategoryController::class);
     Route::resource('resource', ResourceController::class);
     Route::resource('resource_category', ResourceCategoryController::class);
+    Route::resource('contact', ContactController::class);
     Route::get('/blog_category/order/{direction}/{id}/{currPos}', 'App\Http\Controllers\Admin\BlogCategoryController@sort')->name('orderBlogCategory');
     Route::get('/faq_category/order/{direction}/{id}/{currPos}', 'App\Http\Controllers\Admin\FaqCategoryController@sort')->name('orderFaqCategory');
     Route::get('/resource_category/order/{direction}/{id}/{currPos}', 'App\Http\Controllers\Admin\ResourceCategoryController@sort')->name('orderResourceCategory');

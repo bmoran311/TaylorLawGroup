@@ -79,39 +79,63 @@
                                     <hr class="border-bot">
                                     <h6>Education</h6>
                                     <ul class="list-unstyled practice-details">
-                                        @foreach ($colleges as $college) 
-                                            <li><i class="fa-solid fa-square"></i>{{ $college->name }}</li>
-                                        @endforeach                                       
+                                        @if(count($colleges) > 0)
+                                            @foreach ($colleges as $college) 
+                                                <li><i class="fa-solid fa-square"></i>{{ $college->name }}</li>
+                                            @endforeach         
+                                        @else
+                                            <li>None listed</li>
+                                        @endif                              
                                     </ul>
                                     <h6>Bar Admissions</h6>
                                     <ul class="list-unstyled practice-details">
-                                        @foreach ($admissions as $admission) 
-                                            <li><i class="fa-solid fa-square"></i>{{ $admission->name }}</li>
-                                        @endforeach                                        
+                                        @if(count($colleges) > 0)
+                                            @foreach ($admissions as $admission) 
+                                                <li><i class="fa-solid fa-square"></i>{{ $admission->name }}</li>
+                                            @endforeach  
+                                        @else
+                                            <li>None listed</li>
+                                        @endif                                          
                                     </ul>
                                     <h6>Memberships</h6>
                                     <ul class="list-unstyled practice-details">
-                                        @foreach ($memberships as $membership) 
-                                            <li><i class="fa-solid fa-square"></i>{{ $membership->name }}</li>
-                                        @endforeach      
+                                        @if(count($memberships) > 0)
+                                            @foreach ($memberships as $membership) 
+                                                <li><i class="fa-solid fa-square"></i>{{ $membership->name }}</li>
+                                            @endforeach  
+                                        @else
+                                            <li>None listed</li>
+                                        @endif   
                                     </ul>
                                     <h6>Licenses</h6>
                                     <ul class="list-unstyled practice-details">
-                                        @foreach ($licenses as $license) 
-                                            <li><i class="fa-solid fa-square"></i>{{ $license->name }}</li>
-                                        @endforeach      
+                                        @if(count($memberships) > 0)
+                                            @foreach ($licenses as $license) 
+                                                <li><i class="fa-solid fa-square"></i>{{ $license->name }}</li>
+                                            @endforeach 
+                                        @else
+                                            <li>None listed</li>
+                                        @endif        
                                     </ul>
                                     <h6>Awards</h6>
                                     <ul class="list-unstyled practice-details">
-                                        @foreach ($awards as $award) 
-                                            <li><i class="fa-solid fa-square"></i>{{ $award->name }}</li>
-                                        @endforeach      
+                                        @if(count($awards) > 0)
+                                            @foreach ($awards as $award) 
+                                                <li><i class="fa-solid fa-square"></i>{{ $award->name }}</li>
+                                            @endforeach    
+                                        @else
+                                            <li>None listed</li>
+                                        @endif     
                                     </ul>
                                     <h6>Languages</h6>
                                     <ul class="list-unstyled practice-details">
-                                        @foreach ($languages as $language) 
-                                            <li><i class="fa-solid fa-square"></i>{{ $language->name }}</li>
-                                        @endforeach      
+                                        @if(count($awards) > 0)
+                                            @foreach ($languages as $language) 
+                                                <li><i class="fa-solid fa-square"></i>{{ $language->name }}</li>
+                                            @endforeach  
+                                        @else
+                                            <li>None listed</li>
+                                        @endif     
                                     </ul>
                                 </div>
                             </div>

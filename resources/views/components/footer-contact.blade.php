@@ -33,41 +33,51 @@
                 </div>
                 <div class="col-md-6">
                     <div class="contact-form">
+                        @if (session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
                         <h4>Leave us a Message <hr></h4>
-                        <form>
+                        <form action="{{ route('contact.submit') }}#contact" method="POST" id="contactUs">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="First Name" >
+                                        <input type="text" class="form-control" placeholder="First Name" name="first_name" value="{{ old('first_name', '') }}">
+                                        <x-form-error key="first_name" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Last name">
+                                        <input type="text" class="form-control" placeholder="Last name" name="last_name" value="{{ old('last_name', '') }}">
+                                        <x-form-error key="last_name" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email Address">
+                                        <input type="email" class="form-control" placeholder="Email Address" name="email" value="{{ old('email', '') }}">
+                                        <x-form-error key="email" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="num" class="form-control" placeholder="Phone">
+                                        <input type="num" class="form-control" placeholder="Phone" name="phone_number" value="{{ old('phone_number', '') }}">
+                                        <x-form-error key="phone_number" />
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Company">
+                                        <input type="text" class="form-control" placeholder="Company" name="company" value="{{ old('company', '') }}">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                                        <textarea name="message" class="form-control" rows="3" placeholder="Message">{{ old('message', '') }}</textarea>
                                     </div>
-                                </div>
-                                <div class="cont-btn head">
-                                    <a href="#">Submit <i class="fa-solid fa-arrow-right"></i></a>
+                                </div>                               
+                                <div class="cont-btn head">                                    
+                                    <a href="#" onclick="document.getElementById('contactUs').submit(); return false;">Submit <i class="fa-solid fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </form>
