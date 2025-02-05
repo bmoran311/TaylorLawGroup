@@ -79,7 +79,6 @@
                                     <hr class="border-bot">
                                     <h6>Education</h6>
                                     <ul class="list-unstyled practice-details">
-<<<<<<< HEAD
                                         @if(count($colleges) > 0)
                                             @foreach ($colleges as $college) 
                                                 <li><i class="fa-solid fa-square"></i>{{ $college->name }}</li>
@@ -137,41 +136,6 @@
                                         @else
                                             <li>None listed</li>
                                         @endif     
-=======
-                                        @foreach ($colleges as $college)
-                                            <li><i class="fa-solid fa-square"></i>{{ $college->name }}</li>
-                                        @endforeach
-                                    </ul>
-                                    <h6>Bar Admissions</h6>
-                                    <ul class="list-unstyled practice-details">
-                                        @foreach ($admissions as $admission)
-                                            <li><i class="fa-solid fa-square"></i>{{ $admission->name }}</li>
-                                        @endforeach
-                                    </ul>
-                                    <h6>Memberships</h6>
-                                    <ul class="list-unstyled practice-details">
-                                        @foreach ($memberships as $membership)
-                                            <li><i class="fa-solid fa-square"></i>{{ $membership->name }}</li>
-                                        @endforeach
-                                    </ul>
-                                    <h6>Licenses</h6>
-                                    <ul class="list-unstyled practice-details">
-                                        @foreach ($licenses as $license)
-                                            <li><i class="fa-solid fa-square"></i>{{ $license->name }}</li>
-                                        @endforeach
-                                    </ul>
-                                    <h6>Awards</h6>
-                                    <ul class="list-unstyled practice-details">
-                                        @foreach ($awards as $award)
-                                            <li><i class="fa-solid fa-square"></i>{{ $award->name }}</li>
-                                        @endforeach
-                                    </ul>
-                                    <h6>Languages</h6>
-                                    <ul class="list-unstyled practice-details">
-                                        @foreach ($languages as $language)
-                                            <li><i class="fa-solid fa-square"></i>{{ $language->name }}</li>
-                                        @endforeach
->>>>>>> 215712289e1a401aa9b5afb13addb4878e70a814
                                     </ul>
                                 </div>
                             </div>
