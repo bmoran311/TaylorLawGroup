@@ -1,4 +1,4 @@
-*{ 
+*{
 	font-family:'TrajanPro-Regular';
 }
 
@@ -47,7 +47,22 @@ header .mainmenu {
 }
 .dropdown-item {
   font-size: 13px !important;
+  color: #ccc !important;
+  display: inline-block !important;
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
 }
+
+.mainmenu .dropdown-item:hover{
+    color: #fff !important;
+}
+
+.mainmenu .dropdown-menu{
+    z-index: 9999 !important;
+}
+
+
+
 .dropdown .dropdown-menu {
   background-color: transparent;
 }
@@ -244,7 +259,7 @@ header .header-bottom {
   height: 13px;
 }
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
- background: #0054aa !important; 
+ background: #0054aa !important;
 }
 
 
@@ -496,7 +511,7 @@ header .banner-contents h1 {
 }
 .practice-content:hover {
   width: 100%;
-  height: 570px;  
+  height: 570px;
   background-image: url('img/others/practice-bg-img.png');
 }
 .practice-sub-cont h6 {
@@ -825,16 +840,16 @@ header .banner-contents h1 {
   background-size: 30px;
   background-position: 0px 10px;
 }
-.form-group input.email-txt{  
+.form-group input.email-txt{
   background-image: url('img/icons/email-icon.png');
 }
-.form-group input.phone-txt{  
+.form-group input.phone-txt{
   background-image: url('img/icons/phone-icon.png');
 }
-.form-group textarea.message-txt{  
+.form-group textarea.message-txt{
   background-image: url('img/icons/message-icon.png');
 }
-.form-group input.company-txt{  
+.form-group input.company-txt{
   background-image: url('img/icons/web-icon.png');
 }
 
@@ -1073,7 +1088,7 @@ header .banner-contents h1 {
   font-family: 'Outfit';
   font-weight: 600;
 }
-.accordion-body{  
+.accordion-body{
   font-size: 16px;
   padding: 0px 20px 30px;
   color: #041330;
@@ -1122,6 +1137,7 @@ header .banner-contents h1 {
   outline: 3px solid #a9896f;
   outline-offset: -20px;
   box-shadow: 0px 2px 10px #be997b3b;
+  z-index: 100;
 }
 .team-contents ul li a {
   font-size: 18px;
@@ -1403,7 +1419,7 @@ header .banner-contents h1 {
   background-position: 99%;
   background-size: 10px;
 }
-.practice-list-border {  
+.practice-list-border {
   border-bottom: 1px solid #8a8a8a;
 }
 .practice-details-wrap ul li:last-child {
@@ -1572,7 +1588,7 @@ header .banner-contents h1 {
 
 }
 @media screen and (max-width: 1920px) {
-  
+
 
 
 }
@@ -1719,11 +1735,11 @@ header .banner-contents h1 {
     padding: 10px 20px;
     font-size: 15px;
   }
-  
-  .banner-contents a {   
+
+  .banner-contents a {
     font-size: 16px;
   }
-  
+
   header .banner-contents h1 {
     font-size: 40px;
   }
@@ -1952,7 +1968,7 @@ header .banner-contents h1 {
   }
   .heading hr {
     top: -10px;
-  }  
+  }
   .heading h4 {
     font-size: 16px;
   }
@@ -2083,25 +2099,25 @@ header .banner-contents h1 {
   }
 
 
- 
+
 }
 @media screen and (max-width: 840px) {
   .tab-titles .nav-pills .nav-link {
     padding: 10px 20px;
     font-size: 17px;
   }
- 
+
 }
 
 @media screen and (max-width: 767px) {
-  
+
   .last-box {
     margin: auto !important;
     width: auto;
   }
   .footer-menu {
     padding-left: 0px;
-  }  
+  }
   .copyrights {
     text-align: left !important;
     padding-left: 0px;
@@ -2112,7 +2128,7 @@ header .banner-contents h1 {
 
   .heading hr {
     top: -10px;
-  } 
+  }
 
   .heading h3 {
     font-size: 30px;
@@ -2120,7 +2136,7 @@ header .banner-contents h1 {
 
   .heading h5 {
     font-size: 15px;
-  } 
+  }
   .get-content ul li span {
       font-size: 15px;
     margin: 0px 40px 0px 0px;
@@ -2276,7 +2292,7 @@ header .banner-contents h1 {
   }
   .header-clock-cont li i {
     padding: 7px;
-  }   
+  }
   .nav-item a {
     font-size: 17px !important;
   }
@@ -2306,7 +2322,7 @@ header .banner-contents h1 {
   }
   .practice-details-wrap ul li{
     background-size: 6px;
-  
+
   }
   .coming-img .coming-text h4 {
     font-size: 55px;
@@ -2340,7 +2356,7 @@ header .banner-contents h1 {
 
   .contact-head h5 span a {
     font-size: 14px;
-  }   
+  }
   .terms-menu a {
     font-size: 16px;
     padding: 0px 10px 0px 0px;
@@ -2384,7 +2400,7 @@ header .banner-contents h1 {
   }
 }
 @media screen and (max-width: 375px) {
-	
+
   .accordion-flush .accordion-item .accordion-button {
     font-size: 13px;
   }

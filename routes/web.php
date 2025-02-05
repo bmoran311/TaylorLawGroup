@@ -42,6 +42,8 @@ Route::get('/events', [PageController::class, 'events'])->name('site.events');
 Route::get('/faqs', [PageController::class, 'faqs'])->name('site.faqs');
 Route::get('/practice-areas', [PageController::class, 'practice_areas'])->name('site.practice-areas');
 Route::get('/practice-area/{practice_area_id}', [PageController::class, 'practice_area'])->name('site.practice-area');
+Route::get('/resources', [PageController::class, 'resources'])->name('site.resources');
+Route::get('/blog', [PageController::class, 'blog'])->name('site.blog');
 Route::post('/contact-submit', [ContactController::class, 'submit'])->name('contact.submit');
 
 require __DIR__.'/auth.php';

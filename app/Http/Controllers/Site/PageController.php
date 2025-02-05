@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
-use App\Models\PracticeArea, App\Models\Bio, App\Models\News, App\Models\Engagement, App\Models\Faq;
+use App\Models\PracticeArea, App\Models\Bio, App\Models\News, App\Models\Engagement, App\Models\Faq, App\Models\Resource, App\Models\Blog;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -73,6 +73,32 @@ class PageController extends Controller
         ];
                   
         return view('site.news', compact('headerInfo', 'news_stories'));
+    }
+
+    public function resources()
+    {      
+        $resources = Resource::where('firm_id', 1)->orderBy('created_at')->get();       
+        
+        $headerInfo = [        
+            'h1Text' => "Taylor Tax Law",
+            'h4Text' => "Resources",
+            'bannerText' => "Our Resource Center provides expert legal insights, including white papers, case studies, and practical guides to help you navigate complex legal matters."
+        ];
+                  
+        return view('site.resources', compact('headerInfo', 'resources'));
+    }
+
+    public function blog()
+    {      
+        $blogs = Blog::where('firm_id', 1)->orderBy('created_date')->get();       
+        
+        $headerInfo = [        
+            'h1Text' => "Taylor Tax Law",
+            'h4Text' => "Blog",
+            'bannerText' => "Our blog offers expert legal insights, industry trends, and practical advice to help you stay informed."
+        ];
+                  
+        return view('site.blog', compact('headerInfo', 'blogs'));
     }
 
     public function events()

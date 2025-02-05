@@ -4,7 +4,7 @@
 
 <div class="attorneys-cont-section">
     <div class="container">
-        <div class="attorneys-wrap">
+        <div class="attorneys-wrap bg-white">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="team-img">
@@ -33,10 +33,10 @@
                         </ul>
                         <h6>PRACTICES</h6>
                         <ul class="list-unstyled practice-details">
-                            @foreach ($practice_areas as $practice_area) 
+                            @foreach ($practice_areas as $practice_area)
                                 <li><i class="fa-solid fa-square"></i>{{$practice_area->name}} </li>
-                            @endforeach                            
-                        </ul>                        
+                            @endforeach
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -61,7 +61,7 @@
                                 <button class="nav-link" id="v-pills-creadentials-tab" data-bs-toggle="pill" data-bs-target="#v-pills-creadentials" type="button" role="tab" aria-controls="v-pills-creadentials" aria-selected="false">Credentials</button>
                                 <button class="nav-link" id="v-pills-multimedia-tab" data-bs-toggle="pill" data-bs-target="#v-pills-multimedia" type="button" role="tab" aria-controls="v-pills-multimedia" aria-selected="false">Multimedia</button>
                                 <button class="nav-link" id="v-pills-publication-tab" data-bs-toggle="pill" data-bs-target="#v-pills-publication" type="button" role="tab" aria-controls="v-pills-publication" aria-selected="false">Publications</button>
-                                <button class="nav-link" id="v-pills-speaking-tab" data-bs-toggle="pill" data-bs-target="#v-pills-speaking" type="button" role="tab" aria-controls="v-pills-speaking" aria-selected="false">Speaking Engagements</button>                                
+                                <button class="nav-link" id="v-pills-speaking-tab" data-bs-toggle="pill" data-bs-target="#v-pills-speaking" type="button" role="tab" aria-controls="v-pills-speaking" aria-selected="false">Speaking Engagements</button>
                             </div>
                         </div>
                     </div>
@@ -79,6 +79,7 @@
                                     <hr class="border-bot">
                                     <h6>Education</h6>
                                     <ul class="list-unstyled practice-details">
+<<<<<<< HEAD
                                         @if(count($colleges) > 0)
                                             @foreach ($colleges as $college) 
                                                 <li><i class="fa-solid fa-square"></i>{{ $college->name }}</li>
@@ -136,6 +137,41 @@
                                         @else
                                             <li>None listed</li>
                                         @endif     
+=======
+                                        @foreach ($colleges as $college)
+                                            <li><i class="fa-solid fa-square"></i>{{ $college->name }}</li>
+                                        @endforeach
+                                    </ul>
+                                    <h6>Bar Admissions</h6>
+                                    <ul class="list-unstyled practice-details">
+                                        @foreach ($admissions as $admission)
+                                            <li><i class="fa-solid fa-square"></i>{{ $admission->name }}</li>
+                                        @endforeach
+                                    </ul>
+                                    <h6>Memberships</h6>
+                                    <ul class="list-unstyled practice-details">
+                                        @foreach ($memberships as $membership)
+                                            <li><i class="fa-solid fa-square"></i>{{ $membership->name }}</li>
+                                        @endforeach
+                                    </ul>
+                                    <h6>Licenses</h6>
+                                    <ul class="list-unstyled practice-details">
+                                        @foreach ($licenses as $license)
+                                            <li><i class="fa-solid fa-square"></i>{{ $license->name }}</li>
+                                        @endforeach
+                                    </ul>
+                                    <h6>Awards</h6>
+                                    <ul class="list-unstyled practice-details">
+                                        @foreach ($awards as $award)
+                                            <li><i class="fa-solid fa-square"></i>{{ $award->name }}</li>
+                                        @endforeach
+                                    </ul>
+                                    <h6>Languages</h6>
+                                    <ul class="list-unstyled practice-details">
+                                        @foreach ($languages as $language)
+                                            <li><i class="fa-solid fa-square"></i>{{ $language->name }}</li>
+                                        @endforeach
+>>>>>>> 215712289e1a401aa9b5afb13addb4878e70a814
                                     </ul>
                                 </div>
                             </div>
@@ -165,7 +201,7 @@
                                 <div class="tab-right-content heading">
                                     <h3>Publications</h3>
                                     <hr class="border-bot">
-                                    @foreach ($news_stories as $news) 
+                                    @foreach ($news_stories as $news)
                                         <a href="{{ $news->url }}" target="_blank" style="text-decoration: none;">
                                             <div class="publicat-content">
                                                 <h5>{{ \Carbon\Carbon::parse($news->publication_date)->format('M j, Y')  }}</h5>
@@ -173,7 +209,7 @@
                                                 <p>{{ $news->summary }} </p>
                                             </div>
                                         </a>
-                                    @endforeach                                    
+                                    @endforeach
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="v-pills-speaking" role="tabpanel" aria-labelledby="v-pills-sepaking-tab">
@@ -181,21 +217,21 @@
                                     <h3>Speaking Engagements</h3>
                                     <hr class="border-bot">
 
-                                    <div class="speaking-wrap">                                        
+                                    <div class="speaking-wrap">
                                         <div class="row">
-                                            @foreach ($engagements as $engagement)  
+                                            @foreach ($engagements as $engagement)
                                                 <div class="col-md-12 col-lg-6">
-                                                    <div class="speaking-content">                                                        
+                                                    <div class="speaking-content">
                                                         <h4>{{ $engagement->title }} </h4>
                                                         <p>{{ $engagement->summary }}</p>
                                                         <a href="#">{{ $engagement->conference }}<br>{{ \Carbon\Carbon::parse($engagement->event_date)->format('M j, Y')  }} {{ $engagement->event_time }}</a>
                                                     </div>
-                                                </div>  
-                                            @endforeach                                          
-                                        </div>                                      
+                                                </div>
+                                            @endforeach
+                                        </div>
                                     </div>
                                 </div>
-                            </div>                            
+                            </div>
                         </div>
                     </div>
                 </div>
