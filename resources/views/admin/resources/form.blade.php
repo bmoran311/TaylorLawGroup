@@ -97,12 +97,17 @@
                             <x-form-error key="tags" />
                         </div>
                     </div>
-                    <div class="mb-5.5">
+                    <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
-                            <x-label>Description</x-label>
-                            <x-trix name="description" :value="old('description', $resource->description ?? '')" />
+                            <x-label>Summary</x-label>
+                            <textarea
+                                name="description"
+                                rows="25"
+                                placeholder="Summary..."
+                                class="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
+                            >{{ old('description', $resource->description ?? '') }}</textarea>
                         </div>
-                    </div>
+                    </div>                    
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="flex justify-end gap-4.5">
                             <a href="{{ route('resource.index') }}"

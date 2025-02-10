@@ -27,7 +27,9 @@ class TestimonialController extends Controller
     {
         $request->validate([
             'client_name' => 'required|string|max:255',
-            'title' => 'required|string|max:255',          
+            'title' => 'required|string|max:255',
+            'summary' => 'required',       
+            'content' => 'required',              
         ]);
 
         $testimonial = new Testimonial();
@@ -64,6 +66,8 @@ class TestimonialController extends Controller
         $request->validate([
             'client_name' => 'required|string|max:255',
             'title' => 'required|string|max:255',  
+            'summary' => 'required',       
+            'content' => 'required',  
         ]);
         
         $testimonial->firm_id = session('firm_id');        

@@ -44,6 +44,7 @@ Route::get('/practice-areas', [PageController::class, 'practice_areas'])->name('
 Route::get('/practice-area/{practice_area_id}', [PageController::class, 'practice_area'])->name('site.practice-area');
 Route::get('/resources', [PageController::class, 'resources'])->name('site.resources');
 Route::get('/blog', [PageController::class, 'blog'])->name('site.blog');
+Route::get('/blog-detail/{blog_id}', [PageController::class, 'blog_detail'])->name('site.blog-detail');
 Route::post('/contact-submit', [ContactController::class, 'submit'])->name('contact.submit');
 
 require __DIR__.'/auth.php';

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
-use App\Models\PracticeArea, App\Models\Bio, App\Models\News, App\Models\Engagement, App\Models\Faq, App\Models\Resource, App\Models\Blog;
+use App\Models\PracticeArea, App\Models\Bio, App\Models\News, App\Models\Engagement, App\Models\Faq, App\Models\Resource, App\Models\BlogPost;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -90,7 +90,7 @@ class PageController extends Controller
 
     public function blog()
     {      
-        $blogs = Blog::where('firm_id', 1)->orderBy('created_date')->get();       
+        $blogs = BlogPost::where('firm_id', 1)->orderBy('created_at')->get();       
         
         $headerInfo = [        
             'h1Text' => "Taylor Tax Law",
@@ -99,6 +99,19 @@ class PageController extends Controller
         ];
                   
         return view('site.blog', compact('headerInfo', 'blogs'));
+    }
+
+    public function blog_detail($blog_id)
+    {              
+        $blog = BlogPost::find($blog_id);        
+        
+        $headerInfo = [        
+            'h1Text' => "Taylor Tax Law",
+            'h4Text' => $blog->title,
+            'bannerText' => $blog->excerpt
+        ];
+                  
+        return view('site.blog-detail', compact('headerInfo', 'blog'));
     }
 
     public function events()
