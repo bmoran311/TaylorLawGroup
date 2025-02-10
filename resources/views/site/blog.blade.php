@@ -36,7 +36,7 @@
                             @endif
 
                                 @foreach ($blogs as $blog)  
-                                    <a href="/blog-detail/{{ $blog->id }}" target="_blank" style="text-decoration: none;">
+                                    <a href="/blog-detail/{{ $blog->id }}" style="text-decoration: none;">
                                         <div class="publicat-content">
                                             <h5>{{ \Carbon\Carbon::parse($blog->published_date)->format('M j, Y')  }}</h5>
                                             <h4>{{ $blog->title }}</h4>

@@ -52,6 +52,7 @@ class PageController extends Controller
         $languages = $bio->languages; 
         $news_stories = $bio->news; 
         $engagements = $bio->engagements;
+        $multimedias = $bio->multimedias;
 
         $headerInfo = [        
             'h1Text' => "Attorney Detail",
@@ -59,7 +60,7 @@ class PageController extends Controller
             'bannerText' => "This page provides detailed information about the attorney's background, expertise, and commitment to serving your legal needs."
         ];
                    
-        return view('site.attorney-detail', compact('headerInfo', 'bio', 'practice_areas', 'colleges', 'admissions', 'memberships', 'licenses', 'awards', 'languages', 'news_stories', 'engagements'));
+        return view('site.attorney-detail', compact('headerInfo', 'bio', 'practice_areas', 'colleges', 'admissions', 'memberships', 'licenses', 'awards', 'languages', 'news_stories', 'engagements', 'multimedias'));
     }
 
     public function news()

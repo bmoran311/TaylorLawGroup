@@ -143,7 +143,17 @@
                                 <div class="tab-right-content heading">
                                     <h3>Multimedia</h3>
                                     <hr class="border-bot">
-                                    <div class="multimedia-content">
+                                    @foreach ($multimedias as $multimedia)
+                                        <a href="{{ $multimedia->url }}" target="_blank" style="text-decoration: none;">
+                                            <div class="publicat-content">
+                                                <h5>{{ \Carbon\Carbon::parse($multimedia->publication_date)->format('M j, Y')  }}</h5>
+                                                <h4>{{ $multimedia->headline }}</h4>
+                                                <p>{{ $multimedia->summary }} </p>
+                                            </div>
+                                        </a>
+                                    @endforeach
+                                    <!---
+                                    <div class="multimedia-content">                                        
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="media-box">
@@ -157,8 +167,9 @@
                                                     <img src="/site/img/icons/play-icon.png" class="img-fluid play-btn" alt="play-icon" />
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div>                                       
                                     </div>
+                                     --->
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="v-pills-publication" role="tabpanel" aria-labelledby="v-pills-publications-tab">
