@@ -62,6 +62,7 @@
                                 <button class="nav-link" id="v-pills-multimedia-tab" data-bs-toggle="pill" data-bs-target="#v-pills-multimedia" type="button" role="tab" aria-controls="v-pills-multimedia" aria-selected="false">Multimedia</button>
                                 <button class="nav-link" id="v-pills-publication-tab" data-bs-toggle="pill" data-bs-target="#v-pills-publication" type="button" role="tab" aria-controls="v-pills-publication" aria-selected="false">Publications</button>
                                 <button class="nav-link" id="v-pills-speaking-tab" data-bs-toggle="pill" data-bs-target="#v-pills-speaking" type="button" role="tab" aria-controls="v-pills-speaking" aria-selected="false">Speaking Engagements</button>
+                                <button class="nav-link" id="v-pills-testimonials-tab" data-bs-toggle="pill" data-bs-target="#v-pills-testimonials" type="button" role="tab" aria-controls="v-pills-testimonials" aria-selected="false">Testimonials</button>
                             </div>
                         </div>
                     </div>
@@ -205,6 +206,21 @@
                                             @endforeach
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-testimonials" role="tabpanel" aria-labelledby="v-pills-sepaking-tab">
+                                <div class="tab-right-content heading">
+                                    <h3>Testimonials</h3>
+                                    <hr class="border-bot">
+                                    @foreach ($testimonials as $testimonial)
+                                        <a href="/testimonial-detail/{{ $testimonial->id }}" style="text-decoration: none;">
+                                            <div class="publicat-content">
+                                                <h5>{{ \Carbon\Carbon::parse($testimonial->date_of_resolution)->format('M j, Y')  }}</h5>
+                                                <h4>{{ $testimonial->client_name }}, {{ $testimonial->title }}</h4>
+                                                <p>{{ $testimonial->summary }} </p>
+                                            </div>
+                                        </a>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>

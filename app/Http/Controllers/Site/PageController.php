@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
-use App\Models\PracticeArea, App\Models\Bio, App\Models\News, App\Models\Engagement, App\Models\Faq, App\Models\Resource, App\Models\BlogPost;
+use App\Models\PracticeArea, App\Models\Bio, App\Models\News, App\Models\Engagement, App\Models\Faq, App\Models\Resource, App\Models\BlogPost, App\Models\Testimonial;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -53,6 +53,7 @@ class PageController extends Controller
         $news_stories = $bio->news; 
         $engagements = $bio->engagements;
         $multimedias = $bio->multimedias;
+        $testimonials = $bio->testimonials;        
 
         $headerInfo = [        
             'h1Text' => "Attorney Detail",
@@ -60,7 +61,7 @@ class PageController extends Controller
             'bannerText' => "This page provides detailed information about the attorney's background, expertise, and commitment to serving your legal needs."
         ];
                    
-        return view('site.attorney-detail', compact('headerInfo', 'bio', 'practice_areas', 'colleges', 'admissions', 'memberships', 'licenses', 'awards', 'languages', 'news_stories', 'engagements', 'multimedias'));
+        return view('site.attorney-detail', compact('headerInfo', 'bio', 'practice_areas', 'colleges', 'admissions', 'memberships', 'licenses', 'awards', 'languages', 'news_stories', 'engagements', 'multimedias', 'testimonials'));
     }
 
     public function news()
@@ -113,6 +114,19 @@ class PageController extends Controller
         ];
                   
         return view('site.blog-detail', compact('headerInfo', 'blog'));
+    }
+
+    public function testimonial_detail($testimonial_id)
+    {              
+        $testimonial = Testimonial::find($testimonial_id);        
+        
+        $headerInfo = [        
+            'h1Text' => "Taylor Tax Law",
+            'h4Text' => "Testimonial",
+            'bannerText' => $testimonial->client_name . ", ". $testimonial->title
+        ];
+                  
+        return view('site.testimonial-detail', compact('headerInfo', 'testimonial'));
     }
 
     public function events()

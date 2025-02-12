@@ -22,4 +22,5 @@ class Bio extends Model
     public function news() { return $this->belongsToMany(News::class, 'bio_news')->withTimestamps(); }
     public function engagements() { return $this->belongsToMany(Engagement::class, 'bio_engagement')->withTimestamps(); }
     public function multimedias() { return $this->belongsToMany(Multimedia::class, 'bio_multimedia')->withTimestamps(); }
+    public function testimonials() { return $this->belongsToMany(Testimonial::class, 'testimonial_bio')->withTimestamps(); }
 }
