@@ -1,13 +1,13 @@
 <?php 
     use Illuminate\Support\Facades\DB;    
-    $testimonials = DB::table('testimonial')->latest()->get();    
+    $testimonials = DB::table('testimonial')->where('client_consent', 1)->latest()->get();      
 ?>
 
 <div class="testimonials-section">
     <div class="container">
         <div class="testimonials-heading heading text-center">
             <h5>testimonials</h5>
-            <h3>what client are saying</h3>
+            <h3>what clients are saying</h3>
             <hr>
             </div>
             <div class="testimonial-wrap heading">
