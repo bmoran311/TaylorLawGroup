@@ -1,4 +1,4 @@
-@extends('layouts.main-attorney')
+@extends('layouts.attorney')
 
 @section('content')
 
