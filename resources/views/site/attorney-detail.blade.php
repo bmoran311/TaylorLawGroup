@@ -32,11 +32,18 @@
                             <li><a href="tel:{{ $bio->phone_number }}"><i class="fa-solid fa-phone"></i> {{ $bio->phone_number }}</a></li>
                         </ul>
                         <h6>PRACTICES</h6>
-                        <ul class="list-unstyled practice-details">
-                            @foreach ($practice_areas as $practice_area)
-                                <li><i class="fa-solid fa-square"></i>{{$practice_area->name}} </li>
+                        <div class="row">
+                            @foreach ($practice_areas->chunk(4) as $pa_chunk)
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled practice-details">
+                                        @foreach($pa_chunk as $practice_area)
+                                            <li><i class="fa-solid fa-square"></i>{{$practice_area->name}} </li>
+                                        @endforeach
+                                </ul>
+                            </div>
                             @endforeach
-                        </ul>
+                        </div>
+
                     </div>
                 </div>
             </div>
