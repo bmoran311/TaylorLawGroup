@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="attorneys-cont-section">
-    <div class="container">
+    <div class="container" style="padding-top: 50px;">
         <div class="attorneys-wrap bg-white">
             <div class="row">
                 <div class="col-lg-4">
@@ -81,62 +81,62 @@
                                     <h6>Education</h6>
                                     <ul class="list-unstyled practice-details">
                                         @if(count($colleges) > 0)
-                                            @foreach ($colleges as $college) 
+                                            @foreach ($colleges as $college)
                                                 <li><i class="fa-solid fa-square"></i>{{ $college->name }}</li>
-                                            @endforeach         
+                                            @endforeach
                                         @else
                                             <li>None listed</li>
-                                        @endif                              
+                                        @endif
                                     </ul>
                                     <h6>Bar Admissions</h6>
                                     <ul class="list-unstyled practice-details">
                                         @if(count($colleges) > 0)
-                                            @foreach ($admissions as $admission) 
+                                            @foreach ($admissions as $admission)
                                                 <li><i class="fa-solid fa-square"></i>{{ $admission->name }}</li>
-                                            @endforeach  
+                                            @endforeach
                                         @else
                                             <li>None listed</li>
-                                        @endif                                          
+                                        @endif
                                     </ul>
                                     <h6>Memberships</h6>
                                     <ul class="list-unstyled practice-details">
                                         @if(count($memberships) > 0)
-                                            @foreach ($memberships as $membership) 
+                                            @foreach ($memberships as $membership)
                                                 <li><i class="fa-solid fa-square"></i>{{ $membership->name }}</li>
-                                            @endforeach  
+                                            @endforeach
                                         @else
                                             <li>None listed</li>
-                                        @endif   
+                                        @endif
                                     </ul>
                                     <h6>Licenses</h6>
                                     <ul class="list-unstyled practice-details">
                                         @if(count($memberships) > 0)
-                                            @foreach ($licenses as $license) 
+                                            @foreach ($licenses as $license)
                                                 <li><i class="fa-solid fa-square"></i>{{ $license->name }}</li>
-                                            @endforeach 
+                                            @endforeach
                                         @else
                                             <li>None listed</li>
-                                        @endif        
+                                        @endif
                                     </ul>
                                     <h6>Awards</h6>
                                     <ul class="list-unstyled practice-details">
                                         @if(count($awards) > 0)
-                                            @foreach ($awards as $award) 
+                                            @foreach ($awards as $award)
                                                 <li><i class="fa-solid fa-square"></i>{{ $award->name }}</li>
-                                            @endforeach    
+                                            @endforeach
                                         @else
                                             <li>None listed</li>
-                                        @endif     
+                                        @endif
                                     </ul>
                                     <h6>Languages</h6>
                                     <ul class="list-unstyled practice-details">
                                         @if(count($awards) > 0)
-                                            @foreach ($languages as $language) 
+                                            @foreach ($languages as $language)
                                                 <li><i class="fa-solid fa-square"></i>{{ $language->name }}</li>
-                                            @endforeach  
+                                            @endforeach
                                         @else
                                             <li>None listed</li>
-                                        @endif     
+                                        @endif
                                     </ul>
                                 </div>
                             </div>
@@ -154,7 +154,7 @@
                                         </a>
                                     @endforeach
                                     <!---
-                                    <div class="multimedia-content">                                        
+                                    <div class="multimedia-content">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="media-box">
@@ -168,7 +168,7 @@
                                                     <img src="/site/img/icons/play-icon.png" class="img-fluid play-btn" alt="play-icon" />
                                                 </div>
                                             </div>
-                                        </div>                                       
+                                        </div>
                                     </div>
                                      --->
                                 </div>
