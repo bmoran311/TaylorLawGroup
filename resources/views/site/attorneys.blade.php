@@ -14,7 +14,7 @@
         <div class="search-box">
             <h4>SEARCH BY LAST NAME</h4>
             <h6>@foreach (range('A', 'Z') as $letter)
-                    {{ $letter }}
+                    <a href="/attorneys?letter={{ $letter }}">{{ $letter }}</a>
                 @endforeach
             </h6>
             <div class="row">
