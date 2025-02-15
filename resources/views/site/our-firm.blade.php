@@ -8,8 +8,16 @@
     <div class="container">
         <div class="about-wrap heading">
             <div class=row>
-                <div class="col-md-12 col-lg-6 ">
+                <div class="col-md-12 col-lg-12 ">
                     <div class="about-content heading">
+                        <div style="float: right; max-width: 590px;">
+                            <div class="about-img industry text-center">
+                                <img src="/site/img/others/about-img2.png" class="img-fluid" alt="about-img" />
+                            </div>
+                            <div class="about-border industry">
+                                <img src="/site/img/others/img-border.png" class="img-fluid" alt="about-border" />
+                            </div>
+                        </div>
                         <h4>An industry-leading tax<br> litigation powerhouse.</h4>
                         <p>
                             At Taylor Tax Law, we are committed to providing exceptional legal services with a personal touch. Located in the heart of Charlestown, our firm specializes in delivering strategic, practical, and results-driven solutions to meet the unique needs of each of our clients.
@@ -20,7 +28,7 @@
                         </p>
                         <p>
                             <b>Our Expertise</b><br><br>
-                            With deep expertise in tax law, estate planning, business law, and more, our firm serves as a trusted partner for clients navigating pivotal decisions. Whether you’re planning for the future, facing a challenging legal matter, or seeking counsel for your business, Taylor Tax Law is 
+                            With deep expertise in tax law, estate planning, business law, and more, our firm serves as a trusted partner for clients navigating pivotal decisions. Whether you’re planning for the future, facing a challenging legal matter, or seeking counsel for your business, Taylor Tax Law is
                             here to help.
                         </p>
                         <p>
@@ -42,14 +50,6 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-6 ">
-                    <div class="about-img industry text-center">
-                        <img src="/site/img/others/about-img2.png" class="img-fluid" alt="about-img" />
-                    </div>
-                    <div class="about-border industry">
-                        <img src="/site/img/others/img-border.png" class="img-fluid" alt="about-border" />
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -57,12 +57,11 @@
 @endsection
 
 
-      
 
 
 
-               
 
 
 
-      
+
+
