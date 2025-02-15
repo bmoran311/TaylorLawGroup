@@ -39,6 +39,7 @@ Route::get('/disclaimer', [PageController::class, 'disclaimer'])->name('site.dis
 Route::get('/terms-of-use', [PageController::class, 'terms_of_use'])->name('site.terms-of-use');
 Route::get('/news', [PageController::class, 'news'])->name('site.news');
 Route::get('/events', [PageController::class, 'events'])->name('site.events');
+Route::get('/testimonials', [PageController::class, 'testimonials'])->name('site.testimonials');
 Route::get('/faqs', [PageController::class, 'faqs'])->name('site.faqs');
 Route::get('/practice-areas', [PageController::class, 'practice_areas'])->name('site.practice-areas');
 Route::get('/practice-area/{practice_area_id}', [PageController::class, 'practice_area'])->name('site.practice-area');

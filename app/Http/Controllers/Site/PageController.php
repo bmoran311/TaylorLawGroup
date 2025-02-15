@@ -142,6 +142,19 @@ class PageController extends Controller
         return view('site.events', compact('headerInfo', 'engagements'));
     }
 
+    public function testimonials()
+    {                     
+        $testimonials = Testimonial::where('firm_id', 1)->orderBy('title')->get();
+        
+        $headerInfo = [        
+            'h1Text' => "Taylor Tax Law",
+            'h4Text' => "Testimonials",
+            'bannerText' => "At Taylor Law, we pride ourselves on delivering expert legal guidance with a personal touch. Read what our clients have to say about our dedication, professionalism, and results-driven approach."
+        ];
+                  
+        return view('site.testimonials', compact('headerInfo', 'testimonials'));
+    }
+
     public function faqs()
     {                     
         $faqs = Faq::where('firm_id', 1)->orderBy('created_at')->get();
