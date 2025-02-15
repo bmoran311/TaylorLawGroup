@@ -80,7 +80,7 @@
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><a class="dropdown-item" href="/our-firm">Our Firm</a></li>
-                                        <li><a class="dropdown-item" href="/attorney-detail/2">About David</a></li>
+                                        <li><a class="dropdown-item" href="/attorney-detail/1">About David</a></li>
                                         <li><a class="dropdown-item" href="/testimonials">Testimonials</a></li>
                                     </ul>
                                 </li>
