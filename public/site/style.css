@@ -2,6 +2,17 @@
 	font-family:'TrajanPro-Regular';
 }
 
+.letter-link{
+    font-size: 18px;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+}
+
+.letter-link:hover{
+    font-weight: bold;
+}
+
 .text-center img {
   display: inline-block;
 }

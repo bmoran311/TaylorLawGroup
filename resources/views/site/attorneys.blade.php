@@ -14,7 +14,7 @@
         <div class="search-box">
             <h4>SEARCH BY LAST NAME</h4>
             <h6>@foreach (range('A', 'Z') as $letter)
-                    <a href="/attorneys?letter={{ $letter }}">{{ $letter }}</a>
+                    <a href="/attorneys?letter={{ $letter }}" class="letter-link">{{ $letter }}</a>
                 @endforeach
             </h6>
             <div class="row">
@@ -49,12 +49,12 @@
         </div>
         <div class="team-wraping">
             <div class="row">
-                @foreach ($bios as $bio)  
+                @foreach ($bios as $bio)
                     <div class="col-md-12 col-lg-4">
                         <div class="team-content text-center">
                             <div class="team-img tem-box1">
                                 <img src="{{ asset('storage/' . $bio->headshot) }}" class="img-fluid shape-bg-img" alt="{{ $bio->first_name }} {{ $bio->last_name }},  {{ $bio->title }}">
-                            </div>                       
+                            </div>
                             <div class="team-sub-cont">
                                 <h4>{{ $bio->first_name }} {{ $bio->last_name }},  {{ $bio->title }}</h4>
                                 <hr class="border-bot">
@@ -65,7 +65,7 @@
                             </div>
                         </div>
                     </div>
-                @endforeach                
+                @endforeach
             </div>
             <br>
             <div class="all-member-btn text-center">
@@ -73,5 +73,5 @@
             </div>
         </div>
     </div>
-</div>      
+</div>
 @endsection
