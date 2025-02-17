@@ -26,6 +26,19 @@ class PageController extends Controller
                 })
                 ->orderBy('last_name')->orderBy('first_name')->get();
         }
+        else if ($request->filled('search_criteria')) 
+        {
+            $search_criteria = $request->query('search_criteria');
+                
+            $bios = Bio::when($search_criteria, function ($queryBuilder) use ($search_criteria) {
+                $queryBuilder->where('first_name', 'like', "%{$search_criteria}%")
+                             ->orWhere('last_name', 'like', "%{$search_criteria}%")
+                             ->orWhere('email', 'like', "%{$search_criteria}%")
+                             ->orWhere('summary', 'like', "%{$search_criteria}%")
+                             ->orWhere('title', 'like', "%{$search_criteria}%");
+            })->orderBy('last_name')->orderBy('first_name')->get();
+
+        }
         else
         {            
             $bios = Bio::where('firm_id', 1)->orderBy('last_name')->orderBy('first_name')->get();

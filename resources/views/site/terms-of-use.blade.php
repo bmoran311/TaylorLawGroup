@@ -36,8 +36,8 @@
                                 If you have questions about these Terms of Use, please contact us:
                             </p>
                             <ul>
-                                <li><strong>Email:</strong> [Insert Email Address]</li>
-                                <li><strong>Phone:</strong> [Insert Phone Number]</li>
+                                <li><strong>Email:</strong> rebekah.hall@taylortaxlaw.com</li>
+                                <li><strong>Phone:</strong> 843.723.2000</li>
                             </ul>
                         </section>
                     </div>

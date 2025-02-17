@@ -18,14 +18,16 @@
                 @endforeach
             </h6>
             <div class="row">
-                <div class="col-md-8">
-                    <div class="input-group">
-                        <input class="form-control form-control-lg" type="search" placeholder="Name or keyword" aria-label="Search">
-                        <button class="btn btn-primary px-4" type="submit">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
+                <form method="GET" action="{{ route('site.attorneys') }}">            
+                    <div class="col-md-8">
+                        <div class="input-group">
+                            <input name="search_criteria" class="form-control form-control-lg" type="search" placeholder="Name or keyword" aria-label="Search">
+                            <button class="btn btn-primary px-4" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
                     </div>
-                </div>
+                </form>
                 <!---
                 <div class="col-md-4">
                     <div class="advance-search text-end">

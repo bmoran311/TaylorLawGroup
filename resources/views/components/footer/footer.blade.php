@@ -21,8 +21,8 @@
             <ul class="list-unstyled">
                 <li><a href="/our-firm">Our Firm</a></li>
                 <li><a href="/attorneys">Attorneys</a></li>
-                <li><a href="/practice_areas">Practice Areas </a></li>
-                <li><a href="/news">News and Events  </a></li>
+                <li><a href="/practice-areas">Practice Areas </a></li>
+                <li><a href="/news">News</a></li>
                 <li><a href="/attorneys">Team</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -36,6 +36,7 @@
                 <li><a href="/privacy-policy">Privacy Policy</a></li>
                 <li><a href="/accessibility">Accessiblity</a></li>
                 <li><a href="/disclaimer">Disclaimer</a></li>
+                <li><a href="/events">Events</a></li>
                 <li><a href="/terms-of-use">Terms of use</a></li>
                 <li><a href="/faqs">FAQ</a></li>
             </ul>

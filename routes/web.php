@@ -30,7 +30,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'index'])->name('site.home');
 Route::get('/attorneys', [PageController::class, 'attorneys'])->name('site.attorneys');
-Route::get('/attorneys/{letter}', [PageController::class, 'attorneys'])->name('site.attorneys');
+Route::get('/attorneys/{letter}', [PageController::class, 'attorneys'])->name('site.attorneys_letter');
 Route::get('/attorney-detail/{bio_id}', [PageController::class, 'attorney_detail'])->name('site.attorney-detail');
 Route::get('/our-firm', [PageController::class, 'our_firm'])->name('site.our-firm');
 Route::get('/privacy-policy', [PageController::class, 'privacy_policy'])->name('site.privacy-policy');
