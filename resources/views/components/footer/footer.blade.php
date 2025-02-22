@@ -22,8 +22,7 @@
                 <li><a href="/our-firm">Our Firm</a></li>
                 <li><a href="/attorneys">Attorneys</a></li>
                 <li><a href="/practice-areas">Practice Areas </a></li>
-                <li><a href="/news">News</a></li>
-                <li><a href="/attorneys">Team</a></li>
+                <li><a href="/news">News</a></li>                
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
