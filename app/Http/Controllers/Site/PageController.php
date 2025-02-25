@@ -212,7 +212,7 @@ class PageController extends Controller
         $headerInfo = [        
             'h1Text' => "Our Firm",
             'h4Text' => "Meet Our People",
-            'bannerText' => "At our firm, we pride ourselves on delivering exceptional legal expertise with a personalized approach."
+            'bannerText' => "At Taylor Tax Law, we're committed to providing exceptional legal services with a client-focused approach."
         ];
                   
         return view('site.our-firm', compact('headerInfo'));
