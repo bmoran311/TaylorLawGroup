@@ -12,7 +12,7 @@
                 <div class="col-lg-8 col-md-7 col-12 col-sm-12">
                     <div class="tab-content" id="v-pills-tabContent">                                                                                                        
                         <div class="tab-right-content heading">
-                            <h3>Speaking Engagements</h3>
+                            <h3>Engagements</h3>
                             <hr class="border-bot">
 
                             <div class="speaking-wrap">                                        

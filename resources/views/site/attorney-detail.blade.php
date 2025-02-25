@@ -68,7 +68,7 @@
                                 <button class="nav-link" id="v-pills-creadentials-tab" data-bs-toggle="pill" data-bs-target="#v-pills-creadentials" type="button" role="tab" aria-controls="v-pills-creadentials" aria-selected="false">Credentials</button>
                                 <button class="nav-link" id="v-pills-multimedia-tab" data-bs-toggle="pill" data-bs-target="#v-pills-multimedia" type="button" role="tab" aria-controls="v-pills-multimedia" aria-selected="false">Multimedia</button>
                                 <button class="nav-link" id="v-pills-publication-tab" data-bs-toggle="pill" data-bs-target="#v-pills-publication" type="button" role="tab" aria-controls="v-pills-publication" aria-selected="false">Publications</button>
-                                <button class="nav-link" id="v-pills-speaking-tab" data-bs-toggle="pill" data-bs-target="#v-pills-speaking" type="button" role="tab" aria-controls="v-pills-speaking" aria-selected="false">Speaking Engagements</button>
+                                <button class="nav-link" id="v-pills-speaking-tab" data-bs-toggle="pill" data-bs-target="#v-pills-speaking" type="button" role="tab" aria-controls="v-pills-speaking" aria-selected="false">Engagements</button>
                                 <button class="nav-link" id="v-pills-testimonials-tab" data-bs-toggle="pill" data-bs-target="#v-pills-testimonials" type="button" role="tab" aria-controls="v-pills-testimonials" aria-selected="false">Testimonials</button>
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                                 <div class="tab-right-content heading">
                                     <h3>OVERVIEW</h3>
                                     <hr class="border-bot">
-                                    <p>{{ $bio->description }}{!! nl2br(e($bio->description)) !!}</p></div>
+                                    <p>{!! nl2br(e($bio->description)) !!}</p></div>
                             </div>
                             <div class="tab-pane fade" id="v-pills-creadentials" role="tabpanel" aria-labelledby="v-pills-credentials-tab">
                                 <div class="tab-right-content heading">

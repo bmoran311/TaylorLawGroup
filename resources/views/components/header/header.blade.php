@@ -86,11 +86,11 @@
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="/news" id="navbarDropdown" role="button" aria-expanded="false">
-                                        News & Events
+                                        Newsworthy
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="/news">News</a></li>
-                                        <li><a class="dropdown-item" href="/events">Events</a></li>
+                                        <li><a class="dropdown-item" href="/news">Publications</a></li>
+                                        <li><a class="dropdown-item" href="/events">Engagements</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
