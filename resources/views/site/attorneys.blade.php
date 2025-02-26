@@ -54,9 +54,11 @@
                 @foreach ($bios as $bio)
                     <div class="col-md-12 col-lg-4">
                         <div class="team-content text-center">
-                            <div class="team-img tem-box1">
-                                <img src="{{ asset('storage/' . $bio->headshot) }}" class="img-fluid shape-bg-img" alt="{{ $bio->first_name }} {{ $bio->last_name }},  {{ $bio->title }}">
-                            </div>
+                            <a href="/attorney-detail/{{ $bio->id }}">
+                                <div class="team-img tem-box1">
+                                    <img src="{{ asset('storage/' . $bio->headshot) }}" class="img-fluid shape-bg-img" alt="{{ $bio->first_name }} {{ $bio->last_name }},  {{ $bio->title }}">
+                                </div>
+                            </a>
                             <div class="team-sub-cont">
                                 <h4>{{ $bio->first_name }} {{ $bio->last_name }},  {{ $bio->title }}</h4>
                                 <hr class="border-bot">
