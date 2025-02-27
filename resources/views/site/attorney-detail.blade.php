@@ -59,7 +59,7 @@
         <div class="tab-wrap">
             <div class="d-flex align-items-start">
                 <div class="row">
-                    <div class="col-lg-4 col-md-5 col-sm-12 col-12">
+                    <div class="col-lg-5 col-md-5 col-sm-12 col-12">
                         <div class="tab-contentleft">
                             <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                                 <div class="team-name heading">
@@ -84,7 +84,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-8 col-md-7 col-12 col-sm-12">
+                    <div class="col-lg-7 col-md-7 col-12 col-sm-12">
                         <div class="tab-content" id="v-pills-tabContent">
                             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                                 <div class="tab-right-content heading">
