@@ -14,7 +14,7 @@
                         </div>
                         <div class="col-md-12 col-lg-5 col-12 col-sm-12">
                             <div class="banner-info practice-ban">
-                                <p><br><br>{{ $bannerText }} </p>
+                                <p><br>{{ $bannerText }} </p>
                             </div>
                         </div>
                     </div>
