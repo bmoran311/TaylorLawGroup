@@ -33,17 +33,20 @@
                         </ul>
                         <h6>PRACTICES</h6>
                         <div class="row">
-                            @foreach ($practice_areas->chunk(4) as $pa_chunk)
-                            <div class="col-lg-6">
-                                <ul class="list-unstyled practice-details">
+                            @if ($practice_areas->isNotEmpty()) 
+                                @foreach ($practice_areas->chunk(4) as $pa_chunk)
+                                <div class="col-lg-6">
+                                    <ul class="list-unstyled practice-details">                                   
                                         @foreach($pa_chunk as $practice_area)
                                             <li><i class="fa-solid fa-square"></i>{{$practice_area->name}} </li>
-                                        @endforeach
-                                </ul>
-                            </div>
-                            @endforeach
+                                        @endforeach                                       
+                                    </ul>
+                                </div>
+                                @endforeach
+                            @else
+                                <p>None Listed</p>
+                            @endif
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -66,10 +69,18 @@
                                 <img src="/site/img/icons/active-icon.png" class="img-fluid taylorline-img" alt="taylorline" />
                                 <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">OVERVIEW </button>
                                 <button class="nav-link" id="v-pills-creadentials-tab" data-bs-toggle="pill" data-bs-target="#v-pills-creadentials" type="button" role="tab" aria-controls="v-pills-creadentials" aria-selected="false">Credentials</button>
-                                <button class="nav-link" id="v-pills-multimedia-tab" data-bs-toggle="pill" data-bs-target="#v-pills-multimedia" type="button" role="tab" aria-controls="v-pills-multimedia" aria-selected="false">Multimedia</button>
-                                <button class="nav-link" id="v-pills-publication-tab" data-bs-toggle="pill" data-bs-target="#v-pills-publication" type="button" role="tab" aria-controls="v-pills-publication" aria-selected="false">Publications</button>
-                                <button class="nav-link" id="v-pills-speaking-tab" data-bs-toggle="pill" data-bs-target="#v-pills-speaking" type="button" role="tab" aria-controls="v-pills-speaking" aria-selected="false">Engagements</button>
-                                <button class="nav-link" id="v-pills-testimonials-tab" data-bs-toggle="pill" data-bs-target="#v-pills-testimonials" type="button" role="tab" aria-controls="v-pills-testimonials" aria-selected="false">Testimonials</button>
+                                @if ($multimedias->isNotEmpty()) 
+                                    <button class="nav-link" id="v-pills-multimedia-tab" data-bs-toggle="pill" data-bs-target="#v-pills-multimedia" type="button" role="tab" aria-controls="v-pills-multimedia" aria-selected="false">Multimedia</button>
+                                @endif
+                                @if ($news_stories->isNotEmpty()) 
+                                    <button class="nav-link" id="v-pills-publication-tab" data-bs-toggle="pill" data-bs-target="#v-pills-publication" type="button" role="tab" aria-controls="v-pills-publication" aria-selected="false">Publications</button>
+                                @endif
+                                @if ($engagements->isNotEmpty()) 
+                                    <button class="nav-link" id="v-pills-speaking-tab" data-bs-toggle="pill" data-bs-target="#v-pills-speaking" type="button" role="tab" aria-controls="v-pills-speaking" aria-selected="false">Engagements</button>
+                                @endif
+                                @if ($testimonials->isNotEmpty()) 
+                                    <button class="nav-link" id="v-pills-testimonials-tab" data-bs-toggle="pill" data-bs-target="#v-pills-testimonials" type="button" role="tab" aria-controls="v-pills-testimonials" aria-selected="false">Testimonials</button>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -85,66 +96,54 @@
                                 <div class="tab-right-content heading">
                                     <h3>Credentials</h3>
                                     <hr class="border-bot">
-                                    <h6>Education</h6>
-                                    <ul class="list-unstyled practice-details">
-                                        @if(count($colleges) > 0)
+                                    @if ($colleges->isNotEmpty()) 
+                                        <h6>Education</h6>
+                                        <ul class="list-unstyled practice-details">                                        
                                             @foreach ($colleges as $college)
                                                 <li><i class="fa-solid fa-square"></i>{{ $college->name }}</li>
-                                            @endforeach
-                                        @else
-                                            <li>None listed</li>
-                                        @endif
-                                    </ul>
-                                    <h6>Bar Admissions</h6>
-                                    <ul class="list-unstyled practice-details">
-                                        @if(count($colleges) > 0)
+                                            @endforeach                                       
+                                        </ul>
+                                    @endif
+                                    @if ($admissions->isNotEmpty()) 
+                                        <h6>Bar Admissions</h6>
+                                        <ul class="list-unstyled practice-details">                                           
                                             @foreach ($admissions as $admission)
                                                 <li><i class="fa-solid fa-square"></i>{{ $admission->name }}</li>
-                                            @endforeach
-                                        @else
-                                            <li>None listed</li>
-                                        @endif
-                                    </ul>
-                                    <h6>Memberships</h6>
-                                    <ul class="list-unstyled practice-details">
-                                        @if(count($memberships) > 0)
+                                            @endforeach                                            
+                                        </ul>
+                                    @endif
+                                    @if ($memberships->isNotEmpty()) 
+                                        <h6>Memberships</h6>
+                                        <ul class="list-unstyled practice-details">                                           
                                             @foreach ($memberships as $membership)
                                                 <li><i class="fa-solid fa-square"></i>{{ $membership->name }}</li>
-                                            @endforeach
-                                        @else
-                                            <li>None listed</li>
-                                        @endif
-                                    </ul>
-                                    <h6>Licenses</h6>
-                                    <ul class="list-unstyled practice-details">
-                                        @if(count($memberships) > 0)
+                                            @endforeach                                           
+                                        </ul>                                        
+                                    @endif
+                                    @if ($licenses->isNotEmpty()) 
+                                        <h6>Licenses</h6>
+                                        <ul class="list-unstyled practice-details">                                       
                                             @foreach ($licenses as $license)
                                                 <li><i class="fa-solid fa-square"></i>{{ $license->name }}</li>
-                                            @endforeach
-                                        @else
-                                            <li>None listed</li>
-                                        @endif
-                                    </ul>
-                                    <h6>Awards</h6>
-                                    <ul class="list-unstyled practice-details">
-                                        @if(count($awards) > 0)
+                                            @endforeach                                       
+                                        </ul>
+                                    @endif
+                                    @if ($awards->isNotEmpty()) 
+                                        <h6>Awards</h6>
+                                        <ul class="list-unstyled practice-details">                                            
                                             @foreach ($awards as $award)
                                                 <li><i class="fa-solid fa-square"></i>{{ $award->name }}</li>
-                                            @endforeach
-                                        @else
-                                            <li>None listed</li>
-                                        @endif
-                                    </ul>
-                                    <h6>Languages</h6>
-                                    <ul class="list-unstyled practice-details">
-                                        @if(count($awards) > 0)
+                                            @endforeach                                           
+                                        </ul>
+                                    @endif
+                                    @if ($languages->isNotEmpty()) 
+                                        <h6>Languages</h6>
+                                        <ul class="list-unstyled practice-details">                                        
                                             @foreach ($languages as $language)
                                                 <li><i class="fa-solid fa-square"></i>{{ $language->name }}</li>
-                                            @endforeach
-                                        @else
-                                            <li>None listed</li>
-                                        @endif
-                                    </ul>
+                                            @endforeach                                       
+                                        </ul>
+                                    @endif
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="v-pills-multimedia" role="tabpanel" aria-labelledby="v-pills-multimedia-tab">

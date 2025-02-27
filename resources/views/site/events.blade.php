@@ -14,20 +14,23 @@
                         <div class="tab-right-content heading">
                             <h3>Engagements</h3>
                             <hr class="border-bot">
-
-                            <div class="speaking-wrap">                                        
-                                <div class="row">
-                                    @foreach ($engagements as $engagement)  
-                                        <div class="col-md-12 col-lg-6">
-                                            <div class="speaking-content">                                                        
-                                                <h4>{{ $engagement->title }} </h4>
-                                                <p>{{ $engagement->summary }}</p>
-                                                <a href="#">{{ $engagement->conference }}<br>{{ \Carbon\Carbon::parse($engagement->event_date)->format('M j, Y')  }} {{ $engagement->event_time }}</a>
-                                            </div>
-                                        </div>  
-                                    @endforeach                                          
-                                </div>                                      
-                            </div>
+                            @if ($engagements->isNotEmpty()) 
+                                <div class="speaking-wrap">                                        
+                                    <div class="row">
+                                        @foreach ($engagements as $engagement)  
+                                            <div class="col-md-12 col-lg-6">
+                                                <div class="speaking-content">                                                        
+                                                    <h4>{{ $engagement->title }} </h4>
+                                                    <p>{{ $engagement->summary }}</p>
+                                                    <a href="#">{{ $engagement->conference }}<br>{{ \Carbon\Carbon::parse($engagement->event_date)->format('M j, Y')  }} {{ $engagement->event_time }}</a>
+                                                </div>
+                                            </div>  
+                                        @endforeach                                          
+                                    </div>                                      
+                                </div>
+                            @else     
+                                <h6>There are no Engagements scheduled at this time</h6>
+                            @endif
                         </div>
                     </div>                                                                                          
                 </div>               
