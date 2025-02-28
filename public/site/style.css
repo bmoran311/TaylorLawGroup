@@ -185,7 +185,7 @@ header .mainmenu ul .nav-item:last-child a:focus {
   display: none;
   border: none;
   padding: 8px 40px;
-  background-color: #a8886d4a;
+  background-color: #a8886df1;
   top: 43px;
 }
   .dropdown:hover .dropdown-toggle::after {
