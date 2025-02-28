@@ -14,15 +14,19 @@
                         <div class="tab-right-content heading">
                             <h3>Publications</h3>
                             <hr class="border-bot">
-                            @foreach ($news_stories as $news) 
-                                <a href="{{ $news->url }}" target="_blank" style="text-decoration: none;">
-                                    <div class="publicat-content">
-                                        <h5>{{ \Carbon\Carbon::parse($news->publication_date)->format('M j, Y')  }}</h5>
-                                        <h4>{{ $news->headline }}</h4>
-                                        <p>{{ $news->summary }} </p>
-                                    </div>
-                                </a>
-                            @endforeach                                    
+                            @if ($news_stories->isNotEmpty()) 
+                                @foreach ($news_stories as $news) 
+                                    <a href="{{ $news->url }}" target="_blank" style="text-decoration: none;">
+                                        <div class="publicat-content">
+                                            <h5>{{ \Carbon\Carbon::parse($news->publication_date)->format('M j, Y')  }}</h5>
+                                            <h4>{{ $news->headline }}</h4>
+                                            <p>{{ $news->summary }} </p>
+                                        </div>
+                                    </a>
+                                @endforeach   
+                            @else     
+                                <h6>There are no Publications at this Time</h6>
+                            @endif                               
                         </div>                                                                      
                     </div>
                 </div>               
