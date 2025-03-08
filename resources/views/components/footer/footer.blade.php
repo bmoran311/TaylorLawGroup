@@ -37,7 +37,7 @@
                 <li><a href="/disclaimer">Disclaimer</a></li>
                 <li><a href="/events">Events</a></li>
                 <li><a href="/terms-of-use">Terms of use</a></li>
-                <li><a href="/faqs">FAQ</a></li>
+                <!---<li><a href="/faqs">FAQ</a></li>--->
             </ul>
         </div>
     </div>
