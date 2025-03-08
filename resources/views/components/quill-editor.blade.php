@@ -35,10 +35,10 @@
         </div>
     </div>
     <textarea x-cloak x-show="source" id="{{ $name }}_value" name="{{ $name }}" rows="8" class="text-input" style="min-height: {{ $height }}px;"></textarea>
-    <div class="flex justify-end mt-2">
+    {{-- <div class="flex justify-end mt-2">
         <button @click="source = !source" type="button" class="text-blue-500 hover:underline text-sm">
             <span x-show="!source" x-cloak>HTML Mode</span>
             <span x-show="source" x-cloak>Content Mode</span>
         </button>
-    </div>
+    </div> --}}
 </div>
