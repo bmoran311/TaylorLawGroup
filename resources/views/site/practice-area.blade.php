@@ -19,8 +19,8 @@
                             </div>
                         </div>
                         <h4>{{$practice_area->name}}</h4>
-                        <p>
-                            {!! nl2br(e($practice_area->description)) !!}
+                        <p>                           
+                            {!! $practice_area->description !!}
                         </p>
                     </div>
                 </div>                

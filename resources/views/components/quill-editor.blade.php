@@ -9,7 +9,12 @@
 <script>
  document.addEventListener('DOMContentLoaded', function() {
     const quill = new Quill('#{{ $name }}_editor', {
-        theme: 'snow'
+        theme: 'snow',                
+        modules: {            
+            clipboard: {
+                matchVisual: false // Prevents Quill from adding extra <br> tags
+            }
+        }
     });
 
     var textarea = document.getElementById('{{ $name }}_value');
