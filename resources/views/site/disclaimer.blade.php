@@ -9,7 +9,7 @@
             <div class=row>
                 <div class="col-md-12 col-lg-6 ">
                     <div class="about-content heading">
-                        <h4>Taylor Tax Law<br> disclaimer</h4>
+                        <h4>Taylor Law<br> disclaimer</h4>
                         
                         <header>
                             <h2>Disclaimer</h2>

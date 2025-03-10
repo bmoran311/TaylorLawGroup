@@ -9,11 +9,11 @@
             <div class=row>
                 <div class="col-md-12 col-lg-6 ">
                     <div class="about-content heading">
-                        <h4>Taylor Tax Law<br> accessibility statement</h4>
+                        <h4>Taylor Law<br> accessibility statement</h4>
 
                         <section>
                         <p>
-                            Taylor Tax Law is committed to ensuring that our website is accessible to all users, including individuals with disabilities. We strive to provide an inclusive online experience that meets or exceeds accessibility standards.
+                            Taylor Law is committed to ensuring that our website is accessible to all users, including individuals with disabilities. We strive to provide an inclusive online experience that meets or exceeds accessibility standards.
                         </p>
                     </section>
 

@@ -21,7 +21,7 @@
                         <h4>An industry-leading tax<br> litigation powerhouse.</h4>
 
                         <p>                        
-                            At Taylor Tax Law, we are committed to providing exceptional legal services with a client-focused approach. Located in the heart of 
+                            At Taylor Law, we are committed to providing exceptional legal services with a client-focused approach. Located in the heart of 
                             Charlestown, our firm specializes in delivering strategic, practical, and results-driven solutions to meet your needs and that of 
                             your business. <br><br>
                         
@@ -42,7 +42,7 @@
 
                             With deep expertise in tax law, estate planning, business law, and more, our firm serves as a trusted partner for clients 
                             navigating pivotal decisions. Whether you’re planning for the future, facing a challenging legal matter, or seeking counsel 
-                            for your business, Taylor Tax Law is here to ensure your goals are met.<br><br>
+                            for your business, Taylor Law is here to ensure your goals are met.<br><br>
                             
                             <b>
                                 Our Approach 
@@ -71,7 +71,7 @@
                                 Let's Work Together
                             </b>
                             <br>                  
-                            At Taylor Tax Law, we are more than just your legal advisors—we are your advocates, your partners, and your champions. Contact us today to 
+                            At Taylor Law, we are more than just your legal advisors—we are your advocates, your partners, and your champions. Contact us today to 
                             learn how we can help you navigate your legal needs with confidence and ease.
                         </p>
                     </div>

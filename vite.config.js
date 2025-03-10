@@ -8,7 +8,7 @@ export default defineConfig({
             refresh: true,
         }),
     ],
-    server: {
+    /*server: {
         host: '0.0.0.0',
         port: 5173,
         strictPort: true,
@@ -17,5 +17,6 @@ export default defineConfig({
             host: '162.217.171.222',
             clientPort: 5173,
         }
-    }
+    }*/
 });
+

@@ -42,6 +42,9 @@ class PracticeAreaController extends Controller
 
     public function update(Request $request, PracticeArea $practice_area)
     {   
+
+        dd($request);
+
         $request->validate([
             'name' => 'required|string|max:255',
         ]);
