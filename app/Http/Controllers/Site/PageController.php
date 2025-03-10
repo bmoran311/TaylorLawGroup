@@ -46,8 +46,8 @@ class PageController extends Controller
 
         $headerInfo = [        
             'h1Text' => "Attorneys",
-            'h4Text' => "Taylor Tax Law",
-            'bannerText' => "Taylor Tax Law provides expert legal guidance to navigate complex tax matters with confidence and ease."
+            'h4Text' => "Taylor Law",
+            'bannerText' => "Taylor Law provides expert legal guidance to navigate complex tax matters with confidence and ease."
         ];
                     
         return view('site.attorneys', compact('headerInfo', 'bios'));
@@ -70,7 +70,7 @@ class PageController extends Controller
 
         $headerInfo = [        
             'h1Text' => "Attorney Detail",
-            'h4Text' => "Taylor Tax Law",
+            'h4Text' => "Taylor Law",
             'bannerText' => "This page provides detailed information about the attorney's background, expertise, and commitment to serving your legal needs."
         ];
                    
@@ -82,7 +82,7 @@ class PageController extends Controller
         $news_stories = News::where('firm_id', 1)->orderBy('publication_date')->get();       
         
         $headerInfo = [        
-            'h1Text' => "Taylor Tax Law",
+            'h1Text' => "Taylor Law",
             'h4Text' => "Publications",
             'bannerText' => "Our firm has been featured extensively in national and local publications, highlighting our unparalleled expertise and reputation in the legal industry."
         ];
@@ -95,7 +95,7 @@ class PageController extends Controller
         $resources = Resource::where('firm_id', 1)->orderBy('created_at')->get();       
         
         $headerInfo = [        
-            'h1Text' => "Taylor Tax Law",
+            'h1Text' => "Taylor Law",
             'h4Text' => "Resources",
             'bannerText' => "Our Resource Center provides expert legal insights, including white papers, case studies, and practical guides to help you navigate complex legal matters."
         ];
@@ -108,7 +108,7 @@ class PageController extends Controller
         $blogs = BlogPost::where('firm_id', 1)->orderBy('created_at')->get();       
         
         $headerInfo = [        
-            'h1Text' => "Taylor Tax Law",
+            'h1Text' => "Taylor Law",
             'h4Text' => "Blog",
             'bannerText' => "Our blog offers expert legal insights, industry trends, and practical advice to help you stay informed."
         ];
@@ -121,7 +121,7 @@ class PageController extends Controller
         $blog = BlogPost::find($blog_id);        
         
         $headerInfo = [        
-            'h1Text' => "Taylor Tax Law",
+            'h1Text' => "Taylor Law",
             'h4Text' => $blog->title,
             'bannerText' => $blog->excerpt
         ];
@@ -134,7 +134,7 @@ class PageController extends Controller
         $testimonial = Testimonial::find($testimonial_id);        
         
         $headerInfo = [        
-            'h1Text' => "Taylor Tax Law",
+            'h1Text' => "Taylor Law",
             'h4Text' => "Testimonial",
             'bannerText' => $testimonial->client_name . ", ". $testimonial->title
         ];
@@ -147,7 +147,7 @@ class PageController extends Controller
         $engagements = Engagement::where('firm_id', 1)->orderBy('title')->get();
         
         $headerInfo = [        
-            'h1Text' => "Taylor Tax Law",
+            'h1Text' => "Taylor Law",
             'h4Text' => "Engagements",
             'bannerText' => "Our firm is deeply committed to community engagement, proudly participating in and supporting numerous local events, initiatives, and charitable causes."
         ];
@@ -160,7 +160,7 @@ class PageController extends Controller
         $testimonials = Testimonial::where('firm_id', 1)->orderBy('title')->get();
         
         $headerInfo = [        
-            'h1Text' => "Taylor Tax Law",
+            'h1Text' => "Taylor Law",
             'h4Text' => "Testimonials",
             'bannerText' => "At Taylor Law, we pride ourselves on delivering expert legal guidance with a personal touch. Read what our clients have to say about our dedication, professionalism, and results-driven approach."
         ];
@@ -173,9 +173,9 @@ class PageController extends Controller
         $faqs = Faq::where('firm_id', 1)->orderBy('created_at')->get();
         
         $headerInfo = [        
-            'h1Text' => "Taylor Tax Law",
+            'h1Text' => "Taylor Law",
             'h4Text' => "FAQs",
-            'bannerText' => "At Taylor Tax Law, we understand that tax matters can be complex and stressful. Our FAQ section is here to provide clear and concise answers to common questions about our services, expertise, and how we can assist you in resolving tax-related challenges. Explore the FAQs below to learn more!"
+            'bannerText' => "At Taylor Law, we understand that tax matters can be complex and stressful. Our FAQ section is here to provide clear and concise answers to common questions about our services, expertise, and how we can assist you in resolving tax-related challenges. Explore the FAQs below to learn more!"
         ];
                   
         return view('site.faqs', compact('headerInfo', 'faqs'));
@@ -186,7 +186,7 @@ class PageController extends Controller
         $practice_areas = PracticeArea::where('firm_id', 1)->orderBy('name')->get();
         
         $headerInfo = [        
-            'h1Text' => "Taylor Tax Law",
+            'h1Text' => "Taylor Law",
             'h4Text' => "Practice Areas",
             'bannerText' => "With unmatched proficiency across numerous practice areas, we bring a depth of expertise and versatility that ensures excellence in every legal challenge we tackle"
         ];
@@ -199,7 +199,7 @@ class PageController extends Controller
         $practice_area = PracticeArea::find($practice_area_id);        
         
         $headerInfo = [        
-            'h1Text' => "Taylor Tax Law",
+            'h1Text' => "Taylor Law",
             'h4Text' => $practice_area->name,
             'bannerText' => $practice_area->summary
         ];
@@ -212,7 +212,7 @@ class PageController extends Controller
         $headerInfo = [        
             'h1Text' => "Our Firm",
             'h4Text' => "Meet Our People",
-            'bannerText' => "At Taylor Tax Law, we're committed to providing exceptional legal services with a client-focused approach."
+            'bannerText' => "At Taylor Law, we're committed to providing exceptional legal services with a client-focused approach."
         ];
                   
         return view('site.our-firm', compact('headerInfo'));
@@ -222,7 +222,7 @@ class PageController extends Controller
     {
         $headerInfo = [        
             'h1Text' => "Privacy Policy",
-            'h4Text' => "Taylor Tax Law",
+            'h4Text' => "Taylor Law",
             'bannerText' => "Your privacy is important to us. We are committed to safeguarding the personal information you share with us and ensuring it is used responsibly."
         ];
                     
@@ -233,7 +233,7 @@ class PageController extends Controller
     {
         $headerInfo = [        
             'h1Text' => "Accessibility",
-            'h4Text' => "Taylor Tax Law",
+            'h4Text' => "Taylor Law",
             'bannerText' => "We are committed to ensuring that our website is accessible to everyone, including individuals with disabilities."
         ];
                     
@@ -244,7 +244,7 @@ class PageController extends Controller
     {   
         $headerInfo = [        
             'h1Text' => "Disclaimer",
-            'h4Text' => "Taylor Tax Law",
+            'h4Text' => "Taylor Law",
             'bannerText' => "The information provided on this website is for general informational purposes only and does not constitute legal, financial, or professional advice."
         ];
                  
@@ -255,7 +255,7 @@ class PageController extends Controller
     {   
         $headerInfo = [        
             'h1Text' => "Terms of Use",
-            'h4Text' => "Taylor Tax Law",
+            'h4Text' => "Taylor Law",
             'bannerText' => "By using this website, you agree to comply with and be bound by our terms and conditions, which govern your access and use of our services."
         ];
                   
