@@ -24,9 +24,9 @@
                         </ul>
                         <br>
                         <ul class="list-unstyled d-inline-flex d-flex">
-                            <li><a href="mailto:info@taylorlaw.com"><i class="fa-solid fa-envelope"></i></a></li>
-                            <li><a href="mailto:info@taylorlaw.com"><h5>Email address</h5>
-                                <span>info@taylorlaw.com</span></a>
+                            <li><a href="mailto:info@taylortaxlaw.com"><i class="fa-solid fa-envelope"></i></a></li>
+                            <li><a href="mailto:info@taylortaxlaw.com"><h5>Email address</h5>
+                                <span>info@taylortaxlaw.com</span></a>
                             </li>
                         </ul>
                     </div>

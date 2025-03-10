@@ -11,19 +11,27 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="header-clock-cont">
-                        <ul class="list-unstyled d-inline-flex d-flex">
+                        <ul class="list-unstyled d-inline-flex d-flex">							
+                            <li><a href="#"></a><br></li>
+                            <li><h4>&nbsp;</h4><br>
+                            <p><br></p>
+                            </li>												
+                        </ul>
+						<!---
+						<ul class="list-unstyled d-inline-flex d-flex">
                             <li><a href="#"><i class="fa-solid fa-clock"></i></a></li>
                             <li><h4>Mon - Fri: <span>8:00am  - 5:00 pm</span></h4>
                             <p>Answering services avaliable on weekends and offer hours</p>
                             </li>
                         </ul>
+						--->
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="header-clock-cont text-end">
                         <ul class="list-unstyled d-inline-flex d-flex">
-                            <li><a href="tel: 843.723.2000"><i class="fa-solid fa-phone"></i></a></li>
-                            <li><h4>Call Us Now <span> 843.723.2000</span></h4></li>
+							<li><a href="tel: 843.723.2000"><i class="fa-solid fa-phone"></i></a></li>
+                            <li><h4>Call Us Now <span> 843.723.2000</span></h4></li>								
                         </ul>
                     </div>
                 </div>

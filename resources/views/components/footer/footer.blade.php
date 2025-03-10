@@ -7,9 +7,11 @@
                 </div>
                 <div class="social-icon">
                     <ul class="list-unstyled d-inline-flex">
-                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="https://www.twitter.com/"><i class="fa-brands fa-x-twitter"></i></a></li>
-                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+						<!---
+						<li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
+						<li><a href="https://www.twitter.com/"><i class="fa-brands fa-x-twitter"></i></a></li>
+						<li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+						--->
                     <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a></li>
                     </ul>
                 </div>
@@ -57,8 +59,8 @@
             </ul>
             <br>
             <ul class="list-unstyled d-inline-flex d-flex">
-                <li><a href="mailto:info@taylorlaw.com"><i class="fa-solid fa-envelope"></i></a></li>
-                <li><a href="mailto:info@taylorlaw.com"><span>info@taylorlaw.com</span></a></li>
+                <li><a href="mailto:info@taylortaxlaw.com"><i class="fa-solid fa-envelope"></i></a></li>
+                <li><a href="mailto:info@taylortaxlaw.com"><span>info@taylortaxlaw.com</span></a></li>
             </ul>
         </div>
     </div>
