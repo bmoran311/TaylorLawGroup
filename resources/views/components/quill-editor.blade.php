@@ -17,17 +17,19 @@
         }
     });
 
+    var Block = Quill.import('blots/block');
+    Block.tagName = 'DIV'; 
+    Quill.register(Block, true);
+
     var textarea = document.getElementById('{{ $name }}_value');
 
     quill.on('text-change', function() {
-
-        textarea.value = quill.root.innerHTML;
-
+        textarea.value = quill.root.innerHTML.replace(/<\/?p>/g, '').trim(); // Strip <p> tags before storing
     });
+
+    // Sync textarea input to Quill editor (for manual edits)
     textarea.addEventListener('input', function() {
-
         quill.root.innerHTML = textarea.value;
-
     });
  });
 </script>
