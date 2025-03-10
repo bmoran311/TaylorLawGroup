@@ -13,9 +13,9 @@
                         <ul class="list-unstyled d-inline-flex d-flex">
                             <li><a href="#"><i class="fa-solid fa-location-pin"></i></a></li>
                             <li><a href="#"><h5>Address</h5>
-                                <span>171 Church Street - Suite 330 Charleston, South Carolina 29401</span></a>
+                                <span>16 Charlotte Street, South Carolina 29403</span></a>
                             </li>
-                        </ul>
+                        </ul>																
                         <ul class="list-unstyled d-inline-flex d-flex">
                             <li><a href="tel:843.723.2000"><i class="fa-solid fa-phone"></i></a></li>
                             <li><a href="tel:843.723.2000"><h5>Phone</h5>

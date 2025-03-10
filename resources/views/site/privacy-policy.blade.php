@@ -118,7 +118,7 @@
                             <ul>
                                 <li><strong>Email:</strong> rebekah.hall@taylortaxlaw.com</li>  
                                 <li><strong>Phone:</strong> 843.723.2000</li>
-                                <li><strong>Address:</strong> 171 Church Street - Suite 330 Charleston, SC 29401</li>
+                                <li><strong>Address:</strong> 16 Charlotte Street, South Carolina 29403</li>
                             </ul>
                         </section>
 
