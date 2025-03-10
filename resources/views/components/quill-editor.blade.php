@@ -9,27 +9,20 @@
 <script>
  document.addEventListener('DOMContentLoaded', function() {
     const quill = new Quill('#{{ $name }}_editor', {
-        theme: 'snow',                
-        modules: {            
-            clipboard: {
-                matchVisual: false // Prevents Quill from adding extra <br> tags
-            }
-        }
+        theme: 'snow'
     });
-
-    var Block = Quill.import('blots/block');
-    Block.tagName = 'DIV'; 
-    Quill.register(Block, true);
 
     var textarea = document.getElementById('{{ $name }}_value');
 
     quill.on('text-change', function() {
-        textarea.value = quill.root.innerHTML.replace(/<\/?p>/g, '').trim(); // Strip <p> tags before storing
-    });
 
-    // Sync textarea input to Quill editor (for manual edits)
+        textarea.value = quill.root.innerHTML;
+
+    });
     textarea.addEventListener('input', function() {
+
         quill.root.innerHTML = textarea.value;
+
     });
  });
 </script>

@@ -1,4 +1,9 @@
 <x-app-layout>
+<script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+<style>
+    .cke_notification { display: none !important; }
+</style>
+
 <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
     <h2 class="text-title-md2 font-bold text-black dark:text-white">
         Practice Areas
@@ -50,11 +55,24 @@
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>Description</x-label>
-                            <x-quill-editor name="description">
-                                {!! old('description', $practice_area->description ?? '<p>Enter Content Here...</p>') !!}
-                            </x-quill-editor>                            
+                            <textarea name="description" id="editor">{!! old('description', $practice_area->description) !!}</textarea>     
+                            <script>
+                                CKEDITOR.replace('editor', {
+                                    width: '100%',
+                                    height: 600,
+                                    removePlugins: 'notification',
+                                    contentsCss: "{{ asset('site/style.css') }}",
+                                    toolbar: [
+                                        { name: 'document', items: ['Source'] },  // Source Code Toggle
+                                        { name: 'basicstyles', items: ['Bold', 'Italic', 'Underline', 'Strike'] },  // Basic Formatting
+                                        { name: 'paragraph', items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent'] },  // Lists & Indentation
+                                        { name: 'styles', items: ['Format'] }  // Heading (Normal, H1-H6)
+                                    ],
+                                    format_tags: 'p;h1;h2;h3;h4;h5;h6' 
+                                });
+                            </script>                                              
                         </div>
-                    </div>
+                    </div>                    
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="flex justify-end gap-4.5">
                             <a href="{{ route('practice_area.index') }}"
