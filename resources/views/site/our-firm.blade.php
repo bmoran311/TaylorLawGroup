@@ -22,7 +22,7 @@
 
                         <p>                        
                             At Taylor Law, we are committed to providing exceptional legal services with a client-focused approach. Located in the heart of 
-                            Charlestown, our firm specializes in delivering strategic, practical, and results-driven solutions to meet your needs and that of 
+                            Charleston, our firm specializes in delivering strategic, practical, and results-driven solutions to meet your needs and that of 
                             your business. <br><br>
                         
                             <b>
@@ -64,7 +64,7 @@
                             <b>Personalized Service:</b> We believe in building lasting relationships and treating you, and every client, with the respect 
                             and attention you deserve.<br><br>
 
-                            <b>Community Focus:</b> As proud members of the Charlestown community, we are passionate about supporting our neighbors and area 
+                            <b>Community Focus:</b> As proud members of the Charleston community, we are passionate about supporting our neighbors and area 
                             businesses.<br><br>
 
                             <b>
