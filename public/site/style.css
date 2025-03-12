@@ -168,7 +168,7 @@ header .mainmenu ul .nav-item:nth-child(5) {
   font-family: 'Outfit';
   font-weight: 300;
 }
-header .mainmenu ul .nav-item:last-child {
+/* header .mainmenu ul .nav-item:last-child {
   background-image: url('img/others/button-bg.png');
   background-repeat: no-repeat;
   background-position: center;
@@ -177,10 +177,10 @@ header .mainmenu ul .nav-item:last-child {
   position: relative;
   top: -15px;
   left: 10px;
-}
-header .mainmenu ul .nav-item:last-child a {
+} */
+/* header .mainmenu ul .nav-item:last-child a {
   color: #c5a183;
-}
+} */
 header .mainmenu ul .nav-item:last-child a:hover,
 header .mainmenu ul .nav-item:last-child a.active,
 header .mainmenu ul .nav-item:last-child a:focus {
