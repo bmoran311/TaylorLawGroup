@@ -81,7 +81,7 @@
                 <ul class="list-unstyled d-inline-flex d-flex">
                     <li><a href="/terms-of-use">Terms of Use </a></li>
                     <li><a href="/privacy-policy">Privacy Policy</a></li>
-                    <li><a href="#">Sitemap</a></li>
+                    <!---<li><a href="#">Sitemap</a></li>--->
                 </ul>
             </div>
         </div>

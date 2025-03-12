@@ -185,8 +185,11 @@ header .mainmenu ul .nav-item:last-child a:hover,
 header .mainmenu ul .nav-item:last-child a.active,
 header .mainmenu ul .nav-item:last-child a:focus {
   color: #c5a183;
-  background-image: none !important;
-  padding-bottom: 0px !important;
+  background-image: url('img/icons/active-icon.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-bottom: 20px !important;
+  background-size: 30px;
 }
   .dropdown:hover .dropdown-menu {
     display: block;
@@ -240,7 +243,7 @@ header .mainmenu .navbar-nav .nav-item a:focus, header .mainmenu .nav-item a:hov
   color: #fff;
 }
 header .mainmenu .navbar-nav li:first-child a:focus, header .mainmenu li:first-child a:hover {
-  color: #fff;
+  color: #c5a183;
   background-image: url('img/icons/active-icon.png');
   background-repeat: no-repeat;
   background-position: bottom;

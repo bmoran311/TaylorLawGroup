@@ -55,7 +55,7 @@
                             <div class="team-sub-cont">
                                 <h4>{{ $bio->first_name }} {{ $bio->last_name }},  {{ $bio->title }}</h4>
                                 <hr class="border-bot">
-                                <p>{{ $bio->summary }}</p>
+                                <p class="fst-italic text-secondary m-0" style="text-transform: none; font-size: 0.95rem;">"{{ $bio->summary }}"</p><br>
                                 <div class="btn-box">
                                     <a href="/attorney-detail/{{ $bio->id }}" class="btn">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                                 </div>
