@@ -6,14 +6,14 @@
 
 <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
     <h2 class="text-title-md2 font-bold text-black dark:text-white">
-        Practice Areas
+        Firm Expertises
     </h2>
     <nav>
     <ol class="flex items-center gap-2">
         <li>
         <a class="font-medium" href="{{ route('dashboard') }}">Dashboard /</a>
         </li>
-        <li class="font-medium text-primary"><a class="font-medium" href="{{ route('practice_area.index') }}">Practice Areas</a></li>
+        <li class="font-medium text-primary"><a class="font-medium" href="{{ route('practice_area.index') }}">Firm Expertises</a></li>
     </ol>
     </nav>
 </div>
@@ -23,7 +23,7 @@
         <div class="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
             <div class="border-b border-stroke px-7 py-4 dark:border-strokedark">
                 <h3 class="font-medium text-black dark:text-white">
-                {{ isset($practice_area) ? 'Edit' : 'Create' }} Practice Area
+                {{ isset($practice_area) ? 'Edit' : 'Create' }} Firm Expertise
                 </h3>
             </div>
             <div class="p-7">
@@ -36,7 +36,7 @@
                     @endif
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
-                            <x-label>Practice Area Name</x-label>
+                            <x-label>Firm Expertise Name</x-label>
                             <x-text-input name="name" type="text" placeholder="Name..." class="text-input" value="{{ old('name', $practice_area->name ?? '') }}"/>
                             <x-form-error key="name" />
                         </div>

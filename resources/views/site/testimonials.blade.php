@@ -19,7 +19,7 @@
                                     <div class="publicat-content">
                                         <h5>{{ \Carbon\Carbon::parse($testimonial->date_of_resolution)->format('M j, Y')  }}</h5>
                                         <h4>{{ $testimonial->client_name }} - {{ $testimonial->title }}</h4>
-                                        <p>{{ $testimonial->summary }} </p>
+                                        <p>{{ $testimonial->summary }}</p>
                                     </div>
                                 </a>
                             @endforeach                          

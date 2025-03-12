@@ -105,6 +105,7 @@ Route::prefix('dashboard')->group(function()
     Route::get('/blog_category/order/{direction}/{id}/{currPos}', 'App\Http\Controllers\Admin\BlogCategoryController@sort')->name('orderBlogCategory');
     Route::get('/faq_category/order/{direction}/{id}/{currPos}', 'App\Http\Controllers\Admin\FaqCategoryController@sort')->name('orderFaqCategory');
     Route::get('/resource_category/order/{direction}/{id}/{currPos}', 'App\Http\Controllers\Admin\ResourceCategoryController@sort')->name('orderResourceCategory');
+    Route::get('/bio/order/{direction}/{id}/{currPos}', 'App\Http\Controllers\Admin\BioController@sort')->name('orderBio');
 });
 
 

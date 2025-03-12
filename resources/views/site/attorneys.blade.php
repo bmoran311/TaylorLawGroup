@@ -8,7 +8,7 @@
     </div>
     </div>
 </div>
-
+<!---
 <div class="search-box-section">
     <div class="container">
         <div class="search-box">
@@ -27,18 +27,12 @@
                             </button>
                         </div>
                     </div>
-                </form>
-                <!---
-                <div class="col-md-4">
-                    <div class="advance-search text-end">
-                        <a href="#">Advanced Search</a>
-                    </div>
-                </div>
-                --->
+                </form>                
             </div>
         </div>
     </div>
 </div>
+--->
 <div class="team-section all-member">
     <div class="taylorline-about-left">
         <img src="/site/img/others/taylor-line-left.png" class="img-fluid" alt="taylorline" />

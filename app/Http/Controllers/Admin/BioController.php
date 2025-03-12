@@ -12,7 +12,7 @@ class BioController extends Controller
 {
     public function index()
     {
-        $bios = Bio::where('firm_id', session('firm_id'))->orderBy('last_name')->orderBy('first_name')->get();
+        $bios = Bio::where('firm_id', session('firm_id'))->orderBy('sort_order')->get();       
         return view('admin.bios.list', compact('bios'));
     }
 
@@ -50,7 +50,8 @@ class BioController extends Controller
             $bio->headshot = $path;
         }
 
-        $bio->firm_id = session('firm_id');        
+        $bio->firm_id = session('firm_id');  
+        $bio->type = is_array($request->input('type')) ? implode(',', $request->input('type')) : $request->input('type');      
         $bio->first_name = $request->input('first_name');
 		$bio->middle_initial = $request->input('middle_initial');
 		$bio->last_name = $request->input('last_name');
@@ -60,7 +61,8 @@ class BioController extends Controller
         $bio->twitter = $request->input('twitter');
         $bio->linkedin = $request->input('linkedin');
         $bio->summary = $request->input('summary'); 
-        $bio->description = $request->input('description');       
+        $bio->description = $request->input('description'); 
+        $blog_category->sort_order = Bio::max('sort_order') + 1 ?? 1;      
         $bio->save();
 
         $bio->practice_areas()->sync($request->input('practice_areas', []));
@@ -135,6 +137,7 @@ class BioController extends Controller
             $bio->headshot = $path;
         }
 
+        $bio->type = is_array($request->input('type')) ? implode(',', $request->input('type')) : $request->input('type'); 
         $bio->first_name = $request->input('first_name');
 		$bio->middle_initial = $request->input('middle_initial');
 		$bio->last_name = $request->input('last_name');
@@ -165,7 +168,24 @@ class BioController extends Controller
     public function destroy(bio $bio)
     {
         $bio->delete();
+        Bio::where('firm_id', session('firm_id'))->where('sort_order', '>', $bio->sort_order)->decrement('sort_order');
 
          return back()->with('danger', 'Bio Deleted');
+    }
+
+    public function sort(Request $request, $direction, $id, $currPos)
+    {               
+        $swapPosition = ($direction === "up") ? $currPos - 1 : $currPos + 1;
+      
+        $currentBio = Bio::findOrFail($id);
+        $bioToMove = Bio::where('sort_order', $swapPosition)->first();
+        
+        if ($bioToMove) 
+        {           
+            $currentBio->update(['sort_order' => $swapPosition]);
+            $bioToMove->update(['sort_order' => $currPos]);            
+        }
+
+        return back()->with('success', 'Bios Reordered');
     }
 }

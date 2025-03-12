@@ -23,8 +23,8 @@
             <ul class="list-unstyled">
                 <li><a href="/our-firm">Our Firm</a></li>
                 <li><a href="/attorneys">Attorneys</a></li>
-                <li><a href="/practice-areas">Practice Areas </a></li>
-                <li><a href="/news">News</a></li>                
+                <li><a href="/practice-areas">Practice Expertise</a></li>
+                <li><a href="/news">Latest</a></li>                
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -37,8 +37,8 @@
                 <li><a href="/privacy-policy">Privacy Policy</a></li>
                 <li><a href="/accessibility">Accessiblity</a></li>
                 <li><a href="/disclaimer">Disclaimer</a></li>
-                <li><a href="/events">Events</a></li>
-                <li><a href="/terms-of-use">Terms of use</a></li>
+                <li><a href="/events">Engagements</a></li>
+                <li><a href="/terms-of-use">Terms of Use</a></li>
                 <!---<li><a href="/faqs">FAQ</a></li>--->
             </ul>
         </div>
@@ -75,7 +75,7 @@
         <div class="col-md-6">
             <div class="terms-menu text-end">
                 <ul class="list-unstyled d-inline-flex d-flex">
-                    <li><a href="/terms-of-use">Terms of use </a></li>
+                    <li><a href="/terms-of-use">Terms of Use </a></li>
                     <li><a href="/privacy-policy">Privacy Policy</a></li>
                     <li><a href="#">Sitemap</a></li>
                 </ul>

@@ -9,7 +9,7 @@ class Bio extends Model
 {   
     use HasFactory;    
     protected $table = 'bio';
-    protected $fillable = ['first_name', 'middle_initial', 'last_name', 'email'];   
+    protected $fillable = ['first_name', 'middle_initial', 'last_name', 'email', 'sort_order'];   
 
     public function practice_areas() { return $this->belongsToMany(PracticeArea::class, 'bio_practice_area')->withTimestamps(); }
     public function languages() { return $this->belongsToMany(Language::class, 'bio_language')->withTimestamps(); }

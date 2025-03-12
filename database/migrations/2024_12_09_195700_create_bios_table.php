@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('last_name');
             $table->string('email')->unique();
             $table->string('phone_number');
+            $table->string('type');
+            $table->integer('sort_order')->index();
             $table->timestamps();
         });
     }

@@ -3,10 +3,10 @@
 <div class="mb-8">
     <div class="bg-yellow-50 text-center border border-yellow-200 p-4 shadow-lg shadow-slate-200 max-w-5xl mx-auto" role="alert">
         <p class="text-sm leading-5 text-yellow-700">
-        A <b>Practice Area</b> defines the specific fields of law in which an attorney or firm specializes. Examples include Family Law,<br>
+        A <b>Firm Expertise</b> defines the specific fields of law in which an attorney or firm specializes. Examples include Family Law,<br>
         Criminal Defense, Intellectual Property, and Corporate Law.<br><br>
 
-        Our system includes a comprehensive list of common practice areas to simplify the selection process. If a particular area of practice<br>
+        Our system includes a comprehensive list of common Firm Expertises to simplify the selection process. If a particular area of practice<br>
         is not listed, you can add it manually to ensure full representation of your firm's expertise.
         
         </p>
@@ -15,20 +15,20 @@
 
 <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
     <h2 class="text-title-md2 font-bold text-black dark:text-white">
-    Practice Areas
+    Firm Expertises
     </h2>
     <nav>
         <ol class="flex items-center gap-2">
             <li>
                 <a class="font-medium" href="{{ route('dashboard') }}">Dashboard /</a>
             </li>
-            <li class="font-medium text-primary">Practice Areas</li>
+            <li class="font-medium text-primary">Firm Expertises</li>
         </ol>
     </nav>
 </div>
 
 <section class="flex justify-end mb-4">
-    <x-create-button href="{{ route('practice_area.create') }}">Add New Practice Area</x-create-button>
+    <x-create-button href="{{ route('practice_area.create') }}">Add New Firm Expertise</x-create-button>
 </section>
 
 <div class="flex flex-col gap-10">
@@ -38,7 +38,7 @@
                 <thead>
                     <tr class="bg-gray-2 text-left dark:bg-meta-4">
                         <th class="min-w-[220px]  xl:pl-11">
-                            Practice Area
+                            Firm Expertise
                         </th>
                         <th class="min-w-[150px]">
                             Created Date

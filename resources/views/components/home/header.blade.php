@@ -7,10 +7,7 @@
                         <div class="banner-info">
                             <h4>PROTECTING YOUR ASSETS</h4>
                             <h1>a business & taxation law firm</h1>
-                        </div>
-                        <div class="banner-btn">
-                            <a href="#contact" class="btn">BOOK AN APPOINTMENT <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
+                        </div>                        
                     </div>
                 </div>
             </div>

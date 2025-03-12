@@ -50,7 +50,10 @@
                         </th>
                         <th class="min-w-[150px]">
                             Created Date
-                        </th>                        
+                        </th>    
+                        <th class="no-sort">
+                            Sort
+                        </th>                    
                         <th class="no-sort">
                             Actions
                         </th>
@@ -65,7 +68,7 @@
                                 @endif
                             </td>
                             <td class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
-                                <h5 class="font-medium text-black dark:text-white">{{ $bio->last_name }}, {{ $bio->first_name }}</h5>
+                                <h5 class="font-medium text-black dark:text-white">{{ $bio->last_name }}, {{ $bio->first_name }}<br>{{ $bio->type }}</h5>
                             </td>
 							<td class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
                                 <h5 class="font-medium text-black dark:text-white">{{ $bio->email }}</h5>
@@ -75,7 +78,25 @@
                             </td>
                             <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                                 <p class="text-black dark:text-white">{{ $bio->created_at->format('M d, Y') }}</p>
-                            </td>                            
+                            </td>   
+                            <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark max-w-[10px]">
+                                <div class="flex items-center space-x-1">
+                                    @if(!$loop->first)
+                                        <a href="{{ route('orderBio',[ 'direction' => 'up', 'id' => $bio->id, 'currPos' => $bio->sort_order]) }}">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                                            </svg>
+                                        </a>
+                                        @endif
+                                    @if(!$loop->last)
+                                        <a href="{{ route('orderBio',[ 'direction' => 'down', 'id' => $bio->id, 'currPos' => $bio->sort_order]) }}">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                            </svg>
+                                        </a>
+                                    @endif
+                                </div>
+                            </td>                         
                             <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                                 <div class="flex items-center space-x-3.5">
                                     <button class="hover:text-primary">

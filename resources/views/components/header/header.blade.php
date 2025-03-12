@@ -1,6 +1,14 @@
 <?php
     use Illuminate\Support\Facades\DB;
-    $bios = DB::table('bio')->latest()->get();
+    $bios = DB::table('bio')
+        ->where('type', 'LIKE', '%Attorney%')
+        ->orderBy('sort_order', 'asc')
+        ->get();
+
+    $leaders = DB::table('bio')
+        ->where('type', 'LIKE', '%Leadership%')
+        ->orderBy('sort_order', 'asc')
+        ->get();
 
     $practice_areas = DB::table('practice_area')->latest()->get();
 ?>
@@ -31,7 +39,7 @@
                     <div class="header-clock-cont text-end">
                         <ul class="list-unstyled d-inline-flex d-flex">
 							<li><a href="tel: 843.723.2000"><i class="fa-solid fa-phone"></i></a></li>
-                            <li><h4>Call Us Now <span> 843.723.2000</span></h4></li>								
+                            <li><h4>Call Us <span> 843.723.2000</span></h4></li>								
                         </ul>
                     </div>
                 </div>
@@ -71,7 +79,7 @@
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="/practice-areas" id="navbarDropdown" role="button" aria-expanded="false">
-                                        Practice Areas
+                                        Firm Expertise
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         @foreach ($practice_areas as $practice_area)
@@ -83,27 +91,33 @@
                                     <a class="nav-link" href="/"><img src="/site/img/logo1.png" class="img-fluid" alt="logo" /></a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="/our-firm" id="navbarDropdown" role="button" aria-expanded="false">
-                                        History
+                                    <a class="nav-link dropdown-toggle" href="/attorneys" id="navbarDropdown" role="button" aria-expanded="false">
+                                        Leadership
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="/our-firm">Our Firm</a></li>
-                                        <li><a class="dropdown-item" href="/attorney-detail/1">About David</a></li>
-                                        <li><a class="dropdown-item" href="/testimonials">Testimonials</a></li>
+                                        @foreach ($leaders as $leader)
+                                            <li><a class="dropdown-item" href="/attorney-detail/{{ $leader->id }}">{{ $leader->first_name }} {{ $leader->last_name }}</a></li>
+                                        @endforeach
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="/news" id="navbarDropdown" role="button" aria-expanded="false">
-                                        Newsworthy
+                                    <a class="nav-link dropdown-toggle" href="/our-firm" id="navbarDropdown" role="button" aria-expanded="false">
+                                        Culture
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="/news">Publications</a></li>
-                                        <li><a class="dropdown-item" href="/events">Engagements</a></li>
+                                        <li><a class="dropdown-item" href="/customer-service">Customer Service</a></li>
+                                        <li><a class="dropdown-item" href="/expertise">Expertise</a></li>
+                                        <li><a class="dropdown-item" href="/testimonials">Testimonials</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="/news">Latest </a>
+                                </li>
+                                <!---
+                                <li class="nav-item">
                                     <a class="nav-link" href="#contact">BOOK AN APPOINTMENT</a>
                                 </li>
+                                --->
                             </ul>
                         </div>
                     </div>

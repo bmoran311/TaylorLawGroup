@@ -255,14 +255,14 @@
                   <a
                   class="@if(request()->routeIs('practice_area*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                   href="{{ route('practice_area.index') }}"
-                  >Practice Areas
+                  >Firm Expertise
                   </a>
                 </li>
                 <li>
                   <a
                     class="@if(request()->routeIs('news*')) !text-white @endif group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
                     href="{{ route('news.index') }}"
-                    >News
+                    >Latest
                   </a>
                 </li>
 

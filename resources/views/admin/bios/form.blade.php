@@ -1,4 +1,9 @@
 <x-app-layout>
+<script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+<style>
+    .cke_notification { display: none !important; }
+</style>
+
 <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
     <h2 class="text-title-md2 font-bold text-black dark:text-white">
         Bios
@@ -29,6 +34,29 @@
                     @else
                         @method('POST')
                     @endif
+
+                    <div class="mb-5.5 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div>
+                            <x-label for="type">Type</x-label>
+                            
+                            <div class="flex flex-col space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="type[]" value="Attorney"
+                                        {{ str_contains(old('type', $bio->type ?? ''), 'Attorney') ? 'checked' : '' }}>
+                                    <span class="ml-2">Attorney</span>
+                                </label>
+
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="type[]" value="Leadership"
+                                        {{ str_contains(old('type', $bio->type ?? ''), 'Leadership') ? 'checked' : '' }}>
+                                    <span class="ml-2">Leadership</span>
+                                </label>
+                            </div>
+
+                            <x-form-error key="type" />
+                        </div>
+                    </div>
+
                     <div class="mb-5.5 grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <div>
 							<x-label>First Name</x-label>
@@ -77,27 +105,37 @@
 
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
-                            <x-label>Summary</x-label>
+                            <x-label>Quote</x-label>
                             <textarea
                                 name="summary"
                                 rows="10"
-                                placeholder="Summary..."
+                                placeholder="Quote..."
                                 class="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
                             >{{ old('summary', $bio->summary ?? '') }}</textarea>
                         </div>
                     </div>
-
+                   
                     <div class="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
                         <div class="w-full">
                             <x-label>Description</x-label>
-                            <textarea
-                                name="description"
-                                rows="25"
-                                placeholder="Description..."
-                                class="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
-                            >{{ old('description', $bio->description ?? '') }}</textarea>
+                            <textarea name="description" id="editor">{{ old('description', $bio->description ?? '') }}</textarea>     
+                            <script>
+                                CKEDITOR.replace('editor', {
+                                    width: '100%',
+                                    height: 600,
+                                    removePlugins: 'notification',
+                                    contentsCss: "{{ asset('site/style.css') }}",
+                                    toolbar: [
+                                        { name: 'document', items: ['Source'] },  // Source Code Toggle
+                                        { name: 'basicstyles', items: ['Bold', 'Italic', 'Underline', 'Strike'] },  // Basic Formatting
+                                        { name: 'paragraph', items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent'] },  // Lists & Indentation
+                                        { name: 'styles', items: ['Format'] }  // Heading (Normal, H1-H6)
+                                    ],
+                                    format_tags: 'p;h1;h2;h3;h4;h5;h6' 
+                                });
+                            </script>                                              
                         </div>
-                    </div>
+                    </div> 
 
                     <div class="mb-5.5 grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>

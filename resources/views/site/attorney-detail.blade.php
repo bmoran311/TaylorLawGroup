@@ -90,7 +90,7 @@
                                 <div class="tab-right-content heading">
                                     <h3>OVERVIEW</h3>
                                     <hr class="border-bot">
-                                    <p>{!! nl2br(e($bio->description)) !!}</p></div>
+                                    <p> {!! $bio->description !!}</p></div>
                             </div>
                             <div class="tab-pane fade" id="v-pills-creadentials" role="tabpanel" aria-labelledby="v-pills-credentials-tab">
                                 <div class="tab-right-content heading">

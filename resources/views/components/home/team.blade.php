@@ -1,6 +1,6 @@
 <?php 
     use Illuminate\Support\Facades\DB;    
-    $bios = DB::table('bio')->orderBy('id', 'asc')->limit(3)->get();
+    $bios = DB::table('bio')->orderBy('sort_order', 'asc')->limit(3)->get();
 ?>
 
 <div class="team-section">

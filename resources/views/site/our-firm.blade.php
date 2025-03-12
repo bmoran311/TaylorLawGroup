@@ -18,7 +18,7 @@
                                 <img src="/site/img/others/img-border.png" class="img-fluid" alt="about-border" />
                             </div>
                         </div>
-                        <h4>AAn industry-leading tax<br>dispute resolution powerhouse.</h4>
+                        <h4>An industry-leading tax<br>dispute resolution powerhouse.</h4>
 
                         <p>                        
                             At Taylor Law, we are committed to providing exceptional legal services with a client-focused approach. Located in the heart of 

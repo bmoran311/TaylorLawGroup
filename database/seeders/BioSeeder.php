@@ -23,6 +23,7 @@ class BioSeeder extends Seeder
                 'headshot' => 'testing.jpg',
                 'created_at' => now(),
                 'firm_id' => 1,
+                'sort_order' => '2',
             ],
             [
                 'first_name' => 'Alexander',
@@ -33,6 +34,7 @@ class BioSeeder extends Seeder
                 'headshot' => 'testing.jpg',
                 'created_at' => now(),
                 'firm_id' => 1,
+                'sort_order' => '3',
             ],
             [
                 'first_name' => 'David',
@@ -43,6 +45,7 @@ class BioSeeder extends Seeder
                 'headshot' => 'testing.jpg',
                 'created_at' => now(),
                 'firm_id' => 1,
+                'sort_order' => '1',
             ],
         ]);
     }

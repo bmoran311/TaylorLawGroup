@@ -20,8 +20,7 @@
                                         <img src="/img/icons/quotes-icon.png" class="img-fluid" alt="quotes-icon" />
                                     </div>
                                     <p>{{ $testimonial->summary }}</p>                   
-                                    <h4>{{ $testimonial->client_name }}</h4>
-                                    <img src="/img/icons/star-icon.png" class="img-fluid" alt="star-icon" />                  
+                                    <h4>{{ $testimonial->client_name }}</h4>                                                
                                 </div>                      
                             </div>
                         </div> 
