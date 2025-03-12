@@ -15,6 +15,7 @@ class PageController extends Controller
 
     public function attorneys(Request $request)
     {
+        /*
         if ($request->filled('letter')) 
         {
             $letter = $request->query('letter');
@@ -24,7 +25,7 @@ class PageController extends Controller
                     $query->where('first_name', 'LIKE', $letter . '%')
                         ->orWhere('last_name', 'LIKE', $letter . '%');
                 })
-                ->orderBy('last_name')->orderBy('first_name')->get();
+                ->orderBy('sort_order')->get();
         }
         else if ($request->filled('search_criteria')) 
         {
@@ -36,21 +37,31 @@ class PageController extends Controller
                              ->orWhere('email', 'like', "%{$search_criteria}%")
                              ->orWhere('summary', 'like', "%{$search_criteria}%")
                              ->orWhere('title', 'like', "%{$search_criteria}%");
-            })->orderBy('last_name')->orderBy('first_name')->get();
+            })->orderBy('sort_order')->get();
 
         }
         else
         {            
-            $bios = Bio::where('firm_id', 1)->orderBy('last_name')->orderBy('first_name')->get();
+            $bios = Bio::where('firm_id', 1)->orderBy('sort_order')->get();
         }
+        */
+   
+        $type = $request->query('type');
+
+        $bios = Bio::where('type', 'LIKE', "%{$type}%")
+                   ->orderBy('sort_order', 'asc')
+                   ->get();
+
+        if ($type == "Attorney")
+            $type = "Attorneys";
 
         $headerInfo = [        
-            'h1Text' => "Attorneys",
+            'h1Text' => $type,
             'h4Text' => "Taylor Law",
             'bannerText' => "Taylor Law provides expert legal guidance to navigate complex tax matters with confidence and ease."
         ];
                     
-        return view('site.attorneys', compact('headerInfo', 'bios'));
+        return view('site.attorneys', compact('headerInfo', 'bios', 'type'));
     }
 
     public function attorney_detail($bio_id)

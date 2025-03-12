@@ -38,9 +38,8 @@
         <img src="/site/img/others/taylor-line-left.png" class="img-fluid" alt="taylorline" />
     </div>
     <div class="container">
-        <div class="team-heading heading text-center">
-            <h5>full team A - Z</h5>
-            <h3>All Team Members</h3>
+        <div class="team-heading heading text-center">            
+            <h3>Meet Our {{ $type }}</h3>
             <hr class="border-bot">
         </div>
         <div class="team-wraping">
@@ -65,10 +64,12 @@
                     </div>
                 @endforeach
             </div>
+            <!--
             <br>
             <div class="all-member-btn text-center">
                 <a href="/attorneys" class="btn">VIEW MORE ATTORNEYS</a>
             </div>
+            --->
         </div>
     </div>
 </div>

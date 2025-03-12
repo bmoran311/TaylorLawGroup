@@ -68,7 +68,7 @@
                                     <a class="nav-link active" aria-current="page" href="/our-firm">Our Firm </a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="/attorneys" id="navbarDropdown" role="button" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle" href="/attorneys?type=Attorney" id="navbarDropdown" role="button" aria-expanded="false">
                                         Attorneys
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -91,7 +91,7 @@
                                     <a class="nav-link" href="/"><img src="/site/img/logo1.png" class="img-fluid" alt="logo" /></a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="/attorneys" id="navbarDropdown" role="button" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle" href="/attorneys?type=Leadership" id="navbarDropdown" role="button" aria-expanded="false">
                                         Leadership
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -105,8 +105,8 @@
                                         Culture
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="/customer-service">Customer Service</a></li>
-                                        <li><a class="dropdown-item" href="/expertise">Expertise</a></li>
+                                        <li><a class="dropdown-item" href="/testimonials">Customer Service</a></li>
+                                        <li><a class="dropdown-item" href="/testimonials">Expertise</a></li>
                                         <li><a class="dropdown-item" href="/testimonials">Testimonials</a></li>
                                     </ul>
                                 </li>

@@ -62,7 +62,7 @@ class BioController extends Controller
         $bio->linkedin = $request->input('linkedin');
         $bio->summary = $request->input('summary'); 
         $bio->description = $request->input('description'); 
-        $blog_category->sort_order = Bio::max('sort_order') + 1 ?? 1;      
+        $bio->sort_order = Bio::max('sort_order') + 1 ?? 1;      
         $bio->save();
 
         $bio->practice_areas()->sync($request->input('practice_areas', []));
