@@ -19,11 +19,11 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="header-clock-cont">
-                        <ul class="list-unstyled d-inline-flex d-flex">							
+                        <ul class="list-unstyled d-inline-flex d-flex">
                             <li><a href="#"></a><br></li>
                             <li><h4>&nbsp;</h4><br>
                             <p><br></p>
-                            </li>												
+                            </li>
                         </ul>
 						<!---
 						<ul class="list-unstyled d-inline-flex d-flex">
@@ -39,7 +39,7 @@
                     <div class="header-clock-cont text-end">
                         <ul class="list-unstyled d-inline-flex d-flex">
 							<li><a href="tel: 843.723.2000"><i class="fa-solid fa-phone"></i></a></li>
-                            <li><h4>Call Us <span> 843.723.2000</span></h4></li>								
+                            <li><h4>Call Us <span> 843.723.2000</span></h4></li>
                         </ul>
                     </div>
                 </div>
