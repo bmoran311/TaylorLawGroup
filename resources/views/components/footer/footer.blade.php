@@ -12,7 +12,7 @@
 						<li><a href="https://www.twitter.com/"><i class="fa-brands fa-x-twitter"></i></a></li>
 						<li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
 						--->
-                    <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    {{-- <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a></li> --}}
                     </ul>
                 </div>
             </div>
@@ -24,7 +24,7 @@
                 <li><a href="/our-firm">Our Firm</a></li>
                 <li><a href="/attorneys">Attorneys</a></li>
                 <li><a href="/practice-areas">Practice Expertise</a></li>
-                <li><a href="/news">Latest</a></li>                
+                <li><a href="/news">Latest</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -61,6 +61,10 @@
             <ul class="list-unstyled d-inline-flex d-flex">
                 <li><a href="mailto:info@taylortaxlaw.com"><i class="fa-solid fa-envelope"></i></a></li>
                 <li><a href="mailto:info@taylortaxlaw.com"><span>info@taylortaxlaw.com</span></a></li>
+            </ul>
+            <ul class="list-unstyled d-inline-flex d-flex">
+                <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li><a href="https://www.linkedin.com/">Find TaylorLaw on LinkedIn</a></li>
             </ul>
         </div>
     </div>
