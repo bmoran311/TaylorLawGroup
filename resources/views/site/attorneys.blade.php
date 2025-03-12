@@ -3,7 +3,7 @@
 @section('content')
 <div class="taylor-line">
     <div class="container">
-    <div class="top-elements">
+    <div class="top-elements" style="z-index:100;">
         <img src="/site/img/others/taylorline.png" class="img-fluid" alt="taylorline">
     </div>
     </div>
@@ -18,7 +18,7 @@
                 @endforeach
             </h6>
             <div class="row">
-                <form method="GET" action="{{ route('site.attorneys') }}">            
+                <form method="GET" action="{{ route('site.attorneys') }}">
                     <div class="col-md-8">
                         <div class="input-group">
                             <input name="search_criteria" class="form-control form-control-lg" type="search" placeholder="Name or keyword" aria-label="Search">
@@ -27,7 +27,7 @@
                             </button>
                         </div>
                     </div>
-                </form>                
+                </form>
             </div>
         </div>
     </div>
