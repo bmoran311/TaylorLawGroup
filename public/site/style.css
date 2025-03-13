@@ -133,8 +133,19 @@ header .mainmenu ul .nav-item:nth-child(3) {
 }
 header .mainmenu ul .nav-item:nth-child(5) {
   position: relative;
-  left: 20px;
+  left: 50px;
 }
+
+header .mainmenu ul .nav-item:nth-child(6) {
+    position: relative;
+    left: 60px;
+  }
+
+  header .mainmenu ul .nav-item:nth-child(7) {
+    position: relative;
+    left: 70px;
+  }
+
 .header-clock-cont ul li {
   align-content: center;
   padding-left: 10px;
@@ -240,7 +251,7 @@ background-image: none !important;
 }
 
 header .mainmenu .navbar-nav .nav-item a:focus, header .mainmenu .nav-item a:hover {
-  color: #fff;
+  color: #c5a183;
 }
 header .mainmenu .navbar-nav li:first-child a:focus, header .mainmenu li:first-child a:hover {
   color: #c5a183;
@@ -317,7 +328,7 @@ header .banner-contents h1 {
 .banner-contents a:hover{
   color: #fff;
 }
-.banner-info {  
+.banner-info {
   margin-right: 36%;
   border-left: 3px solid #a9896f;
   padding-left: 20px;
