@@ -21,7 +21,8 @@ return new class extends Migration
             $table->string('photo')->nullable(); 
             $table->text('outcome')->nullable(); 
             $table->date('date_of_resolution')->nullable(); 
-            $table->boolean('client_consent')->default(false);                   
+            $table->boolean('client_consent')->default(false);  
+            $table->text('type');                 
             $table->timestamps();
         });
     }

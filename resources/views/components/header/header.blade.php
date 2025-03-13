@@ -105,9 +105,9 @@
                                         Culture
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="/testimonials">Customer Service</a></li>
-                                        <li><a class="dropdown-item" href="/testimonials">Expertise</a></li>
-                                        <li><a class="dropdown-item" href="/testimonials">Testimonials</a></li>
+                                        <li><a class="dropdown-item" href="/testimonials?type=Customer Service">Customer Service</a></li>
+                                        <li><a class="dropdown-item" href="/testimonials?type=Experience">Experience</a></li>
+                                        <li><a class="dropdown-item" href="/testimonials?type=Commitment">Commitment</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">

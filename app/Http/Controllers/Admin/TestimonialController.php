@@ -33,7 +33,8 @@ class TestimonialController extends Controller
         ]);
 
         $testimonial = new Testimonial();
-        $testimonial->firm_id = session('firm_id');        
+        $testimonial->firm_id = session('firm_id');   
+        $testimonial->type = is_array($request->input('type')) ? implode(',', $request->input('type')) : $request->input('type');        
         $testimonial->client_name = $request->input('client_name');
 		$testimonial->title = $request->input('title');
 		$testimonial->summary = $request->input('summary');
@@ -70,7 +71,8 @@ class TestimonialController extends Controller
             'content' => 'required',  
         ]);
         
-        $testimonial->firm_id = session('firm_id');        
+        $testimonial->firm_id = session('firm_id'); 
+        $testimonial->type = is_array($request->input('type')) ? implode(',', $request->input('type')) : $request->input('type');        
         $testimonial->client_name = $request->input('client_name');
 		$testimonial->title = $request->input('title');
 		$testimonial->summary = $request->input('summary');

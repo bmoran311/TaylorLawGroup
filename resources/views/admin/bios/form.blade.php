@@ -34,29 +34,7 @@
                     @else
                         @method('POST')
                     @endif
-
-                    <div class="mb-5.5 grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <div>
-                            <x-label for="type">Type</x-label>
-                            
-                            <div class="flex flex-col space-y-2">
-                                <label class="flex items-center">
-                                    <input type="checkbox" name="type[]" value="Attorney"
-                                        {{ str_contains(old('type', $bio->type ?? ''), 'Attorney') ? 'checked' : '' }}>
-                                    <span class="ml-2">Attorney</span>
-                                </label>
-
-                                <label class="flex items-center">
-                                    <input type="checkbox" name="type[]" value="Leadership"
-                                        {{ str_contains(old('type', $bio->type ?? ''), 'Leadership') ? 'checked' : '' }}>
-                                    <span class="ml-2">Leadership</span>
-                                </label>
-                            </div>
-
-                            <x-form-error key="type" />
-                        </div>
-                    </div>
-
+                    
                     <div class="mb-5.5 grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <div>
 							<x-label>First Name</x-label>
@@ -92,7 +70,23 @@
                         </div>
                     </div>
 
-                    <div class="mb-5.5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="mb-5.5 grid grid-cols-1 sm:grid-cols-3 gap-4">                  
+                        <div>
+                            <x-label for="type">Type</x-label>                            
+                            <div class="flex flex-col space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="type[]" value="Attorney"
+                                        {{ str_contains(old('type', $bio->type ?? ''), 'Attorney') ? 'checked' : '' }}>
+                                    <span class="ml-2">Attorney</span>
+                                    &nbsp; &nbsp; &nbsp;
+                                    <input type="checkbox" name="type[]" value="Leadership"
+                                        {{ str_contains(old('type', $bio->type ?? ''), 'Leadership') ? 'checked' : '' }}>
+                                    <span class="ml-2">Leadership</span>
+                                </label>
+                            </div>
+
+                            <x-form-error key="type" />
+                        </div>                   
                         <div>
 							<x-label>Twitter Handle</x-label>
 							<x-text-input name="twitter" type="text" placeholder="Email..." class="text-input" value="{{ old('twitter', $bio->twitter ?? '') }}"/>							

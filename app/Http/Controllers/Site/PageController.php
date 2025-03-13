@@ -90,7 +90,7 @@ class PageController extends Controller
 
     public function news()
     {      
-        $news_stories = News::where('firm_id', 1)->orderBy('publication_date')->get();       
+        $news_stories = News::where('firm_id', 1)->orderBy('publication_date', 'desc')->get();   
         
         $headerInfo = [        
             'h1Text' => "Taylor Law",
@@ -140,6 +140,31 @@ class PageController extends Controller
         return view('site.blog-detail', compact('headerInfo', 'blog'));
     }
 
+    public function testimonials(Request $request)
+    {                                     
+        $type = $request->query('type');
+        $testimonials = Testimonial::where('firm_id', 1)
+            ->where('type', 'like', "%$type%")
+            ->inRandomOrder()
+            ->get();   
+            
+        if($type == "Customer Service"):
+            $davidQuote = '"At Taylor Tax, we pride ourselves on delivering world-class customer service—responsive, personalized, and always focused on your success. We go above and beyond to ensure every client feels valued" -David Taylor';
+        elseif($type == "Experience"):
+            $davidQuote = '"With decades of tax law experience, Taylor Law combines deep expertise with a client-first approach. Our team navigates complex tax matters with precision, ensuring the best outcomes for every client" -David Taylor';
+        else:
+            $davidQuote = '"At Taylor Law, we pride ourselves on delivering world-class customer service—responsive, personalized, and always focused on your success. We go above and beyond to ensure every client feels valued" -David Taylor';
+        endif;        
+
+        $headerInfo = [        
+            'h1Text' => "Taylor Law",
+            'h4Text' => $type,
+            'bannerText' => $davidQuote,
+        ];
+                  
+        return view('site.testimonials', compact('headerInfo', 'testimonials', 'type'));
+    }
+
     public function testimonial_detail($testimonial_id)
     {              
         $testimonial = Testimonial::find($testimonial_id);        
@@ -164,20 +189,7 @@ class PageController extends Controller
         ];
                   
         return view('site.events', compact('headerInfo', 'engagements'));
-    }
-
-    public function testimonials()
-    {                     
-        $testimonials = Testimonial::where('firm_id', 1)->orderBy('title')->get();
-        
-        $headerInfo = [        
-            'h1Text' => "Taylor Law",
-            'h4Text' => "Testimonials",
-            'bannerText' => "At Taylor Law, we pride ourselves on delivering expert legal guidance with a personal touch. Read what our clients have to say about our dedication, professionalism, and results-driven approach."
-        ];
-                  
-        return view('site.testimonials', compact('headerInfo', 'testimonials'));
-    }
+    }    
 
     public function faqs()
     {                     

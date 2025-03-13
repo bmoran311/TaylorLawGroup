@@ -40,7 +40,7 @@
                             Title
                         </th>						
                         <th class="min-w-[150px]">
-                            Created Date
+                            Type
                         </th>                        
                         <th class="no-sort">
                             Actions
@@ -55,10 +55,10 @@
                             </td>
 							<td class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
                                 <h5 class="font-medium text-black dark:text-white">{{ $testimonial->title }}</h5>
-                            </td>							
-                            <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                                <p class="text-black dark:text-white">{{ $testimonial->created_at->format('M d, Y') }}</p>
-                            </td>                            
+                            </td>	
+                            <td class="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
+                                <h5 class="font-medium text-black dark:text-white">{{ $testimonial->type }}</h5>
+                            </td>						                                                   
                             <td class="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                                 <div class="flex items-center space-x-3.5">
                                     <button class="hover:text-primary">

@@ -30,7 +30,7 @@
                         @method('POST')
                     @endif
 
-                    <div class="mb-5.5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="mb-5.5 grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <div>
                             <x-label>Resolution Date</x-label>
                             <input
@@ -41,7 +41,29 @@
 								data-class="flatpickr-right"
 							/>
                             <x-form-error key="publication_date" />
-                        </div>                                                
+                        </div>  
+                        <div>
+                            <x-label for="type">Type</x-label>                            
+                            <div class="flex flex-col space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="type[]" value="Customer Service"
+                                        {{ str_contains(old('type', $testimonial->type ?? ''), 'Customer Service') ? 'checked' : '' }}>
+                                    <span class="ml-2">Customer Service</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="type[]" value="Experience"
+                                        {{ str_contains(old('type', $testimonial->type ?? ''), 'Experience') ? 'checked' : '' }}>
+                                    <span class="ml-2">Experience</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="type[]" value="Commitment"
+                                        {{ str_contains(old('type', $testimonial->type ?? ''), 'Commitment') ? 'checked' : '' }}>
+                                    <span class="ml-2">Commitment</span>
+                                </label>
+                            </div>
+
+                            <x-form-error key="type" />
+                        </div>                                              
                         <div>
 							<x-label>Client Consent?</x-label>
 							<label>

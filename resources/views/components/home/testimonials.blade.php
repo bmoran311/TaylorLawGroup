@@ -1,6 +1,6 @@
 <?php 
     use Illuminate\Support\Facades\DB;    
-    $testimonials = DB::table('testimonial')->where('client_consent', 1)->latest()->get();         
+    $testimonials = DB::table('testimonial')->where('client_consent', 1)->inRandomOrder()->get();        
 ?>
 
 <div class="testimonials-section">

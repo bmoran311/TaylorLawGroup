@@ -44,6 +44,7 @@
                                 <option value="State Bar" {{ old('type', $membership->type ?? '') == 'State Bar' ? 'selected' : '' }}>State Bar</option>
                                 <option value="National Bar" {{ old('type', $membership->type ?? '') == 'National Bar' ? 'selected' : '' }}>National Bar</option>
                                 <option value="Specialty Bar" {{ old('type', $membership->type ?? '') == 'Specialty Bar' ? 'selected' : '' }}>Specialty Bar</option>
+                                <option value="Miscellaneous" {{ old('type', $membership->type ?? '') == 'Miscellaneous' ? 'selected' : '' }}>Miscellaneous</option>
                             </select>
                             <x-form-error key="type" />
                         </div>
