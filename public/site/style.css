@@ -1648,31 +1648,32 @@ header .banner-contents h1 {
 @media screen and (max-width: 1440px) {
 
   header .mainmenu ul li {
-    padding: 0px 9px;
+    padding: 0px 20px;
   }
   .navbar-nav {
     margin: auto;
+    margin-top: 15px;
   }
   header .mainmenu ul .nav-item:nth-child(2) {
     padding-left: 50px;
     left: 0px;
   }
   .nav-item.logo-t img {
-    width: 73%;
-    left: 56px;
+    width: 62%;
+    left: 12px;
     position: relative;
-    top: -61px;
+    top: 9px;
   }
   header .mainmenu ul .nav-item:nth-child(5) {
     position: relative;
-    left: 40px;
+    left: -60px;
   }
   header .mainmenu ul .nav-item:nth-child(6) {
     position: relative;
-    left: 60px;
+    left: -40px;
   }
   header .mainmenu ul .nav-item:last-child {
-    left: 90px;
+    left: -30px;
   }
   .social-icon i {
     padding: 20px 10px;
@@ -1689,7 +1690,7 @@ header .banner-contents h1 {
     margin-top: -70px;
   }
   header .mainmenu {
-    top: -92px;
+    top: -105px;
   }
   header .mainmenu .navbar-nav a:hover {
     padding-bottom: 17px !important;
@@ -1697,9 +1698,9 @@ header .banner-contents h1 {
   }
   .nav-item.logo-t img {
     width: 63%;
-    left: 64px;
+    left: 16px;
     position: relative;
-    top: -53px;
+    top: 4px;
   }
     .about-border img {
     position: relative;
@@ -1756,25 +1757,28 @@ header .banner-contents h1 {
   }
   .nav-item.logo-t img {
     width: 53%;
-    left: 70px;
+    left: 27px;
     position: relative;
-    top: -46px;
+    top: 12px;
   }
     header .mainmenu ul .nav-item:nth-child(5) {
-    left: 20px;
+    left: -80px;
   }
   header .mainmenu .navbar-nav a:hover {
     padding-bottom: 15px !important;
     background-size: 24px;
   }
     header .mainmenu ul .nav-item:nth-child(6) {
-    left: 40px;
+    left: -50px;
+  }
+  header .mainmenu ul .nav-item:nth-child(7) {
+    left: -20px;
   }
   header .mainmenu ul li a {
     font-size: 10px;
   }
     header .mainmenu {
-    top: -77px;
+    top: -90px;
     z-index: 9999;
   }
     header .mainmenu ul li {
