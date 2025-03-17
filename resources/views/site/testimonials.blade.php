@@ -15,7 +15,7 @@
                                 <hr class="border-bot">
                                 <div class="row">
                                     @foreach ($testimonials as $testimonial)
-                                        <div class="col-md-6 col-sm-12 mb-4">
+                                        <div class="col-md-6 col-sm-12 mb-2">
                                             <a href="/testimonial-detail/{{ $testimonial->id }}"
                                                 style="text-decoration: none;">
                                                 <div class="testimonial-content p-4 position-relative">
