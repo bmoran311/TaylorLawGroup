@@ -82,6 +82,10 @@
                                     <input type="checkbox" name="type[]" value="Leadership"
                                         {{ str_contains(old('type', $bio->type ?? ''), 'Leadership') ? 'checked' : '' }}>
                                     <span class="ml-2">Leadership</span>
+                                    &nbsp; &nbsp; &nbsp;
+                                    <input type="checkbox" name="type[]" value="Staff"
+                                        {{ str_contains(old('type', $bio->type ?? ''), 'Staff') ? 'checked' : '' }}>
+                                    <span class="ml-2">Staff</span>
                                 </label>
                             </div>
 

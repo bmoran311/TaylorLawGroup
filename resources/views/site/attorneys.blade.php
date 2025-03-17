@@ -45,7 +45,7 @@
         <div class="team-wraping">
             <div class="row">
                 @foreach ($bios as $bio)
-                    <div class="col-md-12 col-lg-4">
+                    <div class="col-md-12 col-lg-3">
                         <div class="team-content text-center">
                             <a href="/attorney-detail/{{ $bio->id }}">
                                 <div class="team-img tem-box1">

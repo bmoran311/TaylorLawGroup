@@ -3,7 +3,7 @@
 @include('partials.head')
 
 <body>
-    <header style="margin-top: 50px;">
+    <header style="margin-top: 25px;">
         <x-header.header />
         <x-main.banner :h1Text="$headerInfo['h1Text']" :h4Text="$headerInfo['h4Text']" :bannerText="$headerInfo['bannerText']" />
     </header>

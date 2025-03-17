@@ -1,10 +1,10 @@
 <div class="proprietary-section">
     <div class="container">
         <div class="proprietary-wrap">
-            <div class="row">
+            <div class="row">                   
                 <div class="col-md-12 col-lg-6">
                     <div class="proprietary-content heading">
-                        <h5>proprietary legal software</h5>
+                        <h5 id="client_portal">proprietary legal software</h5>
                         <h3>taylor.law</h3>
                         <hr class="border-bot">
                         <p>Our proprietary legal software is a secure and intuitive client portal designed to streamline communication between law firms and their clients. It provides clients with 24/7 access to their case updates, 
@@ -27,7 +27,7 @@
                             <img src="img/others/taylor-line3.png" class="img-fluid" alt="taylorline" />
                         </div>
                     </div>
-                </div>
+                </div>                    
             </div>
         </div>
     </div>

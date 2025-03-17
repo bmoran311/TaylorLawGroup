@@ -13,6 +13,11 @@
                             <div class="tab-right-content heading">
                                 <h3>{{ $type }}</h3>
                                 <hr class="border-bot">
+                            <div style="background-color: #fdf8f3; padding: 20px; text-align: center; font-style: italic; font-size: 20px; font-weight: bold; border: 2px solid #c5a183; border-radius: 12px; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); width: 75%; margin: 0 auto;">
+                                <p style="color: #5a4a38;">"{!! $davidQuote !!}"</p>
+                                <h4 style="margin-top: 15px; color: #7a5c3a; font-family: 'Garamond', serif; font-size: 16px; font-weight: normal; text-align: right;">— David Taylor, Founder</h4>
+                            </div>                                                    
+                            <br>
                                 <div class="row">
                                     @foreach ($testimonials as $testimonial)
                                         <div class="col-md-6 col-sm-12 mb-2">

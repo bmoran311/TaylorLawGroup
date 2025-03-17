@@ -159,10 +159,10 @@ class PageController extends Controller
         $headerInfo = [        
             'h1Text' => "Taylor Law",
             'h4Text' => $type,
-            'bannerText' => $davidQuote,
+            'bannerText' => "Taylor Law embodies excellence with unmatched customer service, deep expertise, and unwavering commitment—ensuring trust, reliability, and outstanding legal support."
         ];
                   
-        return view('site.testimonials', compact('headerInfo', 'testimonials', 'type'));
+        return view('site.testimonials', compact('headerInfo', 'testimonials', 'type', 'davidQuote'));
     }
 
     public function testimonial_detail($testimonial_id)

@@ -108,6 +108,7 @@ $practice_areas = DB::table('practice_area')->latest()->get();
                                                     href="/attorney-detail/{{ $leader->id }}">{{ $leader->first_name }}
                                                     {{ $leader->last_name }}</a></li>
                                         @endforeach
+                                        <li><a class="dropdown-item" href="/attorneys?type=Staff">Staff</a></li>                                                                                                                  
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -125,7 +126,7 @@ $practice_areas = DB::table('practice_area')->latest()->get();
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="/news">Client Portal </a>
+                                    <a class="nav-link" aria-current="page" href="/#client_portal">Client Portal </a>
                                 </li>
                                 <!---
                                 <li class="nav-item">
