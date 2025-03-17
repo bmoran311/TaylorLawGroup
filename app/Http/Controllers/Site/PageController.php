@@ -149,12 +149,12 @@ class PageController extends Controller
             ->get();   
             
         if($type == "Customer Service"):
-            $davidQuote = '"At Taylor Tax, we pride ourselves on delivering world-class customer service—responsive, personalized, and always focused on your success. We go above and beyond to ensure every client feels valued" -David Taylor';
+            $davidQuote = "We provide such a substantial increase in yield to our clients that literally changes their lives.  We operate with a passion for above-and-beyond customer service and experience, so much so that our clients are pleasantly shocked by the experience and cannot wait to tell others.";
         elseif($type == "Experience"):
-            $davidQuote = '"With decades of tax law experience, Taylor Law combines deep expertise with a client-first approach. Our team navigates complex tax matters with precision, ensuring the best outcomes for every client" -David Taylor';
+            $davidQuote = "I'm motivated by taking on a problem which others have said is impossible to solve, and which has a life-changing impact on our clients if solved. I solve the problem by being able to utilize three decades of experience. What is a great way to live life? By changing the lives of our clients.";
         else:
-            $davidQuote = '"At Taylor Law, we pride ourselves on delivering world-class customer service—responsive, personalized, and always focused on your success. We go above and beyond to ensure every client feels valued" -David Taylor';
-        endif;        
+            $davidQuote = "I follow a standard of high character and do the 'right thing.' I go about my work with uncommon effort, a refusal to stop until success is achieved for our clients and with ethics and character as non-negotiables.";
+        endif;    
 
         $headerInfo = [        
             'h1Text' => "Taylor Law",
