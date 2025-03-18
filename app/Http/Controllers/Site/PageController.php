@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
-use App\Models\PracticeArea, App\Models\Bio, App\Models\News, App\Models\Engagement, App\Models\Faq, App\Models\Resource, App\Models\BlogPost, App\Models\Testimonial;
+use App\Models\PracticeArea, App\Models\Bio, App\Models\News, App\Models\Engagement, App\Models\Faq, App\Models\Resource, App\Models\BlogPost, App\Models\Testimonial, App\Models\Quote;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -146,7 +146,7 @@ class PageController extends Controller
         $testimonials = Testimonial::where('firm_id', 1)
             ->where('type', 'like', "%$type%")
             ->inRandomOrder()
-            ->get();   
+            ->get();            
             
         if($type == "Customer Service"):
             $davidQuote = "We provide such a substantial increase in yield to our clients that literally changes their lives.  We operate with a passion for above-and-beyond customer service and experience, so much so that our clients are pleasantly shocked by the experience and cannot wait to tell others.";
@@ -155,6 +155,13 @@ class PageController extends Controller
         else:
             $davidQuote = "I follow a standard of high character and do the 'right thing.' I go about my work with uncommon effort, a refusal to stop until success is achieved for our clients and with ethics and character as non-negotiables.";
         endif;    
+
+        $davidQuote = Quote::where('firm_id', 1)
+            ->where('type', 'like', "%$type%")
+            ->where('active', 1)
+            ->inRandomOrder()
+            ->pluck('quote')
+            ->first(); 
 
         $headerInfo = [        
             'h1Text' => "Taylor Law",

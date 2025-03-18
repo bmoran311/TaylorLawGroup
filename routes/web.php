@@ -20,6 +20,7 @@ use App\Http\Controllers\Admin\PracticeAreaController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\FaqCategoryController;
 use App\Http\Controllers\Admin\TestimonialController;
+use App\Http\Controllers\Admin\QuoteController;
 use App\Http\Controllers\Admin\ResourceController;
 use App\Http\Controllers\Admin\ResourceCategoryController;
 use App\Http\Controllers\Admin\ContactController;
@@ -97,6 +98,7 @@ Route::prefix('dashboard')->group(function()
     Route::resource('faq', FaqController::class);
     Route::resource('faq_category', FaqCategoryController::class);
     Route::resource('testimonial', TestimonialController::class);
+    Route::resource('quote', QuoteController::class);
     Route::resource('blog_post', BlogPostController::class);
     Route::resource('blog_category', BlogCategoryController::class);
     Route::resource('resource', ResourceController::class);
