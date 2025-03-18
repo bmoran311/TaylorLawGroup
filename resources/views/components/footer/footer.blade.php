@@ -49,7 +49,7 @@
             <hr class="border-bot">
             <ul class="list-unstyled d-inline-flex d-flex">
                 <li><a href="#"><i class="fa-solid fa-location-pin"></i></a></li>
-                <li><a href="#"><span>16 Charlotte Street,<br>South Carolina 29403</span></a>
+                <li><a href="#"><span>16 Charlotte Street,<br>Charleston, SC 29403</span></a>
                 </li>
             </ul>
             <ul class="list-unstyled d-inline-flex d-flex">

@@ -13,7 +13,7 @@
                         <ul class="list-unstyled d-inline-flex d-flex">
                             <li><a href="#"><i class="fa-solid fa-location-pin"></i></a></li>
                             <li><a href="#"><h5>Address</h5>
-                                <span>16 Charlotte Street, South Carolina 29403</span></a>
+                                <span>16 Charlotte Street, Charleston, SC 29403</span></a>
                             </li>
                         </ul>																
                         <ul class="list-unstyled d-inline-flex d-flex">

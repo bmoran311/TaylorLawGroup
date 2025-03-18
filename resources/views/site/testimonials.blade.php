@@ -26,11 +26,11 @@
                                                 <div class="testimonial-content p-4 position-relative">
                                                     <p class="fst-italic text-secondary m-0"
                                                         style="text-transform: none; font-size: 0.95rem;">
-                                                        <span class="quote-icon" style="color: #c5a183; font-size: 1.5rem;">
+                                                        <span class="quote-icon" style="color: #c5a183; font-size: 1rem;">
                                                             <i class="fas fa-quote-left"></i>
                                                         </span>
                                                         {{ $testimonial->summary }}
-                                                        <span class="quote-icon" style="color: #c5a183; font-size: 1.5rem;">
+                                                        <span class="quote-icon" style="color: #c5a183; font-size: 1rem;">
                                                             <i class="fas fa-quote-right"></i>
                                                         </span>
                                                     </p>
