@@ -2493,3 +2493,51 @@ header .banner-contents h1 {
   }
 
 }
+
+
+@media screen and (max-width: 767px) {
+  a.navbar-brand {
+    width: 30%;
+  }
+  .header-top {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0px 0px;
+    background-size: auto;
+  }
+.header-bg-img {
+  display: none;
+}
+.nav-item.logo-t a {
+  display: none;
+}
+.dropdown .dropdown-menu {
+  padding: 8px 10px;
+}
+.header-call-timg {
+  display: none;
+}
+header .mainmenu ul .nav-item:nth-child(7) {
+    left: -6px;
+  }
+ .nav-item a {
+    font-size: 15px !important;
+  }
+
+}
+
+
+@media screen and (max-width: 480px) {
+  .navbar-collapse {
+    top: 135px;
+  }
+ .navbar-collapse {
+    top: 85px;
+  }
+}

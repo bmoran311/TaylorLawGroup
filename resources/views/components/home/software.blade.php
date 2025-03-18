@@ -4,11 +4,12 @@
             <div class="row">                   
                 <div class="col-md-12 col-lg-6">
                     <div class="proprietary-content heading">
-                        <h5 id="client_portal">proprietary legal software</h5>
+                        <h5 id="client_portal">secure client portal</h5>
                         <h3>taylor.law</h3>
                         <hr class="border-bot">
-                        <p>Our proprietary legal software is a secure and intuitive client portal designed to streamline communication between law firms and their clients. It provides clients with 24/7 access to their case updates, 
-                            important documents, and billing information, all in one centralized platform. </p>
+                        <p>Our secure and intuitive client portal streamlines communication between law firms and their 
+                            clients. It provides 24/7 access to case updates, important documents, and billing 
+                            information—all in one centralized platform.</p>
                         <a href="#" class="btn">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
