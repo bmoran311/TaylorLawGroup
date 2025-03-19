@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-3 col-lg-4 col-sm-12 col-12">
                 <div class="footer-logo">
-                    <a href="index.html"><img src="/site/img/logo.png" class="img-fluid" alt="footer-logo" /></a>
+                    <a href="/"><img src="/site/img/logo.png" class="img-fluid" alt="footer-logo" /></a>
                 </div>
                 <div class="social-icon">
                     <ul class="list-unstyled d-inline-flex">

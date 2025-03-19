@@ -10,7 +10,9 @@
 
     @yield('content')
 
-    <x-home.testimonials />
+    @if (!request()->is('testimonials'))
+        <x-home.testimonials />
+    @endif
     <x-footer.contact />
 
     <footer>

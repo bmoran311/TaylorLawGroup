@@ -49,7 +49,7 @@ $practice_areas = DB::table('practice_area')->latest()->get();
             <div class="mainmenu">
                 <nav class="navbar navbar-expand-md">
                     <div class="container">
-                        <a class="navbar-brand d-block d-md-none d-lg-none d-sm-block" href="index.html"><img
+                        <a class="navbar-brand d-block d-md-none d-lg-none d-sm-block" href="/"><img
                                 src="/site/img/logo.png" class="img-fluid" alt="logo" /></a>
                         <div class="get-start text-end d-block d-md-none d-lg-none d-sm-block">
                             <a href="login.html" class="btn">Get Started</a>

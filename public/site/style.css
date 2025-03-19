@@ -1678,6 +1678,25 @@ header .banner-contents h1 {
   .social-icon i {
     padding: 20px 10px;
   }
+    /* 19/03/2025*/
+  header .mainmenu ul li {
+    padding: 0px 20px;
+  }
+ .nav-item.logo-t img {
+    width: 62%;
+    left: 52px;
+    position: relative;
+    top: 9px;
+  }
+  
+  header .mainmenu {
+  position: relative;
+  top: -123px;
+}
+   .nav-item.logo-t img {
+    width: 62%;
+    left: 40px;
+  }
 
 }
 @media screen and (max-width: 1376px){
@@ -1697,8 +1716,8 @@ header .banner-contents h1 {
     background-size: 24px;
   }
   .nav-item.logo-t img {
-    width: 63%;
-    left: 16px;
+    width: 52%;
+    left: 70px;
     position: relative;
     top: 4px;
   }
@@ -1715,6 +1734,7 @@ header .banner-contents h1 {
   .practice-sub-cont p {
     font-size: 14px;
   }
+  
 
 }
 @media screen and (max-width: 1280px) {
@@ -1722,7 +1742,7 @@ header .banner-contents h1 {
     margin-top: -60px;
   }
     header .mainmenu {
-    top: -93px;
+    top: -108px;
   }
    header .mainmenu ul li a {
     font-size: 13px;
@@ -1743,9 +1763,29 @@ header .banner-contents h1 {
     height: 300px;
     width: 50%;
   }
-	.about-img.industry img {
+  .about-img.industry img {
     outline-offset: -20px;
   }
+  /* 19/03/2025*/
+    header .mainmenu ul li {
+    padding: 0px 13px !important;;
+  }
+    .nav-item.logo-t img {
+    width: 56%;
+    left: 58px;
+      top: 16px;
+  }
+    header .mainmenu {
+    top: -108px;
+    z-index: 9;
+  }
+  /*19/03/2024*/
+  
+  header .mainmenu ul .nav-item:first-child {
+  left: -50px;
+    position: relative;
+}
+  
 }
 
 
@@ -1756,13 +1796,13 @@ header .banner-contents h1 {
     top: -9px;
   }
   .nav-item.logo-t img {
-    width: 53%;
-    left: 27px;
+    width: 45%;
+    left: 78px;
     position: relative;
-    top: 12px;
+    top: 20px;
   }
     header .mainmenu ul .nav-item:nth-child(5) {
-    left: -80px;
+    left: -60px;
   }
   header .mainmenu .navbar-nav a:hover {
     padding-bottom: 15px !important;
@@ -1851,6 +1891,10 @@ header .banner-contents h1 {
   .top-elements {
     margin-top: 3px;
     width: 40px;
+  }
+  /* 19/03/2025*/"
+    header .mainmenu ul .nav-item:nth-child(5) {
+    left: -60px;
   }
 
 }
@@ -1991,8 +2035,7 @@ header .banner-contents h1 {
   header .mainmenu .navbar-nav a:hover {
     color: #fff;
     background-color: transparent;
-    background-image: none;
-    padding: 0px !important;
+    background-image: none;    
   }
    header .mainmenu ul li a {
     font-size: 20px;
@@ -2150,10 +2193,58 @@ header .banner-contents h1 {
   .inner-page-ban .line-img {
     top: -46px;
   }
+  
+/* 19/03/2025*/
+  header .mainmenu .navbar-nav a:hover {
+    color: #fff;
+    background-color: transparent;
+    background-image: none;    
+  }
 
 
 
 }
+
+/* 19/03/2025*/
+
+@media screen and (max-width: 899px) {
+  .header-top{
+    background-image: none !important;;
+  }
+   header .mainmenu .d-sm-block {
+    display: block !important;
+  }
+    .header-bg-img {
+    display: none;
+  }
+    .navbar-expand-md .navbar-toggler {
+    display: block;
+  }
+   .collapse:not(.show) {
+    display: none !important;
+  }
+   .navbar-expand-md .navbar-nav {
+    flex-direction: column;
+    margin: 0px;
+    }
+     header .mainmenu ul .nav-item:first-child {
+    left: 10px;
+  }
+  .nav-item.logo-t {
+    display: none;
+  }
+    a.navbar-brand {
+    width: 26%;
+  }
+  header .mainmenu ul .nav-item:nth-child(6) {
+    padding: initial;
+  }
+   header .mainmenu ul .nav-item:nth-child(7) {
+    left: 0px;
+  }
+  
+}
+
 @media screen and (max-width: 840px) {
   .tab-titles .nav-pills .nav-link {
     padding: 10px 20px;
@@ -2273,6 +2364,10 @@ header .banner-contents h1 {
     .search-box h6 {
     font-size: 16px;
     letter-spacing: 6px;
+  }
+   /* 19/03/2025*/
+   header .mainmenu ul .nav-item:nth-child(6) {
+    padding: initial;
   }
 
 }
@@ -2539,5 +2634,11 @@ header .mainmenu ul .nav-item:nth-child(7) {
   }
  .navbar-collapse {
     top: 85px;
+  }
+}
+
+@media (max-width: 768px) { /* Adjust breakpoint if needed */
+  img[src="/site/img/icons/arrow-down-icon.png"] {
+      display: none !important;
   }
 }

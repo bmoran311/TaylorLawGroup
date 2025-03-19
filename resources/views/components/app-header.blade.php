@@ -38,7 +38,7 @@
         </span>
       </button>
       <!-- Hamburger Toggle BTN -->
-      <a class="block flex-shrink-0 lg:hidden" href="index.html">
+      <a class="block flex-shrink-0 lg:hidden" href="/">
         <img src="/images/logo/logo-icon.svg" alt="Logo" />
       </a>
     </div>

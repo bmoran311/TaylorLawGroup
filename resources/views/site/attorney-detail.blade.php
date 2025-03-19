@@ -218,15 +218,27 @@
                                 <div class="tab-right-content heading">
                                     <h3>Testimonials</h3>
                                     <hr class="border-bot">
-                                    @foreach ($testimonials as $testimonial)
-                                        <a href="/testimonial-detail/{{ $testimonial->id }}" style="text-decoration: none;">
-                                            <div class="publicat-content">
-                                                <h5>{{ \Carbon\Carbon::parse($testimonial->date_of_resolution)->format('M j, Y')  }}</h5>
-                                                <h4>{{ $testimonial->client_name }}, {{ $testimonial->title }}</h4>
-                                                <p>{{ $testimonial->summary }} </p>
-                                            </div>
-                                        </a>
-                                    @endforeach
+                                    
+                                    <div class="col-12"> <!-- Remove unnecessary extra containers -->
+                                        @foreach ($testimonials as $testimonial)
+                                            <a href="/testimonial-detail/{{ $testimonial->id }}" style="text-decoration: none;">
+                                                <div class="testimonial-content p-3 position-relative"> <!-- Reduced padding -->
+                                                    <p class="fst-italic text-secondary m-0" style="text-transform: none; font-size: 0.95rem;">
+                                                        <span class="quote-icon" style="color: #c5a183; font-size: 1rem;">
+                                                            <i class="fas fa-quote-left"></i>
+                                                        </span>
+                                                        {{ $testimonial->summary }}
+                                                        <span class="quote-icon" style="color: #c5a183; font-size: 1rem;">
+                                                            <i class="fas fa-quote-right"></i>
+                                                        </span>
+                                                    </p>
+                                                    <h4 class="text-dark fw-semibold fs-6 mb-1">
+                                                        {{ $testimonial->client_name }} - {{ $testimonial->title }}
+                                                    </h4>
+                                                </div>
+                                            </a>
+                                        @endforeach
+                                    </div>
                                 </div>
                             </div>
                         </div>
